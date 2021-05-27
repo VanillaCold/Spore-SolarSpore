@@ -64,17 +64,11 @@
     <ClInclude Include="GroxColony.h">
       <Filter>CustomTools\Tools</Filter>
     </ClInclude>
-    <ClInclude Include="ChangeCaptain.h">
-      <Filter>CustomTools\Random cheat thingy</Filter>
-    </ClInclude>
     <ClInclude Include="SetPlanetType.h">
       <Filter>CustomTools\Random cheat thingy</Filter>
     </ClInclude>
     <ClInclude Include="PlanetDebuster.h">
       <Filter>CustomTools\Tools\Planet De-Buster</Filter>
-    </ClInclude>
-    <ClInclude Include="SystemCount.h">
-      <Filter>CustomTools\Random cheat thingy</Filter>
     </ClInclude>
     <ClInclude Include="ContactHomeworld.h">
       <Filter>CustomTools\Random cheat thingy</Filter>
@@ -153,17 +147,11 @@
     <ClCompile Include="GroxColony.cpp">
       <Filter>CustomTools\Tools</Filter>
     </ClCompile>
-    <ClCompile Include="ChangeCaptain.cpp">
-      <Filter>CustomTools\Random cheat thingy</Filter>
-    </ClCompile>
     <ClCompile Include="SetPlanetType.cpp">
       <Filter>CustomTools\Random cheat thingy</Filter>
     </ClCompile>
     <ClCompile Include="PlanetDebuster.cpp">
       <Filter>CustomTools\Tools\Planet De-Buster</Filter>
-    </ClCompile>
-    <ClCompile Include="SystemCount.cpp">
-      <Filter>CustomTools\Random cheat thingy</Filter>
     </ClCompile>
     <ClCompile Include="ContactHomeworld.cpp">
       <Filter>CustomTools\Random cheat thingy</Filter>

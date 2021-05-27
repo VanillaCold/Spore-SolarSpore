@@ -47,6 +47,15 @@ bool SpiceDye::OnSelect(cSpaceToolData* pTool)
 	int cost;
 	App::Property::GetInt32(pTool->mpPropList.get(), 0x10609EDF, cost);
 	GetPlayerEmpire()->mEmpireMoney -= cost;
+
+
+	PropManager.GetPropertyList(Spice.instanceID, GroupIDs::SpaceTrading, propList);
+	uint32_t spicecolour;
+	App::Property::GetUInt32(propList.get(), 0x058CBB75, spicecolour);
+
+	auto planet = GetActivePlanet();
+	planet->field_1C4 = spicecolour;
+
 	pTool->mbIsActive = false;
 	pTool->mbIsInUse = false;
 	pTool->mRechargeTimer.Start();

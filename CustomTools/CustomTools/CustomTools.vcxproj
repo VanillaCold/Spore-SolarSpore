@@ -101,10 +101,6 @@
     <ClInclude Include="AmmoCreator.h" />
     <ClInclude Include="BerserkerRage.h" />
     <ClInclude Include="Capacitor.h" />
-    <ClInclude Include="ChangeCaptain.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
     <ClInclude Include="ChangeSpecies.h" />
     <ClInclude Include="ContactHomeworld.h">
       <SubType>
@@ -137,10 +133,6 @@
     <ClInclude Include="SpiceDye.h" />
     <ClInclude Include="StaffofDeath.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="SystemCount.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
     <ClInclude Include="targetver.h" />
     <ClInclude Include="ToSol.h" />
     <ClInclude Include="vehicletest.h">
@@ -153,10 +145,6 @@
     <ClCompile Include="AmmoCreator.cpp" />
     <ClCompile Include="BerserkerRage.cpp" />
     <ClCompile Include="Capacitor.cpp" />
-    <ClCompile Include="ChangeCaptain.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
     <ClCompile Include="ChangeSpecies.cpp" />
     <ClCompile Include="ContactHomeworld.cpp">
       <SubType>
@@ -199,10 +187,6 @@
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="SystemCount.cpp">
-      <SubType>
-      </SubType>
     </ClCompile>
     <ClCompile Include="ToSol.cpp" />
     <ClCompile Include="vehicletest.cpp">

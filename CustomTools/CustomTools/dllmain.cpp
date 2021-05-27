@@ -10,11 +10,11 @@
 #include "StaffofDeath.h"
 #include "ConvertPlanet.h"
 #include "GroxColony.h"
-#include "ChangeCaptain.h"
+//#include "ChangeCaptain.h"
 #include "SetPlanetType.h"
 #include "infinitecolonies.h"
 #include "PlanetDebuster.h"
-#include "SystemCount.h"
+//#include "SystemCount.h"
 #include "RandomTool.h"
 #include "ContactHomeworld.h"
 #include "CustomArchetypeTools.h"
@@ -39,7 +39,7 @@ void Initialize()
 	//  - Add new space tools
 	//  - Change materials
 	CheatManager.AddCheat("spawnvehicle", new vehicletest());
-	CheatManager.AddCheat("changecaptain", new ChangeCaptain());
+	//CheatManager.AddCheat("changecaptain", new ChangeCaptain());
 	CheatManager.AddCheat("setPlanetType", new SetPlanetType());
 //	CheatManager.AddCheat("empireInfo", new SystemCount());
 	CheatManager.AddCheat("contactHomeworld", new ContactHomeworld());
