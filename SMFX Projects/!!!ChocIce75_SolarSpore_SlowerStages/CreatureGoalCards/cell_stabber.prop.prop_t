@@ -1,0 +1,11 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+texts creatureGoalCardTextB
+	(cell!0xcccc0013) "Stabber"
+end
+texts creatureGoalCardTextC
+	(cell!0xcccc0014) "Catch Stabber off guard from behind"
+end
+texts creatureGoalCardTextD
+	(cell!0xcccc0015) "blah"
+end
+uint32 0xE2DA314E 0xb4c1a518

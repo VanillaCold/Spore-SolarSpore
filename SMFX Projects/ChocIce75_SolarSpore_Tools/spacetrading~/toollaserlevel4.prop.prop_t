@@ -1,0 +1,43 @@
+texts spaceToolDescription
+	"Imperial Laser"
+end
+texts spaceToolDetailDescription
+	"Use on ground targets. A strong, precision weapon."
+end
+key spaceToolImageID ufotools~!0xD4055DBD.png
+float spaceTradingAbundance 10
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 2000000
+float spaceTradingChance 5
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 100
+float spaceTradingChanceWarrior 100
+float spaceTradingChanceZealot 100
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierTrader 0.65
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierWarrior 0.5
+float spaceTradingCostMultiplierZealot 0.75
+key spaceTradingExchangeFor laserlevel4.prop
+key spaceTradingRequires laserlevel3.prop
+key spaceTradingRequiresBadge conquerer-4
+key spaceTradingRequiresBadgeOr ecohero-3
+int32 spaceTradingRequiresTier 4
+key spaceTradingToolClass combat
+key spaceTradingType upgrade

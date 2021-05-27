@@ -1,0 +1,6 @@
+key parent herdtypes~!npc_large_social.prop
+vector2 OriginDistance (150, 350)
+float 0x24A02634 1
+float 0x4934CACA 1
+float 0x561C98AC 40
+float 0xCBB8D102 75

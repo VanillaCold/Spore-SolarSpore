@@ -1,0 +1,43 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Auto Blaster"
+float spaceToolAutoFireRate 1
+key spaceToolContext planet
+float spaceToolDamageArea 1
+texts spaceToolDescription
+	"Imperial Auto Blaster"
+end
+texts spaceToolDetailDescription
+	"A defensive weapon that will automatically fire on enemy turrets and spaceships when attacked. Can be toggled on and off."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.75
+key spaceToolImageID ufotools~!0xE5F742F6.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 150
+float spaceToolMaxRange 75
+float spaceToolMinDamage 150
+float spaceToolRechargeRate 1
+key spaceToolStrategy 0x2FD3EB55
+key spaceToolType weapon
+key spaceToolUpgradeFile torpedoplanet3.prop
+bool toolCanPlayerLockOn true
+key toolHitCombatantEffectID 0xDF808E66
+bool toolHitOrientsToTerrain false
+bool toolIsHoming true
+key toolMuzzleEffectID 0x6088B99A
+key toolProjectileEffectID 0xFFEA3B88
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileSpeed 100
+float toolProjectileTimeOut 1.5
+int32s toolTargetFlags
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	0xa6663355
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xb5f45e41) "Targeting capability of this weapon is limited to spaceships, turrets and vehicles."
+end

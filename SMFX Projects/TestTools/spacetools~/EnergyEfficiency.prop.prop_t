@@ -1,0 +1,29 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Test"
+key spaceToolContext always
+float spaceToolChargeRate 0
+texts spaceToolDescription
+	"AC Generator"
+end
+texts spaceToolDetailDescription
+	"Reduces all energy losses by 50%, at the cost of reserving 30% of your health."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld true
+bool spaceToolDisableOnSaveGames true
+float cap-Multiplier 0.50
+float percentHealthToNotReserve 0.7
+bool spaceToolHide false
+bool toolIsSuperWeapon true
+key spaceToolImageID ufotools~!acgenerator.png #0x826502EB.png
+float spaceToolMaxRange -1
+key spaceToolPanelKey travel_panel_top~
+float spaceToolRechargeRate 60
+key spaceToolStrategy EnergyEfficiency
+bool toolDeselectsAfterUse false
+bool toolHitOrientsToTerrain false
+bool toolPreventsPlanetExit false
+bool toolUseOnActivate true
+texts toolTargetFlagsFailMessage
+	"whoops"
+end

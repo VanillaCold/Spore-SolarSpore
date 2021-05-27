@@ -1,0 +1,30 @@
+key parent herdtypes~!npc_small_combat.prop
+vector2 Altitude (1, 10000)
+float DamageMultiplier 1.25
+bool HasNest false
+float HitpointOverride 15
+vector2 OriginDistance (10, 20)
+vector2 WaterDistance (20, -1)
+vector2 slope (0, 55)
+uint32s upgradeHerdList
+	hash(npc_medium_combat-hard~)
+	hash(npc_large_combat-hard~)
+end
+uint32 0x0DFE5F93 2
+float 0x24A02634 1
+int32 0x2D5624E5 1
+float 0x3E89ACC8 0.2
+float 0x4934CACA 0.73
+bool 0x54F1CE40 true
+float 0x561C98AC 60
+int32 0x690A9B9B 100
+int32 0x90CB151D 2
+int32 0x95CEDA48 2
+vector2s 0xAFD5E585
+end
+float 0xB1559418 0.1
+int32 0xB3D796FE 2
+float 0xBF54A4FE 15
+float 0xC75C3509 25
+float 0xCBB8D102 75
+uint32 0xE6C38666 5

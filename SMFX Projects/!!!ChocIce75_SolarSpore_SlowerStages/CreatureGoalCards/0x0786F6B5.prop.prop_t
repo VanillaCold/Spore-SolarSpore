@@ -1,0 +1,13 @@
+float priority 0
+texts 0x34255D1E
+	(0xAD56080C!0x0524d319) "You need X more things"
+end
+uint32 0x6B443D4B 0
+uint32 0x9A9AE1D2 0
+texts 0xADF78285
+	(0xAD56080C!0x050a34ca) "Earn DNA points!"
+end
+texts 0xD2F7CD25
+	(0xAD56080C!0x0524d31f) "Complete"
+end
+uint32 0xE2DA314E 0x74bf58cb

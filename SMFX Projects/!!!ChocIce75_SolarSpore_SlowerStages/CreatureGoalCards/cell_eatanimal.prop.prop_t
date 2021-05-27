@@ -1,0 +1,13 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+key creatureGoalCardLayout layouts~!0x70EC631F
+texts creatureGoalCardTextB
+	(cell!0xcccc0004) "Eat"
+end
+texts creatureGoalCardTextC
+	(cell!0xcccc0005) "Eat animal food"
+end
+texts creatureGoalCardTextD
+	(cell!0xcccc0006) "Your creature is an carnivore."
+end
+uint32 0x5D6796FD 0x74c1935d
+uint32 0xE2DA314E 0xb4c1a518

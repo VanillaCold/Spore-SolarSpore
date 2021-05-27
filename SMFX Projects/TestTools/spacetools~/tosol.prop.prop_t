@@ -1,0 +1,26 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Test"
+key spaceToolContext space
+texts spaceToolDescription
+	"Sol-Portal"
+end
+texts spaceToolDetailDescription
+	"A tool which teleports the user to Sol."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld true
+bool spaceToolDisableOnSaveGames true
+bool spaceToolHide false
+key spaceToolImageID consequence~!0xF9DA1BF7.png
+float spaceToolMaxRange -1
+key spaceToolPanelKey travel_panel_top~
+float spaceToolRechargeRate 60
+key spaceToolStrategy ToSol
+bool toolDeselectsAfterUse true
+bool toolHitOrientsToTerrain false
+bool toolIsSuperWeapon false
+bool toolPreventsPlanetExit true
+bool toolUseOnActivate true
+texts toolTargetFlagsFailMessage
+	"whoops"
+end

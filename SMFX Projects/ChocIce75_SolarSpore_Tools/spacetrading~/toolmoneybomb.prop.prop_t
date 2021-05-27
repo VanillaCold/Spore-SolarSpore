@@ -1,0 +1,43 @@
+texts spaceToolDescription
+	"Sporebuck Bomb"
+end
+texts spaceToolDetailDescription
+	"An incredibly powerful bomb, fuelled by Sporebucks."
+end
+key spaceToolImageID consequence~!0x8BE3E321.png
+float spaceTradingAbundance 30
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 30000
+float spaceTradingChance 10
+float spaceTradingChanceBard 15
+float spaceTradingChanceDiplomat 5
+float spaceTradingChanceEcologist 15
+float spaceTradingChanceGrob 15
+float spaceTradingChancePlayerBard 15
+float spaceTradingChancePlayerDiplomat 5
+float spaceTradingChancePlayerEcologist 15
+float spaceTradingChancePlayerScientist 15
+float spaceTradingChancePlayerShaman 5
+float spaceTradingChancePlayerTrader 35
+float spaceTradingChancePlayerWanderer 15
+float spaceTradingChancePlayerWarrior 75
+float spaceTradingChancePlayerZealot 25
+float spaceTradingChanceScientist 15
+float spaceTradingChanceShaman 5
+float spaceTradingChanceTrader 35
+float spaceTradingChanceWarrior 75
+float spaceTradingChanceZealot 25
+float spaceTradingCostMultiplierDiplomat 1.25
+float spaceTradingCostMultiplierTrader 1.5
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierWarrior 0.75
+float spaceTradingCostMultiplierZealot 1.25
+key spaceTradingExchangeFor moneybomb.prop
+uint32 spaceTradingQuantityToOffer 3
+key spaceTradingRequiresBadge goldentouch-3
+int32 spaceTradingRequiresTier 3
+key spaceTradingToolClass social
+int32 spaceTradingToolReofferRate 120
+key spaceTradingType tool

@@ -1,0 +1,48 @@
+key parent spacetools~!ToolTemplate.prop
+key spaceToolContext planet
+string16 description "Uber Turret Missiles"
+texts spaceToolDescription
+	"Uber Missile"
+end
+texts spaceToolDetailDescription
+	"Fires an incredibly powerful missile used by Uber Turrets. Uses lots of energy."
+end
+float spaceToolAutoFireRate 1
+float spaceToolDamageArea 12
+float spaceToolMaxDamage 500
+float spaceToolMaxProjectileScale 1
+float spaceToolMaxRange 250
+float spaceToolMinDamage 500
+key spaceToolPanelKey combat_panel_top~
+float spaceToolRechargeRate 2
+key spaceToolStrategy 0x2FD3EB55
+key spaceToolType weapon
+key toolCanPlayerLockOn true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 15
+key spaceToolImageID ufotools~!0x89824FB1.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+key toolHitCombatantEffectID civ_weapons_military_projectile_shell_1_explosion
+key toolHitGroundEffectID civ_weapons_military_projectile_shell_1_explosion
+key toolHitWaterEffectID civ_weapons_military_projectile_shell_1_explosion
+bool toolIsHoming true
+key toolMuzzleEffectID civ_weapons_military_projectile_shell_1_muzzle
+float toolProjectileEccentricity 1
+key toolProjectileEffectID CIV_weapons_military_projectile_shell_1
+float toolProjectileExplosionExpansionRate 5000
+key toolProjectileMotion 0x0BA57653
+float toolProjectileSpeed 180
+float toolProjectileTimeOut 8
+int32s toolTargetFlags
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x061af4b2) "This weapon can only be fired at spaceships, turrets, and vehicles."
+end

@@ -1,0 +1,63 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Peace Bomb"
+int32 spaceToolAmmoUsedPerShot 1
+float spaceToolDamageArea 1000
+int32 spaceToolBuyCost 2500
+key spaceToolContext planet
+texts spaceToolDescription
+	"Peace Bomb"
+end
+texts spaceToolDetailDescription
+	"Disables all buildings, vehicles & turrets on the planet for a short period of time."
+end
+float spaceToolDetectableRange 450
+bool spaceToolDisableOn201Ruins false
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+bool spaceToolHide false
+key spaceToolImageID ufotools~!0x193DF54E.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxDamage 400
+float spaceToolMaxRange 200
+float spaceToolMinDamage 300
+key spaceToolPanelKey social_panel_bottom~
+float spaceToolRechargeRate 600
+key spaceToolStrategy 0x2FD3EB55
+key spaceToolType special
+bool spaceToolUsesAmmo true
+bool toolDamagesFriendlies true
+bool toolDeselectsAfterUse true
+key toolHitCombatantEffectID 0xB25B5446
+key toolHitGroundEffectID 0xB25B5446
+key toolHitWaterEffectID 0xB25B5446
+bool toolCanPlayerLockOn true
+key toolMuzzleEffectID 0x42F4F98C
+bool toolPreventsPlanetExit false
+key toolProjectileEffectID 0x54B769C6
+float toolRelationshipDelta -5
+key toolProjectileMotion cruise
+key toolTargetEffectID 0x7D2BF7A3
+float toolProjectileExplosionExpansionRate 50
+float toolProjectileSpeed 200
+float toolProjectileTimeOut 100
+key toolProjectileType blackcloud
+#bool toolIsHoming true
+int32s toolTargetFlags
+	hash(animal)
+	0xa13abc9f
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	0x9b8e862f
+	0x4bf0fa5a
+	hash(air)
+end
+texts toolTargetFlagsFailMessage
+	"You must choose a valid ground target to fire this weapon."
+end
+bool toolUseOnActivate false

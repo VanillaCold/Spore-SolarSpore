@@ -1,0 +1,9 @@
+key parent civpopupbase~!EventTemplate.prop
+string16 description "Wanderer Tool"
+bool eventAllowDuplicates true
+key eventCategory Info
+texts eventDescription
+	"You got the Wandering Portal."
+end
+float eventRemoveTime 15
+float eventStartFadeTime 10

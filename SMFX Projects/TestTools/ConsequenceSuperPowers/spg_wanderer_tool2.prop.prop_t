@@ -1,0 +1,8 @@
+key parent ConsequenceSuperPowers!spg_Template.prop
+texts consequenceSuperPowerDescription
+	"Lets you teleport to any location in the galaxy. Unlocked after colonising 30 systems."
+end
+key consequenceSuperPowerIcon ufotools~!0x4AD21FAC.png
+texts consequenceSuperPowerName
+	"Intergalactic Drive"
+end

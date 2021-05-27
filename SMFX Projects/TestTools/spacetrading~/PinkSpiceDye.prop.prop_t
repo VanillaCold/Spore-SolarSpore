@@ -1,0 +1,46 @@
+texts spaceToolDescription
+	"Pink Spice Dye"
+end
+texts spaceToolDetailDescription
+	"Used to convert the spice of a planet to Pink Spice."
+end
+key spaceToolImageID ufotools~!0xA690DC79.png
+float spaceTradingAbundance 15
+bool spaceTradingAlliesOnly true
+float spaceTradingBaseCost 1500000
+float spaceTradingChance 50
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 0
+float spaceTradingChancePlayerBard 0
+float spaceTradingChancePlayerDiplomat 0
+float spaceTradingChancePlayerEcologist 0
+float spaceTradingChancePlayerKnight 0
+float spaceTradingChancePlayerScientist 5
+float spaceTradingChancePlayerShaman 0
+float spaceTradingChancePlayerTrader 10
+float spaceTradingChancePlayerWanderer 0
+float spaceTradingChancePlayerWarrior 0
+float spaceTradingChancePlayerZealot 0
+float spaceTradingChanceScientist 5
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 75
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierBard 1
+float spaceTradingCostMultiplierGrob 1
+float spaceTradingCostMultiplierTrader 0.95
+float spaceTradingCostMultiplierUserCul 1#0.75
+float spaceTradingCostMultiplierUserEco 0.75
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierScientist 1.25
+float spaceTradingCostMultiplierWarrior 1
+float spaceTradingCostMultiplierZealot 99.75
+float spaceTradingCostMultiplierDiplomat 0.75
+key spaceTradingExchangeFor PinkSpiceDye
+int32 spaceTradingRequiresTier 4
+int32 spaceTradingToolReofferRate 30
+key spaceTradingToolClass colonization
+key spaceTradingType tool

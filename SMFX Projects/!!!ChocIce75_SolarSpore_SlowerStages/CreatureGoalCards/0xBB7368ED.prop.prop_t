@@ -1,0 +1,11 @@
+key parent CreatureGoalCards!0xBD917CAE.prop
+texts creatureGoalCardTextB
+	(CivGame!0x058c75fd) "title"
+end
+texts creatureGoalCardTextC
+	(CivGame!0x058c75ff) "summary"
+end
+texts creatureGoalCardTextD
+	(CivGame!0x058c75fe) "body"
+end
+float priority 1

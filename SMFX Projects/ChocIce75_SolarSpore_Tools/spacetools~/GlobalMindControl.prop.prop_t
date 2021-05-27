@@ -1,0 +1,47 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Planet Conversion"
+int32 spaceToolAmmoUsedPerShot 1
+key spaceToolContext planet
+texts spaceToolDescription
+	"Global Mind Control [UNUSABLE]"
+end
+texts spaceToolDetailDescription
+	"Use on a planet to control its inhabitants, making them surrender. [UNUSABLE]"
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+bool spaceToolHide false
+bool spaceToolUsesAmmo true
+int32 spaceToolInitialAmmoCount 5
+key spaceToolImageID ufotools~!0x43C721AB.png 
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxRange -1
+key spaceToolPanelKey combat_panel_bottom~
+float spaceToolRechargeRate 2400
+key spaceToolStrategy 0x2FD3EB55
+key spaceToolType special
+bool toolDeselectsAfterUse true
+float toolGalacticRelationshipDelta -7
+float toolGalacticRelationshipRadius 10
+key toolHitGroundEffectID 0xB332DE96
+bool toolIsSuperWeapon true
+key toolMuzzleEffectID 0x2E7E98DA
+bool toolPreventsPlanetExit false
+key toolProjectileEffectID 0xCCDDB4CC
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 15
+float toolRelationshipDelta -10
+int32s toolTargetFlags
+	hash(animal)
+	0xa13abc9f
+	hash(turret)
+	hash(city)
+	hash(building)
+	0x9b8e862f
+	0x4bf0fa5a
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x061ab566) "You must choose a valid ground target to fire this weapon."
+end
+bool toolUseOnActivate false

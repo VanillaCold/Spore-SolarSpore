@@ -1,0 +1,29 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x00000000
+texts spaceToolDescription
+	"Animanium"
+end
+texts spaceToolDetailDescription
+	"A weird material that can be used in the creation of animations."
+end
+uint32s spaceToolImageColors
+	0xff000000
+end
+key spaceToolImageID ufotools~!0xD4055DBF.png
+float spaceTradingBaseCost 3750
+float spaceTradingChanceBlueEasy 0
+float spaceTradingChanceBlueHard 0
+float spaceTradingChanceRedEasy 0
+float spaceTradingChanceRedHard 0
+float spaceTradingChanceYellowEasy 0
+float spaceTradingChanceYellowHard 0
+texts spaceTradingNeed
+	"Uh-oh, we're out of Animanium. It gives our cartoons more life than regular ink - we need some, now."
+end
+texts spaceTradingNoNeed
+	"Please take a look at our fine goods available."
+end
+key spaceTradingType spice
+bool SS-UseSpiceOnHomeworld false

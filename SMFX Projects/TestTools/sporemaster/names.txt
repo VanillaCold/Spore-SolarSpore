@@ -1,0 +1,179 @@
+terraforming
+auto_spacetools~_ReturnPortal
+panelTemplate
+auto_spacetools~_RandomWeapon
+auto_spacetools~_spawngrob
+RandomTool_Weapon
+RandomWeapon
+SG_laser_lvl_1_beam_impact
+auto_AssetBrowserConfig_OnlySpaceShopper
+combat_panel_top~	0x7311b21
+SG_ufo_place_colony_muzzle
+colony_thingymabob
+ConsequenceTraits
+spacetoolui~	0x5f4d5e7
+ToPlanetShopper
+special
+weapon
+atmospheric_panel_bottom~	0x1ef330e5
+PinkSpiceDye
+spacegame_tools
+groxcolony
+spg_Template
+colonization
+other
+AssetBrowserConfig
+atmospheric_panel_top~	0x29109e30
+SG_laser_lvl_1_beam
+sporepedia
+SolarSpore_ModAPITools
+spawngrob
+auto_ConsequenceTraits_spg_wanderer
+AssetBrowserFilter
+auto_ConsequenceSuperPowers_spg_trader_tool2
+tosol
+spg_warrior
+RageMode
+MouseTemplate
+auto_spacetools~_spawnvehiclelaser
+EcoTool
+Detente
+graphics_atlas~	0x31a44893
+lifeburst
+changespecies
+ConsequenceSuperPowers
+sporemaster
+planets
+names
+camera_properties~	0x40410100
+TopdownGalaxy3
+auto_spacetools~_ConvertPlanet
+AmmoCreator
+auto_spacetools~_Detente
+civpopupbase~	0x2bb7aff
+auto_AssetBrowserFilter_ToPlanet
+ToolTemplate
+purplespicedye
+something
+layouts_atlas~	0x40464200
+IntergalacticDrive
+ToPlanet
+solarsporeconfig
+WanderAroundAmmo
+consequence
+auto_AssetBrowserConfig_AdventurersShopper
+SpawnVehicle
+auto_spacetools~_WanderAround
+ExpansionPack1
+auto_ConsequenceTraits_spg_trader
+auto_spacetrading~_RandomTool_Base
+erasespecies
+spacepopups~	0x131a9f54
+TraderTool
+WanderAround
+auto_ConsequenceSuperPowers_spg_warrior_tool2
+EnergyEfficiency
+auto_spacetrading~_WanderingPortal
+ReturnPortal
+acgenerator1
+StaffofDeath
+auto_camera_properties~_TopDownGalaxyCam2
+auto_spacetrading~_RandomTool_Weapon
+ufotools~	0x3064cb38
+TopdownGalaxy
+auto_AssetBrowserConfig_ToPlanetShopper
+auto_camera_properties~_TopdownGalaxy3
+SG_ufo_place_colony_projectile
+spg_wanderer_tool2
+Healing
+AdventurersShopper
+auto_spacetools~_staffofdeath
+CreatureSpace
+auto_camera_properties~_TopdownGalaxy
+auto_ConsequenceSuperPowers_spg_wanderer_tool
+colonize_panel_bottom~	0xc2f7b09d
+RegalShield
+spacetools~	0x30608f0b
+spawnvehiclelaser
+auto_spacetools~_RandomTool
+auto_ConsequenceSuperPowers_spg_ecologist_tool2
+BerserkerRage
+auto_AssetBrowserFilter_OnlySpaceCreatures
+ConvertPlanet
+colonize_panel_top~	0x51aa04d8
+GlobalTemplate
+spg_wanderer_tool
+WanderingPortal
+spg_ecologist_tool
+social_panel_top~	0x22da18a4
+TopDownGalaxyCam2
+auto_spacetools~_lifeburst
+combat
+OnlySpaceShopper
+spg_trader_tool2
+auto_spacetoolui~_0x51aa04d8
+auto_spacetools~_IntergalacticDrive
+auto_spacetools~_pinkspicedye
+auto_spacetools~_tosol
+spg_ecologist_tool2
+auto_spacetools~_something
+spg_ecologist
+testtoolsexists
+AmmoForge
+auto_ToolImageEnforcer_UI_SolarSpore_ModAPITools
+infinitecolonies
+auto_spacetools~_RageMode
+travel_panel_top~	0xaf3696d
+planetdebuster
+spg_warrior_tool2
+auto_spacepopups~_EcoTool
+travel_panel_bottom~	0xa1e58c4e
+SG_laser_lvl_1_scorch
+auto_spacetrading~_PinkSpiceDye
+Info
+spg_trader
+gameTemplate
+superrare
+consequence~	0xd509ffbf
+spacetrading~	0x34d97fa
+auto_ConsequenceTraits_spg_ecologist
+auto_spacetools~_RegalShield
+ToolImageEnforcer_UI
+auto_spacetools~_purplespicedye
+auto_spacetools~_planetdebuster
+spicedye_pink
+OnlySpaceCreatures
+auto_spacetools~_AmmoForge
+spice6
+spice5
+auto_solarsporeconfig_testtoolsexists
+auto_spacetrading~_StaffofDeath
+auto_spacetoolui~_0xa1e58c4e
+spg_warrior_tool
+spicedye
+WandererTool
+planet
+spg_trader_tool
+spg_wanderer
+acgenerator
+RandomTool
+colony_panel_superweapon
+tool
+auto_ConsequenceTraits_spg_warrior
+auto_spacetools~_WanderAroundAmmo
+auto_spacetools~_EnergyEfficiency
+auto_spacetools~_erasespecies
+Unknown
+thing
+auto_spacepopups~_WandererTool
+auto_spacetools~_changespecies
+auto_spacepopups~_TraderTool
+SG_laser_lvl_1_water
+auto_layouts_atlas~_colony_panel_superweapon
+space
+placecolonyinf
+auto_spacetools~_placecolonyinf
+auto_ConsequenceSuperPowers_spg_wanderer_tool2
+always
+EventTemplate
+RandomTool_Base

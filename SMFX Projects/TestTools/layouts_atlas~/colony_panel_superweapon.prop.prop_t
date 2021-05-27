@@ -1,0 +1,4 @@
+keys preloadTextures
+	graphics_atlas~!0xB5C41506
+	graphics_atlas~!colony_thingymabob
+end

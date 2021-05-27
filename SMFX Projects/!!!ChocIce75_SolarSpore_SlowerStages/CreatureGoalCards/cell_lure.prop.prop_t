@@ -1,0 +1,14 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+key creatureGoalCardLayout layouts~!0x2ACCFCD6
+texts creatureGoalCardTextB
+	(0xB02263BE!0x00000001) "Lure"
+end
+texts creatureGoalCardTextC
+	(0xB02263BE!0x00000002) "Lure 10 cells into your poison"
+end
+texts creatureGoalCardTextD
+	(0xB02263BE!0x00000003) "Lure 10 cells into your poison"
+end
+uint32 0x5D6796FD 0x74c1935d
+uint32 0x63FF8CC5 0x06398d4f
+uint32 0xE2DA314E 0xb4c1a518

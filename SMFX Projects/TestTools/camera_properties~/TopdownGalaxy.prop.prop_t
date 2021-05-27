@@ -1,0 +1,39 @@
+string16 description "GGE camera"
+colorRGBA cameraBackgroundColor (0, 0, 0, 1)
+float cameraFarClip 22000
+float cameraInitialHeading -90
+float cameraInitialOffsetX 0
+float cameraInitialOffsetY 100
+float cameraInitialPitch -90
+float cameraInitialZoom 1400
+vector4 cameraMaterialLODs (20, 40, 60, 80)
+float cameraMaxPitch -90
+float cameraMaxZoomDistance 1400
+float cameraMinPitch -90
+float cameraMinZoomDistance 1400
+float cameraMomentumScale 0.3
+string16 cameraName "GGECamera"
+float cameraNearClip 5
+float cameraTranslateScale 0
+uint32 cameraType 0x043c6e06
+float cameraZoomScale 20
+bool 0x05C75469 false
+float 0x0AB7ECAA 400
+float 0x117596FE 0.95
+float 0x12D3DA88 20
+float 0x1F5E6D86 7
+float 0x1FA53607 0.2
+float 0x23970B2E 2
+float 0x23E13C2E 0.15
+float 0x327C1CAB 400
+float 0x334DB042 0.55
+float 0x3510083B 0.85
+float 0x4A2F63FE 3
+float 0x6712ADAA 0.1
+float 0x6755710F 2
+float 0x8D59F19F 0.6
+float 0xA62B9AE7 0.9
+float 0xA8FA45BA 0.01
+float 0xAA8D130B 500
+float 0xB7CC369A 250
+float 0xEF6BA08A 0.3

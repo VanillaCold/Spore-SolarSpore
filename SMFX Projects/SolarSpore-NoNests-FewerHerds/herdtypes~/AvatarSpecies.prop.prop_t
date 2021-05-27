@@ -1,0 +1,46 @@
+key parent herdtypes~!default.prop
+int32 FoodChainLevel 5
+vector2 NumCreatures (16, 16)
+int32 NumGuardLocations 4
+vector2 NumNests (1, 1)
+vector2 OriginDistance (10, 35)
+float RespawnRate 50
+vector2 WaterDistance (2, 25)
+float socialDecay 0
+int32 type 3
+vector2 0x0748B77B (0.167, 0.167)
+uint32 0x0DFE5F93 1
+float 0x24A02634 1
+int32 0x2D5624E5 3
+vector2 0x43476EBE (0, 40)
+vector2 0x45D1A932 (10, 15)
+float 0x561C98AC 90
+float 0x5B0E0D01 0
+int32 0x690A9B9B 100
+float 0x79B9184B 25
+uint32s 0x7ECAF0EE
+	hash(Carcass)
+	hash(epic_carcass)
+end
+uint32s 0x8ECEAD6D
+	0x778f18a1
+end
+colorRGB 0x9A2B74A7 (1, 1, 1)
+vector2s 0xAFD5E585
+	(10, 35)
+	(10, 35)
+end
+float 0xB1559418 45
+int32 0xB3D796FE 1
+float 0xC33386A0 0
+float 0xC75C3509 40
+float 0xCBB8D102 90
+uint32s 0xDB9BFC2C
+	hash(Sticks1)
+	hash(SkeletonPartUnlockColumn3)
+	hash(SkeletonPartUnlockColumn1)
+	0xa347cc28
+end
+uint32 0xE6C38666 6
+int32 0xF04C3DB9 1
+vector2 0xFE43F720 (10, 30)

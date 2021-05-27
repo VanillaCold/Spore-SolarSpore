@@ -1,0 +1,12 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+int32 EvoPointReward 12
+texts creatureGoalCardTextB
+	(0xAD56080C!0x0514f98e) "Migrate"
+end
+texts creatureGoalCardTextC
+	(0xAD56080C!0x0524d32c) "Summary"
+end
+texts creatureGoalCardTextD
+	(0xAD56080C!0x0514f993) "Migrate"
+end
+float priority 3

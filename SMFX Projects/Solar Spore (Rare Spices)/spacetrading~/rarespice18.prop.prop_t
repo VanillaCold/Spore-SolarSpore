@@ -1,0 +1,29 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x0000BC00
+texts spaceToolDescription
+	"Random Access Memory"
+end
+texts spaceToolDetailDescription
+	"ERROR: Not enough RAM available to view item description."
+end
+uint32s spaceToolImageColors
+	0xff00BC00
+end
+key spaceToolImageID ufotools~!ram.png
+float spaceTradingBaseCost 5000
+float spaceTradingChanceBlueEasy 0
+float spaceTradingChanceBlueHard 0
+float spaceTradingChanceRedEasy 0
+float spaceTradingChanceRedHard 0
+float spaceTradingChanceYellowEasy 0
+float spaceTradingChanceYellowHard 0
+texts spaceTradingNeed
+	"We need some more RAM - we only have 1 GB available, since Spoogle Chrome takes up the rest."
+end
+texts spaceTradingNoNeed
+	"Please take a look at our fine goods available - you might be able to download some more RAM!"
+end
+key spaceTradingType spice
+bool SS-UseSpiceOnHomeworld false

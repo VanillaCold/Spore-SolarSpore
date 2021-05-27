@@ -1,0 +1,11 @@
+key parent CreatureGoalCards!0x2E7E2B68.prop
+texts creatureGoalCardTextB
+	(TribeGame!0x0554061e) "select some tribe members"
+end
+texts creatureGoalCardTextC
+	(TribeGame!0x05540620) "Summary"
+end
+texts creatureGoalCardTextD
+	(TribeGame!0x0554061f) "select some tribe members"
+end
+float priority 1

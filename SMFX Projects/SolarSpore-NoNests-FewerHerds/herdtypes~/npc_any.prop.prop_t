@@ -1,0 +1,54 @@
+key parent herdtypes~!default.prop
+vector2 Altitude (0, 1000)
+vector3s Attack
+	(2, 0, 40.0999985)
+end
+vector3s BaseGear
+	(2, 0, 3)
+end
+vector2 NumCreatures (10, 15)
+vector3s NumFeet
+	(2, 0, 10000)
+end
+vector2 OriginDistance (17, 35)
+vector3s Social
+	(2, 0, 100.0999985)
+end
+vector2 WaterDistance (5, -1)
+vector3s cuteness
+	(2, 0, 100.0999985)
+end
+vector3s health
+	(2, 0, 100.0999985)
+end
+vector3s mass
+	(2, 0.001, 10000)
+end
+vector2 slope (0, 60)
+float socialDecay 2
+int32 type 1
+vector3s 0x1ACA5758
+	(2, 0, 4.0999999)
+end
+float 0x24A02634 1
+vector3s 0x2DFB4F9F
+	(2, 0, 2)
+end
+bool 0x54F1CE40 true
+float 0x561C98AC 90
+float 0x79B9184B 50
+vector3s 0xA28A67E8
+	(2, 0, 2)
+end
+vector2s 0xAFD5E585
+	(150, 300)
+	(150, 300)
+end
+float 0xC75C3509 10
+float 0xCBB8D102 90
+vector3s 0xD80F4DB1
+	(2, 0, 4.0999999)
+end
+vector3s 0xF25E3665
+	(2, 0, 10000)
+end

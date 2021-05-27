@@ -1,0 +1,27 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "PlanetDebuster"
+key spaceToolContext space
+texts spaceToolDescription
+	"Planet De-Buster"
+end
+texts spaceToolDetailDescription
+	"Restores a planet destroyed with a planet-buster."
+end
+bool spaceToolDisableOn201Ruins false
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!0xFDE1BB35.png
+float spaceToolMaxRange 0
+key toolMuzzleEffectID 0xFC258EE2
+key spaceToolPanelKey travel_panel_bottom~
+float spaceToolRechargeRate 60
+key spaceToolStrategy planetdebuster
+bool toolDeselectsAfterUse true
+bool toolHitOrientsToTerrain false
+bool toolIsSuperWeapon false
+bool spaceToolUsesAmmo true
+bool toolUseOnActivate true
+int32 spaceToolMaxAmmoCount 99
+int32 spaceToolAmmoUsedPerShot 1
+bool toolPreventsPlanetExit false
+key spaceToolType other

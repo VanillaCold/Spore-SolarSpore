@@ -1,0 +1,58 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "PurpleSpice"
+int32 spaceToolAmmoUsedPerShot 1
+#int32 spaceToolBuyCost 1000
+key spaceToolContext space
+texts spaceToolDescription
+	"Pink Spice Dye"
+end
+texts spaceToolDetailDescription
+	"Converts the spice of the current planet to Pink Spice."
+end
+bool spaceToolDisableOn201Ruins true
+int32 spaceToolUseCost 0
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+bool toolIsSuperWeapon false
+int32 spaceToolMaxDiscoveredAmmo 6
+int32 spaceToolMinDiscoveredAmmo 1
+key toolDiscoverableRarity superrare
+#key spaceToolImageID ufotools~!0xA690DC79.png
+key spaceToolImageID ufotools~!spicedye_pink.png
+#<uint32s spaceToolImageColors
+	0xffff6eb4
+	0xFFbb1930
+	0xffff8fd7
+	0xFFdd4c92
+	0xFF000000
+end#>
+int32 spaceToolInitialAmmoCount 0
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxRange -1
+key spaceToolPanelKey colonize_panel_top~
+float spaceToolRechargeRate 15
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy spicedye
+key SpiceDye-SpiceFile spacetrading~!spice5
+key spaceToolType special
+bool spaceToolUsesAmmo false
+bool toolDeselectsAfterUse true
+#bool toolDeselectsOnPlanetExit true
+#bool toolDoActionPostEffect true
+#bool toolHitOrientsToTerrain true
+key toolMuzzleEffectID SG_ufo_place_colony_muzzle
+bool toolPreventsPlanetExit false
+#<key toolProjectileEffectID SG_ufo_place_colony_projectile
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 30
+int32s toolTargetFlags
+	0x9b8e862f
+end#>
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

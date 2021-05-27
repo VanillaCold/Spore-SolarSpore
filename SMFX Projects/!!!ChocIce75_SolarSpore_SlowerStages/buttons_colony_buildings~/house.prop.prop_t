@@ -1,0 +1,31 @@
+key parent buttons_colony_buildings~!TemplateBuilding.prop
+texts blockName
+	(cip!0x05b05f03) "House"
+end
+key modelGonzagoClassID kBuildingHouse~
+keys modelMainAbilityList
+	colony_house
+end
+int32 modelPrice 51200
+texts paletteAssetSwatchEditTooltip
+	(planners!0x00000003) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchHeaderIcon editors_planner~!0x129A1E2A.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x00000001) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x00000004) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchLockedIcon editors_planner~!0x5176203A.png
+keys paletteAssetSwatchNewIcon
+	editors_planner~!0xF75DA688.png
+	editors_planner~!0xAB96FB51.png
+	editors_planner~!0x7CA8BE66.png
+	editors_planner~!0x9E9269E6.png
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x00000002) "Tooltip (PLACEHOLDER)"
+end
+key paletteItemHeaderIconID 0x5A086E80
+key paletteItemModelType BuildingHouse

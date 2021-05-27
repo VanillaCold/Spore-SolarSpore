@@ -1,0 +1,37 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "RandTool"
+key spaceToolContext space
+texts spaceToolDescription
+	"Weapon Dip"
+end
+texts spaceToolDetailDescription
+	"Gives you a random weapon."
+end
+bool spaceToolDisableOn201Ruins false
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+bool RandomTool-isList true
+uint32s RandomTool-List
+	0xFC220278
+	0x05475298
+	0x7070AEDA
+	hash(staffofdeath)
+end
+bool spaceToolHide false
+bool spaceToolUsesAmmo true
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolMaxAmmoCount 99
+key spaceToolImageID ufotools~!randomtool.png #unknown.png#0x1585FFDA.png
+float spaceToolMaxRange -1
+key spaceToolPanelKey travel_panel_bottom~
+float spaceToolRechargeRate 60
+key toolMuzzleEffectID 0x2E570807
+key spaceToolStrategy randomtool
+bool toolDeselectsAfterUse true
+bool toolHitOrientsToTerrain false
+bool toolIsSuperWeapon false
+bool toolPreventsPlanetExit true
+bool toolUseOnActivate true
+texts toolTargetFlagsFailMessage
+	"whoops"
+end

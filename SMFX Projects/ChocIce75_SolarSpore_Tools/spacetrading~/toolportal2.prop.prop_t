@@ -1,0 +1,44 @@
+texts spaceToolDescription
+	"Homeworld Portal"
+end
+texts spaceToolDetailDescription
+	"Returns you to your home system through a portal."
+end
+key spaceToolImageID ufotools~!0x555AAE55.png
+float spaceTradingAbundance 50
+bool spaceTradingAlliesOnly true
+float spaceTradingBaseCost 250000
+float spaceTradingChance 3
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 100
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 15
+float spaceTradingChancePlayerBard 0
+float spaceTradingChancePlayerDiplomat 0
+float spaceTradingChancePlayerEcologist 0
+float spaceTradingChancePlayerScientist 0
+float spaceTradingChancePlayerShaman 75
+float spaceTradingChancePlayerTrader 25
+float spaceTradingChancePlayerWanderer 0
+float spaceTradingChancePlayerWarrior 5
+float spaceTradingChancePlayerZealot 5
+float spaceTradingChanceScientist 30
+float spaceTradingChanceShaman 75
+float spaceTradingChanceTrader 25
+float spaceTradingChanceWarrior 5
+float spaceTradingChanceZealot 5
+float spaceTradingCostMultiplierDiplomat 2
+float spaceTradingCostMultiplierScientist 2
+float spaceTradingCostMultiplierShaman 0.75
+float spaceTradingCostMultiplierTrader 1
+float spaceTradingCostMultiplierUserCul 2
+float spaceTradingCostMultiplierUserEco 2
+float spaceTradingCostMultiplierUserMil 2
+float spaceTradingCostMultiplierZealot 2
+key spaceTradingExchangeFor portal2.prop
+uint32 spaceTradingQuantityToOffer 3
+key spaceTradingRequires interplanetarydrive.prop
+int32 spaceTradingRequiresTier 1
+key spaceTradingToolClass frequentflyer-2
+int32 spaceTradingToolReofferRate 70
+key spaceTradingType tool

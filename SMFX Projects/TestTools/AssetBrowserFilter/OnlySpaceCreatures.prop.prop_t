@@ -1,0 +1,8 @@
+keys browserFilterChildrenFilters
+	CreatureSpace
+end
+texts browserFilterName
+	(sporepedia!0x00020008) "Creatures"
+end
+keys browserFilterButtonGraphic
+end

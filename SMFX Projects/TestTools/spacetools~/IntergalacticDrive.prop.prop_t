@@ -1,0 +1,27 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Test"
+key spaceToolContext space
+texts spaceToolDescription
+	"Intergalactic Drive"
+end
+texts spaceToolDetailDescription
+	"Lets you teleport to any location in the galaxy."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld true
+bool spaceToolDisableOnSaveGames true
+bool spaceToolHide false
+key spaceToolImageID ufotools~!0x4AD21FAC.png
+float spaceToolMaxRange -1
+key spaceToolPanelKey travel_panel_top~
+float spaceToolRechargeRate 15
+key spaceToolStrategy IntergalacticDrive
+bool toolDeselectsAfterUse true
+float spaceToolEnergyCost 100
+bool toolHitOrientsToTerrain false
+bool toolIsSuperWeapon true
+bool toolPreventsPlanetExit true
+bool toolUseOnActivate true
+texts toolTargetFlagsFailMessage
+	"whoops"
+end

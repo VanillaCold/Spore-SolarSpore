@@ -1,0 +1,36 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Torpedo Solar 4"
+float spaceToolAutoFireRate 1
+int32 spaceToolBuyCost 0
+key spaceToolContext space
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	"Imperial Auto Blaster"
+end
+texts spaceToolDetailDescription
+	"A defensive weapon that will automatically fire on enemy turrets and spaceships when attacked. Can be toggled on and off."
+end
+float spaceToolEnergyCost 0.75
+key spaceToolImageID ufotools~!0xE5F742F6.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 150
+float spaceToolMaxRange 75
+float spaceToolMinDamage 150
+float spaceToolRechargeRate 1
+key spaceToolStrategy 0x2FD3EB55
+key spaceToolType other
+key spaceToolUpgradeFile torpedosolar3.prop
+int32 spaceToolUseCost 0
+bool toolCanPlayerLockOn true
+bool toolDestroysFloraAndFauna false
+key toolHitCombatantEffectID 0xDF808E66
+key toolHitGroundEffectID 0xDF808E66
+bool toolHitOrientsToTerrain false
+bool toolIsHoming true
+key toolMuzzleEffectID 0x6088B99A
+key toolProjectileEffectID 0xFFEA3B88
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileSpeed 75
+float toolProjectileTimeOut 1.5

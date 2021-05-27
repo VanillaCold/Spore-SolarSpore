@@ -1,0 +1,43 @@
+texts spaceToolDescription
+	"Lucky Dip"
+end
+texts spaceToolDetailDescription
+	"Gives you a completely random tool when used. Could be useful, could be something you already have."
+end
+key spaceToolImageID ufotools~!0xD4055DBF.png
+float spaceTradingAbundance 30
+bool spaceTradingAlliesOnly true
+float spaceTradingBaseCost 500000
+float spaceTradingChance 50
+float spaceTradingChanceBard 25
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 0
+float spaceTradingChancePlayerBard 25
+float spaceTradingChancePlayerDiplomat 0
+float spaceTradingChancePlayerEcologist 0
+float spaceTradingChancePlayerKnight 0
+float spaceTradingChancePlayerScientist 0
+float spaceTradingChancePlayerShaman 0
+float spaceTradingChancePlayerTrader 5
+float spaceTradingChancePlayerWanderer 0
+float spaceTradingChancePlayerWarrior 0
+float spaceTradingChancePlayerZealot 0
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 5
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierBard 1
+float spaceTradingCostMultiplierTrader 0.65
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierWarrior 0.5
+float spaceTradingCostMultiplierZealot 0.75
+key spaceTradingExchangeFor RandomTool.prop
+int32 spaceTradingRequiresTier 4
+int32 spaceTradingToolReofferRate 3
+key spaceTradingToolClass colonization
+key spaceTradingType tool

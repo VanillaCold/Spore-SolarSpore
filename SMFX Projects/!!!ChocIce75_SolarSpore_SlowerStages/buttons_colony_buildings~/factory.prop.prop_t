@@ -1,0 +1,31 @@
+key parent buttons_colony_buildings~!TemplateBuilding.prop
+texts blockName
+	(cip!0x05b05f02) "Factory"
+end
+key modelGonzagoClassID kBuildingIndustry~
+keys modelMainAbilityList
+	colony_factory
+end
+int32 modelPrice 38400
+texts paletteAssetSwatchEditTooltip
+	(planners!0x20000003) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchHeaderIcon editors_planner~!0x48E20B85.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x20000001) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x20000004) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchLockedIcon editors_planner~!0xC0ED2661.png
+keys paletteAssetSwatchNewIcon
+	editors_planner~!0x81F589D1.png
+	editors_planner~!0xE9CE5312.png
+	editors_planner~!0x37C74F17.png
+	editors_planner~!0xD6ABA33D.png
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x20000002) "Tooltip (PLACEHOLDER)"
+end
+key paletteItemHeaderIconID 0x403FACB3
+key paletteItemModelType BuildingIndustry

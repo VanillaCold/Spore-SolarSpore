@@ -1,0 +1,48 @@
+texts spaceToolDescription
+	(spacegame_tools!0xcca62f06) "Imperial Auto Blaster"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x0ed9431f) "A defensive weapon that will automatically fire on enemy turrets and spaceships when attacked. Can be toggled on and off."
+end
+key spaceToolImageID ufotools~!0xE5F742F6.png
+float spaceTradingAbundance 10
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 1000000
+keys spaceTradingBonusTool
+	torpedosolar4.prop
+	torpedogalaxy4.prop
+	torpedoplanet4.prop
+end
+float spaceTradingChance 0
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 0 #100
+float spaceTradingChancePlayerBard 0 #100
+float spaceTradingChancePlayerDiplomat 0 #100
+float spaceTradingChancePlayerEcologist 0 #100
+float spaceTradingChancePlayerScientist 0 #100
+float spaceTradingChancePlayerShaman 0 #100
+float spaceTradingChancePlayerTrader 0 #100
+float spaceTradingChancePlayerWanderer 0 #100
+float spaceTradingChancePlayerWarrior 0 #100
+float spaceTradingChancePlayerZealot 0 #100
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 0
+float spaceTradingChanceWarrior 0 #100
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierTrader 0.65
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierWarrior 0.5
+float spaceTradingCostMultiplierZealot 0.75
+key spaceTradingExchangeFor autoblasterlevel4.prop
+key spaceTradingRequires autoblasterlevel4.prop
+key spaceTradingRequiresBadge conquerer-3
+key spaceTradingRequiresBadgeOr colonist-3
+int32 spaceTradingRequiresTier 4
+key spaceTradingToolClass combat
+key spaceTradingType upgrade

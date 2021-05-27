@@ -1,0 +1,29 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x007135FF
+texts spaceToolDescription
+	"Lowryum"
+end
+texts spaceToolDetailDescription
+	"An odd material that can float at any time, especially above chairs."
+end
+uint32s spaceToolImageColors
+	0xff7135FF
+end
+key spaceToolImageID ufotools~!lowryum.png
+float spaceTradingBaseCost 50000
+float spaceTradingChanceBlueEasy 0
+float spaceTradingChanceBlueHard 0
+float spaceTradingChanceRedEasy 0
+float spaceTradingChanceRedHard 0
+float spaceTradingChanceYellowEasy 0
+float spaceTradingChanceYellowHard 0
+texts spaceTradingNeed
+	"Our spaceships are too heavy to take off. We need some Lowryum to fix this."
+end
+texts spaceTradingNoNeed
+	"Please take a look at our fine goods available."
+end
+key spaceTradingType spice
+bool SS-UseSpiceOnHomeworld false

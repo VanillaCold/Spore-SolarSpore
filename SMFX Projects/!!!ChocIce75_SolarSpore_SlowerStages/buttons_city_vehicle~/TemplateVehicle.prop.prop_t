@@ -1,0 +1,27 @@
+string16 description "Vehicle"
+key paletteAssetSwatchBackgroundImage editors_planner~!0x908F1077.png
+texts paletteAssetSwatchEditTooltip
+	(planners!0x04a505a4) "Tooltip (PLACEHOLDER)"
+end
+bool paletteAssetSwatchEditable true
+key paletteAssetSwatchHeaderIcon editors_planner~!0x959F6015.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x04a505a2) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x04a505a5) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchLockedBackgroundImage editors_planner~!0xD20FD1D3.png
+key paletteAssetSwatchLockedIcon editors_planner~!0x5A4A8A5C.png
+keys paletteAssetSwatchNewIcon
+	editors_planner~!0x80EF10FB.png
+	editors_planner~!0xE18B4E08.png
+	editors_planner~!0x2035B305.png
+	editors_planner~!0xC69A2E03.png
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x04a505a3) "Tooltip (PLACEHOLDER)"
+end
+bool paletteItemIsDraggable false
+key paletteItemTriggerBehavior Click
+key paletteItemType 0x8BFAC054

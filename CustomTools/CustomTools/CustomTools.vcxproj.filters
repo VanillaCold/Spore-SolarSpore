@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="CustomTools">
+      <UniqueIdentifier>{3880d018-2395-4502-abfe-4b83e0817aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal">
+      <UniqueIdentifier>{d62ad12d-69d8-4933-8342-03043c9adc22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools">
+      <UniqueIdentifier>{27289670-4d44-4531-9650-9657e4b6342a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Random cheat thingy">
+      <UniqueIdentifier>{a899d681-405a-4a55-b131-d3c3cf573c8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\finished">
+      <UniqueIdentifier>{c28fcfcb-98fe-4b90-b866-a0193c6c38f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Planet De-Buster">
+      <UniqueIdentifier>{3aad31cb-0dd4-4b2b-9f1c-b4995659759a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems">
+      <UniqueIdentifier>{0f11701f-f943-48e9-a791-f40a4f4c5a23}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="vehicletest.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnVehicle.h">
+      <Filter>CustomTools\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToSol.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeSpecies.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="EraseSpecies.h">
+      <Filter>CustomTools\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="MySystem.h">
+      <Filter>CustomTools\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvertPlanet.h">
+      <Filter>CustomTools\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="infinitecolonies.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="StaffofDeath.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="GroxColony.h">
+      <Filter>CustomTools\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeCaptain.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="SetPlanetType.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="PlanetDebuster.h">
+      <Filter>CustomTools\Tools\Planet De-Buster</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemCount.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="ContactHomeworld.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomArchetypeTools.h">
+      <Filter>CustomTools\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomTool.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="WanderingPortal.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="LifeBurst.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="BerserkerRage.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="SpiceDye.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="Detente.h">
+      <Filter>CustomTools\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="IntergalacticDrive.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="RegalShield.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="AmmoCreator.h">
+      <Filter>CustomTools\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Capacitor.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="ReturnPortal.h">
+      <Filter>CustomTools\Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>CustomTools</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="vehicletest.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnVehicle.cpp">
+      <Filter>CustomTools\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToSol.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeSpecies.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="MySystem.cpp">
+      <Filter>CustomTools\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertPlanet.cpp">
+      <Filter>CustomTools\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="EraseSpecies.cpp">
+      <Filter>CustomTools\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="infinitecolonies.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="StaffofDeath.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="GroxColony.cpp">
+      <Filter>CustomTools\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeCaptain.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="SetPlanetType.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="PlanetDebuster.cpp">
+      <Filter>CustomTools\Tools\Planet De-Buster</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemCount.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactHomeworld.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomArchetypeTools.cpp">
+      <Filter>CustomTools\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomTool.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="WanderingPortal.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="LifeBurst.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="BerserkerRage.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="SpiceDye.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="Detente.cpp">
+      <Filter>CustomTools\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="IntergalacticDrive.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="RegalShield.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="AmmoCreator.cpp">
+      <Filter>CustomTools\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Capacitor.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="ReturnPortal.cpp">
+      <Filter>CustomTools\Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SdkPathConfig.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>Internal</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+key creatureGoalCardLayout layouts~!0x2ACCFCD6
+texts creatureGoalCardTextB
+	(cell!0xcccc0020) "Skewer"
+end
+texts creatureGoalCardTextC
+	(cell!0xcccc0021) "Skewer 10 cells with your proboscis"
+end
+texts creatureGoalCardTextD
+	(cell!0xcccc0022) "Skewer 10 cells with your proboscis"
+end
+uint32 0x5D6796FD 0x74c1935d
+uint32 0x63FF8CC5 0x06398d4f
+uint32 0xE2DA314E 0xb4c1a518

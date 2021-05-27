@@ -1,0 +1,16 @@
+key parent spacetoolui~!panelTemplate.prop
+string16 spaceToolActiveCursor "cursor-spg-travel-on"
+key spaceToolEmptyLayoutKey 0xAFFD4D46.layout
+string16 spaceToolInvalidCursor "cursor-no-opt"
+uint32 spaceToolItemsPerCol 1
+uint32 spaceToolItemsPerRow 9
+uint32 spaceToolKeySelectMode 2
+key spaceToolLayoutKey 0x42F0094C.layout
+uint32 spaceToolPanelControlID 0x05f4d24c
+string16 spaceToolRechargeCursor "cursor-spg-travel-wait"
+uint32 spaceToolScrollDirection 0x41478d35
+key spaceToolSuperLayoutKey 0x5B806663.layout
+key spaceToolToggleLayoutKey 0xC0A3C2D6.layout
+uint32 spaceToolTotalItems 0xffffffff
+key spaceToolUseLayoutKey 0x7545D13F.layout
+string16 spaceToolValidCursor "cursor-spg-travel-norm"

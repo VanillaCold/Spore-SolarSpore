@@ -1,0 +1,21 @@
+key parent 0x26ABAA21
+string16 description "Creature Nest - Brain Level 0"
+float modelBoundingRadius 6.5
+keys modelEffect
+	0x2B129295
+end
+key modelHavokShape havok!0xBECF22F2.hkx
+floats modelLODDistances
+	130
+	160
+	190
+end
+vector3 modelLevelParams (45, 0, 1)
+key modelLevelTexture 0xF6A4E168
+key modelMeshLOD0 floraModels_LOD0~!0x9E7C4693.gmdl
+key modelMeshLOD1 floraModels_LOD1~!0x9E7C4693.gmdl
+key modelMeshLOD2 floraModels_LOD2~!0x9E7C4693.gmdl
+bool modelMeshUseHavokMesh false
+vector3 modelOffset (0, 0, -0.03)
+float modelOverrideFootprintRadius 6.5
+float terraformClearFloraRadius 14

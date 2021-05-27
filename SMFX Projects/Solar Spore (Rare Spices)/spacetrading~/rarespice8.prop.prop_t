@@ -1,0 +1,29 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x008DA4C4
+texts spaceToolDescription
+	"Steel"
+end
+texts spaceToolDetailDescription
+	"A strong but heavy metal alloy. Steel is used in the construction of many different things, such as vehicles."
+end
+uint32s spaceToolImageColors
+	0xff8DA4C4
+end
+key spaceToolImageID ufotools~!0x1585FFDA.png
+float spaceTradingBaseCost 3000
+float spaceTradingChanceBlueEasy 0
+float spaceTradingChanceBlueHard 0
+float spaceTradingChanceRedEasy 0
+float spaceTradingChanceRedHard 0
+float spaceTradingChanceYellowEasy 0
+float spaceTradingChanceYellowHard 0
+texts spaceTradingNeed
+	"The demand for steel is so high, we've ran out! Do you have any?"
+end
+texts spaceTradingNoNeed
+	"Please take a look at our fine goods available."
+end
+key spaceTradingType spice
+bool SS-UseSpiceOnHomeworld false

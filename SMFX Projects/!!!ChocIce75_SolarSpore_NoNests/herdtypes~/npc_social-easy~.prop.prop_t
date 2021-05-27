@@ -1,0 +1,22 @@
+key parent herdtypes~!npc_social.prop
+vector2 Altitude (1, 10000)
+float DamageMultiplier 0.5
+bool HasNest false
+float HitpointOverride 6
+vector2 OriginDistance (35, 120)
+vector2 WaterDistance (30, -1)
+vector2 slope (0, 55)
+uint32s upgradeHerdList
+	hash(npc_small_social-easy~)
+	hash(npc_medium_social-easy~)
+	hash(npc_large_social-easy~)
+end
+float 0x24A02634 1
+float 0x3E89ACC8 0.05
+bool 0x54F1CE40 true
+float 0x561C98AC 90
+vector2s 0xAFD5E585
+end
+float 0xB1559418 5
+float 0xC75C3509 25
+float 0xCBB8D102 60

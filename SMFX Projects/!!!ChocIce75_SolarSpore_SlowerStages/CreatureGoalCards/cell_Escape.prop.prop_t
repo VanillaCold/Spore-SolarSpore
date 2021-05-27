@@ -1,0 +1,12 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+texts creatureGoalCardTextB
+	(cell!0xcccc0007) "Escape"
+end
+texts creatureGoalCardTextC
+	(cell!0xcccc0008) "Escape"
+end
+texts creatureGoalCardTextD
+	(cell!0xcccc0009) "Something is after you, run away!"
+end
+uint32 0x5D6796FD 0x74c1935d
+uint32 0xE2DA314E 0xb4c1a518

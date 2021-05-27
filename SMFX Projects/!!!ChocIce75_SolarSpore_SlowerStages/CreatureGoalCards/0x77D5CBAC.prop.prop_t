@@ -1,0 +1,11 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+texts creatureGoalCardTextB
+	(0xAD56080C!0xf4daf5c9) "Find"
+end
+texts creatureGoalCardTextC
+	(0xAD56080C!0xf4daf5cb) "Summary"
+end
+texts creatureGoalCardTextD
+	(0xAD56080C!0xf4daf5ca) "Find"
+end
+uint32 0x63FF8CC5 0x06398d4f

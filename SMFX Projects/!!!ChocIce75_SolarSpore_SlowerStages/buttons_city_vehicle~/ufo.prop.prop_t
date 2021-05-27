@@ -1,0 +1,39 @@
+key parent buttons_city_vehicle~!TemplateVehicle.prop
+texts blockName
+	(cip!0x05b05e30) "Spaceship"
+end
+keys modelCreateNewAbilityList
+	city_new_ufo
+end
+keys modelLockedAbilityList
+	city_locked_ufo
+end
+keys modelMainAbilityList
+	city_ufo
+end
+int32 modelPrice 0
+key paletteAssetSwatchBackgroundImage editors_planner~!0xD20FD1D3.png
+texts paletteAssetSwatchEditTooltip
+	(planners!0x31000003) "Tooltip (PLACEHOLDER)"
+end
+bool paletteAssetSwatchEditable true
+key paletteAssetSwatchHeaderIcon editors_planner~!0x3B9FEF73.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x31000001) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x31000004) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchLockedIcon editors_planner~!0x9D25173C.png
+keys paletteAssetSwatchNewIcon
+	editors_planner~!0x891E4BB0.png
+	editors_planner~!0x262D08C9.png
+	editors_planner~!0x9E36C51E.png
+	editors_planner~!0x394FB8AE.png
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x31000002) "Tooltip (PLACEHOLDER)"
+end
+key paletteItemHeaderIconID 0x0E0AB851
+bool paletteItemIsDraggable false
+key paletteItemModelType vehicleufo

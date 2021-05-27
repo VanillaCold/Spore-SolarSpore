@@ -1,0 +1,39 @@
+key parent buttons_city_vehicle~!TemplateVehicle.prop
+texts blockName
+	(cip!0x05b05e02) "Religious Sea"
+end
+keys modelCreateNewAbilityList
+	city_new_cultural
+end
+keys modelLockedAbilityList
+	city_locked_sea
+end
+keys modelMainAbilityList
+end
+int32 modelPrice 3000
+texts paletteAssetSwatchEditTooltip
+	(planners!0x21000003) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchHeaderIcon editors_planner~!0x63FCE511.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x21000001) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x21000004) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchLockedIcon editors_planner~!0x7C19F91D.png
+texts paletteAssetSwatchLockedText
+	(cip!0x05b1e102) "Gain control of 3 cities to invent sea vehicles and attack other continents!"
+end
+keys paletteAssetSwatchNewIcon
+	editors_planner~!0x891E4BB0.png
+	editors_planner~!0x262D08C9.png
+	editors_planner~!0x9E36C51E.png
+	editors_planner~!0x394FB8AE.png
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x21000002) "Tooltip (PLACEHOLDER)"
+end
+key paletteItemHeaderIconID 0x010626F8
+key paletteItemModelType VehicleCulturalWater
+int32 paletteItemVehicleType 1

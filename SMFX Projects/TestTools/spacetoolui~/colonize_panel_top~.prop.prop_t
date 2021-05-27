@@ -1,0 +1,16 @@
+key parent spacetoolui~!panelTemplate.prop
+string16 spaceToolActiveCursor "cursor-spg-colonize-on"
+key spaceToolEmptyLayoutKey 0xAFFD4D46.layout
+string16 spaceToolInvalidCursor "cursor-no-opt"
+uint32 spaceToolItemsPerCol 1
+uint32 spaceToolItemsPerRow 9
+uint32 spaceToolKeySelectMode 1
+key spaceToolLayoutKey 0x9F5D0AAE.layout
+uint32 spaceToolPanelControlID 0x05f4c6b8
+key spaceToolSuperLayoutKey colony_panel_superweapon.layout
+string16 spaceToolRechargeCursor "cursor-spg-colonize-wait"
+uint32 spaceToolScrollDirection 0x41478d35
+key spaceToolToggleLayoutKey 0xA2BC3714.layout
+uint32 spaceToolTotalItems 0xffffffff
+key spaceToolUseLayoutKey 0x086B75A1.layout
+string16 spaceToolValidCursor "cursor-spg-colonize-norm"

@@ -1,0 +1,24 @@
+string16 description "Building"
+key paletteAssetSwatchBackgroundImage editors_planner~!0x908F1077.png
+texts paletteAssetSwatchEditTooltip
+	(planners!0x04a50268) "Tooltip (PLACEHOLDER)"
+end
+bool paletteAssetSwatchEditable true
+key paletteAssetSwatchHeaderIcon editors_planner~!0x959F6015.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x04a50266) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x04a50269) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchLockedBackgroundImage editors_planner~!0xD20FD1D3.png
+keys paletteAssetSwatchNewIcon
+	editors_planner~!0x3EB357A1.png
+	editors_planner~!0x3D35F362.png
+	editors_planner~!0x49A72B47.png
+	editors_planner~!0x2A1342AD.png
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x04a50267) "Tooltip (PLACEHOLDER)"
+end
+key paletteItemType 0x81C74DBC

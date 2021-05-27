@@ -1,0 +1,17 @@
+texts blockName
+	(cip!0x05b05f04) "Turret"
+end
+key modelGonzagoClassID kBuildingEntertainment~
+keys modelMainAbilityList
+	city_defense
+end
+key modelMeshLOD0 0x76545C16.rw4
+int32 modelPrice 10000
+key paletteAssetSwatchBackgroundImage editors_planner~!0xD20FD1D3.png
+bool paletteAssetSwatchEditable false
+key paletteAssetSwatchHeaderIcon editors_planner~!0x6D3249E3.png
+key paletteAssetSwatchLockedBackgroundImage editors_planner~!0xD20FD1D3.png
+key paletteAssetSwatchLockedIcon editors_planner~!0x792CCB3B.png
+key paletteItemHeaderIconID 0xE2D8B23D
+key paletteItemModelType BuildingTurret
+key paletteItemType 0x0142462A

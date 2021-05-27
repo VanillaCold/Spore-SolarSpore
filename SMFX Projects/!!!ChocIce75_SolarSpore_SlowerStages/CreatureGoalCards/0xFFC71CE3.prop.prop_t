@@ -1,0 +1,20 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+key creatureGoalCardLayout layouts~!0xAC7D78D8
+texts creatureGoalCardTextA
+	(0xAD56080C!0x064d4053) "Text 1: Verb Species"
+end
+texts creatureGoalCardTextB
+	(0xAD56080C!0x064d4054) "Text 2: Verb"
+end
+texts creatureGoalCardTextC
+	(0xAD56080C!0x064d4055) "Text 3: collapsed card"
+end
+texts creatureGoalCardTextD
+	(0xAD56080C!0x064d4056) "Text 4: expanded card"
+end
+texts creatureGoalCardTextE
+	(0xAD56080C!0x067394f7) "Text 5: log detail description"
+end
+uint32 0x5D6796FD 0x74c1935d
+uint32 0x63FF8CC5 0x06398d4d
+uint32 0xE2DA314E 0xb4c1a518

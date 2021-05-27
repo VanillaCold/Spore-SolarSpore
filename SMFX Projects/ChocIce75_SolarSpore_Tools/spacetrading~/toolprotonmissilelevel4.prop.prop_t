@@ -1,0 +1,45 @@
+texts spaceToolDescription
+	"Imperial Proton Missile"
+end
+texts spaceToolDetailDescription
+	"Fires a powerful homing Proton Missile at its target.  Effective against enemy spaceships."
+end
+key spaceToolImageID ufotools~!0x0BBF8B7F.png
+float spaceTradingAbundance 25
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 1200000
+float spaceTradingChance 5
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 100
+float spaceTradingChanceWarrior 100
+float spaceTradingChanceZealot 100
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierTrader 0.65
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierWarrior 0.5
+float spaceTradingCostMultiplierZealot 0.75
+key spaceTradingExchangeFor protonmissilelevel4.prop
+uint32 spaceTradingQuantityToOffer 1
+key spaceTradingRequires protonmissilelevel3.prop
+key spaceTradingRequiresBadge conquerer-4
+key spaceTradingRequiresBadgeOr bodyguard-3
+int32 spaceTradingRequiresTier 4
+key spaceTradingToolClass combat
+int32 spaceTradingToolReofferRate 40
+key spaceTradingType upgrade

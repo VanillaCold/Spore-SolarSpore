@@ -1,0 +1,29 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x00de4811
+texts spaceToolDescription
+	"Red Sporillium"
+end
+texts spaceToolDetailDescription
+	"A type of Sporillium which often produces an eye-watering effect when burnt and is commonly mistaken for Red Spice."
+end
+uint32s spaceToolImageColors
+	0xffde4811
+end
+key spaceToolImageID ufotools~!0xA690DC79.png
+float spaceTradingBaseCost 3375
+float spaceTradingChanceBlueEasy 0
+float spaceTradingChanceBlueHard 0
+float spaceTradingChanceRedEasy 0
+float spaceTradingChanceRedHard 0
+float spaceTradingChanceYellowEasy 0
+float spaceTradingChanceYellowHard 0
+texts spaceTradingNeed
+	(SpaceGame!0x043af039) "Wow, we're really crave some Red Spice."
+end
+texts spaceTradingNoNeed
+	(SpaceGame!0x043af038) "Please take a look at our fine goods available."
+end
+key spaceTradingType spice
+bool SS-UseSpiceOnHomeworld false

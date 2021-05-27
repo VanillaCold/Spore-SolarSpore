@@ -1,0 +1,29 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x00674C82
+texts spaceToolDescription
+	"E-DNA"
+end
+texts spaceToolDetailDescription
+	"An unstable type of DNA that can be used to modify and even weaponize life itself."
+end
+uint32s spaceToolImageColors
+	0xff674C82
+end
+key spaceToolImageID ufotools~!edna.png
+float spaceTradingBaseCost 2500
+float spaceTradingChanceBlueEasy 0
+float spaceTradingChanceBlueHard 0
+float spaceTradingChanceRedEasy 0
+float spaceTradingChanceRedHard 0
+float spaceTradingChanceYellowEasy 0
+float spaceTradingChanceYellowHard 0
+texts spaceTradingNeed
+	"We are in need of E-DNA. You do not need to know the specifics."
+end
+texts spaceTradingNoNeed
+	"The Crogenitors gave us tons of E-DNA. More than we need. You will want it."
+end
+key spaceTradingType spice
+bool SS-UseSpiceOnHomeworld false

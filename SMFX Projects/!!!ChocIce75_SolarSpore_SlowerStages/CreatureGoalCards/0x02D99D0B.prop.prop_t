@@ -1,0 +1,12 @@
+key parent CreatureGoalCards!0x2E7E2B68.prop
+texts creatureGoalCardTextB
+	(TribeGame!0x055407c2) "eating"
+end
+texts creatureGoalCardTextC
+	(TribeGame!0x055407c4) "Summary"
+end
+texts creatureGoalCardTextD
+	(TribeGame!0x055407c3) "eating"
+end
+float priority 0.9
+uint32 0x6B15B5CB 50

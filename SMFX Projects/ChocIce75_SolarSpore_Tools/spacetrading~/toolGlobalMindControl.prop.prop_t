@@ -1,0 +1,44 @@
+texts spaceToolDescription
+	"Global Mind Control"
+end
+texts spaceToolDetailDescription
+	"Use on a planet to control its inhabitants, maing them surrender."
+end
+key spaceToolImageID ufotools~!0x43C721AB.png
+float spaceTradingAbundance 50
+bool spaceTradingAlliesOnly true
+float spaceTradingBaseCost 250000
+float spaceTradingChance 0#3
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0#100
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 0#15
+float spaceTradingChancePlayerBard 0
+float spaceTradingChancePlayerDiplomat 0
+float spaceTradingChancePlayerEcologist 0
+float spaceTradingChancePlayerScientist 0
+float spaceTradingChancePlayerShaman 0
+float spaceTradingChancePlayerTrader 0
+float spaceTradingChancePlayerWanderer 0
+float spaceTradingChancePlayerWarrior 0
+float spaceTradingChancePlayerZealot 0
+float spaceTradingChanceScientist 0#30
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 0#70
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 0 #75
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierScientist 1
+float spaceTradingCostMultiplierShaman 1
+float spaceTradingCostMultiplierTrader 0 #0.75
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierZealot 0.25
+key spaceTradingExchangeFor GlobalMindControl.prop
+uint32 spaceTradingQuantityToOffer 0#3 
+key spaceTradingRequires interplanetarydrive.prop
+int32 spaceTradingRequiresTier 5
+key spaceTradingToolClass frequentflyer-2
+int32 spaceTradingToolReofferRate 70
+key spaceTradingType tool

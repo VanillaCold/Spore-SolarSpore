@@ -1,0 +1,65 @@
+key parent herdtypes~!default.prop
+int32 FoodChainLevel 5
+vector2 NumCreatures (19, 19)
+int32 NumGuardLocations 10
+vector2 NumNests (1, 1)
+float RespawnRate 0
+vector2 WaterDistance (2, 25)
+vector2 slope (0, 20)
+float socialDecay 0
+int32 type 2
+vector2 0x0748B77B (0.167, 0.167)
+uint32 0x0DFE5F93 1
+float 0x24A02634 1
+int32 0x2D5624E5 1
+bool hasNest 1
+vector2 0x45D1A932 (5, 10)
+bool 0x54F1CE40 false
+float 0x561C98AC 1
+int32 0x690A9B9B 2
+float TerritoryRadius 25
+float 0x79B9184B 25
+uint32s 0x7ECAF0EE
+end
+uint32s 0x8ECEAD6D
+	0x778f18a1
+end
+colorRGB 0x9A2B74A7 (1, 1, 1)
+int32 0xB3D796FE 1
+float 0xC75C3509 25
+float 0xCBB8D102 10
+uint32s 0xDB9BFC2C
+	0xa347cc28
+	hash(SkeletonPartUnlockColumn1)
+	0xb86f7892
+	0x62f2d5eb
+	0xb86f7892
+	0xb86f7892
+	0x62f2d5eb
+	0xb86f7892
+	0xb86f7892
+	0x62f2d5eb
+	0xb86f7892
+	0xb86f7892
+	0x62f2d5eb
+	0xb86f7892
+	0xb86f7892
+	0x62f2d5eb
+	0xb86f7892
+	0xb86f7892
+	0x62f2d5eb
+	0xb86f7892
+	0xb86f7892
+	0x62f2d5eb
+	0x0d6507b0
+	0x76d1ea2f
+	0x0d6507b3
+	0x0d6507b2
+	0x0d6507b5
+	hash(Sticks1)
+	hash(log)
+	hash(log)
+end
+uint32 0xE6C38666 6
+int32 0xF04C3DB9 1
+vector2 0xFE43F720 (10, 30)

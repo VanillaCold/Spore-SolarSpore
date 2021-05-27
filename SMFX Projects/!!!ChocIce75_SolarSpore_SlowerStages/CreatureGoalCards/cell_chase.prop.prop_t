@@ -1,0 +1,12 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+texts creatureGoalCardTextB
+	(0x51B756B2!0x00000001) "Chase"
+end
+texts creatureGoalCardTextC
+	(0x51B756B2!0x00000002) "Chase"
+end
+texts creatureGoalCardTextD
+	(0x51B756B2!0x00000003) "You need 10 food before you can access the editor"
+end
+uint32 0x5D6796FD 0x74c1935d
+uint32 0xE2DA314E 0xb4c1a518

@@ -1,0 +1,29 @@
+key inventoryItemArtifactModel sg_crate_spice_02
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x54de91
+texts spaceToolDescription
+	"Green Sporillium"
+end
+texts spaceToolDetailDescription
+	"Green Sporillium is used in fireplaces, as it relaxes nearby people when burnt."
+end
+uint32s spaceToolImageColors
+	0xff54de91
+end
+key spaceToolImageID ufotools~!0xA690DC79.png
+float spaceTradingBaseCost 10125
+float spaceTradingChanceBlueEasy 0
+float spaceTradingChanceBlueHard 0
+float spaceTradingChanceRedEasy 0
+float spaceTradingChanceRedHard 0
+float spaceTradingChanceYellowEasy 0
+float spaceTradingChanceYellowHard 0
+texts spaceTradingNeed
+	(SpaceGame!0x043af083) "Our leader wanted to know if you have any Green..."
+end
+texts spaceTradingNoNeed
+	(SpaceGame!0x043af082) "We've scanned your cargo, do you see anything that interests you? "
+end
+key spaceTradingType spice
+bool SS-UseSpiceOnHomeworld false

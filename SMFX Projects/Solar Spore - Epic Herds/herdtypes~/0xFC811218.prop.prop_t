@@ -1,0 +1,124 @@
+key parent herdtypes~!default.prop
+vector2 Altitude (0, 20)
+uint32 ArchetypeGroup 0xfc811218
+vector3s Attack
+	(2, 0, 0)
+end
+vector3s BaseGear
+	(2, 0, 0)
+end
+vector3s Cost
+	(0, 500, 50000)
+end
+float DamageMultiplier 100
+int32 FoodChainLevel 10
+bool HasNest false
+float HitpointOverride 1000
+vector2 NumCreatures (3, 3)
+vector3s NumFeet
+	(0, 1, 10000)
+end
+vector3s NumGraspers
+	(2, 0, 0)
+end
+vector2 NumNests (1, 1)
+int32 NumToKillForExtinction 3
+vector2 OriginDistance (50, 80)
+float RespawnRate 600
+float 0xa1b3a751 3000
+vector3s Social
+	(2, 0, 0)
+end
+float TerritoryRadius 150
+vector3s TotalAttack
+	(2, 0, 0)
+end
+vector3s TotalSocial
+	(2, 0, 0)
+end
+vector2 WaterDistance (25, -1)
+vector3s biteCapRange
+	(2, 0, 0)
+end
+vector3s chargeCapRange
+	(2, 0, 0)
+end
+vector3s danceCapRange
+	(2, 0, 0)
+end
+float foodValue 300
+vector3s healthCapRange
+	(2, 0, 0)
+end
+vector3s height
+	(2, 0, 0)
+end
+bool isEpic true
+vector3s singCapRange
+	(2, 0, 0)
+end
+vector2 slope (0, 35)
+float socialDecay 100
+vector3s spitCapRange
+	(2, 0, 0)
+end
+vector3s strikeCapRange
+	(2, 0, 0)
+end
+int32 type 1
+vector2 0x0748B77B (0, 0)
+vector3s 0x095BE098
+	(2, 0, 0)
+end
+float 0x23A57CB5 2
+float 0x24A02634 1
+vector3s 0x2DFB4F9F
+	(2, 0, 0)
+end
+bool 0x3A509D24 true
+uint32 0x3F5504EC 1
+float 0x4934CACA 0.08
+bool 0x54F1CE40 true
+float 0x561C98AC 75
+float 0x56EBD162 20
+float 0x5B0E0D01 100
+float 0x5FBA6EE4 50
+int32 0x690A9B9B 100
+vector3 0x6B152F47 (9, 18, 0)
+float 0x79B9184B 5000
+uint32s 0x7ECAF0EE
+end
+bool 0x80CD38C6 true
+bool 0x835025DA true
+float 0x8C20B411 10
+uint32s 0x8ECEAD6D
+	0xcd061bba
+	0xb7f7f5b5
+	0x89004f0a
+end
+colorRGB 0x9A2B74A7 (1, 1, 1)
+vector3s 0xA28A67E8
+	(0, 1, 2)
+end
+vector3s 0xA5AE7F21
+	(2, 0, 0)
+end
+int32 0xACD16349 4
+vector2s 0xAFD5E585
+	(120, 300)
+	(120, 300)
+end
+float 0xC33386A0 100
+float 0xC75C3509 10
+float 0xCBB8D102 50
+uint32s 0xDB9BFC2C
+	hash(SkeletonPartUnlockColumn4)
+	hash(SkeletonPartUnlockColumn4)
+	hash(SkeletonPartUnlockColumn1)
+	0xcaaebfc2
+	0x6b03a493
+end
+uint32 0xE6C38666 5
+float 0xE95BF2F7 10
+float 0xED65739A 135
+vector2 0xF51B95CB (0, 0)

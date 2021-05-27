@@ -1,0 +1,22 @@
+key parent buttons_colony_buildings~!TemplateBuilding.prop
+texts blockName
+	(cip!0x05b05f00) "City Hall"
+end
+key modelGonzagoClassID kBuildingCityHall~
+key paletteAssetSwatchBackgroundImage editors_planner~!0xED7BE52C.png
+texts paletteAssetSwatchEditTooltip
+	(planners!0x30000003) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchHeaderIcon editors_planner~!0x959F6015.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x30000001) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x30000004) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x30000002) "Tooltip (PLACEHOLDER)"
+end
+key paletteItemHeaderIconID 0xA3D8A0CB
+bool paletteItemIsDraggable false
+key paletteItemModelType BuildingCityHall

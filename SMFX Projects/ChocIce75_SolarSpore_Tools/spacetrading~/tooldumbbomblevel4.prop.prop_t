@@ -1,0 +1,43 @@
+texts spaceToolDescription
+	"Imperial Bomb"
+end
+texts spaceToolDetailDescription
+	"A very powerful bomb, capable of destroying many vehicles and buildings."
+end
+key spaceToolImageID ufotools~!0x193DF54C.png
+float spaceTradingAbundance 10
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 2600000
+float spaceTradingChance 5
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 0
+float spaceTradingChanceWarrior 100
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierTrader 0.65
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierWarrior 0.5
+float spaceTradingCostMultiplierZealot 0.75
+key spaceTradingExchangeFor dumbbomblevel4.prop
+key spaceTradingRequires dumbbomblevel3.prop
+key spaceTradingRequiresBadge warmonger-4
+key spaceTradingRequiresBadgeOr colonist-4
+int32 spaceTradingRequiresTier 5
+key spaceTradingToolClass combat
+key spaceTradingType upgrade

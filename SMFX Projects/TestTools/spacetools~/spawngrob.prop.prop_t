@@ -1,0 +1,45 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Place Colony"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 1000
+key spaceToolContext planet
+texts spaceToolDescription
+	"Grox Takeover"
+end
+texts spaceToolDetailDescription
+	"Makes the Grox take over the given planet, if deterraformed."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld true
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!0x555AAE55.png
+int32 spaceToolInitialAmmoCount 1
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxRange -1
+key spaceToolPanelKey colonize_panel_bottom~
+float spaceToolRechargeRate 0
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy groxcolony
+key spaceToolType special
+int32 spaceToolUseCost 0
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+bool toolDeselectsOnPlanetExit true
+bool toolDoActionPostEffect true
+bool toolHitOrientsToTerrain true
+key toolMuzzleEffectID SG_ufo_place_colony_muzzle
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_ufo_place_colony_projectile
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 30
+int32s toolTargetFlags
+	0x9b8e862f
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

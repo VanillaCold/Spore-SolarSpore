@@ -1,0 +1,54 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Staff of Death"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 25000
+key spaceToolContext planet
+float spaceToolDamageArea 35
+texts spaceToolDescription
+	"Staff of Death"
+end
+texts spaceToolDetailDescription
+	"Use on planet to destroy its atmosphere permamently."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+bool spaceToolHide false
+key spaceToolImageID ufotools~!0x0BBF8B7F.png
+int32 spaceToolInitialAmmoCount 5
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxRange -1
+key spaceToolPanelKey atmospheric_panel_bottom~
+float spaceToolRechargeRate 60
+key spaceToolStrategy StaffOfDeath
+key spaceToolType combat
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+key toolHitGroundEffectID 0x8EC3FB5C
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID 0x8EC3FB5C
+#int32 toolMeaningOfLifeRewardCount 42
+uint32 toolMinimapSlotsToggleEffect 0xe7c9ede0
+bool toolPreventsPlanetExit false
+key toolProjectileEffectID 0x59852035
+float toolProjectileExplosionExpansionRate 1
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 15
+key toolProjectileType Healing
+int32s toolTargetFlags
+	hash(animal)
+	0xa13abc9f
+	hash(turret)
+	hash(city)
+	hash(building)
+	0x9b8e862f
+	0x4bf0fa5a
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+bool toolUseOnActivate false
+uint32 toolTerraformingIconKey 0x44bb4db9

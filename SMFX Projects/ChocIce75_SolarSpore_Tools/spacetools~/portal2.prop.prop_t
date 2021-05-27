@@ -1,0 +1,28 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "HomeworldPortal"
+int32 spaceToolAmmoUsedPerShot 1
+key spaceToolContext planet
+texts spaceToolDescription
+	"Homeworld Portal"
+end
+texts spaceToolDetailDescription
+	"Returns you to your home system through a portal."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld true
+bool spaceToolDisableOnSaveGames false
+key spaceToolImageID consequence~!0xF9DA1BF7.png
+int32 spaceToolMaxAmmoCount 99
+int32 spaceToolMaxDiscoveredAmmo 3
+float spaceToolMaxRange -1
+key spaceToolPanelKey travel_panel_top~
+float spaceToolRechargeRate 60
+key spaceToolStrategy 0xB0DA49D9
+key spaceToolType special
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+key toolGenericEffectID 0x21376D17
+bool toolHitOrientsToTerrain false
+bool toolIsSuperWeapon false
+bool toolPreventsPlanetExit true
+bool toolUseOnActivate true

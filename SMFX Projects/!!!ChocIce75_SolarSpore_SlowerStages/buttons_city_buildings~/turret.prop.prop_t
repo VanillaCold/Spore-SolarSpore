@@ -1,0 +1,16 @@
+string16 description "Turret"
+texts blockName
+	(cip!0x05b05a40) "Turret"
+end
+key modelGonzagoClassID kBuildingEntertainment~
+keys modelLockedAbilityList
+	city_locked_turret
+end
+keys modelMainAbilityList
+	city_defense
+end
+int32 modelPrice 4000
+bool paletteAssetSwatchEditable false
+key paletteItemHeaderIconID 0xE2D8B23D
+key paletteItemModelType BuildingTurret
+key paletteItemType 0x0142462A

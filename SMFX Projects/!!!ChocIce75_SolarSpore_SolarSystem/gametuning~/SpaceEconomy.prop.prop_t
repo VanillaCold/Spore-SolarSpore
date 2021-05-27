@@ -1,0 +1,121 @@
+float attackRequestBaseCost 50000
+float attackRequestCostBuildingCountFactor 2000
+float attackRequestCostTurretCountFactor 3000
+int32 peaceBadOfferDelta -5000
+int32 peaceGoodOfferDelta 10000
+int32s peaceOfferPrices
+	40000
+	50000
+	60000
+	70000
+	80000
+end
+float peacePriceCaptureFactor 0
+float peacePriceElapsedSecondsFactor 0
+float peacePriceEnemySizeFactor 0
+float peacePricePlayerSizeFactor 0
+float peacePriceRelationshipFactor -6250
+int32 peaceVeryBadOfferDelta -11000
+float spaceEconomyAllianceTravelDiscount 0.2
+float spaceEconomyBuildingIncome 1.1
+int32 spaceEconomyCheatMoneyAmount 1000000
+int32 spaceEconomyCivicObjectCost 25
+float spaceEconomyColonyTravelDiscount 0
+bool spaceEconomyDebugDrawEconomy false
+int32 spaceEconomyDefensiveBuildingCost 10000
+float spaceEconomyEnergyRechargeDelay 5
+float spaceEconomyEnergyRechargeRate 0
+float spaceEconomyFuelRechargeTime 10
+int32 spaceEconomyHomeWorldBuildingMultiply 16
+int32 spaceEconomyMaxCargoCount 99
+float spaceEconomyMaxMoneyStoredPerTribe 50
+int32 spaceEconomyProductionBuildingCost 20000
+floats spaceEconomyRechargeCost
+	0
+	10
+	30
+	70
+	150
+	310
+end
+floats spaceEconomyRepairCost
+	0
+	1
+	3
+	7
+	15
+	31
+end
+float spaceEconomySpiceHomeworldMultiplier 0.025
+floats spaceEconomySpiceModifiers
+	1
+	1
+	1
+end
+float spaceEconomySpiceProductionMultiplier 0.0005
+float spaceEconomySpiceStorageMultiplier 2
+int32 spaceEconomyStartingMoney 100000
+int32 spaceEconomyTradeMaxSpiceBought 200
+int32s spaceEconomyTradeSpecialsOffered
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+	9
+end
+float spaceEconomyTravelCost 0
+float spaceEconomyTravelDamage 200
+float spaceEconomyTravelFuelCost 5
+float spaceEconomyTribeMemberIncome 0.008
+int32 spaceEconomyVehicleCost 500
+int32 spaceTransitionCulturalReward 0
+int32 spaceTransitionEconomicReward 0
+int32 spaceTransitionMilitaryReward 0
+int32 tradeCaptureBadOfferDelta -200000
+float tradeCaptureCostBuildingCountFactor 10
+int32 tradeCaptureCostT0 100000
+int32 tradeCaptureCostT1 400000
+int32 tradeCaptureCostT2 1200000
+int32 tradeCaptureCostT3 3500000
+float tradeCaptureCostTurretCountFactor 0
+float tradeCaptureDistanceBase 10
+float tradeCaptureDistanceFactor 1
+int32 tradeCaptureGoodOfferDelta 200000
+float tradeCaptureMaxRate 0.000066
+float tradeCaptureMinRate 0.000042
+int32s tradeCaptureOfferPrices
+	500000
+	1000000
+	3000000
+	5000000
+	0x00989680
+end
+float tradeCapturePerMS 0.00002
+int32 tradeCaptureVeryBadOfferDelta -400000
+float tradeRouteBundleInterval 240
+int32 tradeRouteMaxNumber 3
+float tradeRouteRemainingBuildingRatio 1
+float tradeRouteRemainingCityRatio 1
+float tradeRouteRemainingPlanetRatio 1
+float tradeRouteShipIntervalGalaxy 1
+float tradeRouteShipIntervalSolar 10

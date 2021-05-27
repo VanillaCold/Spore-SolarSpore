@@ -1,0 +1,9 @@
+key parent civpopupbase~!EventTemplate.prop
+string16 description "Ecologist Tool"
+bool eventAllowDuplicates true
+key eventCategory Info
+texts eventDescription
+	"You have been awarded Life Burst for colonizing 30 systems!"
+end
+float eventRemoveTime 15
+float eventStartFadeTime 10

@@ -1,0 +1,29 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Test"
+key spaceToolContext always
+float spaceToolChargeRate 0
+texts spaceToolDescription
+	"Regal Shield"
+end
+texts spaceToolDetailDescription
+	"Reduces all damage taken by 75%, at the cost of reserving 50% of your energy."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld true
+bool spaceToolDisableOnSaveGames true
+float shield-Multiplier 0.75
+float percentEnergyToNotReserve 0.50
+bool spaceToolHide false
+bool toolIsSuperWeapon true
+key spaceToolImageID ufotools~!0x71B594FE.png
+float spaceToolMaxRange -1
+key spaceToolPanelKey combat_panel_top~
+float spaceToolRechargeRate 60
+key spaceToolStrategy RegalShield
+bool toolDeselectsAfterUse false
+bool toolHitOrientsToTerrain false
+bool toolPreventsPlanetExit false
+bool toolUseOnActivate true
+texts toolTargetFlagsFailMessage
+	"whoops"
+end

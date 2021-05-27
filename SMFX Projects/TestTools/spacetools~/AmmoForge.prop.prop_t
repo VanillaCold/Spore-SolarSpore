@@ -1,0 +1,30 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "RandTool"
+key spaceToolContext space
+texts spaceToolDescription
+	"Ammo Forge - $750,000 per Tool"
+end
+texts spaceToolDetailDescription
+	"Creates ammo for tools, while paying a large price."
+end
+bool spaceToolDisableOn201Ruins false
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+bool spaceToolHide false
+bool spaceToolUsesAmmo true
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolMaxAmmoCount 99
+key spaceToolImageID ufotools~!0x1585FFDA.png
+float spaceToolMaxRange -1
+key spaceToolPanelKey travel_panel_bottom~
+float spaceToolRechargeRate 60
+key toolMuzzleEffectID 0x2E570807
+key spaceToolStrategy AmmoCreator
+bool toolDeselectsAfterUse true
+bool toolHitOrientsToTerrain false
+bool toolIsSuperWeapon false
+bool toolPreventsPlanetExit true
+bool toolUseOnActivate true
+texts toolTargetFlagsFailMessage
+	"whoops"
+end

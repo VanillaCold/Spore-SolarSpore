@@ -1,0 +1,43 @@
+texts spaceToolDescription
+	"Peace Bomb"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x2e4a83a6) "A weak bomb, capable of damaging vehicles and buildings."
+end
+key spaceToolImageID ufotools~!0x193DF54E.png
+float spaceTradingAbundance 15
+bool spaceTradingAlliesOnly true
+float spaceTradingBaseCost 200000
+float spaceTradingChance 10
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 75
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 0
+float spaceTradingChancePlayerBard 0
+float spaceTradingChancePlayerDiplomat 75
+float spaceTradingChancePlayerEcologist 0
+float spaceTradingChancePlayerScientist 0
+float spaceTradingChancePlayerShaman 0
+float spaceTradingChancePlayerTrader 25
+float spaceTradingChancePlayerWanderer 0
+float spaceTradingChancePlayerWarrior 0
+float spaceTradingChancePlayerZealot 0
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 25
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 0.5
+float spaceTradingCostMultiplierTrader 1.5
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierWarrior 0.5
+float spaceTradingCostMultiplierZealot 0.75
+key spaceTradingExchangeFor peacebomb2.prop
+uint32 spaceTradingQuantityToOffer 3
+key spaceTradingRequiresBadge diplomat-3
+int32 spaceTradingRequiresTier 3
+key spaceTradingToolClass social
+int32 spaceTradingToolReofferRate 120
+key spaceTradingType tool

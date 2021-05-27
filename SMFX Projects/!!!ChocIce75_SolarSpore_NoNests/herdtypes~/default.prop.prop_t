@@ -1,0 +1,176 @@
+vector2 Altitude (0, 1000)
+#0xa1b3a751 is possibly DNA recieved when killing, testing is needed
+#0x85E8AF05 also is another contestant, maybe the former is for socializing and the latter is for hunting?
+vector3s Attack
+	(2, 0, 40)
+end
+vector3s BaseGear
+	(2, 0, 3.0999999)
+end
+vector3s Cost
+	(2, 0, 0)
+end
+float DamageMultiplier 1
+int32 EggIndex -1
+int32 FoodChainLevel 5
+bool HasNest false
+float HitpointOverride 0
+uint32s ModelTypes
+	hash(creature)
+end
+vector2 NumCreatures (1, 2)
+vector3s NumFeet
+	(2, 0, 10000)
+end
+vector3s NumGraspers
+	(2, 0, 10000)
+end
+int32 NumGuardLocations 6
+vector2 NumNests (1, 1)
+int32 NumToImpressForBestFriends 6
+int32 NumToImpressForCurious 1
+int32 NumToImpressForFriendly 3
+int32 NumToKillForExtinction 6
+vector2 OriginDistance (5, 100)
+float RespawnRate 60
+float ScaleMultiplier 1
+vector3s Social
+	(2, 0, 10000)
+end
+float TerritoryRadius 0
+vector3s TotalAttack
+	(2, 0, 40)
+end
+vector3s TotalSocial
+	(2, 0, 10000)
+end
+vector2 WaterDistance (5, -1)
+uint32 archetypeRefillAmount 10
+uint32 archetypeRefillThreshold 10
+vector3s biteCapRange
+	(2, 0, 10)
+end
+vector3s chargeCapRange
+	(2, 0, 10)
+end
+vector3s cuteness
+	(2, 0, 10000)
+end
+vector3s danceCapRange
+	(2, 0, 10)
+end
+float foodValue 100
+vector3s glideCapRange
+	(2, 0, 10)
+end
+vector3s health
+	(2, 0, 10000)
+end
+vector3s healthCapRange
+	(2, 0, 10)
+end
+vector3s height
+	(2, 0.1, 10000)
+end
+bool isEpic false
+bool isMiniboss false
+vector3s mass
+	(2, 0.1, 10000)
+end
+vector3s senseCapRange
+	(2, 0, 10)
+end
+vector3s singCapRange
+	(2, 0, 10)
+end
+vector2 slope (0, 60)
+float socialDecay 2
+vector3s spitCapRange
+	(2, 0, 10)
+end
+vector3s sprintCapRange
+	(2, 0, 10)
+end
+vector3s stealthCapRange
+	(2, 0, 10)
+end
+vector3s strikeCapRange
+	(2, 0, 10)
+end
+int32 type 0
+uint32s upgradeHerdList
+end
+float 0x03B8CE20 2
+vector2 0x05459D34 (4, 6)
+vector2 0x0748B77B (0.2, 0.4)
+vector3s 0x095BE098
+	(2, 0, 10)
+end
+uint32 0x0DFE5F93 3
+int32 0x1900D4B3 2
+vector3s 0x1ACA5758
+	(2, 0, 5)
+end
+vector3 0x1EE4CAFD (1, 1, 1)
+float 0x23A57CB5 1
+float 0x24A02634 5
+int32 0x2D5624E5 1
+vector3s 0x2DFB4F9F
+	(2, 0, 2)
+end
+bool 0x3A509D24 true
+float 0x3E89ACC8 0.1
+uint32 0x3F5504EC 0
+vector2 0x45D1A932 (10, 15)
+float 0x4934CACA 1
+bool 0x54F1CE40 true
+float 0x561C98AC 5
+float 0x56EBD162 0
+float 0x5B0E0D01 1
+float 0x5FBA6EE4 10
+int32 0x690A9B9B 0
+vector3 0x6B152F47 (0, 0, 0)
+float 0x79B9184B 50
+bool 0x80CD38C6 true
+bool 0x835025DA false
+int32 0x85E8AF05 30
+vector2 0x8A3B9858 (0, 0)
+float 0x8C20B411 -1
+uint32s 0x8ECEAD6D
+	0x50a2c197
+end
+int32 0x90CB151D 6
+int32 0x95CEDA48 0
+float 0x9A75974A 0.3
+int32 0xA1B3A751 35
+vector3s 0xA28A67E8
+	(2, 0, 2)
+end
+vector3s 0xA5AE7F21
+	(2, 0, 10)
+end
+int32 0xA9DE6046 2
+int32 0xACD16349 0
+uint32 0xAD8B3088 0
+float 0xB1559418 4
+int32 0xB3D796FE 1
+int32 0xBB833F5A 3
+float 0xBF54A4FE 10
+float 0xC33386A0 1
+float 0xC75C3509 10
+float 0xCBB8D102 5
+vector3s 0xD80F4DB1
+	(2, 0, 5)
+end
+uint32 0xE6C38666 3
+float 0xE6F2FCE8 -1
+int32 0xE7548ABB 5
+float 0xE95BF2F7 -1
+int32 0xEB69140E 5
+float 0xED65739A -1
+int32 0xF04C3DB9 1
+vector3s 0xF25E3665
+	(2, 0, 10000)
+end
+vector2 0xF51B95CB (1, 1)
+vector2 0xFE43F720 (60, 120)

@@ -1,0 +1,29 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x0089EDFF
+texts spaceToolDescription
+	"Crystals"
+end
+texts spaceToolDetailDescription
+	"Rare crystals, found deep underground on some planets."
+end
+uint32s spaceToolImageColors
+	0xff89EDFF
+end
+key spaceToolImageID ufotools~!0xE62B3858.png
+float spaceTradingBaseCost 5000
+float spaceTradingChanceBlueEasy 0
+float spaceTradingChanceBlueHard 0
+float spaceTradingChanceRedEasy 0
+float spaceTradingChanceRedHard 0
+float spaceTradingChanceYellowEasy 0
+float spaceTradingChanceYellowHard 0
+texts spaceTradingNeed
+	"Our crystal mine was raided and we need some crystals for a festival. Do you have any?"
+end
+texts spaceTradingNoNeed
+	"Please take a look at our fine goods available."
+end
+key spaceTradingType spice
+bool SS-UseSpiceOnHomeworld false

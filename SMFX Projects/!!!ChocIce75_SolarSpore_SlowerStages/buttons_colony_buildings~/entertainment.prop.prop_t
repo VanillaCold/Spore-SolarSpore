@@ -1,0 +1,31 @@
+key parent buttons_colony_buildings~!TemplateBuilding.prop
+texts blockName
+	(cip!0x05b05f01) "Entertainment"
+end
+key modelGonzagoClassID kBuildingEntertainment~
+keys modelMainAbilityList
+	colony_entertainment
+end
+int32 modelPrice 25600
+texts paletteAssetSwatchEditTooltip
+	(planners!0x10000003) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchHeaderIcon editors_planner~!0xF9A3A473.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x10000001) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x10000004) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchLockedIcon editors_planner~!0xBFA7932B.png
+keys paletteAssetSwatchNewIcon
+	editors_planner~!0x3EB357A1.png
+	editors_planner~!0x3D35F362.png
+	editors_planner~!0x49A72B47.png
+	editors_planner~!0x2A1342AD.png
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x10000002) "Tooltip (PLACEHOLDER)"
+end
+key paletteItemHeaderIconID 0x661773DF
+key paletteItemModelType BuildingEntertainment

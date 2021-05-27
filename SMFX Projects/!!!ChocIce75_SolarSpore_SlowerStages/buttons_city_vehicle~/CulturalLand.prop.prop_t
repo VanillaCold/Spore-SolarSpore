@@ -1,0 +1,39 @@
+key parent buttons_city_vehicle~!TemplateVehicle.prop
+texts blockName
+	(cip!0x05b05e01) "Religious Land"
+end
+keys modelCreateNewAbilityList
+	city_new_cultural
+end
+keys modelLockedAbilityList
+	city_locked_land
+end
+keys modelMainAbilityList
+end
+int32 modelPrice 2000
+texts paletteAssetSwatchEditTooltip
+	(planners!0x11000003) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchHeaderIcon editors_planner~!0x2645866B.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x11000001) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x11000004) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchLockedIcon editors_planner~!0xF7EB0B63.png
+texts paletteAssetSwatchLockedText
+	(cip!0x05b1e101) "Need 40 Citizens to unlock"
+end
+keys paletteAssetSwatchNewIcon
+	editors_planner~!0x15CEFCDA.png
+	editors_planner~!0x3AFA1D87.png
+	editors_planner~!0xE87BD034.png
+	editors_planner~!0x25D76AE4.png
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x11000002) "Tooltip (PLACEHOLDER)"
+end
+key paletteItemHeaderIconID 0x0E087D90
+key paletteItemModelType VehicleCulturalLand
+int32 paletteItemVehicleType 0

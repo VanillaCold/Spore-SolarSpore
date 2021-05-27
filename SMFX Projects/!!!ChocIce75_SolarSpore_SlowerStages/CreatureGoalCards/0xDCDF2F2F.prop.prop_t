@@ -1,0 +1,11 @@
+key parent CreatureGoalCards!0x2E7E2B68.prop
+texts creatureGoalCardTextB
+	(TribeGame!0x0567cbee) "conquer"
+end
+texts creatureGoalCardTextC
+	(TribeGame!0x0567cbf0) "Summary"
+end
+texts creatureGoalCardTextD
+	(TribeGame!0x0567cbef) "conquer"
+end
+float priority 0.8

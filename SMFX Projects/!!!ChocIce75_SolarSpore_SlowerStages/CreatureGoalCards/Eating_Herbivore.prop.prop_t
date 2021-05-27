@@ -1,0 +1,12 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+int32 EvoPointReward 0
+texts creatureGoalCardTextB
+	(0xAD56080C!0x0509f9db) "Eat some fruit!"
+end
+texts creatureGoalCardTextC
+	(0xAD56080C!0x0524d325) "Summary"
+end
+texts creatureGoalCardTextD
+	(0xAD56080C!0x0509f9dc) "Eat some fruit!"
+end
+float priority 1

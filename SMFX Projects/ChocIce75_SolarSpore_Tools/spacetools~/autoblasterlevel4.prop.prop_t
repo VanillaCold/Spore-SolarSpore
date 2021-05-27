@@ -1,0 +1,32 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Imperial Auto Blaster"
+float spaceToolDamageArea 10
+texts spaceToolDescription
+	"Imperial Auto Blaster"
+end
+texts spaceToolDetailDescription
+	"A defensive weapon that will automatically fire on enemy turrets and spaceships when attacked."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 1
+key spaceToolImageID ufotools~!0xE5F742F6.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 300
+float spaceToolMaxRange 150
+float spaceToolMinDamage 300
+key spaceToolPanelKey combat_panel_top~
+float spaceToolRechargeRate 1
+key spaceToolStrategy 0xA5D0D08F
+key spaceToolType weapon
+key spaceToolUpgradeFile autoblasterlevel3.prop
+key toolHitCombatantEffectID 0xDF808E66
+key toolHitGroundEffectID 0xDF808E66
+key toolHitWaterEffectID 0xDF808E66
+key toolMuzzleEffectID 0x6088B99A
+key toolProjectileEffectID 0xFFEA3B88
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileSpeed 100
+float toolProjectileTimeOut 1.5

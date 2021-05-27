@@ -1,0 +1,14 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+key creatureGoalCardLayout layouts~!0x2ACCFCD6
+texts creatureGoalCardTextB
+	(0x5311BD6F!0x00000001) "Evolve"
+end
+texts creatureGoalCardTextC
+	(0x5311BD6F!0x00000002) "Eat food to evolve your cell"
+end
+texts creatureGoalCardTextD
+	(0x5311BD6F!0x00000003) "You need 10 food before you can access the editor"
+end
+uint32 0x5D6796FD 0x74c1935d
+uint32 0x63FF8CC5 0x06398d4f
+uint32 0xE2DA314E 0xb4c1a518

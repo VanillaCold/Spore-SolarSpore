@@ -1,0 +1,31 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x00970070
+texts spaceToolDescription
+	"Explodium"
+end
+texts spaceToolDetailDescription
+	"An incredibly explosive material, used to create planet-busters. Its high risk of spontaniously combusting makes it incredibly cheap."
+end
+uint32s spaceToolImageColors
+	0xff970070
+end
+key spaceToolImageID ufotools~!0x0B634E74.png
+float spaceTradingBaseCost 25
+float spaceTradingChanceBlueEasy 0
+float spaceTradingChanceBlueHard 0
+float spaceTradingChanceRedEasy 0
+float spaceTradingChanceRedHard 0
+float spaceTradingChanceYellowEasy 0
+float spaceTradingChanceYellowHard 0
+float spaceTradingCostMultiplierGrob 10000
+float spaceTradingCostMultiplierWarrior 2
+texts spaceTradingNeed
+	"We need a lot of explodium. Don't ask."
+end
+texts spaceTradingNoNeed
+	"Please take a look at our fine goods available."
+end
+key spaceTradingType spice
+bool SS-UseSpiceOnHomeworld false

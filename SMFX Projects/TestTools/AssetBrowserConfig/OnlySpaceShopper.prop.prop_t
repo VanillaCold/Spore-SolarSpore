@@ -1,0 +1,8 @@
+key parent AssetBrowserConfig!GlobalTemplate.prop
+texts sporepediaConfigCallToActionMessage
+	(sporepedia!0x00040017) "placeholder"
+end
+key sporepediaConfigSelectedFeed 0x63694C3B
+#<key sporepediaConfigRootFilterID OnlySpaceCreatures
+key sporepediaConfigSelectedFilterID OnlySpaceCreatures
+#>

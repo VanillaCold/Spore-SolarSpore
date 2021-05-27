@@ -1,0 +1,49 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Laser"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	"Test Laser"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x7f2e2c7b) "Use on ground targets. A precise, but weak weapon."
+end
+float spaceToolDetectableRange 0
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.25
+key spaceToolImageID ufotools~!0xD4055DBF.png
+float spaceToolMaxDamage 0
+float spaceToolMaxRange 200
+float spaceToolMinDamage 0
+key spaceToolPanelKey combat_panel_top~
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy 0xFC20C32D
+#key spaceToolType weapon
+#key spaceToolStrategy 0x2FD3EB55
+key spaceToolType 0x997EE240
+int32 spaceToolUseCost 0
+key toolBeamEffectID SG_laser_lvl_1_beam
+key toolHitCombatantEffectID SG_laser_lvl_1_beam_impact
+key toolHitGroundEffectID 0x0506A097
+#key toolHitGroundEffectID 0x7D2529EA
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID 0x7D2529EA
+bool toolIsHoming true
+#float toolRelationshipDelta -0.02
+int32s toolTargetFlags
+	hash(animal)
+	0xa13abc9f
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	0x9b8e862f
+	0x4bf0fa5a
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x7df2eccf) "You must choose a valid target to use this tool."
+end

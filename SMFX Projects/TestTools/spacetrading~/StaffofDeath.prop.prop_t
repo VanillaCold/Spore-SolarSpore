@@ -1,0 +1,45 @@
+texts spaceToolDescription
+	"Staff of Death"
+end
+texts spaceToolDetailDescription
+	"Permamently and instantly destroys a planet's atmosphere."
+end
+key spaceToolImageID ufotools~!0x0BBF8B7F.png
+float spaceTradingAbundance 15
+bool spaceTradingAlliesOnly true
+float spaceTradingBaseCost 10000000
+float spaceTradingChance 50
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 0
+float spaceTradingChancePlayerDiplomat 0
+float spaceTradingChancePlayerEcologist 0
+float spaceTradingChancePlayerKnight 0
+float spaceTradingChancePlayerScientist 25
+float spaceTradingChancePlayerShaman 0
+float spaceTradingChancePlayerTrader 5
+float spaceTradingChancePlayerWanderer 0
+float spaceTradingChancePlayerWarrior 35
+float spaceTradingChancePlayerZealot 0
+float spaceTradingChanceScientist 25
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 15
+float spaceTradingChanceWarrior 35
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierBard 1
+float spaceTradingCostMultiplierGrob 0.25
+float spaceTradingCostMultiplierTrader 1.65
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 0.75
+float spaceTradingCostMultiplierScientist 1.25
+float spaceTradingCostMultiplierWarrior 0.75
+float spaceTradingCostMultiplierZealot 99.75
+key spaceTradingExchangeFor StaffOfDeath.prop
+int32 spaceTradingRequiresTier 5
+int32 spaceTradingToolReofferRate 60
+key spaceTradingToolClass combat
+key spaceTradingType tool

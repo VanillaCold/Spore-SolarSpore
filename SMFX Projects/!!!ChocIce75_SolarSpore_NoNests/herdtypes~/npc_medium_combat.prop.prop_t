@@ -1,0 +1,137 @@
+key parent herdtypes~!default.prop
+vector2 Altitude (1, 10000)
+uint32 ArchetypeGroup hash(npc_medium_combat)
+vector3s Attack
+	(2, 0, 0)
+end
+vector3s BaseGear
+	(2, 0, 0)
+end
+vector3s Cost
+	(2, 0, 0)
+end
+float DamageMultiplier 1
+int32 FoodChainLevel 6
+float HitpointOverride 25
+vector2 NumCreatures (28, 28)
+vector3s NumFeet
+	(2, 0, 0)
+end
+vector3s NumGraspers
+	(2, 0, 0)
+end
+int32 NumToImpressForBestFriends 6
+int32 NumToImpressForCurious 2
+int32 NumToImpressForFriendly 5
+int32 NumToKillForExtinction 15
+vector2 OriginDistance (100, 200)
+float RespawnRate 240
+vector3s Social
+	(2, 0, 0)
+end
+float TerritoryRadius 0
+vector3s TotalAttack
+	(0, 5, 16)
+end
+vector3s TotalSocial
+	(2, 0, 0)
+end
+vector2 WaterDistance (30, -1)
+uint32 archetypeRefillAmount 30
+uint32 archetypeRefillThreshold 15
+vector3s biteCapRange
+	(0, 0, 4)
+end
+vector3s chargeCapRange
+	(0, 0, 4)
+end
+vector3s danceCapRange
+	(0, 0, 4)
+end
+float foodValue 160
+vector3s healthCapRange
+	(0, 0, 5)
+end
+vector3s height
+	(2, 0, 0)
+end
+vector3s singCapRange
+	(0, 0, 4)
+end
+vector2 slope (0, 55)
+float socialDecay 0.1
+vector3s spitCapRange
+	(0, 0, 4)
+end
+vector3s strikeCapRange
+	(0, 0, 4)
+end
+int32 type 1
+uint32s upgradeHerdList
+	hash(npc_large_combat)
+end
+vector2 0x05459D34 (2, 4)
+vector2 0x0748B77B (0, 0.125)
+vector3s 0x095BE098
+	(0, 0, 4)
+end
+uint32 0x0DFE5F93 3
+int32 0x1900D4B3 0
+float 0x24A02634 1
+int32 0x2D5624E5 2
+vector3s 0x2DFB4F9F
+	(2, 1, 2)
+end
+float 0x3E89ACC8 0.1
+vector2 0x45D1A932 (20, 25)
+float 0x4934CACA 0.9
+bool 0x54F1CE40 true
+float 0x561C98AC 40
+float 0x56EBD162 3.45
+float 0x5B0E0D01 14
+float 0x5FBA6EE4 7
+int32 0x690A9B9B 100
+vector3 0x6B152F47 (15, 30, 0)
+float 0x79B9184B 300
+uint32s 0x7ECAF0EE
+end
+int32 0x85E8AF05 40
+vector2 0x8A3B9858 (400, 650)
+uint32s 0x8ECEAD6D
+	0xcd061bba
+	0xb7f7f5b5
+	0x89004f0a
+end
+int32 0x90CB151D 3
+int32 0x95CEDA48 3
+colorRGB 0x9A2B74A7 (1, 0, 0)
+int32 0xA1B3A751 55
+vector3s 0xA28A67E8
+	(0, 1, 2)
+end
+vector3s 0xA5AE7F21
+	(0, 0, 4)
+end
+int32 0xA9DE6046 0
+int32 0xACD16349 3
+vector2s 0xAFD5E585
+end
+float 0xB1559418 0.5
+int32 0xB3D796FE 3
+int32 0xBB833F5A 3
+float 0xBF54A4FE 25
+float 0xC33386A0 9
+float 0xC75C3509 10
+float 0xCBB8D102 75
+uint32s 0xDB9BFC2C
+	hash(SkeletonPartUnlockColumn3)
+	0xd6b2f660
+	0x11bf9e35
+	0xcaaebfc2
+end
+uint32 0xE6C38666 5
+float 0xE6F2FCE8 0.375
+int32 0xE7548ABB 0
+int32 0xF04C3DB9 2
+vector2 0xF51B95CB (0, 1)
+vector2 0xFE43F720 (10, 30)

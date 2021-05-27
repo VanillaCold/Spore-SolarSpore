@@ -1,0 +1,32 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "RandStarAmmo"
+key spaceToolContext space
+texts spaceToolDescription
+	"Wanderering Portal"
+end
+texts spaceToolDetailDescription
+	"Teleports you to a random, nearby star. Uses ammo."
+end
+bool spaceToolDisableOn201Ruins false
+bool spaceToolDisableOnHomeworld false
+float WanderingPortal-Radius 60
+bool spaceToolDisableOnSaveGames false
+bool spaceToolHide false
+bool spaceToolUsesAmmo true
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolMaxAmmoCount 99
+key spaceToolImageID ufotools~!0x66E86527.png
+float spaceToolMaxRange -1
+bool toolIsSuperWeapon true
+key spaceToolType special
+key spaceToolPanelKey travel_panel_bottom~
+float spaceToolRechargeRate 5
+key toolMuzzleEffectID 0x2E570807
+key spaceToolStrategy wanderingportal
+bool toolDeselectsAfterUse true
+bool toolHitOrientsToTerrain false
+bool toolPreventsPlanetExit true
+bool toolUseOnActivate true
+texts toolTargetFlagsFailMessage
+	"whoops"
+end

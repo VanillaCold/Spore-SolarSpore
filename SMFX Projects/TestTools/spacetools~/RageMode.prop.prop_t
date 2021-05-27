@@ -1,0 +1,29 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Test"
+key spaceToolContext always
+float spaceToolChargeRate 0
+texts spaceToolDescription
+	"Berserker Rage"
+end
+texts spaceToolDetailDescription
+	"Triples all damage dealt to enemies while enabled, at the cost of reserving 25% of your energy."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld true
+bool spaceToolDisableOnSaveGames true
+int32 rageMode-Multiplier 3
+float percentEnergyToNotReserve 0.75
+bool spaceToolHide false
+bool toolIsSuperWeapon true
+key spaceToolImageID ufotools~!0x5FB05326.png
+float spaceToolMaxRange -1
+key spaceToolPanelKey combat_panel_top~
+float spaceToolRechargeRate 60
+key spaceToolStrategy BerserkerRage
+bool toolDeselectsAfterUse false
+bool toolHitOrientsToTerrain false
+bool toolPreventsPlanetExit false
+bool toolUseOnActivate true
+texts toolTargetFlagsFailMessage
+	"whoops"
+end

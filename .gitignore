@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Chocice75_SS-RareSpices/.vs/Chocice75_SS-RareSpices/v16
+/Chocice75_SS-RareSpices/SolarSpore - Rare Spices/Debug
+/CustomTools/.vs/CustomTools/v16
+/SS-HomeworldSpice/.vs/SS-HomeworldSpice/v16
+/SS-HomeworldSpice/Solar Spore - Random Homeworld Spice/Debug

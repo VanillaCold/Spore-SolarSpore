@@ -1,0 +1,12 @@
+key parent CreatureGoalCards!0x2E7E2B68.prop
+texts creatureGoalCardTextB
+	(TribeGame!0x06e1f025) "Conquer"
+end
+texts creatureGoalCardTextC
+	(TribeGame!0x055a6249) "Summary"
+end
+texts creatureGoalCardTextD
+	(TribeGame!0x055a6248) "Combat"
+end
+uint32 0x63FF8CC5 0x06398d4d
+uint32 0xE2DA314E 0xb4c1a518

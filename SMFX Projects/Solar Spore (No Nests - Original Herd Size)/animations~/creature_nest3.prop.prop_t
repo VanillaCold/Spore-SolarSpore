@@ -1,0 +1,15 @@
+key parent creature_nest0
+string16 description "Creature Nest - Brain Level 4"
+float modelBoundingRadius 2
+#<keys modelEffect
+	#0x2EF33AC4
+end#>
+floats modelLODDistances
+	130
+	160
+	190
+end
+vector3 modelLevelParams (10, 0, 1)
+key modelLevelTexture 0xF6A4E168
+key modelMeshLOD0 floraModels_LOD0~!0x9E7C4693.gmdl
+float terraformClearFloraRadius 3

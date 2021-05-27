@@ -1,0 +1,29 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x00ADDDFF
+texts spaceToolDescription
+	"Diamond"
+end
+texts spaceToolDetailDescription
+	"A rare jewel stronger than any known metal. It's also incredibly shiny and sells for a very high price."
+end
+uint32s spaceToolImageColors
+	0xffD5F0FF
+end
+key spaceToolImageID ufotools~!0xDECC0005.png
+float spaceTradingBaseCost 625315
+float spaceTradingChanceBlueEasy 0
+float spaceTradingChanceBlueHard 0
+float spaceTradingChanceRedEasy 0
+float spaceTradingChanceRedHard 0
+float spaceTradingChanceYellowEasy 0
+float spaceTradingChanceYellowHard 0
+texts spaceTradingNeed
+	"We need some diamonds. This is not a drill."
+end
+texts spaceTradingNoNeed
+	"Please take a look at our fine goods available."
+end
+key spaceTradingType spice
+bool SS-UseSpiceOnHomeworld false

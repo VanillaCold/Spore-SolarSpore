@@ -1,0 +1,8 @@
+keys browserFilterChildrenFilters
+	planets
+end
+texts browserFilterName
+	(sporepedia!0x00020012) "Home"
+end
+keys browserFilterButtonGraphic
+end

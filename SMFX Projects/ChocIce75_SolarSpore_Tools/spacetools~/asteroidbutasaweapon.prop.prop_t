@@ -1,0 +1,68 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Asteroid"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 12650
+key spaceToolContext planet
+float spaceToolDamageArea 70
+texts spaceToolDescription
+	"Summon Meteor"
+end
+texts spaceToolDetailDescription
+	"Use on a planet to summon a large meteor, causing tons of damage to nearby cities."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!0x5FB05326.png
+int32 spaceToolInitialAmmoCount 1
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxDamage 1000
+int32 spaceToolMaxDiscoveredAmmo 3
+float spaceToolMaxRange 300
+float spaceToolMinDamage 1000
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey combat_panel_bottom~
+float spaceToolRechargeRate 5
+key spaceToolStrategy 0x68ECCB0A
+key spaceToolType weapon #terraforming
+bool spaceToolUsesAmmo true
+key toolBeamEffectID 0x9158AEB0
+bool toolDeselectsAfterUse true
+float toolHitAirAtmosphereVelocity 0
+float toolHitAirTemperatureVelocity 0
+float toolHitAirWaterVelocity 0
+float toolHitCombatantAtmosphereVelocity 0
+key toolHitCombatantEffectID SG_ufo_asteroid_collision_ground
+float toolHitCombatantTemperatureVelocity 0
+float toolHitCombatantWaterVelocity 0
+float toolHitGroundAtmosphereVelocity 0
+key toolHitGroundEffectID SG_ufo_asteroid_collision_ground
+float toolHitGroundTemperatureVelocity 0
+float toolHitGroundWaterVelocity 0
+float toolHitWaterAtmosphereVelocity 0
+key toolHitWaterEffectID SG_ufo_asteroid_collision_water
+float toolHitWaterTemperatureVelocity 0
+float toolHitWaterWaterVelocity 0
+uint32 toolMinimapSlotsToggleEffect 0xe7c9ede0
+key toolMuzzleEffectID SG_ufo_asteroid_tractor_beam_muzzle
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_ufo_asteroid_projectile
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 25
+key toolTargetEffectID 0xB1E858ED
+int32s toolTargetFlags
+	hash(animal)
+	0xa13abc9f
+	hash(turret)
+	hash(city)
+	hash(building)
+	0x9b8e862f
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+#uint32 toolTerraformingIconKey 0x44bb4db8

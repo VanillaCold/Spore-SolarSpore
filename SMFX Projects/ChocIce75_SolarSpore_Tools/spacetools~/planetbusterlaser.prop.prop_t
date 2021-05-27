@@ -1,0 +1,66 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Planet Buster Laser"
+int32 spaceToolBuyCost 5000
+key spaceToolContext planet
+float spaceToolDamageArea 200
+texts spaceToolDescription
+	"Planet Buster Laser"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xd6dd32f8) "Destroys an entire planet without the use of ammo. Feared by all.  BIG BADDA BOOM."
+end
+float spaceToolDetectableRange 2000
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!0x0B634E74.png
+int32 spaceToolInitialAmmoCount 5
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 10000
+float spaceToolMaxRange -1
+float spaceToolMinDamage 10000
+key spaceToolPanelKey combat_panel_bottom~
+float spaceToolRechargeRate 15
+key spaceToolStrategy 0x2FD3EB55
+key spaceToolType weapon
+key spaceToolUpgradeFile planetbusterbomb.prop
+bool toolDeselectsAfterUse true
+float toolGalacticRelationshipDelta -7
+float toolGalacticRelationshipRadius 10
+float toolHitAirAtmosphereVelocity -0.2
+float toolHitAirTemperatureVelocity 0.15
+float toolHitAirWaterVelocity -0.02
+float toolHitCombatantAtmosphereVelocity 0.2
+key toolHitCombatantEffectID 0x26A2EC29
+float toolHitCombatantTemperatureVelocity 0.15
+float toolHitCombatantWaterVelocity -0.02
+float toolHitGroundAtmosphereVelocity -0.2
+key toolHitGroundEffectID 0x26A2EC29
+float toolHitGroundTemperatureVelocity 0.15
+float toolHitGroundWaterVelocity -0.02
+float toolHitWaterAtmosphereVelocity -0.2
+key toolHitWaterEffectID 0x26A2EC29
+float toolHitWaterTemperatureVelocity 0.15
+float toolHitWaterWaterVelocity -0.02
+int32 toolMilitaryRewardCount 2
+key toolMuzzleEffectID SG_pulse_weapon_muzzle
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_laser_lvl_3_beam
+float toolProjectileExplosionExpansionRate 1
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 250
+float toolRelationshipDelta -20
+int32s toolTargetFlags
+	hash(animal)
+	0xa13abc9f
+	hash(turret)
+	hash(city)
+	hash(building)
+	0x9b8e862f
+	0x4bf0fa5a
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x061ab566) "You must choose a valid ground target to fire this weapon."
+end
+bool toolUseOnActivate false

@@ -1,0 +1,11 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+texts creatureGoalCardTextB
+	(cell!0xcccc0023) "Puffish"
+end
+texts creatureGoalCardTextC
+	(cell!0xcccc0024) "Puffish is weak the electricity"
+end
+texts creatureGoalCardTextD
+	(cell!0xcccc0025) "blah"
+end
+uint32 0xE2DA314E 0xb4c1a518

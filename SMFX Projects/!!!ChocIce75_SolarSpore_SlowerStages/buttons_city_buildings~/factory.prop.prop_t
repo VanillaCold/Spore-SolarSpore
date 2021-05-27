@@ -1,0 +1,37 @@
+key parent buttons_city_buildings~!TemplateBuilding.prop
+texts blockName
+	(cip!0x05b05a32) "Factory"
+end
+keys modelCreateNewAbilityList
+	city_new_factory
+end
+key modelGonzagoClassID kBuildingIndustry~
+keys modelLockedAbilityList
+	city_locked_factory
+end
+keys modelMainAbilityList
+	city_income
+end
+int32 modelPrice 2800
+texts paletteAssetSwatchEditTooltip
+	(planners!0x20000003) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchHeaderIcon editors_planner~!0x17E6C8CD.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x20000001) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x20000004) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchLockedIcon editors_planner~!0x07C9F4C9.png
+keys paletteAssetSwatchNewIcon
+	editors_planner~!0xA5CC0BC9.png
+	editors_planner~!0xB89081BA.png
+	editors_planner~!0xCB0D081F.png
+	editors_planner~!0xC59513F5.png
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x20000002) "Tooltip (PLACEHOLDER)"
+end
+key paletteItemHeaderIconID 0x8B10D9D3
+key paletteItemModelType BuildingIndustry

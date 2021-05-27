@@ -1,0 +1,121 @@
+float allianceTiltMaxAlpha 0.3
+float allianceTiltMaxAngle 70
+float allianceTiltMinAngle 25
+float driftAmplitude0 0.05
+float driftAmplitude1 0.05
+float driftAmplitude2 0.1
+float driftFrequency0 0.017
+float driftFrequency1 0.033
+float driftFrequency2 0.02517
+float galaxyAutoZoomRateMax 1000
+float galaxyAutoZoomRateMin 1
+vector2s galaxyCameraPhi
+	(1, 50)
+	(40, 45)
+	(700, 30)
+end
+floats galaxyDiscreteZoom
+	5
+	40
+	200
+	1200
+end
+float galaxyFOVEnd 60
+float galaxyFOVStart 15
+float galaxyMaxRadius 1200
+float galaxyMinRadius 0.4
+float galaxyZoomFloor 1
+float galaxyZoomOutEndRadius 5
+float galaxyZoomOutStartRadius 0.7
+float galaxyZoomRateMax 3500
+float galaxyZoomRateMin 1.5
+float horizonAngle 15
+float obstacleCanopyAlphaMultiplier 0.5
+float obstacleHeightPercentToCanopyAlpha 0.75
+float obstacleMaxDistToCanopyAlpha 100
+float obstacleOcclusionAlphaConvergenceSpeed 0.3
+float obstacleOcclusionMinAlpha 0.25
+float obstacleOcclusionObjectRadiusMultiplier 1
+vector3 obstacleOcclusionRadiusBlendFactor (0, 0.7, 0.7)
+float planetAtmosphereEnd 1200
+float planetAtmosphereStart 351
+vector4s planetCameraBusterTuning
+	(1500, 500, 0, 85)
+	(600, 900, 0, 85)
+	(100, 1400, 0, 85)
+	(20, 1480, 0, 85)
+end
+bool planetCameraCombatModeEnabled true
+vector4s planetCameraCombatTuning
+	(3000, 200, 0, 60)
+	(700, 160, 0, 70)
+	(600, 150, 0, 80)
+	(500, 300, 0, 80)
+	(100, 200, 0, 60)
+	(20, 100, 0, 40)
+end
+vector4s planetCameraDistanceFOV
+	(3000, 200, 0, 60)
+	(700, 160, 0, 70)
+	(600, 150, 0, 80)
+	(500, 200, 0, 80)
+	(300, 300, 0, 80)
+	(100, 200, -40, 50)
+	(30, 80, -15, 30)
+	(20, 70, -10, 20)
+end
+float planetCameraDistanceInterpolationRate 10
+float planetCameraFOVInterpolationRate 1
+float planetCameraInterpolationRamp 2
+float planetCameraInterpolationTolerance 0.01
+float planetCameraMaxAltitudeForRotation 200
+float planetCameraMouseRotationSpeed 0.3
+float planetCameraRotationSpeed 60
+float planetCameraTerrainInterpolationRate 1
+float planetMaxHeight 1200
+bool planetTransitionCheatToDaylightAlways false
+bool planetTransitionCheatToDaylightOnce true
+bool planetTransitionEnable false
+bool planetTransitionEnterOnDaySide false
+bool planetTransitionExitOnNightSide false
+float planetTransitionTime 4
+bool planetTransitionZoomControl false
+float planetZoomCeiling 700
+float planetZoomInEndHeight 275
+float planetZoomInStartHeight 1000
+float planetZoomRateMax 3600
+float planetZoomRateMin 900
+float solarAutoZoomRateInMax 2000
+float solarAutoZoomRateInMin 20
+float solarAutoZoomRateOutMax 2000
+float solarAutoZoomRateOutMin 10
+vector2s solarCameraPhi
+	(5, 25)
+	(40, 60)
+	(100, 75)
+	(900, 50)
+end
+floats solarDiscreteZoom
+	500
+end
+float solarFOVEnd 60
+float solarFOVStart 60
+float solarMaxRadius 1750
+float solarMinRadius 5
+bool solarPullOutDebugDraw false
+float solarPullOutRight 1.2
+float solarPullOutUp 0.4
+float solarZoomCeiling 1200
+float solarZoomFloor 40
+float solarZoomInEndRadius 900
+float solarZoomInStartRadius 1000
+float solarZoomOutEndRadius 200
+float solarZoomOutStartRadius 5
+float solarZoomRateMax 5000
+float solarZoomRateMin 250
+bool spaceCameraDebugMouseWheel false
+float spaceFOV 60
+float spaceFarClip 10000
+float spaceNearClip 0.05
+float spacePhiOffsetGalaxy 0.1
+float spacePhiOffsetSolar 0.1

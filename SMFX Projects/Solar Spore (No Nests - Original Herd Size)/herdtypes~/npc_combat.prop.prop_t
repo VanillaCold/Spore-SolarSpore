@@ -1,0 +1,125 @@
+key parent herdtypes~!default.prop
+vector2 Altitude (1, 10000)
+uint32 ArchetypeGroup hash(npc_combat)
+vector3s Attack
+	(0, 1, 1)
+end
+vector3s BaseGear
+	(2, 0, 0)
+end
+vector3s Cost
+	(0, 0, 145)
+end
+float DamageMultiplier 0.75
+int32 FoodChainLevel 2
+float HitpointOverride 10
+vector2 NumCreatures (4, 4)
+vector3s NumFeet
+	(0, 0, 100)
+end
+vector3s NumGraspers
+	(0, 0, 0)
+end
+int32 NumGuardLocations 3
+vector2 NumNests (1, 1)
+int32 NumToImpressForBestFriends 3
+int32 NumToImpressForCurious 1
+int32 NumToImpressForFriendly 2
+int32 NumToKillForExtinction 3
+vector2 OriginDistance (100, 200)
+float RespawnRate 240
+vector3s Social
+	(2, 0, 0)
+end
+vector2 WaterDistance (10, -1)
+vector3s biteCapRange
+	(0, 1, 1)
+end
+vector3s chargeCapRange
+	(0, 0, 1)
+end
+vector3s danceCapRange
+	(0, 0, 0)
+end
+float foodValue 100
+vector3s healthCapRange
+	(0, 0, 2)
+end
+vector3s height
+	(2, 0, 0)
+end
+vector3s singCapRange
+	(0, 0, 1)
+end
+vector2 slope (0, 40)
+float socialDecay 0
+vector3s spitCapRange
+	(0, 0, 1)
+end
+vector3s strikeCapRange
+	(0, 0, 0)
+end
+int32 type 1
+uint32s upgradeHerdList
+	hash(npc_small_combat)
+	hash(npc_medium_combat)
+	hash(npc_large_combat)
+end
+vector2 0x0748B77B (0, 0)
+vector3s 0x095BE098
+	(0, 0, 0)
+end
+uint32 0x0DFE5F93 1
+int32 0x1900D4B3 0
+float 0x24A02634 1
+int32 0x2D5624E5 1
+vector3s 0x2DFB4F9F
+	(2, 0, 0)
+end
+float 0x3E89ACC8 0.1
+vector2 0x45D1A932 (5, 10)
+bool 0x54F1CE40 true
+float 0x561C98AC 60
+float 0x56EBD162 1.5
+float 0x5B0E0D01 10
+float 0x5FBA6EE4 5
+int32 0x690A9B9B 100
+vector3 0x6B152F47 (15, 30, 0)
+float 0x79B9184B 25
+int32 0x85E8AF05 20
+vector2 0x8A3B9858 (50, 200)
+uint32s 0x8ECEAD6D
+	0x778f18a1
+end
+int32 0x90CB151D 1
+int32 0x95CEDA48 0
+colorRGB 0x9A2B74A7 (1, 0, 1)
+int32 0xA1B3A751 25
+vector3s 0xA28A67E8
+	(0, 1, 2)
+end
+vector3s 0xA5AE7F21
+	(0, 0, 1)
+end
+int32 0xA9DE6046 0
+int32 0xACD16349 1
+vector2s 0xAFD5E585
+end
+float 0xB1559418 3
+int32 0xB3D796FE 1
+int32 0xBB833F5A 1
+float 0xBF54A4FE 5
+float 0xC33386A0 7
+float 0xC75C3509 10
+float 0xCBB8D102 75
+uint32s 0xDB9BFC2C
+	0x16acc461
+	0xfb311c6d
+	hash(Sticks1)
+end
+uint32 0xE6C38666 2
+float 0xE6F2FCE8 0.25
+int32 0xE7548ABB 0
+int32 0xF04C3DB9 1
+vector2 0xF51B95CB (0, 0)
+vector2 0xFE43F720 (10, 30)

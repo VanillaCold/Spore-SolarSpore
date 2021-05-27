@@ -1,0 +1,10 @@
+key parent CreatureGoalCards!0x0786F6B5.prop
+texts creatureGoalCardTextB
+	(0xC8DAF7BD!0x00000001) "Explore"
+end
+texts creatureGoalCardTextC
+	(0xC8DAF7BD!0x00000002) "Explore the world"
+end
+texts creatureGoalCardTextD
+	(0xC8DAF7BD!0x00000003) "Try to find a part."
+end

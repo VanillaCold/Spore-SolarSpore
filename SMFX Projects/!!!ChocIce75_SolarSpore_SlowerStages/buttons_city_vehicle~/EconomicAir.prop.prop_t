@@ -1,0 +1,39 @@
+key parent buttons_city_vehicle~!TemplateVehicle.prop
+texts blockName
+	(cip!0x05b05e10) "Economic Air"
+end
+keys modelCreateNewAbilityList
+	city_new_economic
+end
+keys modelLockedAbilityList
+	city_locked_air
+end
+keys modelMainAbilityList
+end
+int32 modelPrice 6000
+texts paletteAssetSwatchEditTooltip
+	(planners!0x04000003) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchHeaderIcon editors_planner~!0x73CFDF70.png
+texts paletteAssetSwatchLargeNewTooltip
+	(planners!0x04000001) "Tooltip (PLACEHOLDER)"
+end
+texts paletteAssetSwatchLoadTooltip
+	(planners!0x04000004) "Tooltip (PLACEHOLDER)"
+end
+key paletteAssetSwatchLockedIcon editors_planner~!0x5A4A8A5C.png
+texts paletteAssetSwatchLockedText
+	(cip!0x05b1e100) "Gain control of 5 cities to invent air vehicles!"
+end
+keys paletteAssetSwatchNewIcon
+	editors_planner~!0xCF994443.png
+	editors_planner~!0x50EE00E0.png
+	editors_planner~!0x46E5E7DD.png
+	editors_planner~!0x55D6030B.png
+end
+texts paletteAssetSwatchNewTooltip
+	(planners!0x04000002) "Tooltip (PLACEHOLDER)"
+end
+key paletteItemHeaderIconID 0x2128EB49
+key paletteItemModelType VehicleEconomicAir
+int32 paletteItemVehicleType 2
