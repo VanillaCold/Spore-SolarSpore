@@ -109,6 +109,9 @@
     <ClInclude Include="ReturnPortal.h">
       <Filter>CustomTools\Tools</Filter>
     </ClInclude>
+    <ClInclude Include="StarKiller.h">
+      <Filter>CustomTools\Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -190,6 +193,9 @@
       <Filter>CustomTools\Tools\finished</Filter>
     </ClCompile>
     <ClCompile Include="ReturnPortal.cpp">
+      <Filter>CustomTools\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Starkiller.cpp">
       <Filter>CustomTools\Tools</Filter>
     </ClCompile>
   </ItemGroup>

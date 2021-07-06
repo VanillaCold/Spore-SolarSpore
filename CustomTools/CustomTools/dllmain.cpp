@@ -28,6 +28,7 @@
 #include "RegalShield.h"
 #include "AmmoCreator.h"
 #include "ReturnPortal.h"
+#include "StarKiller.h"
 
 void Initialize()
 {
@@ -64,6 +65,7 @@ void Initialize()
 	ToolManager.AddStrategy(new capacitor(), id("EnergyEfficiency"));
 	ToolManager.AddStrategy(new AmmoCreator(), id("AmmoCreator"));
 	ToolManager.AddStrategy(new ReturnPortal(), id("ReturnPortal"));
+	ToolManager.AddStrategy(new StarKiller(), id("Starkiller"));
 
 	SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
 	SimulatorSystem.AddStrategy(new CustomArchetypeTools(), CustomArchetypeTools::NOUN_ID);

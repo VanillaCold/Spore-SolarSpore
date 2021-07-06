@@ -43,7 +43,7 @@ bool PlanetDebuster::OnSelect(cSpaceToolData* pTool)
 
 bool PlanetDebuster::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** ppFailText)
 {
-	if (GetCurrentContext() == kSpaceContextSolarSystem)
+	if (GetCurrentContext() == kSpaceContextSolarSystem && GetActivePlanetRecord() != nullptr && GetActiveStarRecord()->mType != StarType::ProtoPlanetary)
 	{
 		if (GetActivePlanetRecord()->mFlags & 256)
 		{
