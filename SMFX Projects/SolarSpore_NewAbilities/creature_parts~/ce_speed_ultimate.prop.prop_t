@@ -1,0 +1,12 @@
+key parent CreatureEditorTemplates!CreatureWeaponTemplate
+texts blockName
+	"Swiftness"
+end
+int32 modelCapabilitySprint 50
+int32 modelCapabilityStealth 91
+int32 modelPrice 250
+float modelScale 0.01
+float modelMinScale 0.0001
+float modelMaxScale 2
+float modelZCorpMinScale 10
+#bool modelUseSkin false

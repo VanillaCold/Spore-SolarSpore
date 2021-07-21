@@ -1,0 +1,43 @@
+string16 description "EpicStomp"
+uint32s creatureAbilityAnimationIDs
+	0x04bc04ab
+end
+uint32 creatureAbilityBabyGameAnimationID 0
+int32 creatureAbilityCategory 1
+uint32s creatureAbilityCombatEffectEffectIds
+	0
+	0
+	0
+	0xf62f839c
+end
+floats creatureAbilityCombatEffectPercentages
+	0
+	0
+	0
+	1
+end
+uint32s creatureAbilityCombatEffectTypes
+	0
+	1
+	2
+	3
+end
+float creatureAbilityConeDamageMultiplier 0.5
+float creatureAbilityConeDist 2
+float creatureAbilityConeRadius 20
+float creatureAbilityDamage 6
+float creatureAbilityEffectDuration 1
+int32 creatureAbilityEffectKind 0
+int32 creatureAbilityEffectType 0
+float creatureAbilityEnergyCost 1
+float creatureAbilityRange 15
+float creatureAbilityRazeDamage 6
+float creatureAbilityRefresh 3
+uint32s creatureAbilityRequiredCAPs
+end
+int32 creatureAbilityType 41
+bool creatureAbilityUseForBabyGame false
+key verbIconCategory strike
+key verbIconRepresentativeAnimation 0x04DD7334
+int32 verbIconTriggerKey -1
+bool verbIconUseDescription false

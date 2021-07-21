@@ -1,0 +1,18 @@
+key parent creatureabilityTemplates~!danceTemplate
+uint32s creatureAbilityAnimationIDs
+	0x042a1ca0
+end
+float creatureAbilityDamage 0
+texts creatureAbilityDescription
+	"Your creature's dancing abilities are embarassing. Nobody likes them."
+end
+uint32s creatureAbilityFollowerAnimationIDs
+	0x042a1ca0
+end
+texts creatureAbilityName
+	"Stumble"
+end
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(91, 1000)
+end
+key verbIconRepresentativeAnimation 0x04DD7350

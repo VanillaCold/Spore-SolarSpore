@@ -1,0 +1,6 @@
+key parent creatureabilityTemplates~!GlideTemplate
+float creatureAbilityGliding 128
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(6, 1000)
+end
+key verbIconRepresentativeAnimation 0x06553ADF

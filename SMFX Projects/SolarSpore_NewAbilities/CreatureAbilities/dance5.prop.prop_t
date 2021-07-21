@@ -1,0 +1,18 @@
+key parent creatureabilityTemplates~!danceTemplate
+uint32s creatureAbilityAnimationIDs
+	0x042a1ca4
+end
+float creatureAbilityDamage 5
+texts creatureAbilityDescription
+	(Abilities!0x0000005e) "Show off your moves! (PLACEHOLDER)"
+end
+uint32s creatureAbilityFollowerAnimationIDs
+	0x042a1ca4
+end
+texts creatureAbilityName
+	(Abilities!0x0000005d) "Dance (PLACEHOLDER)"
+end
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(5, 5)
+end
+key verbIconRepresentativeAnimation 0x04DD7354

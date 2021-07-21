@@ -1,0 +1,19 @@
+key parent creatureabilityTemplates~!CharmTemplate
+uint32s creatureAbilityAnimationIDs
+	0x042a1ca5
+end
+float creatureAbilityDamage 0
+texts creatureAbilityDescription
+	"Your creature might be strong, but it's not charming at all."
+end
+uint32s creatureAbilityFollowerAnimationIDs
+	0x042a1ca5
+end
+texts creatureAbilityName
+	"Unpleasant"
+end
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(91, 1000)
+end
+key verbIconRepresentativeAnimation 0x04DD7360
+bool verbIconShowZeroLevel true

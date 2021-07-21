@@ -1,0 +1,25 @@
+int32s palettePagePartItemColumns
+	0
+	0
+	0
+	0
+	1
+	1
+end
+int32s palettePagePartItemRows
+	0
+	1
+	2
+	3
+	0
+	1
+end
+keys palettePagePartItems
+	creature_parts~!ce_firebreath
+	creature_parts~!ce_stun
+	creature_parts~!ce_stomp
+	creature_parts~!ce_firespit
+	creature_parts~!ce_speed_ultimate
+	creature_parts~!ce_stealth_ultimate
+end
+key palettePagePartParentPage creature_editor_palette_pages~!SS_page_weapons

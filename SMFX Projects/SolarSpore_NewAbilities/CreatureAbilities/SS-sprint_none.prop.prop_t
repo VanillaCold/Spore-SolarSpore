@@ -1,0 +1,14 @@
+key parent creatureabilityTemplates~!SprintTemplate
+float creatureAbilityDuration 0
+float creatureAbilityRecharge 1000000000000000000
+float creatureAbilityRefresh 2500000000000000000
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(91, 91)
+end
+key verbIconRepresentativeAnimation 0x04DD73B4
+texts creatureAbilityDescription
+	"Your creature is too sluggish to sprint."
+end
+texts creatureAbilityName
+	"Sluggishness"
+end

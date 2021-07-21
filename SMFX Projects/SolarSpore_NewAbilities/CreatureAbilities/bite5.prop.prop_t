@@ -1,0 +1,23 @@
+key parent creatureabilityTemplates~!BiteTemplate
+uint32s creatureAbilityAnimationIDs
+	0x044ddeaa
+end
+uint32 creatureAbilityBabyGameAnimationID 0x342ba71e
+uint32s creatureAbilityCombatEffectEffectIds
+	0
+	0
+	0x48b4b926
+	0
+end
+float creatureAbilityDamage 3
+texts creatureAbilityDescription
+	(Abilities!0x0000000c) "A nip at the heels can cause some small prey to flee. (PLACEHOLDER)"
+end
+texts creatureAbilityName
+	(Abilities!0x0000000b) "Bite (PLACEHOLDER)"
+end
+float creatureAbilityRazeDamage 1.25
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(5, 5)
+end
+key verbIconRepresentativeAnimation 0x04DD7304

@@ -1,0 +1,18 @@
+key parent creatureabilityTemplates~!CharmTemplate
+uint32s creatureAbilityAnimationIDs
+	0x042a1ca9
+end
+float creatureAbilityDamage 5
+texts creatureAbilityDescription
+	(Abilities!0x0000008c) "Charm (PLACEHOLDER)"
+end
+uint32s creatureAbilityFollowerAnimationIDs
+	0x042a1ca9
+end
+texts creatureAbilityName
+	(Abilities!0x0000008b) "Charm (PLACEHOLDER)"
+end
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(5, 5)
+end
+key verbIconRepresentativeAnimation 0x04DD7364

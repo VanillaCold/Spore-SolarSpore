@@ -1,0 +1,15 @@
+key parent creatureabilityTemplates~!SpitTemplate
+float creatureAbilityDamage 2.5
+texts creatureAbilityDescription
+	(Abilities!0x000000c9) "Lob a glob of toxic mucus to cause some pain. (PLACEHOLDER)"
+end
+float creatureAbilityEffectDamage 0.5833
+uint32 creatureAbilityImpactEffectId 0x778b0e5e
+uint32 creatureAbilityMuzzleEffectId 0x1c81e36e
+texts creatureAbilityName
+	(Abilities!0x000000c8) "Spit (PLACEHOLDER)"
+end
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(5, 5)
+end
+uint32 creatureAbilityTrailEffectId 0x722859be

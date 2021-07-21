@@ -1,0 +1,21 @@
+key parent creatureabilityTemplates~!ChargeTemplate
+uint32s creatureAbilityCombatEffectEffectIds
+	0x056d2cf4
+end
+float creatureAbilityDamage 3
+texts creatureAbilityDescription
+	"Stuns your current target from a close distance."
+end
+float creatureAbilityEffectDuration 4.5
+texts creatureAbilityName
+	"Stun"
+end
+int32 modelComplexityScore 0
+float creatureAbilityRangeMin 0
+float creatureAbilityRange 1
+float creatureAbilityRefresh 6
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(11, 11)
+end
+float creatureAbilityRushingRange 1
+key verbIconRepresentativeAnimation 0x056d2cf4

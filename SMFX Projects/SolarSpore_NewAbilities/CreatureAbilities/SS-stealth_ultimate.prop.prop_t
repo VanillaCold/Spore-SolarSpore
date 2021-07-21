@@ -1,0 +1,16 @@
+key parent creatureabilityTemplates~!StealthTemplate
+float creatureAbilityDuration 30
+float creatureAbilityRange 0.75
+float creatureAbilityRangeMin 0.25
+float creatureAbilityRecharge 15
+float creatureAbilityRefresh 25
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(50, 50)
+end
+key verbIconRepresentativeAnimation 0x04DD73A4
+texts creatureAbilityDescription
+	"When enabeld, other creatures can only notice you when you get incredibly close."
+end
+texts creatureAbilityName
+	"Total Camouflage"
+end

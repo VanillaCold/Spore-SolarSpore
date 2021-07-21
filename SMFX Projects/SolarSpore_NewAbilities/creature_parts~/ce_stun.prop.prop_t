@@ -1,0 +1,15 @@
+key parent CreatureEditorTemplates!CreatureWeaponTemplate
+texts blockName
+	"Stun"
+end
+int32 modelCapabilityCharge 11
+int32 modelCapabilityMean 6
+int32 modelCapabilityPower 5
+int32 modelCapabilitySocial -5
+int32 modelPrice 250
+float modelScale 0.01
+float modelMinScale 0.0001
+float modelMaxScale 2
+float modelZCorpMinScale 100
+int32 modelCapabilityDance 91
+#bool modelUseSkin true

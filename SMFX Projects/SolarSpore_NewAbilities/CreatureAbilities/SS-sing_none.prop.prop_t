@@ -1,0 +1,19 @@
+key parent creatureabilityTemplates~!VocalizeTemplate
+uint32s creatureAbilityAnimationIDs
+	0x042a1caf
+end
+float creatureAbilityDamage 0
+texts creatureAbilityDescription
+	"Your creature cannot sing."
+end
+uint32s creatureAbilityFollowerAnimationIDs
+	0x042a1caf
+end
+texts creatureAbilityName
+	"Empty Song"
+end
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(91,1000)
+end
+key verbIconRepresentativeAnimation 0x04DD7380
+bool verbIconShowZeroLevel true

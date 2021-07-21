@@ -1,0 +1,18 @@
+key parent creatureabilityTemplates~!PostureTemplate
+uint32s creatureAbilityAnimationIDs
+	0x042a1cae
+end
+float creatureAbilityDamage 0
+texts creatureAbilityDescription
+	"Your posing seems cool, but it comes across as arrogant to other creatures. They don't like it."
+end
+uint32s creatureAbilityFollowerAnimationIDs
+	0x042a1cae
+end
+texts creatureAbilityName
+	"Arrogant Pose"
+end
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(91, 1000)
+end
+key verbIconRepresentativeAnimation 0x04DD7374

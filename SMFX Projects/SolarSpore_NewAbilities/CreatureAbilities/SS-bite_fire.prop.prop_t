@@ -1,0 +1,24 @@
+key parent creatureabilityTemplates~!BiteTemplate
+uint32s creatureAbilityAnimationIDs
+	0x0629B06A
+end
+uint32 creatureAbilityBabyGameAnimationID 0x342ba71e
+uint32s creatureAbilityCombatEffectEffectIds
+	0
+	0
+	0x48b4b926
+	0
+end
+float creatureAbilityDamage 15
+texts creatureAbilityDescription
+	"Breathe fire onto your target, dealing large amounts of damage."
+end
+texts creatureAbilityName
+	"Fire Breath"
+end
+float creatureAbilityRazeDamage 7.5
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(16, 16)
+end
+key verbIconRepresentativeAnimation 0x0629B06A
+key verbIconImageID 0x9AD1B7A2

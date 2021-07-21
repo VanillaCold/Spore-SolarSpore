@@ -1,0 +1,18 @@
+key parent creatureabilityTemplates~!PostureTemplate
+uint32s creatureAbilityAnimationIDs
+	0x042a1cae
+end
+float creatureAbilityDamage 50
+texts creatureAbilityDescription
+	(Abilities!0x000000ac) "Strike a pose and be cool to impress others. (PLACEHOLDER)"
+end
+uint32s creatureAbilityFollowerAnimationIDs
+	0x042a1cae
+end
+texts creatureAbilityName
+	(Abilities!0x000000ab) "Posture (PLACEHOLDER)"
+end
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(5, 5)
+end
+key verbIconRepresentativeAnimation 0x04DD7374

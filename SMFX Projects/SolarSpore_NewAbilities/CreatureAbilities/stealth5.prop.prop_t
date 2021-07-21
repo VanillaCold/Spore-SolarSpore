@@ -1,0 +1,10 @@
+key parent creatureabilityTemplates~!StealthTemplate
+float creatureAbilityDuration 20
+float creatureAbilityRange 2
+float creatureAbilityRangeMin 0.75
+float creatureAbilityRecharge 30
+float creatureAbilityRefresh 25
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(5, 5)
+end
+key verbIconRepresentativeAnimation 0x04DD73A4

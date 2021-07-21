@@ -1,0 +1,18 @@
+key parent creatureabilityTemplates~!VocalizeTemplate
+uint32s creatureAbilityAnimationIDs
+	0x042a1cb3
+end
+float creatureAbilityDamage 5
+texts creatureAbilityDescription
+	(Abilities!0x00000125) "Let your voice be heard and hopefully it will delight other creatures. (PLACEHOLDER)"
+end
+uint32s creatureAbilityFollowerAnimationIDs
+	0x042a1cb3
+end
+texts creatureAbilityName
+	(Abilities!0x00000124) "Vocalize (PLACEHOLDER)"
+end
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(5, 5)
+end
+key verbIconRepresentativeAnimation 0x04DD7384

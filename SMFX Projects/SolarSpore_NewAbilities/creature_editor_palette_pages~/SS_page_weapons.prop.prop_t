@@ -1,0 +1,10 @@
+key parent Adventure_brushes~!TemplatePalettePartsPage.prop
+string16 description "Solar Spore Weapons"
+key paletteCategoryIcon editors_creature~!0xE3668266.png
+float palettePageItemMaxPercentageHeight 0.12
+float palettePageItemPercentageWidth 0.25
+key palettePageParentCategory creature_editor_palette_categories~!ce_category_weapons
+uint32 palettePageSequenceNumber 200
+int32 palettePageSetId 2
+int32 palettePageNumColumns 4
+int32 palettePageNumRows 4

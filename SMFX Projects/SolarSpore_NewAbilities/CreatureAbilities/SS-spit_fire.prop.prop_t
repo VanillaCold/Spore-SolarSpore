@@ -1,0 +1,40 @@
+key parent creatureabilityTemplates~!SpitTemplate
+uint32s creatureAbilityAnimationIDs
+	0x044ddeaf
+end
+floats creatureAbilityCombatEffectPercentages
+	0
+	0
+	1
+	0
+end
+uint32s creatureAbilityCombatEffectTypes
+	0
+	1
+	2
+	3
+end
+float creatureAbilityDamage 12
+texts creatureAbilityDescription
+	"Hurls a massive fireball at your target."
+end
+float creatureAbilityEffectDamage 2
+float creatureAbilityEffectDuration 2
+int32 creatureAbilityEffectKind 1
+int32 creatureAbilityEffectType 0
+float creatureAbilityEnergyCost 0
+uint32 creatureAbilityImpactEffectId 0x6073a2ff
+uint32 creatureAbilityMuzzleEffectId 0xddbd7902
+texts creatureAbilityName
+	"Fireball Spit"
+end
+float creatureAbilityRange 35
+float creatureAbilityRangeMin 1
+float creatureAbilityRazeDamage 6
+float creatureAbilityRefresh 3
+float creatureAbilitySpeed 50#150
+uint32 creatureAbilityTrailEffectId 0x226b1043
+key verbIconRepresentativeAnimation 0x04DD7310
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(44, 44)
+end

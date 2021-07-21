@@ -1,0 +1,23 @@
+key parent creatureabilityTemplates~!StrikeTemplate
+uint32s creatureAbilityAnimationIDs
+	0x044ddd79
+end
+uint32 creatureAbilityBabyGameAnimationID 0xb42ba9f9
+uint32s creatureAbilityCombatEffectEffectIds
+	0
+	0
+	0
+	0
+end
+float creatureAbilityDamage 9
+texts creatureAbilityDescription
+	(Abilities!0x000000df) "Swing your grasper or slasher to punish your opponent. (PLACEHOLDER)"
+end
+texts creatureAbilityName
+	(Abilities!0x000000de) "Strike (PLACEHOLDER)"
+end
+float creatureAbilityRazeDamage 3.75
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(5, 5)
+end
+key verbIconRepresentativeAnimation 0x04DD7334

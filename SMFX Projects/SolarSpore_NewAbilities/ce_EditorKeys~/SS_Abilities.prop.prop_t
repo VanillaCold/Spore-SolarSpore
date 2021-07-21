@@ -1,0 +1,9 @@
+key parent Adventure_brushes~!TemplateManifest.prop
+keys validEditorKeys
+	creature_parts~!ce_firebreath
+	creature_parts~!ce_firespit
+	creature_parts~!ce_stomp
+	creature_parts~!ce_stun
+	creature_parts~!ce_speed_ultimate
+	creature_parts~!ce_stealth_ultimate
+end

@@ -1,0 +1,333 @@
+vector2 CastingManager_DistanceThresholds (100, 150)
+int32 CastingManager_MaxAnimalPoolSize 100
+int32 CastingManager_MaxHerdsActivatedPerInterval 2
+float CastingManager_UpdateTime 1
+float PlanetHorizonCullFactor 10
+int32 clickFruitOrTrees 0
+float creatureAvatarAcceptableStopDist 0.55
+float creatureAvatarDamageMultiplier 1
+float creatureAvatarDeathEffectScaleMultiplier 1.5
+float creatureAvatarGoalStopDistance 0.4
+float creatureAvatarHitpointsMultiplier 1
+bool creatureAvatarKeyboardControl true
+float creatureAvatarMaxMouseRadius 10
+float creatureAvatarMinMouseRadius 0.2
+float creatureAvatarWASDReleaseStopDist 0.2
+float creatureAvatarWASDSlowTurningSpeed 4
+float creatureAvatarWASDTurningSpeed 10
+float creatureBaseAcceleration 0
+uint32 creatureBattleroarDelay 500
+float creatureCallDuration 3
+float creatureCallStartRadius 10
+float creatureChaseDistance 5
+float creatureDistanceToActivateVerb 75
+uint32 creatureEvoPointEffectDelay 1000
+float creatureEvoPointsPerCarcass 1
+float creatureEvoPointsPerEgg 25
+float creatureEvoPointsPerFruit 1
+float creatureEvoPointsToLevel_1 100
+float creatureEvoPointsToLevel_2 400
+float creatureEvoPointsToLevel_3 600
+float creatureEvoPointsToLevel_4 800
+float creatureEvoPoints_L 10
+float creatureEvoPoints_M 5
+float creatureEvoPoints_S 0
+float creatureEvoPoints_XL 20
+float creatureFleeDistance 25
+float creatureFleeTime 5
+float creatureGlideSpeed 30
+float creatureGoalDistanceLimit 50
+float creatureHealingRadius 5
+float creatureHealthPointsPerCarcassPerSec 1.75
+float creatureHealthPointsPerEgg 0.33
+float creatureHealthPointsPerFruit 0.25
+float creatureMaxEvoPoints 9999
+float creatureMaxJumpHeight 3.5
+int32 creatureNestRespawnTime 120
+int32 creatureNestRespawnTime_PlayerSpecies 15
+int32 creatureNewbieGameTime 240
+float creatureNoAttackTimer 30
+float creatureScaleMultiplier 1
+float creatureSimulationLOD_MinDistanceLow 100
+float creatureSimulationLOD_MinDistanceMed 75
+float creatureStartTimeOfDay 7
+bool creatureTreesEnabled true
+float creatureUntargetDistance 17.5
+key creatureVerbtrayCollection verbtrays!0x758205A3
+bool effectSpawnedRocksEnabled true
+bool fruitAutoDroppingEnabled true
+bool fruitEnabled true
+float fruitPropMaxHangingTime 60
+float fruitPropMaxOnGroundTime 300
+float fruitPropMaxRegrowthTime 30
+float fruitPropMaxRottingTime 180
+float fruitPropMinHangingTime 30
+bool fruitRegrowthEnabled true
+keys modelPreloads
+	tuningenerfmommmaxblockedcreathreshold_death_hut01
+	tuningcheratercraft_envir_01b
+	castingmanagen_posen_deathspeedzoomceilimbs_9
+	0x2D12268B
+	0xFE29A98E
+	CRG_Skeleton1
+	CRG_Giant_Skeleton
+	CRG_Giant_Skeleton_Pillaged
+	crg_skeleton_ribs
+	CRG_Skeleton_Ribs_Pillaged
+	CRG_Part_Unlock_Skeleton2
+	CRG_Part_Unlock_Skeleton3
+	CRG_Part_Unlock_Skeleton4
+	CRG_Skeleton_Destructed_01
+	CRG_Skeleton_Destructed_02
+	CRG_Skeleton_Destructed_03
+	CRG_Skeleton_Destructed_04
+	CRG_SkeletonSkull1
+	0xA76CD528
+	cr_egg_01_base
+	cr_egg_01_breaking_open
+	cr_egg_01_hatched
+	cr_egg_02_base
+	cr_egg_02_breaking_open
+	cr_egg_02_hatched
+	cr_egg_03_base
+	cr_egg_03_breaking_open
+	cr_egg_03_hatched
+	cr_egg_04_base
+	cr_egg_04_breaking_open
+	cr_egg_04_hatched
+	cr_egg_05_base
+	cr_egg_05_breaking_open
+	cr_egg_05_hatched
+	cr_egg_06_base
+	cr_egg_06_breaking_open
+	cr_egg_06_hatched
+	cr_egg_07_base
+	cr_egg_07_breaking_open
+	cr_egg_07_hatched
+	cr_egg_08_base
+	cr_egg_08_breaking_open
+	cr_egg_08_hatched
+	cr_egg_09_base
+	cr_egg_09_breaking_open
+	cr_egg_09_hatched
+	cr_egg_10_base
+	cr_egg_10_breaking_open
+	cr_egg_10_hatched
+	cr_cocoon
+	cr_cocoon_collision
+	CRG_fruit
+	CRG_partunlock
+end
+float obstacleCanopyAlphaMultiplier 0.5
+float obstacleHeightPercentToCanopyAlpha 0.75
+float obstacleMaxDistToCanopyAlpha 100
+float obstacleOcclusionAlphaConvergenceSpeed 0.3
+float obstacleOcclusionMinAlpha 0.25
+float obstacleOcclusionObjectRadiusMultiplier 1
+vector3 obstacleOcclusionRadiusBlendFactor (0, 0.7, 0.7)
+bool treeOrnamentsEnabled true
+float 0x0284E6C1 2
+float 0x02ACBAD8 10
+uint32 0x037AE622 2
+int32s 0x04098097
+	150
+	650
+end
+float 0x04F7CF2C 0.001
+float 0x07AF7926 1
+int32 0x0816E292 60
+uint32 0x08A6F491 400
+float 0x0A6A4F0B 0.5
+float 0x0FFCA7FF 5
+float 0x13138BD2 10
+uint32 0x1810C6E0 5000
+float 0x18CE7BC3 0.2
+float 0x196C4280 3
+float 0x1D7441C9 10
+float 0x1EB2CA6D 10
+float 0x2140064F 5
+int32 0x22E5D268 3
+int32 0x22E5D269 5
+int32 0x22E5D26B 2
+float 0x2307FC8B 5
+float 0x25E6AD1C 0.5
+int32 0x261FA6B9 50
+int32 0x2713641E 7
+float 0x274FC6E0 0.75
+int32 0x2A829109 2
+bool 0x2BABCDFC false
+float 0x2BEB6558 25
+float 0x2EBA30A8 10
+uint32 0x2F343A3C 0
+uint32 0x3194B523 15
+float 0x3215F0AF 5
+float 0x322D5DD6 0.25
+float 0x34877C4F 2
+float 0x35CD8F0C 90
+float 0x3757372C 3
+floats 0x3819A4D3
+	1
+	0.3
+	0.15
+	0.01
+	0.01
+	0.01
+	0.01
+	0.01
+	0.01
+	0.01
+	0.01
+end
+float 0x38623218 10
+float 0x3964A33D 15
+float 0x39697DE6 90
+bool 0x39B674A2 false
+float 0x3AC3FDDB 6
+float 0x3D3E2988 10
+float 0x3D73D3B0 40
+float 0x3DA2A2D2 1.25
+float 0x3DA92194 1
+float 0x3FBD28E4 1
+float 0x41752DD5 1
+float 0x4247BF2B 20
+bool 0x42B6C4B6 false
+float 0x4453DF5D 5
+float 0x45EE098C 3
+float 0x46DEE850 6
+float 0x4BAE2A99 20
+float 0x4BC7F666 0
+float 0x4D5F54B6 20
+float 0x4E229D3E 1
+float 0x4EE78A9B 3
+float 0x511B50D8 0.5
+float 0x516E7B63 7.5
+float 0x553C6E30 100
+float 0x57AE947D 1
+float 0x58CC10B4 30
+float 0x5933F8F4 25
+float 0x5BE9D5F9 1
+float 0x5C40BBB4 50
+uint32 0x5C68A779 1
+float 0x5E352B93 3
+float 0x6459830B 1.5
+float 0x65525B4E 5
+float 0x6848E35E 5
+float 0x687FBCEC 1.5
+uint32 0x6A86C027 4000
+int32 0x6E212EA9 50
+float 0x703B9A9D 500
+float 0x7195EDF1 10
+float 0x75BB1B3C 0
+float 0x770F1AC5 0.4
+float 0x7A7E1C91 2
+float 0x7DC0A48A 15
+int32 0x80B1E465 50
+float 0x82E52579 1
+float 0x82FB1ACC 4
+float 0x832F6D3D 0
+float 0x861D7203 50
+float 0x8836316C 1
+float 0x89E27397 100
+float 0x8B034CE0 2.5
+float 0x8B1FD1F1 1
+float 0x8FC666CE 2
+bool 0x9040F372 true
+float 0x90BD714C 4
+float 0x90C1B65C 0.1
+float 0x9224AA67 2
+float 0x9243C96E 8
+float 0x93110E94 2
+float 0x954F8DCC 20
+float 0x95E575C6 1
+float 0x967F9546 0.75
+float 0x98C83C48 0
+vector3 0x99646E30 (0, 1.5, 1)
+float 0x996644A3 1
+bool 0x99B154EF true
+float 0x9A4955DD 0.3
+float 0x9C2AD71B 3
+float 0x9EFA4612 3
+float 0xA117EF5B 1
+float 0xA1247843 15
+float 0xA3E580F3 0.2
+float 0xA5B8D733 60
+bool 0xA5E247F0 false
+float 0xAC640BA9 3
+float 0xAD0D6A72 3
+float 0xAD530307 1
+float 0xB070EBA6 20
+float 0xB2CA5E63 0.2
+float 0xB5531079 1
+vector2s 0xB561B9EB
+	(0.5, 2)
+	(0.75, 2.2)
+	(1, 2.4000001)
+	(1, 2.5999999)
+	(1, 2.8)
+end
+float 0xB67C4F9A 60
+uint32 0xB895359E 700
+float 0xBCF97143 10
+int32 0xBCFD2A40 6
+int32 0xBCFD2A41 4
+int32 0xBCFD2A42 2
+int32 0xBCFD2A46 10
+int32 0xBCFD2A47 8
+float 0xBD82FAE8 0.5
+float 0xBF5E5D72 4
+float 0xC1FE457D 0.7
+bool 0xC3FFF105 false
+float 0xC4F054B6 120
+float 0xC661855E 10
+int32 0xC77A6C53 50
+float 0xCA16ADDA 0.5
+float 0xCD1E526D 0.7071068
+float 0xCE6BD0A6 1.5
+float 0xCE78E0D8 40
+float 0xCE9F3F71 5
+float 0xCEB65676 0.1
+float 0xCFF3E974 200
+float 0xD02942AA 8
+int32 0xD0780E75 50
+vector2 0xD0FC1CAC (3, 4)
+int32 0xD1A03CB4 7
+float 0xD3D10A58 0.25
+float 0xD5F935BC 0.1
+float 0xD6379AA9 75
+float 0xD6E7812F 1.25
+float 0xD7E2F8AA 0.5
+float 0xDA14D908 1
+int32 0xDA7E582A 50
+int32 0xDB370FB5 2
+float 0xDB821BAB 20
+float 0xDCC9694F 10
+float 0xDCD5E42E 650
+int32 0xDDA63AED 50
+float 0xDE67264F 0.85
+float 0xDEC48A8F 3.5
+float 0xDF6747C9 10
+float 0xE11CB6CC 12
+float 0xE1532D2D 100
+floats 0xE39B27BF
+	50
+	150
+	300
+	450
+	600
+	750
+	900
+	1000
+end
+float 0xE6F2FCE8 0.1
+float 0xE8AD4F2D 100
+float 0xEEAA8367 1.5
+bool 0xEEB7A2DB true
+float 0xF290181F 0.25
+float 0xF5C2BF12 15
+float 0xF7DC67F7 80
+bool 0xF7E9BDEE true
+uint32 0xFB2020B9 1
+key 0xFC530D11 verbtrays!0xE715F528
+float 0xFD87B588 2.5
+vector2 0xFF259BA2 (0, -80)
+uint32 0xFF7D4A77 4

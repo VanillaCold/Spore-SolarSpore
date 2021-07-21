@@ -1,0 +1,29 @@
+key parent creatureabilityTemplates~!StrikeTemplate
+uint32s creatureAbilityAnimationIDs
+	0x04bc04ab
+end
+uint32 creatureAbilityBabyGameAnimationID 0x04bc04ab
+uint32s creatureAbilityCombatEffectEffectIds
+	0
+	0
+	0
+	0
+end
+float creatureAbilityDamage 18
+float creatureAbilityConeDamageMultiplier 0.5
+float creatureAbilityConeDist 2
+float creatureAbilityConeRadius 2
+float creatureAbilityEffectDuration 1
+int32 creatureAbilityEffectKind 0
+int32 creatureAbilityEffectType 0
+texts creatureAbilityDescription
+	"Performs a huge stomp onto your foes."
+end
+texts creatureAbilityName
+	"Stomp"
+end
+float creatureAbilityRazeDamage 3.75
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(91, 91)
+end
+key verbIconRepresentativeAnimation 0x04bc04ab
