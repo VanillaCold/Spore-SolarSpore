@@ -2,8 +2,8 @@ key parent creatureabilityTemplates~!StealthTemplate
 float creatureAbilityDuration 0
 float creatureAbilityRange 5000
 float creatureAbilityRangeMin 3000
-float creatureAbilityRecharge 20000000000
-float creatureAbilityRefresh 25
+float creatureAbilityRecharge 1000000000000000000
+float creatureAbilityRefresh 2500000000000000000
 vector2s creatureAbilityRequiredCAPsMaxValueRange
 	(91, 91)
 end

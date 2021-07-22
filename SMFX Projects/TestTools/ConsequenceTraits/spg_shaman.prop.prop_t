@@ -1,0 +1,13 @@
+key parent ConsequenceTraits!spg_Template.prop
+colorRGB consequenceTraitColor (0.3, 0.92, 0.37)
+texts consequenceTraitDescription
+	(consequence!0x00000064) "Shaman Descrip (PLACEHOLDER)"
+end
+key consequenceTraitIcon consequence~!0xAD59AE4F.png
+texts consequenceTraitName
+	(consequence!0x00000063) "Shaman (PLACEHOLDER)"
+end
+keys consequenceTraitUnlocksSuperpowers
+	spg_shaman_tool
+	spg_shaman_tool2
+end

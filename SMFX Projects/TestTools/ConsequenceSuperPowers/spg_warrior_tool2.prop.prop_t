@@ -4,5 +4,5 @@ texts consequenceSuperPowerName
 end
 key consequenceSuperPowerIcon ufotools~!0x5FB05326.png
 texts consequenceSuperPowerDescription
-	"Triples all damage dealt to enemies while enabled, at the cost of reserving 25% of your energy. Unlocked after colonising 30 systems."
+	"Triples all damage dealt to enemies while enabled, at the cost of reserving 25% of your energy. Unlocked after colonising 60 systems."
 end

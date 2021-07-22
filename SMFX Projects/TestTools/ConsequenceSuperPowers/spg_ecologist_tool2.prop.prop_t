@@ -1,6 +1,6 @@
 key parent ConsequenceSuperPowers!spg_Template.prop
 texts consequenceSuperPowerDescription
-	"Reverses the effects of the Staff of Death, prepares temperature and atmosphere for life. Unlocked after colonising 30 systems."
+	"Reverses the effects of the Staff of Death, prepares temperature and atmosphere for life. Unlocked after colonising 60 systems."
 end
 key consequenceSuperPowerIcon ufotools~!0x813F6FE0.png
 texts consequenceSuperPowerName

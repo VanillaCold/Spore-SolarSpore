@@ -56,6 +56,7 @@ void CustomArchetypeTools::Update(int deltaTime, int deltaGameTime) {
 		acgenerator();
 		regalshield();
 		returnportal();
+		starKiller();
 	}
 }
 
@@ -82,7 +83,7 @@ void CustomArchetypeTools::OnModeEntered(uint32_t previousModeID, uint32_t newMo
 void CustomArchetypeTools::purpleSpiceDye()
 {
 	cSpaceToolDataPtr tool;
-	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerTrader && Simulator::GetPlayerEmpire()->mStars.size() >= 30)
+	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerTrader && Simulator::GetPlayerEmpire()->mStars.size() >= 60)
 	{
 		auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 		if (auto test = inventory->GetTool({ id("purplespicedye"),0,0 })) { tradertool = true; }
@@ -111,7 +112,7 @@ void CustomArchetypeTools::purpleSpiceDye()
 void CustomArchetypeTools::berserkerRage()
 {
 	cSpaceToolDataPtr tool;
-	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerWarrior && Simulator::GetPlayerEmpire()->mStars.size() >= 30)
+	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerWarrior && Simulator::GetPlayerEmpire()->mStars.size() >= 60)
 	{
 		auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 		if (auto test = inventory->GetTool({ id("ragemode"),0,0 })) { warriortool = true; }
@@ -140,7 +141,7 @@ void CustomArchetypeTools::berserkerRage()
 void CustomArchetypeTools::intergalacticDrive()
 {
 	cSpaceToolDataPtr tool;
-	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerWanderer && Simulator::GetPlayerEmpire()->mStars.size() >= 30)
+	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerWanderer && Simulator::GetPlayerEmpire()->mStars.size() >= 60)
 	{
 		auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 		if (auto test = inventory->GetTool({ id("intergalacticdrive"),0,0 })) { wanderertool2 = true; }
@@ -204,7 +205,7 @@ void CustomArchetypeTools::wanderAround()
 void CustomArchetypeTools::lifeBurst()
 {
 	cSpaceToolDataPtr tool;
-	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerEcologist && Simulator::GetPlayerEmpire()->mStars.size() >= 30)
+	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerEcologist && Simulator::GetPlayerEmpire()->mStars.size() >= 60)
 	{
 		auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 		if (auto test = inventory->GetTool({ id("lifeburst"),0,0 })) { ecotool = true; }
@@ -233,7 +234,7 @@ void CustomArchetypeTools::lifeBurst()
 void CustomArchetypeTools::acgenerator()
 {
 	cSpaceToolDataPtr tool;
-	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerScientist && Simulator::GetPlayerEmpire()->mStars.size() >= 30)
+	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerScientist && Simulator::GetPlayerEmpire()->mStars.size() >= 60)
 	{
 		auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 		if (auto test = inventory->GetTool({ id("EnergyEfficiency"),0,0 })) { scientisttool = true; }
@@ -243,7 +244,7 @@ void CustomArchetypeTools::acgenerator()
 			ToolManager.LoadTool(selectedtool, tool);
 			inventory->AddItem(tool.get());
 			scientisttool = true;
-			uint32_t eventID = UIEventLog.ShowEvent(id("TraderTool"), GroupIDs::SpacePopups);
+			uint32_t eventID = UIEventLog.ShowEvent(id("ScientistTool"), GroupIDs::SpacePopups);
 		}
 	}
 	else
@@ -262,7 +263,7 @@ void CustomArchetypeTools::acgenerator()
 void CustomArchetypeTools::regalshield()
 {
 	cSpaceToolDataPtr tool;
-	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerKnight && Simulator::GetPlayerEmpire()->mStars.size() >= 30)
+	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerKnight && Simulator::GetPlayerEmpire()->mStars.size() >= 60)
 	{
 		auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 		if (auto test = inventory->GetTool({ id("regalshield"),0,0 })) { knighttool = true; }
@@ -291,7 +292,7 @@ void CustomArchetypeTools::regalshield()
 void CustomArchetypeTools::returnportal()
 {
 	cSpaceToolDataPtr tool;
-	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerShaman && Simulator::GetPlayerEmpire()->mStars.size() >= 30)
+	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerShaman && Simulator::GetPlayerEmpire()->mStars.size() >= 60)
 	{
 		auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 		if (auto test = inventory->GetTool({ id("ReturnPortal"),0,0 })) { shamantool = true; }
@@ -300,7 +301,7 @@ void CustomArchetypeTools::returnportal()
 			ResourceKey selectedtool = { id("ReturnPortal"),0,0 };
 			ToolManager.LoadTool(selectedtool, tool);
 			inventory->AddItem(tool.get());
-			scientisttool = true;
+			shamantool = true;
 			uint32_t eventID = UIEventLog.ShowEvent(id("ShamanTool"), GroupIDs::SpacePopups);
 		}
 	}
@@ -313,6 +314,35 @@ void CustomArchetypeTools::returnportal()
 		{
 			inventory->RemoveItem(test);
 			shamantool = false;
+		}
+	}
+}
+
+void CustomArchetypeTools::starKiller()
+{
+	cSpaceToolDataPtr tool;
+	if (Simulator::GetPlayerEmpire()->mArchetype == Simulator::Archetypes::kArchetypePlayerZealot && Simulator::GetPlayerEmpire()->mStars.size() >= 60)
+	{
+		auto inventory = SimulatorSpaceGame.GetPlayerInventory();
+		if (auto test = inventory->GetTool({ id("StarKiller"),0,0 })) { zealottool = true; }
+		if (zealottool == false)
+		{
+			ResourceKey selectedtool = { id("StarKiller"),0,0 };
+			ToolManager.LoadTool(selectedtool, tool);
+			inventory->AddItem(tool.get());
+			scientisttool = true;
+			uint32_t eventID = UIEventLog.ShowEvent(id("ZealotTool"), GroupIDs::SpacePopups);
+		}
+	}
+	else
+	{
+		ResourceKey selectedtool = { id("StarKiller"),0,0 };
+		ToolManager.LoadTool(selectedtool, tool);
+		auto inventory = SimulatorSpaceGame.GetPlayerInventory();
+		if (auto test = inventory->GetTool(selectedtool))
+		{
+			inventory->RemoveItem(test);
+			zealottool = false;
 		}
 	}
 }

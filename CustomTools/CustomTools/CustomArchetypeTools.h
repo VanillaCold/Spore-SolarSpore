@@ -20,6 +20,7 @@ class CustomArchetypeTools
 	bool scientisttool = false;
 	bool knighttool = false;
 	bool shamantool = false;
+	bool zealottool = false;
 
 public:
 	static const uint32_t TYPE = id("CustomTools::CustomArchetypeTools");
@@ -45,6 +46,7 @@ public:
 	void acgenerator();
 	void regalshield();
 	void returnportal();
+	void starKiller();
 
 
 	//

@@ -3,7 +3,7 @@ string16 description "Warrior Tool"
 bool eventAllowDuplicates true
 key eventCategory Info
 texts eventDescription
-	"You have been awarded Berserker Rage for colonizing 30 systems!"
+	"You have been awarded Berserker Rage for colonizing 60 systems!"
 end
 float eventRemoveTime 15
 float eventStartFadeTime 10

@@ -1,0 +1,8 @@
+key parent ConsequenceSuperPowers!spg_Template.prop
+texts consequenceSuperPowerName
+	"Return Portal"
+end
+key consequenceSuperPowerIcon ufotools~!0x6DF659DD.png
+texts consequenceSuperPowerDescription
+	"Teleports you to the closest system that you own. Unlocked after colonising 60 systems."
+end

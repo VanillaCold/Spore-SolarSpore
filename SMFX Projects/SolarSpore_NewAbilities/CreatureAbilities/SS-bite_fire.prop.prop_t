@@ -21,4 +21,4 @@ vector2s creatureAbilityRequiredCAPsMaxValueRange
 	(16, 16)
 end
 key verbIconRepresentativeAnimation 0x0629B06A
-key verbIconImageID 0x9AD1B7A2
+#key verbIconImageID 0x9AD1B7A2

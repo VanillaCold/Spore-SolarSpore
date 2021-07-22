@@ -1,0 +1,13 @@
+key parent ConsequenceTraits!spg_Template.prop
+colorRGB consequenceTraitColor (0.314, 0.275, 0.804)
+texts consequenceTraitDescription
+	(consequence!0x00000060) "Scientist Descrip (PLACEHOLDER)"
+end
+key consequenceTraitIcon consequence~!0x25211089.png
+texts consequenceTraitName
+	(consequence!0x0000005f) "Scientist (PLACEHOLDER)"
+end
+keys consequenceTraitUnlocksSuperpowers
+	spg_scientist_tool
+	spg_scientist_tool2
+end

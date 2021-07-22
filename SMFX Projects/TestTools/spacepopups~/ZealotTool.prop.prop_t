@@ -1,9 +1,9 @@
 key parent civpopupbase~!EventTemplate.prop
-string16 description "Trader Tool"
+string16 description "Zealot Tool"
 bool eventAllowDuplicates true
 key eventCategory Info
 texts eventDescription
-	"You have been awarded Purple Spice Dye for colonizing 60 systems!"
+	"You have been awarded the Starkiller for colonizing 60 systems!"
 end
 float eventRemoveTime 15
 float eventStartFadeTime 10
