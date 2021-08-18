@@ -1,0 +1,27 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Starkiller"
+key spaceToolContext space
+texts spaceToolDescription
+	"Starkiller"
+end
+texts spaceToolDetailDescription
+	"Destroys a star with a huge explosion, converting it to a black hole."
+end
+bool spaceToolDisableOn201Ruins false
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!0xFDE1BB35.png
+float spaceToolMaxRange 0
+key toolMuzzleEffectID StarKiller1 #effect 0x03D6EF40 = proto star
+key spaceToolPanelKey combat_panel_top~
+float spaceToolRechargeRate 60
+key spaceToolStrategy StarKiller
+bool toolDeselectsAfterUse true
+bool toolHitOrientsToTerrain false
+bool toolIsSuperWeapon false
+bool spaceToolUsesAmmo false
+bool toolUseOnActivate true
+int32 spaceToolMaxAmmoCount 99
+int32 spaceToolAmmoUsedPerShot 0
+bool toolPreventsPlanetExit false
+key spaceToolType other
