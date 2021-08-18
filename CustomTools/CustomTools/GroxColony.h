@@ -6,11 +6,14 @@
 #include <Spore\Simulator\cPlaceColonyToolStrategy.h>
 using namespace Simulator;
 class GroxColony
-	:public Simulator::cDefaultProjectileWeapon
+	:public Simulator::cToolStrategy
 {
 public:
 	GroxColony();
 	~GroxColony();
+	
+	virtual bool OnDeselect(cSpaceToolData* pTool) override;
+	
 	virtual bool OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int) override;
 	virtual bool Update(cSpaceToolData* pTool, bool showErrors, const char16_t** ppFailText = nullptr) override;
 };
