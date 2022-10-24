@@ -23,7 +23,7 @@ texts spaceTradingNeed
 	"We need some C++ for an experiment. We want to try using it to create completely new things that don't exist yet."
 end
 texts spaceTradingNoNeed
-	"Would you like some C++? You can use it create a ModAPI Development Kit!"
+	"Would you like some C++? You can use it create a modding API!"
 end
 key spaceTradingType spice
 bool SS-UseSpiceOnHomeworld false

@@ -3,7 +3,7 @@ float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
 uint32 spaceEconomySpiceColor 0x005F372B
 texts spaceToolDescription
-	"Nutella"
+	"Chocolium"
 end
 texts spaceToolDetailDescription
 	"A very powerful material, which is commonly used as chocolate-flavoured spread. Do not under-estimate its power."
@@ -11,7 +11,7 @@ end
 uint32s spaceToolImageColors
 	0xff5F372B
 end
-key spaceToolImageID ufotools~!nutella.png
+key spaceToolImageID ufotools~!cspread.png
 float spaceTradingBaseCost 20000
 float spaceTradingChanceBlueEasy 0
 float spaceTradingChanceBlueHard 0
@@ -20,7 +20,7 @@ float spaceTradingChanceRedHard 0
 float spaceTradingChanceYellowEasy 0
 float spaceTradingChanceYellowHard 0
 texts spaceTradingNeed
-	"Do you have any Nutella? We want to put some on our sandwiches."
+	"Do you have any Chocolium? We want to put some on our sandwiches."
 end
 texts spaceTradingNoNeed
 	"Please take a look at our fine goods available."

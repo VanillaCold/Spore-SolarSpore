@@ -3,7 +3,7 @@ float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
 uint32 spaceEconomySpiceColor 0x00538236
 texts spaceToolDescription
-	"RTX 3080"
+	"SporeTX 8040"
 end
 texts spaceToolDetailDescription
 	"So that's where they all went."
@@ -11,7 +11,7 @@ end
 uint32s spaceToolImageColors
 	0xff538236
 end
-key spaceToolImageID ufotools~!rtx3080.png
+key spaceToolImageID ufotools~!gpu.png
 float spaceTradingBaseCost 10000
 float spaceTradingChanceBlueEasy 0
 float spaceTradingChanceBlueHard 0
@@ -20,10 +20,10 @@ float spaceTradingChanceRedHard 0
 float spaceTradingChanceYellowEasy 0
 float spaceTradingChanceYellowHard 0
 texts spaceTradingNeed
-	"Do you have any RTX 3080s we can use? We're planning on upgrading our computers from the RTX 2070 Super."
+	"Do you have any SporeTX 8040s we can use? We're planning on upgrading our computers from the SporeTX 7040 Hyper."
 end
 texts spaceTradingNoNeed
-	"We bought a bunch of RTX 3080s and are now selling them at a higher price! Please buy them."
+	"We bought a bunch of SporeTX 8040s and are now selling them at a higher price! Please buy them."
 end
 key spaceTradingType spice
 bool SS-UseSpiceOnHomeworld false
