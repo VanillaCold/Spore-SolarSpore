@@ -44,7 +44,7 @@ void SolarSpore_RareSpices::Dispose() {
 void SolarSpore_RareSpices::Update(int deltaTime, int deltaGameTime) {
 	if (Simulator::IsSpaceGame())
 	{
-		eastl::vector<ResourceKey> props;
+		/*eastl::vector<ResourceKey> props;
 		auto star = Simulator::GetActiveStarRecord();
 		if (star != nullptr)
 		{
@@ -52,10 +52,10 @@ void SolarSpore_RareSpices::Update(int deltaTime, int deltaGameTime) {
 			//rarespice1
 			if (star->mPlanetCount > 0 && it == generatedstars.end())
 			{
-				RandomNumberGenerator rng1(star->mKey * int32_t(star->mType));
+				RandomNumberGenerator rng1(star->mKey.internalValue * int16_t(star->mType));
 				auto planet = star->mPlanets[rng1.RandomInt(star->mPlanetCount-1)];
-				RandomNumberGenerator rng(rng1.seed / star->mKey * (planet->GetID() + planet->mFlags));
-				rng.seed = star->mKey * planet->GetID();
+				RandomNumberGenerator rng(rng1.seed / star->mKey.internalValue * (planet->GetID().internalValue + planet->mFlags));
+				rng.seed = star->mKey.internalValue * planet->GetID().internalValue;
 				//App::ConsolePrintF(to_string(rng1.seed).c_str());
 				//App::ConsolePrintF(to_string(rng.seed).c_str());
 				PropertyListPtr propList;
@@ -69,10 +69,10 @@ void SolarSpore_RareSpices::Update(int deltaTime, int deltaGameTime) {
 				{
 					props.push_back(ray[i]);
 				}
-				/*			for (int i = 0; i < num; i += 1)
+							for (int i = 0; i < num; i += 1)
 							{
 								props.push_back(ray[i]);
-							}*/
+							}
 
 							//if (num != (1 || 0))
 							//{
@@ -86,11 +86,11 @@ void SolarSpore_RareSpices::Update(int deltaTime, int deltaGameTime) {
 				
 				cPlanetPtr planet2;
 				StarManager.RecordToPlanet(planet.get(),planet2);
-				planet2->field_1C4 = spicecolour;
-				generatedstars.push_back(star->mKey);
+				planet2->mSpaceEconomySpiceColor = spicecolour;
+				generatedstars.push_back(star->mKey.internalValue);
 				//}
 			}
-		}
+		}*/
 	}
 }
 
