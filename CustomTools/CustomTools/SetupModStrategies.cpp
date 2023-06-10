@@ -17,7 +17,6 @@
 //#include "SystemCount.h"
 #include "RandomTool.h"
 #include "ContactHomeworld.h"
-#include "CustomArchetypeTools.h"
 #include "WanderingPortal.h"
 #include "LifeBurst.h"
 #include "SpiceDye.h"
@@ -117,6 +116,12 @@ void SetupModStrategies::SetupStrategies()
 				id("ReturnPortal"),
 				id("ShamanTool")
 			));
+
+			SSConsequenceToolManager.AddArchetypeTool(ArchetypeTool(
+				Simulator::Archetypes::kArchetypePlayerDiplomat,
+				id("Detente")
+			));
+
 		}
 		catch (std::exception except)
 		{

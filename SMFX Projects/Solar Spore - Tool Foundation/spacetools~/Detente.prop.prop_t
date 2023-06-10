@@ -5,7 +5,7 @@ texts spaceToolDescription
 	"Detente Surge"
 end
 texts spaceToolDetailDescription
-	"Ends a war with another empire, even works for the Grox."
+	"Completely ends a war with another empire; even the Grox."
 end
 bool spaceToolDisableOn201Ruins true
 bool spaceToolDisableOnHomeworld false
@@ -14,7 +14,7 @@ bool spaceToolHide false
 key spaceToolImageID consequence~!0x8F46C38A.png
 float spaceToolMaxRange -1
 key spaceToolPanelKey social_panel_top~
-float spaceToolRechargeRate 0 #-2400
+float spaceToolRechargeRate 200 #-2400
 key spaceToolStrategy Detente
 key spaceToolType special
 bool toolDeselectsAfterUse true

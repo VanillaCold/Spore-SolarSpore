@@ -19,10 +19,17 @@ bool Detente::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit
 	auto oldemp = StarManager.GetEmpire(oldid);
 	auto otheremp = GetPlayerEmpire();
 
-	RelationshipManager.DeclarePeace(oldemp, GetPlayerEmpire());
-	//RelationshipManager.DeclarePeace((uint32_t)oldemp, (uint32_t)GetPlayerEmpire());
-	RelationshipManager.ResetRelationship(oldemp->mPoliticalID, GetPlayerEmpire()->mPoliticalID);
-	RelationshipManager.ApplyRelationship(oldemp->mPoliticalID, otheremp->mPoliticalID, RelationshipEvents::kRelationshipEventDeclaredWar, 0.5F);
+	if (RelationshipManager.IsAtWar(GetPlayerEmpireID(), oldid))
+	{
+		RelationshipManager.DeclarePeace(oldemp, GetPlayerEmpire());
+		//RelationshipManager.DeclarePeace((uint32_t)oldemp, (uint32_t)GetPlayerEmpire());
+		RelationshipManager.ResetRelationship(oldemp->mPoliticalID, GetPlayerEmpire()->mPoliticalID);
+		RelationshipManager.ApplyRelationship(oldemp->mPoliticalID, otheremp->mPoliticalID, RelationshipEvents::kRelationshipEventDeclaredWar, 1.75F);
+	}
+	else
+	{
+		RelationshipManager.ApplyRelationship(oldemp->mPoliticalID, otheremp->mPoliticalID, RelationshipEvents::kRelationshipEventSpaceGoodToolUse, 3.0F);
+	}
 
 	return false;
 }

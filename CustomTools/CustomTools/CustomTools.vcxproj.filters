@@ -38,12 +38,6 @@
     <Filter Include="CustomTools\Tools\GroxColoniser">
       <UniqueIdentifier>{84459c80-0e1b-4c94-9357-5c52138418a2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CustomTools\Tools\ReturnPortal">
-      <UniqueIdentifier>{59c8dbc0-e6f1-4fe0-8693-0f1c6c98f3aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CustomTools\Tools\Starkiller">
-      <UniqueIdentifier>{9268ab1e-f63d-4c53-bbbf-62878fec4224}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CustomTools\Tools\Archetype">
       <UniqueIdentifier>{7aa4355d-5b33-4465-a44c-abcedb6402f5}</UniqueIdentifier>
     </Filter>
@@ -52,6 +46,12 @@
     </Filter>
     <Filter Include="CustomTools\IUpdatables">
       <UniqueIdentifier>{25f0c6b1-2c25-48ce-b079-a7f45a4aa2b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Archetype\ReturnPortal">
+      <UniqueIdentifier>{59c8dbc0-e6f1-4fe0-8693-0f1c6c98f3aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Starkiller">
+      <UniqueIdentifier>{9268ab1e-f63d-4c53-bbbf-62878fec4224}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -131,7 +131,7 @@
       <Filter>CustomTools\Tools\GroxColoniser</Filter>
     </ClInclude>
     <ClInclude Include="ReturnPortal.h">
-      <Filter>CustomTools\Tools\ReturnPortal</Filter>
+      <Filter>CustomTools\Tools\Archetype\ReturnPortal</Filter>
     </ClInclude>
     <ClInclude Include="StarKiller.h">
       <Filter>CustomTools\Tools\Starkiller</Filter>
@@ -223,7 +223,7 @@
       <Filter>CustomTools\Tools\GroxColoniser</Filter>
     </ClCompile>
     <ClCompile Include="ReturnPortal.cpp">
-      <Filter>CustomTools\Tools\ReturnPortal</Filter>
+      <Filter>CustomTools\Tools\Archetype\ReturnPortal</Filter>
     </ClCompile>
     <ClCompile Include="Starkiller.cpp">
       <Filter>CustomTools\Tools\Starkiller</Filter>
