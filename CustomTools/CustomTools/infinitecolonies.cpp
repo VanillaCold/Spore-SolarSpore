@@ -33,7 +33,7 @@ bool infinitecolonies::Update(cSpaceToolData* pTool, bool showErrors, const char
 		int increaseby = 0;
 		int tries = 0;
 		size_t count = 0;
-		ResourceKey* ray;
+		ResourceKey* ray{};
 		vector<ResourceKey> props;
 		check = PropManager.GetPropertyList(colonykey.instanceID, colonykey.groupID, propList);
 		//if (check == true){ check = App::Property::GetArrayKey(propList.get(), 0x043B29E1, count, ray); }
