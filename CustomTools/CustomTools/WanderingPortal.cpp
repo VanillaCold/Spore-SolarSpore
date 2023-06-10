@@ -49,7 +49,7 @@ bool WanderingPortal::Update(cSpaceToolData* pTool, bool showErrors, const char1
 		}
 	}
 	if (pTool->mAmmoUsedPerShot != 0) { if (pTool->mCurrentAmmoCount < pTool->mAmmoUsedPerShot) { enoughammo = false; } }
-	if (GetCurrentContext() == kSpaceContextGalaxy && pTool->mRechargeTimer.IsRunning() == false && enoughammo == true) { return true; }
+	if (GetCurrentContext() == SpaceContext::Galaxy && pTool->mRechargeTimer.IsRunning() == false && enoughammo == true) { return true; }
 	else { return false; }
 }
 
@@ -62,7 +62,7 @@ void WanderingPortal::SelectedUpdate(cSpaceToolData* pTool, const Vector3& posit
 {
 }
 
-bool WanderingPortal::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool WanderingPortal::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	return false;
 }

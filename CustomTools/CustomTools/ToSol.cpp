@@ -12,7 +12,7 @@ ToSol::~ToSol()
 
 bool ToSol::OnSelect(cSpaceToolData* pTool)
 {
-	//if (test == kSpaceContextGalaxy)
+	//if (test == SpaceContext::Galaxy)
 	//{
 		Sporepedia::ShopperRequest request(this);
 		request.shopperID = id("ToPlanetShopper");
@@ -27,7 +27,7 @@ bool ToSol::OnSelect(cSpaceToolData* pTool)
 bool ToSol::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** ppFailText )
 {
 	showErrors = true;
-	if (GetCurrentContext() == kSpaceContextGalaxy && GetActiveStarRecord() != StarManager.GetSol()) { return true; }
+	if (GetCurrentContext() == SpaceContext::Galaxy && GetActiveStarRecord() != StarManager.GetSol()) { return true; }
 	else { return false; }
 }
 
@@ -40,10 +40,10 @@ void ToSol::SelectedUpdate(cSpaceToolData* pTool, const Vector3& position)
 {
 	SpaceContext test;
 	test = GetCurrentContext();
-	if (test != kSpaceContextGalaxy) { pTool->mbIsInUse = 0; }
+	if (test != SpaceContext::Galaxy) { pTool->mbIsInUse = 0; }
 }
 
-bool ToSol::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool ToSol::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	return false;
 }

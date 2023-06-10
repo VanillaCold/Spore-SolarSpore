@@ -21,6 +21,6 @@ public:
 		const Vector3& position) override;
 	virtual bool OnHit(cSpaceToolData* pTool,
 		const Vector3& position,
-		cSpaceToolData::SpaceToolHit hitType, int) override;
+		SpaceToolHit hitType, int) override;
 	void OnShopperAccept(const ResourceKey& selection) override;
 };

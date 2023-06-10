@@ -14,7 +14,7 @@ using namespace Simulator;
 class AmmoCreator
 	:public Simulator::cToolStrategy
 {
-	IEffectPtr effect;
+	IVisualEffectPtr effect;
 	cSpaceToolData* tool;
 	ResourceKey creature;
 public:

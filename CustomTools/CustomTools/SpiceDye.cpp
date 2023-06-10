@@ -13,7 +13,7 @@ SpiceDye::~SpiceDye()
 {
 }
 
-bool SpiceDye::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool SpiceDye::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	//MessageManager.PostMSG(0x6527EAF, nullptr);
 	//MessageManager.PostMSG(0x6527EAD, nullptr);
@@ -33,7 +33,7 @@ bool SpiceDye::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** p
 			pTool->mRechargeTimer.Stop();
 		}
 	}
-	if (GetCurrentContext() == kSpaceContextSolarSystem && pTool->mRechargeTimer.IsRunning() == false && mulah >= cost) { return true; }
+	if (GetCurrentContext() == SpaceContext::SolarSystem && pTool->mRechargeTimer.IsRunning() == false && mulah >= cost) { return true; }
 	else { return false; }
 }
 
@@ -54,7 +54,7 @@ bool SpiceDye::OnSelect(cSpaceToolData* pTool)
 	App::Property::GetUInt32(propList.get(), 0x058CBB75, spicecolour);
 
 	auto planet = GetActivePlanet();
-	planet->field_1C4 = spicecolour;
+	planet->mSpaceEconomySpiceColor = spicecolour;
 
 	pTool->mbIsActive = false;
 	pTool->mbIsInUse = false;

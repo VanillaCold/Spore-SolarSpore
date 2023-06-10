@@ -26,7 +26,7 @@ void PlanetDebuster::SelectedUpdate(cSpaceToolData* pTool, const Vector3& positi
 {
 }
 
-bool PlanetDebuster::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool PlanetDebuster::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	return false;
 }
@@ -43,7 +43,7 @@ bool PlanetDebuster::OnSelect(cSpaceToolData* pTool)
 
 bool PlanetDebuster::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** ppFailText)
 {
-	if (GetCurrentContext() == kSpaceContextSolarSystem && GetActivePlanetRecord() != nullptr && GetActiveStarRecord()->mType != StarType::ProtoPlanetary)
+	if (GetCurrentContext() == SpaceContext::SolarSystem && GetActivePlanetRecord() != nullptr && GetActiveStarRecord()->mType != StarType::ProtoPlanetary)
 	{
 		if (GetActivePlanetRecord()->mFlags & 256)
 		{

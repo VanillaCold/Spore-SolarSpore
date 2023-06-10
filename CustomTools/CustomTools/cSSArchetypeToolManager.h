@@ -5,6 +5,17 @@
 #define cSSArchetypeToolManagerPtr intrusive_ptr<cSSArchetypeToolManager>
 #define SSConsequenceToolManager (cSSArchetypeToolManager::Get())
 
+struct ArchetypeTool
+{
+	ArchetypeTool(Simulator::Archetypes targetArchetype, uint32_t tool)
+	{
+		toolID = tool;
+		archetype = targetArchetype;
+	}
+	Simulator::Archetypes archetype;
+	uint32_t toolID;
+};
+
 class cSSArchetypeToolManager 
 	: public Object
 	, public DefaultRefCounted
@@ -12,16 +23,7 @@ class cSSArchetypeToolManager
 {
 
 public:
-	struct ArchetypeTool
-	{
-		ArchetypeTool(Simulator::Archetypes targetArchetype, uint32_t tool)
-		{
-			toolID = tool;
-			archetype = targetArchetype;
-		}
-		Simulator::Archetypes archetype;
-		uint32_t toolID;
-	};
+
 
 	static const uint32_t TYPE = id("cSSArchetypeToolManager");
 	

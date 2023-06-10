@@ -45,7 +45,7 @@ bool RandomTool::OnSelect(cSpaceToolData* pTool)
 
 	if (isList == false)
 	{
-		PropManager.GetAllListIDs(GroupIDs::SpaceTools, props);
+		PropManager.GetPropertyListIDs(GroupIDs::SpaceTools, props);
 	}
 	else
 	{
@@ -87,9 +87,9 @@ bool RandomTool::OnSelect(cSpaceToolData* pTool)
 	cSpaceToolDataPtr t;
 	//auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 	if (ToolManager.LoadTool({ pTool->mpPropList->GetResourceKey().instanceID, 0, 0 }, t)) { t->mCurrentAmmoCount = 0; inventory->AddItem(t.get()); }
-	IEffectPtr effect;
-	if (SwarmManager.CreateEffect(pTool->mMuzzleEffectID, 0, effect)) {
-		effect->SetTransform(Transform()
+	IVisualEffectPtr effect;
+	if (EffectsManager.CreateVisualEffect(pTool->mMuzzleEffectID, 0, effect)) {
+		effect->SetRigidTransform(Transform()
 			.SetOffset(pos));
 		effect->Start();
 	}

@@ -54,7 +54,7 @@ bool GroxColony::Update(cSpaceToolData* pTool, bool showErrors, const char16_t**
 	{
 		tScore = TerraformingManager.GetTScore(Simulator::GetActivePlanetRecord());
 	}*/
-	if (true){//((SpacePlayerData::Get()->mCurrentContext == kSpaceContextPlanet || true) && pTool->mCurrentAmmoCount > 0 && tScore == 0) {
+	if (true){//((SpacePlayerData::Get()->mCurrentContext == SpaceContext::Planet || true) && pTool->mCurrentAmmoCount > 0 && tScore == 0) {
 		return true;
 	}
 	return false;

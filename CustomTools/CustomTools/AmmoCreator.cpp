@@ -113,7 +113,7 @@ bool AmmoCreator::Update(cSpaceToolData* pTool, bool showErrors, const char16_t*
 	auto name = GetPlayerEmpire()->mEmpireName;
 	GetPlayerEmpire()->SetSpeciesProfile(SelectedSpecies);
 	auto pos = GetPlayerUFO()->GetPosition();
-	if (SwarmManager.CreateEffect(tool->mMuzzleEffectID, 0, effect)) {
+	if (EffectsManager.CreateVisualEffect(tool->mMuzzleEffectID, 0, effect)) {
 		effect->SetTransform(Transform()
 			.SetOffset(pos));
 		effect->Start();

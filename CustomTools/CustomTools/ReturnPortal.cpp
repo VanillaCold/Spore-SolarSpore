@@ -12,7 +12,7 @@ ReturnPortal::~ReturnPortal()
 
 bool ReturnPortal::OnSelect(cSpaceToolData* pTool)
 {
-	//if (test == kSpaceContextGalaxy)
+	//if (test == SpaceContext::Galaxy)
 	//{
 	//Sporepedia::ShopperRequest request(this);
 	//request.shopperID = id("ToPlanetShopper");

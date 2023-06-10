@@ -13,7 +13,7 @@ LifeBurst::~LifeBurst()
 {
 }
 
-bool LifeBurst::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool LifeBurst::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	MySystem* System = MySystem::Get();
 	auto propList = pTool->mpPropList;
@@ -24,11 +24,11 @@ bool LifeBurst::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceTool
 	{
 		neworold = true;
 	}
-	auto it = eastl::find(System->deadplanets.begin(), System->deadplanets.end(), GetActivePlanetRecord()->GetID());
+	/*auto it = eastl::find(System->deadplanets.begin(), System->deadplanets.end(), GetActivePlanetRecord()->GetID());
 	if (it != System->deadplanets.end())
 	{
 		System->deadplanets.erase(it);
-	}
+	}*/
 	if (neworold == false)
 	{
 		GetActivePlanetRecord()->mAtmosphereScore = 0.5;

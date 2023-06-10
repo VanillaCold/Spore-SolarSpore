@@ -34,28 +34,28 @@ bool SpawnVehicle::WhileFiring(cSpaceToolData* pTool, const Vector3& aimPoint, i
 	}
 	vehicle->SetPosition(aimPoint);
 	if (beameffect != nullptr) {
-		beameffect->SetTransform(Transform()
+		beameffect->SetRigidTransform(Transform()
 			.SetOffset(playpos));
 	}
 	if (hiteffect != nullptr) {
-		hiteffect->SetTransform(Transform()
+		hiteffect->SetRigidTransform(Transform()
 			.SetOffset(aimPoint));
 	}
 
 
 	if (hiteffect == nullptr)
 	{
-		if (SwarmManager.CreateEffect(id("SG_laser_lvl_1_beam_impact"), 0, hiteffect)) {
-			hiteffect->SetTransform(Transform()
+		if (EffectsManager.CreateVisualEffect(id("SG_laser_lvl_1_beam_impact"), 0, hiteffect)) {
+			hiteffect->SetRigidTransform(Transform()
 				.SetOffset(aimPoint));
 			hiteffect->Start();
 		}
 	}
 	if (beameffect == nullptr)
 	{
-		if (SwarmManager.CreateEffect(id("SG_laser_lvl_1_beam"), 0, beameffect))
+		if (EffectsManager.CreateVisualEffect(id("SG_laser_lvl_1_beam"), 0, beameffect))
 		{
-			beameffect->SetTransform(Transform()
+			beameffect->SetRigidTransform(Transform()
 				.SetOffset(playpos));
 			beameffect->Start();
 		}

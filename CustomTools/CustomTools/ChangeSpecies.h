@@ -15,7 +15,7 @@ class ChangeSpecies
 	:public Simulator::cToggleToolStrategy
 	,public Sporepedia::IShopperListener
 {
-	IEffectPtr effect;
+	IVisualEffectPtr effect;
 	cSpaceToolData* tool;
 	ResourceKey creature;
 public:

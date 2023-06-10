@@ -13,11 +13,11 @@ StaffofDeath::~StaffofDeath()
 {
 }
 
-bool StaffofDeath::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool StaffofDeath::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	GetActivePlanetRecord()->mAtmosphereScore = -0.25;
 	App::ConsolePrintF(to_string(GetActivePlanetRecord()->mAtmosphereScore).c_str());
 	MySystem* System = MySystem::Get();
-	System->deadplanets.push_back(GetActivePlanetRecord()->GetID());
+	System->deadplanets.push_back(GetActivePlanetRecord()->GetID().internalValue);
 	return false;
 }

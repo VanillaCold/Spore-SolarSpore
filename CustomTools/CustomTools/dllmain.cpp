@@ -30,6 +30,8 @@
 #include "ReturnPortal.h"
 #include "StarKiller.h"
 
+#include "cSSArchetypeToolManager.h"
+
 void Initialize()
 {
 	// This method is executed when the game starts, before the user interface is shown
@@ -67,8 +69,12 @@ void Initialize()
 	ToolManager.AddStrategy(new ReturnPortal(), id("ReturnPortal"));
 	ToolManager.AddStrategy(new StarKiller(), id("Starkiller"));
 
-	SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
-	SimulatorSystem.AddStrategy(new CustomArchetypeTools(), CustomArchetypeTools::NOUN_ID);
+	//SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
+	//SimulatorSystem.AddStrategy(new CustomArchetypeTools(), CustomArchetypeTools::NOUN_ID);
+	
+	App::AddUpdateFunction(new cSSArchetypeToolManager());
+	
+	SSConsequenceToolManager->AddArchetypeTool(ArchetypeTool(Simulator::Archetypes::kArchetypeBard, id("test")));
 }
 
 /*virtual_detour(thingytofixparts, Editors::cEditor, Editors::cEditor, void()) {

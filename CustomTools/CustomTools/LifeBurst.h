@@ -10,6 +10,6 @@ class LifeBurst
 public:
 	LifeBurst();
 	~LifeBurst();
-	bool OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int);
+	bool OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int);
 	//virtual bool WhileFiring(cSpaceToolData* pTool, const Vector3& aimPoint, int) override;
 };

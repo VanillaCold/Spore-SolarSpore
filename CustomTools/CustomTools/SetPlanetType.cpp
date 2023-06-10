@@ -19,12 +19,12 @@ void SetPlanetType::ParseLine(const ArgScript::Line& line)
 	//17451
 	auto args = line.GetArguments(3);
 	
-	App::ConsolePrintF(to_string(GetActivePlanetRecord()->mType).c_str());
+	App::ConsolePrintF(to_string(int(GetActivePlanetRecord()->mType)).c_str());
 	//PlanetIndex Index = mpFormatParser->ParseUInt(args[0]);
 	App::ConsolePrintF(to_string(GetActivePlanetRecord()->mFlags).c_str());
 	App::ConsolePrintF(to_string(int(GetActivePlanetRecord()->mTechLevel)).c_str());
 	//cPlanetRecord* Record = StarManager.GetPlanetRecord(Index);
-	GetActivePlanetRecord()->mType = mpFormatParser->ParseInt(args[0]);
+	GetActivePlanetRecord()->mType = Simulator::PlanetType(mpFormatParser->ParseInt(args[0]));
 	GetActivePlanetRecord()->mFlags = mpFormatParser->ParseInt(args[1]);
 	GetActivePlanetRecord()->mTechLevel = Simulator::TechLevel(mpFormatParser->ParseInt(args[2]));
 }

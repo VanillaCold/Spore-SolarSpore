@@ -8,8 +8,8 @@ using namespace Simulator;
 class SpawnVehicle
 	:public Simulator::cDefaultBeamTool
 {
-	IEffectPtr beameffect;
-	IEffectPtr hiteffect;
+	IVisualEffectPtr beameffect;
+	IVisualEffectPtr hiteffect;
 	cGameDataUFOPtr vehicle;
 	Vector3& playpos = Vector3(0,0,0);
 public:
@@ -20,6 +20,6 @@ public:
 	void OnMouseDown(cSpaceToolData* pTool, const Vector3& playerPosition);
 	/*virtual bool func4Ch(cSpaceToolData* pTool,const Vector3&);
 	virtual bool func48h(cSpaceToolData* pTool, const Vector3&);
-	virtual bool OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType);*/
+	virtual bool OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType);*/
 	virtual bool OnMouseUp(cSpaceToolData* pTool) override;
 };

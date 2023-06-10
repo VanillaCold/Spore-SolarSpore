@@ -26,7 +26,7 @@ void StarKiller::SelectedUpdate(cSpaceToolData* pTool, const Vector3& position)
 {
 }
 
-bool StarKiller::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool StarKiller::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	return false;
 }
@@ -36,8 +36,8 @@ bool StarKiller::OnSelect(cSpaceToolData* pTool)
 	auto star = GetActiveStarRecord();
 	star->mType = StarType::ProtoPlanetary;
 	
-	if (SwarmManager.CreateEffect(pTool->mMuzzleEffectID, 0, effect)) {
-		effect->SetTransform(Transform()
+	if (EffectsManager.CreateVisualEffect(pTool->mMuzzleEffectID, 0, effect)) {
+		effect->SetRigidTransform(Transform()
 			.SetOffset(GetPlayerUFO()->GetPosition()));
 		effect->Start();
 	}
@@ -86,8 +86,8 @@ bool StarKiller::OnSelect(cSpaceToolData* pTool)
 	//star->mPlanets.erase(star->mPlanets.begin(), star->mPlanets.end());
 	auto star2 = GetActiveStar(); 
 	star2->mbIsDestroyed = 1;
-	star2->mPrimaryType = int(StarType::BlackHole);
-	star2->mSecondaryType = int(StarType::BlackHole);
+	star2->mPrimaryType = StarType::BlackHole;
+	star2->mSecondaryType = StarType::BlackHole;
 
 	/*auto& emps = StarManager.GetEmpires();
 	int nullemps = 0;
@@ -115,7 +115,7 @@ bool StarKiller::OnSelect(cSpaceToolData* pTool)
 bool StarKiller::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** ppFailText)
 {
 	bool result = Simulator::cToolStrategy::Update(pTool, showErrors, ppFailText);
-	if (GetCurrentContext() == kSpaceContextGalaxy)
+	if (GetCurrentContext() == SpaceContext::Galaxy)
 	{
 		if (GetActiveStarRecord()->mType != StarType::GalacticCore && GetActiveStarRecord()->mType != StarType::BlackHole && GetActiveStarRecord()->mType != StarType::ProtoPlanetary && GetActiveStarRecord()->mEmpireID == -1)
 		{

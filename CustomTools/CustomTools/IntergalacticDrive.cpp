@@ -71,7 +71,7 @@ bool IntergalacticDrive::Update(cSpaceToolData* pTool, bool showErrors, const ch
 			pTool->mRechargeTimer.Stop();
 		}
 	}
-	if (GetCurrentContext() == kSpaceContextGalaxy && pTool->mRechargeTimer.IsRunning() == false && pTool->mEnergyCost/10 < GetPlayerUFO()->mEnergy) { return true; }
+	if (GetCurrentContext() == SpaceContext::Galaxy && pTool->mRechargeTimer.IsRunning() == false && pTool->mEnergyCost/10 < GetPlayerUFO()->mEnergy) { return true; }
 	else { pTool->mbIsInUse = false; return false; }
 	//}
 }
@@ -96,11 +96,11 @@ void IntergalacticDrive::SelectedUpdate(cSpaceToolData* pTool, const Vector3& po
 		CameraManager.SetActiveCameraByID(oldcam);
 		}
 
-	if (test != kSpaceContextGalaxy) { pTool->mbIsInUse = 0; }
+	if (test != SpaceContext::Galaxy) { pTool->mbIsInUse = 0; }
 	//pTool->mbIsActive = false;
 }
 
-bool IntergalacticDrive::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool IntergalacticDrive::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	return false;
 }

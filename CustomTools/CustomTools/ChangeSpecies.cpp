@@ -48,8 +48,8 @@ void ChangeSpecies::OnShopperAccept(const ResourceKey& selection)
 	auto name = GetPlayerEmpire()->mEmpireName;
 	GetPlayerEmpire()->SetSpeciesProfile(SelectedSpecies);
 	auto pos = GetPlayerUFO()->GetPosition();
-	if (SwarmManager.CreateEffect(tool->mMuzzleEffectID, 0, effect)) {
-		effect->SetTransform(Transform()
+	if (EffectsManager.CreateVisualEffect(tool->mMuzzleEffectID, 0, effect)) {
+		effect->SetRigidTransform(Transform()
 			.SetOffset(pos));
 		effect->Start();
 	}
