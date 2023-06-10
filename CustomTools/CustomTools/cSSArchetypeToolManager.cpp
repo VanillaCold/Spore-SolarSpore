@@ -43,6 +43,7 @@ void cSSArchetypeToolManager::Update()
 			OnArchetypeUpdate();
 			return;
 		}
+
 		else
 		{
 			if (givenTool == false && empire->mStars.size() >= 60)
@@ -106,6 +107,7 @@ bool cSSArchetypeToolManager::AddArchetypeTool(ArchetypeTool tool)
 			else
 			{
 				throw std::invalid_argument("The event ID is neither an actual file nor NULL, and so is invalid.");
+				return false;
 			}
 		}
 		else
