@@ -6,7 +6,7 @@ texts spaceToolDescription
 	"Methane"
 end
 texts spaceToolDetailDescription
-	"One of the Alkanes, Methane (C2H6) is a fossil fuel commonly referred to as 'Natural Gas'."
+	"The most basic alkane, Methane (CH4) is a fossil fuel commonly referred to as 'Natural Gas'."
 end
 uint32s spaceToolImageColors
 	0xff81CC55
