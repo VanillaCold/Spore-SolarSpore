@@ -7,13 +7,15 @@
 
 struct ArchetypeTool
 {
-	ArchetypeTool(Simulator::Archetypes targetArchetype, uint32_t tool)
+	ArchetypeTool(Simulator::Archetypes targetArchetype, uint32_t tool, uint32_t evID = NULL)
 	{
 		toolID = tool;
 		archetype = targetArchetype;
+		eventID = evID;
 	}
 	Simulator::Archetypes archetype;
 	uint32_t toolID;
+	uint32_t eventID;
 };
 
 class cSSArchetypeToolManager 

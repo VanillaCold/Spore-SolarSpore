@@ -56,6 +56,10 @@ void cSSArchetypeToolManager::Update()
 						if (ToolManager.LoadTool(ResourceKey(tooltype.toolID, 0, 0), tool))
 						{
 							SimulatorSpaceGame.GetPlayerInventory()->AddItem(tool.get());
+							if (tooltype.eventID != NULL)
+							{
+								uint32_t event = UIEventLog.ShowEvent(tooltype.eventID, GroupIDs::SpaceEvents);
+							}
 						}
 					}
 				}
@@ -95,7 +99,14 @@ bool cSSArchetypeToolManager::AddArchetypeTool(ArchetypeTool tool)
 	{
 		if (tool.archetype > 8 && tool.archetype < 19)
 		{
-			toolInstances.push_back(tool);
+			if (PropManager.HasPropertyList(tool.eventID, GroupIDs::SpaceEvents) || tool.eventID == NULL)
+			{
+				toolInstances.push_back(tool);
+			}
+			else
+			{
+				throw std::invalid_argument("The event ID is neither an actual file nor NULL, and so is invalid.");
+			}
 		}
 		else
 		{
