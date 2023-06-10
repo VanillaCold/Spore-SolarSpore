@@ -29,7 +29,7 @@
 #include "AmmoCreator.h"
 #include "ReturnPortal.h"
 #include "StarKiller.h"
-
+#include <stdexcept>
 #include "cSSArchetypeToolManager.h"
 
 void Initialize()
@@ -74,7 +74,7 @@ void Initialize()
 	
 	App::AddUpdateFunction(new cSSArchetypeToolManager());
 	
-	SSConsequenceToolManager->AddArchetypeTool(ArchetypeTool(Simulator::Archetypes::kArchetypeBard, id("test")));
+	//SSConsequenceToolManager->AddArchetypeTool(ArchetypeTool(Simulator::Archetypes::kArchetypeBard, id("test")));
 }
 
 /*virtual_detour(thingytofixparts, Editors::cEditor, Editors::cEditor, void()) {

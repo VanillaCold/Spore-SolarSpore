@@ -34,7 +34,7 @@ public:
 	int Release() override;
 	void Update() override;
 
-	void OnArchetypeUpdate(Simulator::Archetypes oldArchetype);
+	void OnArchetypeUpdate();
 	bool AddArchetypeTool(ArchetypeTool tool);
 
 	void* Cast(uint32_t type) const override;
@@ -46,4 +46,5 @@ private:
 
 	Simulator::Archetypes currentArchetype;
 	vector<ArchetypeTool> toolInstances;
+	bool givenTool;
 };
