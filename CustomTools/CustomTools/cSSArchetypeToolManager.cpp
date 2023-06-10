@@ -8,6 +8,7 @@ cSSArchetypeToolManager::cSSArchetypeToolManager()
 	currentArchetype = Simulator::Archetypes::kArchetypeGrob; //initialise current archetype.
 	givenTool = false;
 	toolInstances = {};
+	isDebug = false;
 }
 
 
@@ -46,7 +47,7 @@ void cSSArchetypeToolManager::Update()
 
 		else
 		{
-			if (givenTool == false && empire->mStars.size() >= 60)
+			if (givenTool == false && (empire->mStars.size() >= 60 || isDebug))
 			{
 				givenTool = true;
 				for each (ArchetypeTool tooltype in toolInstances)
@@ -86,9 +87,10 @@ void cSSArchetypeToolManager::OnArchetypeUpdate()
 		if (auto item = inventory->GetTool(ResourceKey(archetype.toolID,0,0)))
 		{
 			inventory->RemoveItem(item);
-			givenTool = false;
 		}
 	}
+	currentArchetype = Simulator::GetPlayerEmpire()->mArchetype;
+	givenTool = false;
 
 }
 

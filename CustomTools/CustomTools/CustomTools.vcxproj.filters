@@ -145,6 +145,9 @@
     <ClInclude Include="SetupModStrategies.h">
       <Filter>CustomTools</Filter>
     </ClInclude>
+    <ClInclude Include="ToggleSSDebug.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -236,6 +239,9 @@
     </ClCompile>
     <ClCompile Include="SetupModStrategies.cpp">
       <Filter>CustomTools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToggleSSDebug.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

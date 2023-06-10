@@ -30,6 +30,7 @@
 #include "ReturnPortal.h"
 #include "StarKiller.h"
 #include "cSSArchetypeToolManager.h"
+#include "ToggleSSDebug.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -63,21 +64,25 @@ void SetupModStrategies::SetupStrategies()
 	CheatManager.AddCheat("setPlanetType", new SetPlanetType());
 	//	CheatManager.AddCheat("empireInfo", new SystemCount());
 	CheatManager.AddCheat("contactHomeworld", new ContactHomeworld());
+	CheatManager.AddCheat("togglessdebug", new ToggleSSDebug());
 	
 	//Add archetype tools
 	try
 	{
 		SSConsequenceToolManager->AddArchetypeTool(ArchetypeTool(
-			Simulator::Archetypes::kArchetypePlayerShaman,
-			id("purplespicedye")));
+			Simulator::Archetypes::kArchetypePlayerTrader,
+			id("purplespicedye"),
+			id("TraderTool")));
 
 		SSConsequenceToolManager->AddArchetypeTool(ArchetypeTool(
 			Simulator::Archetypes::kArchetypePlayerWarrior,
-			id("ragemode")));
+			id("ragemode"),
+			id("WarriorTool")));
 
 		SSConsequenceToolManager->AddArchetypeTool(ArchetypeTool(
-			Simulator::Archetypes::kArchetypePlayerShaman,
-			id("purplespicedie")));
+			Simulator::Archetypes::kArchetypePlayerWanderer,
+			id("intergalacticdrive"),
+			id("WandererTool2")));
 	}
 	catch (std::exception except)
 	{

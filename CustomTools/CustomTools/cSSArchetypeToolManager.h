@@ -35,6 +35,7 @@ public:
 	int AddRef() override;
 	int Release() override;
 	void Update() override;
+	bool isDebug;
 
 	void OnArchetypeUpdate();
 	bool AddArchetypeTool(ArchetypeTool tool);
