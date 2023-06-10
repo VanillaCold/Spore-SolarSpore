@@ -15,6 +15,7 @@ infinitecolonies::~infinitecolonies()
 
 bool infinitecolonies::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** ppFailText)
 {
+	bool result = Simulator::cToolStrategy::Update(pTool, showErrors, ppFailText);
 	//return true;
 	if (GetActivePlanetRecord())
 	{
@@ -55,7 +56,7 @@ bool infinitecolonies::Update(cSpaceToolData* pTool, bool showErrors, const char
 		{
 			tScore = TerraformingManager.GetTScore(Simulator::GetActivePlanetRecord());
 		}
-		if (GetCurrentContext() == kSpaceContextPlanet && pTool->mCurrentAmmoCount >= pTool->mAmmoUsedPerShot && numcolonies < 7) { return true; }
+		if (numcolonies < 7 && tScore == 3) { return result; }
 		else { return false; }
 	}
 	return false;

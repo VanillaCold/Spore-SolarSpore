@@ -114,11 +114,12 @@ bool StarKiller::OnSelect(cSpaceToolData* pTool)
 
 bool StarKiller::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** ppFailText)
 {
-	if (GetCurrentContext() == kSpaceContextGalaxy && pTool->mCurrentAmmoCount >= pTool->mAmmoUsedPerShot)
+	bool result = Simulator::cToolStrategy::Update(pTool, showErrors, ppFailText);
+	if (GetCurrentContext() == kSpaceContextGalaxy)
 	{
 		if (GetActiveStarRecord()->mType != StarType::GalacticCore && GetActiveStarRecord()->mType != StarType::BlackHole && GetActiveStarRecord()->mType != StarType::ProtoPlanetary && GetActiveStarRecord()->mEmpireID == -1)
 		{
-			return true;
+			return result;
 		}
 	}
 	return false;

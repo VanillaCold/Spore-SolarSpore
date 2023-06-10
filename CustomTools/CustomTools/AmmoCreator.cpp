@@ -74,6 +74,7 @@ bool AmmoCreator::OnDeselect(cSpaceToolData* pTool)
 
 bool AmmoCreator::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** ppFailText)
 {
+	bool result = Simulator::cToolStrategy::Update(pTool, showErrors, ppFailText);
 	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 	int cost = 0;
 	//if (inventory->mpActiveTool != nullptr)
@@ -101,7 +102,7 @@ bool AmmoCreator::Update(cSpaceToolData* pTool, bool showErrors, const char16_t*
 	{
 		return true;
 	}
-	return false;
+	return result;
 }
 
 /*void AmmoCreator::OnShopperAccept(const ResourceKey& selection)

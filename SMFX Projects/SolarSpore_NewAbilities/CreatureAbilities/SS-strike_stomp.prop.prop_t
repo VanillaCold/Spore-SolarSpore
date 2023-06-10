@@ -1,8 +1,8 @@
 key parent creatureabilityTemplates~!StrikeTemplate
 uint32s creatureAbilityAnimationIDs
-	0x04bc04ab
+	0xA71A2EF4
 end
-uint32 creatureAbilityBabyGameAnimationID 0x04bc04ab
+uint32 creatureAbilityBabyGameAnimationID 0xA71A2EF4
 uint32s creatureAbilityCombatEffectEffectIds
 	0
 	0
@@ -26,4 +26,4 @@ float creatureAbilityRazeDamage 3.75
 vector2s creatureAbilityRequiredCAPsMaxValueRange
 	(91, 91)
 end
-key verbIconRepresentativeAnimation 0x04bc04ab
+key verbIconRepresentativeAnimation 0xA71A2EF4

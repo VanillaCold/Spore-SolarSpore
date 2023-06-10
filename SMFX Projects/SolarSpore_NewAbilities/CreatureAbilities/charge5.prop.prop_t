@@ -1,4 +1,4 @@
-key parent creatureabilityTemplates~!ChargeTemplate
+key parent AbilityTemplates!ChargeTemplate
 uint32s creatureAbilityCombatEffectEffectIds
 	0
 	0x8ada6610

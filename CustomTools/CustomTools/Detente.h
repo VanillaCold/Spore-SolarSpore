@@ -10,5 +10,5 @@ class Detente
 public:
 	Detente();
 	~Detente();
-	virtual bool OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int) override;
+	virtual bool OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int) override;
 };

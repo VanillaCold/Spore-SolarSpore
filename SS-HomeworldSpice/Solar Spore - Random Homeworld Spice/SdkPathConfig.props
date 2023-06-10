@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <SporeSdkPath>C:\Program Files (x86)\SporeModder FX\Spore ModAPI\</SporeSdkPath>
-	<SporeLauncherPath>C:\ProgramData\SporeModManagerStorage\</SporeLauncherPath>
+	<SporeLauncherPath>C:\ProgramData\SPORE ModAPI Launcher Kit\</SporeLauncherPath>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />

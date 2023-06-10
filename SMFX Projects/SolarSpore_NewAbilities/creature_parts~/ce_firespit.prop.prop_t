@@ -5,7 +5,7 @@ end
 int32 modelCapabilitySpit 44
 int32 modelCapabilityMean 6
 int32 modelCapabilityFlaunt 91
-int32 modelPrice 250
+int32 modelPrice 300
 float modelScale 0.01
 float modelMinScale 0.0001
 float modelMaxScale 2

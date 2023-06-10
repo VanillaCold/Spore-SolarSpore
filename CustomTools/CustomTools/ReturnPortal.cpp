@@ -27,7 +27,10 @@ bool ReturnPortal::OnSelect(cSpaceToolData* pTool)
 	{
 		Vector3 pos1 = currentPos; 
 		Vector3 pos2 = empire->mStars[i]->mPosition;
-		if (currentPos.x < 0) { pos1.x *= -1; }
+
+		float dist = Math::distance(pos1, pos2);
+
+		/*if (currentPos.x < 0) { pos1.x *= -1; }
 		if (currentPos.y < 0) { pos1.y *= -1; }
 		if (currentPos.z < 0) { pos1.z *= -1; }
 		if (pos2.x < 0) { pos2.x *= -1; }
@@ -35,7 +38,7 @@ bool ReturnPortal::OnSelect(cSpaceToolData* pTool)
 		if (pos2.z < 0) { pos2.z *= -1; }
 
 		Vector3 vecdist = { (max(pos1.x, pos2.x) - min(pos1.x,pos2.x)),(max(pos1.y, pos2.y) - min(pos1.y,pos2.y)),(max(pos1.z, pos2.z) - min(pos1.x,pos2.z)) };
-		float dist = max(vecdist.x, vecdist.y) - min(vecdist.x, vecdist.y);
+		float dist = max(vecdist.x, vecdist.y) - min(vecdist.x, vecdist.y);*/
 
 		if (dist < closestdist)
 		{
@@ -43,7 +46,7 @@ bool ReturnPortal::OnSelect(cSpaceToolData* pTool)
 			closestdist = dist;
 		}
 	}
-	if (closeststar != GetActiveStarRecord()->mKey)
+	if (closeststar.internalValue != GetActiveStarRecord()->mKey.internalValue)
 	{
 		SpaceTeleportTo(StarManager.GetStarRecord(closeststar));
 	}
@@ -55,9 +58,10 @@ bool ReturnPortal::OnSelect(cSpaceToolData* pTool)
 
 bool ReturnPortal::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** ppFailText)
 {
+	bool result = Simulator::cToolStrategy::Update(pTool, showErrors, ppFailText);
 	showErrors = true;
 	auto it = eastl::find(GetPlayerEmpire()->mStars.begin(), GetPlayerEmpire()->mStars.end(), GetActiveStarRecord());
-	if (GetCurrentContext() == kSpaceContextGalaxy && it == GetPlayerEmpire()->mStars.end() && GetActiveStarRecord() != nullptr) { return true; }
+	if (GetCurrentContext() == SpaceContext::Galaxy && it == GetPlayerEmpire()->mStars.end() && GetActiveStarRecord() != nullptr) { return result; }
 	else { return false; }
 }
 
@@ -70,10 +74,10 @@ void ReturnPortal::SelectedUpdate(cSpaceToolData* pTool, const Vector3& position
 {
 	SpaceContext test;
 	test = GetCurrentContext();
-	if (test != kSpaceContextGalaxy) { pTool->mbIsInUse = 0; }
+	if (test != SpaceContext::Galaxy) { pTool->mbIsInUse = 0; }
 }
 
-bool ReturnPortal::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool ReturnPortal::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	return false;
 }

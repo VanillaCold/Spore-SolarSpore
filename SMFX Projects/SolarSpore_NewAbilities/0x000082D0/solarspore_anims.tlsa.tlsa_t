@@ -1,0 +1,11 @@
+version 10
+
+anim 0xA71A2EF4 "player_stomp_v1"
+	endMode 0
+	allowLocomotion false
+	priorityOverride 1
+
+	choice -probability 1
+		animation "player_stomp_v1"
+	end
+end

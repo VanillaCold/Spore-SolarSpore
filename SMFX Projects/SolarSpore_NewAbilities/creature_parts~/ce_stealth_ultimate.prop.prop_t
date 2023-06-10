@@ -4,7 +4,7 @@ texts blockName
 end
 int32 modelCapabilitySprint 91
 int32 modelCapabilityStealth 50
-int32 modelPrice 250
+int32 modelPrice 300
 float modelScale 0.01
 float modelMinScale 0.0001
 float modelMaxScale 2

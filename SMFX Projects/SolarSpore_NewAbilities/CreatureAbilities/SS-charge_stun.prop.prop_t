@@ -16,5 +16,6 @@ float creatureAbilityRefresh 6
 vector2s creatureAbilityRequiredCAPsMaxValueRange
 	(11, 11)
 end
-float creatureAbilityRushingRange 20
+float creatureAbilityRushingRange 25
+float creatureAbilityRushingSpeed 25
 key verbIconRepresentativeAnimation 0x056d2cf4

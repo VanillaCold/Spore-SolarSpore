@@ -17,6 +17,7 @@ capacitor::~capacitor()
 
 bool capacitor::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** ppFailText)
 {
+	bool result = Simulator::cToolStrategy::Update(pTool, showErrors, ppFailText);
 	/*if (GetPlayerUFO()->GetWeapon() != nullptr)
 	{
 		App::ConsolePrintF("Current damage: %f", GetPlayerUFO()->GetWeapon()->mDamageMultiplier);
@@ -51,7 +52,7 @@ bool capacitor::Update(cSpaceToolData* pTool, bool showErrors, const char16_t** 
 		MySystem::Get()->capon = 0;
 		MySystem::Get()->capefficiencyamount = 0;
 	}
-	return true;
+	return result;
 }
 
 bool capacitor::OnSelect(cSpaceToolData* pTool)

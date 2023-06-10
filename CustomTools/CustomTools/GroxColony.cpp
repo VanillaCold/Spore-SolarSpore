@@ -22,7 +22,7 @@ bool GroxColony::OnDeselect(cSpaceToolData* pTool)
 	return false;
 }
 
-bool GroxColony::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool GroxColony::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	/*auto oldid = GetActiveStarRecord()->mEmpireID;
 	auto system = GetActiveStarRecord(); //cStarRecordPtr(GetActiveStarRecord());
