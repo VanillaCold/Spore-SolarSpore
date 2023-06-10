@@ -28,7 +28,7 @@ bool Detente::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit
 	}
 	else
 	{
-		RelationshipManager.ApplyRelationship(oldemp->mPoliticalID, otheremp->mPoliticalID, RelationshipEvents::kRelationshipEventSpaceGoodToolUse, 3.0F);
+		RelationshipManager.ApplyRelationship(oldemp->mPoliticalID, otheremp->mPoliticalID, RelationshipEvents::kRelationshipEventSpaceGiveGift, 5.0F);
 	}
 
 	return false;

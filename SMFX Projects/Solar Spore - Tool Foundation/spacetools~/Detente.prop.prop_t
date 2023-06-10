@@ -5,7 +5,7 @@ texts spaceToolDescription
 	"Detente Surge"
 end
 texts spaceToolDetailDescription
-	"Completely ends a war with another empire; even the Grox."
+	"Completely ends a war with another empire, or befriends them during times of peace."
 end
 bool spaceToolDisableOn201Ruins true
 bool spaceToolDisableOnHomeworld false
