@@ -7,7 +7,7 @@ end
 key spaceToolImageID ufotools~!0x0B634E74.png
 float spaceTradingAbundance 1
 bool spaceTradingAlliesOnly false
-float spaceTradingBaseCost 10000000
+float spaceTradingBaseCost 50000000
 float spaceTradingChance 1
 float spaceTradingChanceBard 0
 float spaceTradingChanceDiplomat 0

@@ -106,6 +106,10 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="cSSArchetypeToolManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="CustomArchetypeTools.h">
       <SubType>
       </SubType>
@@ -148,6 +152,10 @@
     <ClCompile Include="Capacitor.cpp" />
     <ClCompile Include="ChangeSpecies.cpp" />
     <ClCompile Include="ContactHomeworld.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="cSSArchetypeToolManager.cpp">
       <SubType>
       </SubType>
     </ClCompile>

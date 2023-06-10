@@ -12,7 +12,7 @@ ConvertPlanet::~ConvertPlanet()
 {
 }
 
-bool ConvertPlanet::OnHit(cSpaceToolData* pTool, const Vector3& position, cSpaceToolData::SpaceToolHit hitType, int)
+bool ConvertPlanet::OnHit(cSpaceToolData* pTool, const Vector3& position, SpaceToolHit hitType, int)
 {
 	auto oldid = GetActiveStarRecord()->mEmpireID;
 	auto system = GetActiveStarRecord(); //cStarRecordPtr(GetActiveStarRecord());

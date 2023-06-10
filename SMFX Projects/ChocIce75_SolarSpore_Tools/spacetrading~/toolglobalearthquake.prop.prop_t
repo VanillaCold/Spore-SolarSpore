@@ -16,7 +16,7 @@ float spaceTradingChanceGrob 100
 float spaceTradingChancePlayerBard 0
 float spaceTradingChancePlayerDiplomat 0
 float spaceTradingChancePlayerEcologist 0
-float spaceTradingChancePlayerScientist 85
+float spaceTradingChancePlayerScientist 0
 float spaceTradingChancePlayerShaman 0
 float spaceTradingChancePlayerTrader 30
 float spaceTradingChancePlayerWanderer 0
@@ -34,6 +34,7 @@ float spaceTradingCostMultiplierUserEco 1
 float spaceTradingCostMultiplierUserMil 1
 float spaceTradingCostMultiplierWarrior 0.5
 float spaceTradingCostMultiplierZealot 0.75
+float spaceTradingCostMultiplierScientist 1.15
 key spaceTradingExchangeFor 0x80D32313.prop
 uint32 spaceTradingQuantityToOffer 2
 key spaceTradingRequiresBadge conquerer-5

@@ -2,7 +2,7 @@ texts spaceToolDescription
 	(spacegame_tools!0xcca62f06) "Imperial Auto Blaster"
 end
 texts spaceToolDetailDescription
-	(spacegame_tools!0x0ed9431f) "A defensive weapon that will automatically fire on enemy turrets and spaceships when attacked. Can be toggled on and off."
+	"(UNUSED) A defensive weapon that will automatically fire on enemy turrets and spaceships when attacked. Can be toggled on and off."
 end
 key spaceToolImageID ufotools~!0xE5F742F6.png
 float spaceTradingAbundance 10

@@ -4,12 +4,13 @@ int32 spaceToolBuyCost 5000
 key spaceToolContext planet
 float spaceToolDamageArea 200
 texts spaceToolDescription
-	"Planet Buster Laser"
+	"Planet-Buster Laser - "
 end
 texts spaceToolDetailDescription
-	(spacegame_tools!0xd6dd32f8) "Destroys an entire planet without the use of ammo. Feared by all.  BIG BADDA BOOM."
+	"Fueled by melting down Sporebucks rather than using ammo, this laser destroys an entire planet in one shot."
 end
 float spaceToolDetectableRange 2000
+int32 spaceToolUseCost 5000000
 bool spaceToolDisableOn201Ruins true
 bool spaceToolDisableOnSaveGames true
 key spaceToolImageID ufotools~!0x0B634E74.png

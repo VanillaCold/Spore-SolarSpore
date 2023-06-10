@@ -26,6 +26,33 @@
     <Filter Include="CustomTools\Systems">
       <UniqueIdentifier>{0f11701f-f943-48e9-a791-f40a4f4c5a23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CustomTools\Tools\AmmoForge">
+      <UniqueIdentifier>{396d6bc0-bb60-442a-84ca-37c849a5f5a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\PlanetConverter">
+      <UniqueIdentifier>{e64caab6-75f8-4014-afc3-8bf4436de490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\SpeciesEraser">
+      <UniqueIdentifier>{0a4686ec-8a22-42e4-9223-0ff0efeb8cfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\GroxColoniser">
+      <UniqueIdentifier>{84459c80-0e1b-4c94-9357-5c52138418a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\ReturnPortal">
+      <UniqueIdentifier>{59c8dbc0-e6f1-4fe0-8693-0f1c6c98f3aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Starkiller">
+      <UniqueIdentifier>{9268ab1e-f63d-4c53-bbbf-62878fec4224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Archetype">
+      <UniqueIdentifier>{7aa4355d-5b33-4465-a44c-abcedb6402f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Archetype\Detente">
+      <UniqueIdentifier>{e8d05fd0-5877-463c-a0a8-2015d3b6206c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\IUpdatables">
+      <UniqueIdentifier>{25f0c6b1-2c25-48ce-b079-a7f45a4aa2b7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -46,23 +73,14 @@
     <ClInclude Include="ChangeSpecies.h">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClInclude>
-    <ClInclude Include="EraseSpecies.h">
-      <Filter>CustomTools\Tools</Filter>
-    </ClInclude>
     <ClInclude Include="MySystem.h">
       <Filter>CustomTools\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="ConvertPlanet.h">
-      <Filter>CustomTools\Tools</Filter>
     </ClInclude>
     <ClInclude Include="infinitecolonies.h">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClInclude>
     <ClInclude Include="StaffofDeath.h">
       <Filter>CustomTools\Tools\finished</Filter>
-    </ClInclude>
-    <ClInclude Include="GroxColony.h">
-      <Filter>CustomTools\Tools</Filter>
     </ClInclude>
     <ClInclude Include="SetPlanetType.h">
       <Filter>CustomTools\Random cheat thingy</Filter>
@@ -91,26 +109,38 @@
     <ClInclude Include="SpiceDye.h">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClInclude>
-    <ClInclude Include="Detente.h">
-      <Filter>CustomTools\Tools</Filter>
-    </ClInclude>
     <ClInclude Include="IntergalacticDrive.h">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClInclude>
     <ClInclude Include="RegalShield.h">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClInclude>
-    <ClInclude Include="AmmoCreator.h">
-      <Filter>CustomTools\Tools</Filter>
-    </ClInclude>
     <ClInclude Include="Capacitor.h">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClInclude>
+    <ClInclude Include="AmmoCreator.h">
+      <Filter>CustomTools\Tools\AmmoForge</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvertPlanet.h">
+      <Filter>CustomTools\Tools\PlanetConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="Detente.h">
+      <Filter>CustomTools\Tools\Archetype\Detente</Filter>
+    </ClInclude>
+    <ClInclude Include="EraseSpecies.h">
+      <Filter>CustomTools\Tools\SpeciesEraser</Filter>
+    </ClInclude>
+    <ClInclude Include="GroxColony.h">
+      <Filter>CustomTools\Tools\GroxColoniser</Filter>
+    </ClInclude>
     <ClInclude Include="ReturnPortal.h">
-      <Filter>CustomTools\Tools</Filter>
+      <Filter>CustomTools\Tools\ReturnPortal</Filter>
     </ClInclude>
     <ClInclude Include="StarKiller.h">
-      <Filter>CustomTools\Tools</Filter>
+      <Filter>CustomTools\Tools\Starkiller</Filter>
+    </ClInclude>
+    <ClInclude Include="cSSArchetypeToolManager.h">
+      <Filter>CustomTools\IUpdatables</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -135,20 +165,11 @@
     <ClCompile Include="MySystem.cpp">
       <Filter>CustomTools\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="ConvertPlanet.cpp">
-      <Filter>CustomTools\Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="EraseSpecies.cpp">
-      <Filter>CustomTools\Tools</Filter>
-    </ClCompile>
     <ClCompile Include="infinitecolonies.cpp">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClCompile>
     <ClCompile Include="StaffofDeath.cpp">
       <Filter>CustomTools\Tools\finished</Filter>
-    </ClCompile>
-    <ClCompile Include="GroxColony.cpp">
-      <Filter>CustomTools\Tools</Filter>
     </ClCompile>
     <ClCompile Include="SetPlanetType.cpp">
       <Filter>CustomTools\Random cheat thingy</Filter>
@@ -177,26 +198,38 @@
     <ClCompile Include="SpiceDye.cpp">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClCompile>
-    <ClCompile Include="Detente.cpp">
-      <Filter>CustomTools\Tools</Filter>
-    </ClCompile>
     <ClCompile Include="IntergalacticDrive.cpp">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClCompile>
     <ClCompile Include="RegalShield.cpp">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClCompile>
-    <ClCompile Include="AmmoCreator.cpp">
-      <Filter>CustomTools\Tools</Filter>
-    </ClCompile>
     <ClCompile Include="Capacitor.cpp">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClCompile>
+    <ClCompile Include="AmmoCreator.cpp">
+      <Filter>CustomTools\Tools\AmmoForge</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertPlanet.cpp">
+      <Filter>CustomTools\Tools\PlanetConverter</Filter>
+    </ClCompile>
+    <ClCompile Include="Detente.cpp">
+      <Filter>CustomTools\Tools\Archetype\Detente</Filter>
+    </ClCompile>
+    <ClCompile Include="EraseSpecies.cpp">
+      <Filter>CustomTools\Tools\SpeciesEraser</Filter>
+    </ClCompile>
+    <ClCompile Include="GroxColony.cpp">
+      <Filter>CustomTools\Tools\GroxColoniser</Filter>
+    </ClCompile>
     <ClCompile Include="ReturnPortal.cpp">
-      <Filter>CustomTools\Tools</Filter>
+      <Filter>CustomTools\Tools\ReturnPortal</Filter>
     </ClCompile>
     <ClCompile Include="Starkiller.cpp">
-      <Filter>CustomTools\Tools</Filter>
+      <Filter>CustomTools\Tools\Starkiller</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSArchetypeToolManager.cpp">
+      <Filter>CustomTools\IUpdatables</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
