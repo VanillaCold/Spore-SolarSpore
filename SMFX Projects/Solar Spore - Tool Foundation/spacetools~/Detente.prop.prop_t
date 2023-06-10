@@ -11,7 +11,7 @@ bool spaceToolDisableOn201Ruins true
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
 bool spaceToolHide false
-key spaceToolImageID consequence~!0x8F46C38A.png
+key spaceToolImageID ufotools~!detente
 float spaceToolMaxRange -1
 key spaceToolPanelKey social_panel_top~
 float spaceToolRechargeRate 200 #-2400

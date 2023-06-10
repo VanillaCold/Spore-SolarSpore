@@ -1,0 +1,13 @@
+key parent ConsequenceTraits!spg_Template.prop
+colorRGB consequenceTraitColor (0.773, 0.792, 0.278)
+texts consequenceTraitDescription
+	(consequence!0x0000005e) "Diplomat Descrip (PLACEHOLDER)"
+end
+key consequenceTraitIcon ConsequenceGraphics!trait_spg_diplomat.png
+texts consequenceTraitName
+	(consequence!0x0000005d) "Diplomat (PLACEHOLDER)"
+end
+keys consequenceTraitUnlocksSuperpowers
+	spg_diplomat_tool
+	spg_diplomat_tool2
+end
