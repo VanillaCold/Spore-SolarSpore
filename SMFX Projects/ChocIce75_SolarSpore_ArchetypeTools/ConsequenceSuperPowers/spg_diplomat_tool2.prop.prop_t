@@ -1,8 +1,8 @@
 key parent ConsequenceSuperPowers!spg_Template.prop
-texts consequenceSuperPowerDescription
+texts consequenceSuperPowerName
 	"Detente Surge"
 end
-key consequenceSuperPowerIcon ufotools~!detente
-texts consequenceSuperPowerName
+key consequenceSuperPowerIcon ufotools~!detente.png
+texts consequenceSuperPowerDescription
 	"Completely ends a war with another empire, or befriends them during times of peace."
 end
