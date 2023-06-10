@@ -31,6 +31,7 @@
 #include "StarKiller.h"
 #include "cSSArchetypeToolManager.h"
 #include "ToggleSSDebug.h"
+#include "MySystem.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -65,30 +66,64 @@ void SetupModStrategies::SetupStrategies()
 	//	CheatManager.AddCheat("empireInfo", new SystemCount());
 	CheatManager.AddCheat("contactHomeworld", new ContactHomeworld());
 	CheatManager.AddCheat("togglessdebug", new ToggleSSDebug());
+
+	//Add simulator strategy (to-do: make strategy obsolete and remove it)
+	SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
 	
+
 	//Add archetype tools
-	try
+	if (PropManager.HasPropertyList(id("sstoolsexist"), id("solarsporeconfig")))
 	{
-		SSConsequenceToolManager->AddArchetypeTool(ArchetypeTool(
-			Simulator::Archetypes::kArchetypePlayerTrader,
-			id("purplespicedye"),
-			id("TraderTool")));
+		try
+		{
+			SSConsequenceToolManager.AddArchetypeTool(ArchetypeTool(
+				Simulator::Archetypes::kArchetypePlayerTrader,
+				id("purplespicedye"),
+				id("TraderTool")
+			));
 
-		SSConsequenceToolManager->AddArchetypeTool(ArchetypeTool(
-			Simulator::Archetypes::kArchetypePlayerWarrior,
-			id("ragemode"),
-			id("WarriorTool")));
+			SSConsequenceToolManager.AddArchetypeTool(ArchetypeTool(
+				Simulator::Archetypes::kArchetypePlayerWarrior,
+				id("ragemode"),
+				id("WarriorTool")
+			));
 
-		SSConsequenceToolManager->AddArchetypeTool(ArchetypeTool(
-			Simulator::Archetypes::kArchetypePlayerWanderer,
-			id("intergalacticdrive"),
-			id("WandererTool2")));
-	}
-	catch (std::exception except)
-	{
-		const char* text = except.what();
-		wstring report;
-		report.assign_convert(text);
-		MessageBox(NULL, report.c_str(), LPCWSTR(u"Error adding tool"), 0x00000010L);
+			SSConsequenceToolManager.AddArchetypeTool(ArchetypeTool(
+				Simulator::Archetypes::kArchetypePlayerWanderer,
+				id("intergalacticdrive"),
+				id("WandererTool2")
+			));
+
+			SSConsequenceToolManager.AddArchetypeTool(ArchetypeTool(
+				Simulator::Archetypes::kArchetypePlayerEcologist,
+				id("lifeburst"),
+				id("EcoTool")
+			));
+
+			SSConsequenceToolManager.AddArchetypeTool(ArchetypeTool(
+				Simulator::Archetypes::kArchetypePlayerScientist,
+				id("EnergyEfficiency"),
+				id("ScientistTool")
+			));
+
+			SSConsequenceToolManager.AddArchetypeTool(ArchetypeTool(
+				Simulator::Archetypes::kArchetypePlayerKnight,
+				id("regalshield"),
+				id("KnightTool")
+			));
+
+			SSConsequenceToolManager.AddArchetypeTool(ArchetypeTool(
+				Simulator::Archetypes::kArchetypePlayerShaman,
+				id("ReturnPortal"),
+				id("ShamanTool")
+			));
+		}
+		catch (std::exception except)
+		{
+			const char* text = except.what();
+			wstring report;
+			report.assign_convert(text);
+			MessageBox(NULL, report.c_str(), LPCWSTR(u"Error adding tool"), 0x00000010L);
+		}
 	}
 }

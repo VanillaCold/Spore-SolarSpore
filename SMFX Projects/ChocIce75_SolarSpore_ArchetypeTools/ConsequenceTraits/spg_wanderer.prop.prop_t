@@ -8,6 +8,6 @@ texts consequenceTraitName
 	(consequence!0x00000067) "Wanderer (PLACEHOLDER)"
 end
 keys consequenceTraitUnlocksSuperpowers
-	spg_wanderer_tool
+	#spg_wanderer_tool
 	spg_wanderer_tool2
 end

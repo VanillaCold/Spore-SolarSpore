@@ -32,8 +32,8 @@ bool MySystem::Read(Simulator::ISerializerStream* stream)
 Simulator::Attribute MySystem::ATTRIBUTES[] = {
 	// Add more attributes here
 	// This one must always be at the end
-	SimAttribute(MySystem,Selection,1),
-	SimAttribute(MySystem,deadplanets,2),
+	//SimAttribute(MySystem,Selection,1),
+	//SimAttribute(MySystem,deadplanets,2),
 	Simulator::Attribute()
 };
 

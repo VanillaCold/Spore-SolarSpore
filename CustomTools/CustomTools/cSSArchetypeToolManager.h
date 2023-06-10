@@ -3,7 +3,7 @@
 #include <Spore\BasicIncludes.h>
 
 #define cSSArchetypeToolManagerPtr intrusive_ptr<cSSArchetypeToolManager>
-#define SSConsequenceToolManager (cSSArchetypeToolManager::Get())
+#define SSConsequenceToolManager (cSSArchetypeToolManager::Get())[0]
 
 struct ArchetypeTool
 {

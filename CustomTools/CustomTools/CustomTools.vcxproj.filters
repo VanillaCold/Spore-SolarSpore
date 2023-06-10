@@ -91,9 +91,6 @@
     <ClInclude Include="ContactHomeworld.h">
       <Filter>CustomTools\Random cheat thingy</Filter>
     </ClInclude>
-    <ClInclude Include="CustomArchetypeTools.h">
-      <Filter>CustomTools\Systems</Filter>
-    </ClInclude>
     <ClInclude Include="RandomTool.h">
       <Filter>CustomTools\Tools\finished</Filter>
     </ClInclude>
@@ -185,9 +182,6 @@
     </ClCompile>
     <ClCompile Include="ContactHomeworld.cpp">
       <Filter>CustomTools\Random cheat thingy</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomArchetypeTools.cpp">
-      <Filter>CustomTools\Systems</Filter>
     </ClCompile>
     <ClCompile Include="RandomTool.cpp">
       <Filter>CustomTools\Tools\finished</Filter>

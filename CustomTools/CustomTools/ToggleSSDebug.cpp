@@ -24,7 +24,7 @@ void ToggleSSDebug::ParseLine(const ArgScript::Line& line)
 		isDebug = false;
 	}
 
-	SSConsequenceToolManager->isDebug = isDebug;
+	SSConsequenceToolManager.isDebug = isDebug;
 	// This method is called when your cheat is invoked.
 	// Put your cheat code here.
 }
