@@ -2,9 +2,9 @@
 
 #include <Spore\BasicIncludes.h>
 
-#define MyObjectPtr intrusive_ptr<MyObject>
+#define MyObjectPtr intrusive_ptr<HomeworldSpiceObj>
 
-class MyObject
+class HomeworldSpiceObj
 	: public Object
 	, public DefaultRefCounted
 	, public App::IUpdatable
@@ -12,8 +12,8 @@ class MyObject
 public:
 	static const uint32_t TYPE = id("SolarSpore-HomeworldSpiceObject");
 	
-	MyObject();
-	~MyObject();
+	HomeworldSpiceObj();
+	~HomeworldSpiceObj();
 
 	void Update() override;
 	int AddRef() override;

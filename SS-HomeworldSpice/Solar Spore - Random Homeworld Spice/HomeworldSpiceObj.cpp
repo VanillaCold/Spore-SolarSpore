@@ -1,16 +1,16 @@
 #include "stdafx.h"
-#include "MyObject.h"
+#include "HomeworldSpiceObj.h"
 
-MyObject::MyObject()
+HomeworldSpiceObj::HomeworldSpiceObj()
 {
 }
 
 
-MyObject::~MyObject()
+HomeworldSpiceObj::~HomeworldSpiceObj()
 {
 }
 
-void MyObject::Update()
+void HomeworldSpiceObj::Update()
 {
 	if (Simulator::IsCreatureGame() || Simulator::IsTribeGame() || Simulator::IsCivGame() || Simulator::IsSpaceGame())
 	{
@@ -18,7 +18,7 @@ void MyObject::Update()
 	if (!Simulator::IsSpaceGame()) { planet = Simulator::GetActivePlanetRecord(); }
 	else if (Simulator::GetPlayerEmpire()){ planet = StarManager.GetPlanetRecord(Simulator::GetPlayerEmpire()->mHomePlanet); }
 		vector<uint32_t> itemIDs;
-		PropManager.GetAllListIDs(GroupIDs::SpaceTrading, itemIDs);
+		PropManager.GetPropertyListIDs(GroupIDs::SpaceTrading, itemIDs);
 		PropertyListPtr propList;
 		if (spiceIDs.empty())
 		{
@@ -45,8 +45,8 @@ void MyObject::Update()
 				StarManager.RecordToPlanet(planet, planet2);
 				//SporeDebugPrint(to_string(planet2->field_1C4).c_str());
 				
-				RandomNumberGenerator rng(planet->GetID());
-				rng.seed = planet->GetID();
+				RandomNumberGenerator rng(planet->GetID().internalValue);
+				rng.seed = planet->GetID().internalValue;
 				int chosenSpice = rng.RandomInt(spiceIDs.size());
 				planet->mSpiceGen.instanceID = spiceIDs[chosenSpice];
 				
@@ -54,28 +54,28 @@ void MyObject::Update()
 				uint32_t spicecolour;
 				App::Property::GetUInt32(propList.get(), 0x058CBB75, spicecolour);
 				//SporeDebugPrint(to_string(spicecolour).c_str());
-				planet2->field_1C4 = spicecolour;
+				planet2->mSpaceEconomySpiceColor = spicecolour;
 			}
 		}
 	}
 }
 
 // For internal use, do not modify.
-int MyObject::AddRef()
+int HomeworldSpiceObj::AddRef()
 {
 	return DefaultRefCounted::AddRef();
 }
 
 // For internal use, do not modify.
-int MyObject::Release()
+int HomeworldSpiceObj::Release()
 {
 	return DefaultRefCounted::Release();
 }
 
 // You can extend this function to return any other types your class implements.
-void* MyObject::Cast(uint32_t type) const
+void* HomeworldSpiceObj::Cast(uint32_t type) const
 {
 	CLASS_CAST(Object);
-	CLASS_CAST(MyObject);
+	CLASS_CAST(HomeworldSpiceObj);
 	return nullptr;
 }

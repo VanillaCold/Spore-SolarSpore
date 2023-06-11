@@ -1,6 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "stdafx.h"
-#include "MyObject.h"
+#include "HomeworldSpiceObj.h"
 
 void Initialize()
 {
@@ -11,7 +11,7 @@ void Initialize()
 	//  - Add new game modes
 	//  - Add new space tools
 	//  - Change materials
-	App::AddUpdateFunction(new MyObject());
+	App::AddUpdateFunction(new HomeworldSpiceObj());
 }
 
 void Dispose()

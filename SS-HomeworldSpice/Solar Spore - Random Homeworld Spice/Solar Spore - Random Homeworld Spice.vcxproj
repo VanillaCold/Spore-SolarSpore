@@ -98,7 +98,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyObject.h">
+    <ClInclude Include="HomeworldSpiceObj.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -114,7 +114,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="MyObject.cpp">
+    <ClCompile Include="HomeworldSpiceObj.cpp">
       <SubType>
       </SubType>
     </ClCompile>

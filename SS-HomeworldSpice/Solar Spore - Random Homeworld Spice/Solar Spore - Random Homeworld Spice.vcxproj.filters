@@ -19,7 +19,7 @@
     <ClInclude Include="stdafx.h">
       <Filter>Internal</Filter>
     </ClInclude>
-    <ClInclude Include="MyObject.h">
+    <ClInclude Include="HomeworldSpiceObj.h">
       <Filter>Solar Spore - Random Homeworld Spice</Filter>
     </ClInclude>
   </ItemGroup>
@@ -30,7 +30,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Internal</Filter>
     </ClCompile>
-    <ClCompile Include="MyObject.cpp">
+    <ClCompile Include="HomeworldSpiceObj.cpp">
       <Filter>Solar Spore - Random Homeworld Spice</Filter>
     </ClCompile>
   </ItemGroup>
