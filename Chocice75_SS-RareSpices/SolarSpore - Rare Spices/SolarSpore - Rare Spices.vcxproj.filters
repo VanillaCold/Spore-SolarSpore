@@ -19,9 +19,6 @@
     <ClInclude Include="stdafx.h">
       <Filter>Internal</Filter>
     </ClInclude>
-    <ClInclude Include="SolarSpore_RareSpices.h">
-      <Filter>SolarSpore - Rare Spices</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -29,9 +26,6 @@
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Internal</Filter>
-    </ClCompile>
-    <ClCompile Include="SolarSpore_RareSpices.cpp">
-      <Filter>SolarSpore - Rare Spices</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
