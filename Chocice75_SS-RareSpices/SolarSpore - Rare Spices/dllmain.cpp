@@ -5,15 +5,7 @@
 
 void Initialize()
 {
-	//SimulatorSystem.AddStrategy(new SolarSpore_RareSpices, SolarSpore_RareSpices::NOUN_ID);
-	// 
-	// This method is executed when the game starts, before the user interface is shown
-	// Here you can do things such as:
-	//  - Add new cheats
-	//  - Add new simulator classes
-	//  - Add new game modes
-	//  - Add new space tools
-	//  - Change materials
+	
 }
 
 void Dispose()
@@ -25,38 +17,36 @@ member_detour(SolarSpore_RareSpiceDetour, Simulator::cStarManager, void(Simulato
 {
 	void detoured(Simulator::cStarRecord * pStarRecord, Simulator::StarRequestFilter * pFilter, bool useMaxPlanets)
 	{
-		original_function(this, pStarRecord, pFilter, useMaxPlanets);
+		original_function(this, pStarRecord, pFilter, useMaxPlanets); //Generate the planets before messing with them
 
-		int planetIndex = GetRNG().RandomInt(pStarRecord->mPlanetCount);
+		int planetIndex = GetRNG().RandomInt(pStarRecord->mPlanetCount); //Use the game's RNG function to randomly choose a planet
 
-		PropertyListPtr propList;
-		//vector<uint32_t> props;
-		PropManager.GetPropertyList(id("RareSpiceList"), id("SolarSporeConfig"), propList);
-		ResourceKey* spiceArray;
-		size_t spiceCount;
-		App::Property::GetArrayKey(propList.get(), id("rareSpiceIDs"), spiceCount, spiceArray);
+		PropertyListPtr propList; //Set up an empty property list
+		PropManager.GetPropertyList(id("RareSpiceList"), id("SolarSporeConfig"), propList); //Find the rare spice property list, and store in the propList pointer
+		ResourceKey* spiceArray; //Create empty ResourceKey array
+		size_t spiceCount; //Set up empty size_t for count
+		App::Property::GetArrayKey(propList.get(), id("rareSpiceIDs"), spiceCount, spiceArray); //Get the array of rare spices from the property list
 
-		int spiceIndex = GetRNG().RandomInt(int(spiceCount));
+		int spiceIndex = GetRNG().RandomInt(int(spiceCount)); //Use the RNG function to choose a random spice from the newly obtained array
 
-		PropManager.GetPropertyList(spiceArray[spiceIndex].instanceID, GroupIDs::SpaceTrading, propList);
-		uint32_t spiceColour;
-		App::Property::GetUInt32(propList.get(), 0x058CBB75, spiceColour);
+		PropManager.GetPropertyList(spiceArray[spiceIndex].instanceID, GroupIDs::SpaceTrading, propList); //Get the spice's property list
+		uint32_t spiceColour; 
+		App::Property::GetUInt32(propList.get(), 0x058CBB75, spiceColour); //Find the spice's colour, and store in the spiceColour unsigned integer.
 
-		cPlanetRecordPtr planetRec = pStarRecord->GetPlanetRecord(planetIndex);
-		cPlanetPtr planet;
-		StarManager.RecordToPlanet(planetRec.get(), planet);
+		cPlanetRecordPtr planetRec = pStarRecord->GetPlanetRecord(planetIndex); //Get the planet record of the target planet
+		cPlanetPtr planet; //and set up a planetPtr too.
+		StarManager.RecordToPlanet(planetRec.get(), planet); //Use StarManager to get the planet itself from its record
 
-		planetRec->mSpiceGen = spiceArray[spiceIndex];
-		planet->mSpaceEconomySpiceColor = spiceColour;
+		planetRec->mSpiceGen = spiceArray[spiceIndex]; //Set the planet's spice to the previously chosen one
+		planet->mSpaceEconomySpiceColor = spiceColour; //And change the colour of the planet's spice, too.
 
 	}
 };
 
 void AttachDetours()
 {
-	SolarSpore_RareSpiceDetour::attach(GetAddress(Simulator::cStarManager, GeneratePlanetsForStar));
-	// Call the attach() method on any detours you want to add
-	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
+	//Attach the previously-made detour to the function that generates planets when a system is first loaded
+	SolarSpore_RareSpiceDetour::attach(GetAddress(Simulator::cStarManager, GeneratePlanetsForStar)); 
 }
 
 
