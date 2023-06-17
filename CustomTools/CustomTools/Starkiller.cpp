@@ -121,7 +121,13 @@ bool StarKiller::Update(cSpaceToolData* pTool, bool showErrors, const char16_t**
 		{
 			return result;
 		}
+		//ppFailText = new const char16_t* (u"Must be on an actual, uncolonised star");
+		//showErrors = true;
+		return false;
 	}
+
+	//ppFailText = new const char16_t* (u"Must be in galaxy view!");
+	//showErrors = true;
 	return false;
 }
 

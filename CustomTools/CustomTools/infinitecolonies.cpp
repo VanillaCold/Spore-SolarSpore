@@ -57,7 +57,9 @@ bool infinitecolonies::Update(cSpaceToolData* pTool, bool showErrors, const char
 			tScore = TerraformingManager.GetTScore(Simulator::GetActivePlanetRecord());
 		}
 		if (numcolonies < 7 && tScore == 3) { return result; }
-		else { return false; }
+		else { 
+			return false; 
+		}
 	}
 	return false;
 }
