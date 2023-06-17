@@ -59,6 +59,9 @@
     <Filter Include="CustomTools\Systems\Research\WinProcs">
       <UniqueIdentifier>{1ae17577-f236-4cdc-893b-c9785d8bbc99}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CustomTools\Tools\NPC">
+      <UniqueIdentifier>{b2504013-c5ee-4f92-b703-18b0f2c9c3da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -151,27 +154,6 @@
     <ClInclude Include="ToggleSSDebug.h">
       <Filter>CustomTools\Random cheat thingy</Filter>
     </ClInclude>
-    <ClInclude Include="GetResearchData.h">
-      <Filter>CustomTools\Random cheat thingy</Filter>
-    </ClInclude>
-    <ClInclude Include="cSSResearchManager.h">
-      <Filter>CustomTools\Systems\Research</Filter>
-    </ClInclude>
-    <ClInclude Include="CloseResearchMenu.h">
-      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
-    </ClInclude>
-    <ClInclude Include="cResearchWinProc.h">
-      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
-    </ClInclude>
-    <ClInclude Include="cResearchButtonWinProc.h">
-      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
-    </ClInclude>
-    <ClInclude Include="OpenResearchMenu.h">
-      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
-    </ClInclude>
-    <ClInclude Include="ResearchPointCaptionWinProc.h">
-      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -263,27 +245,6 @@
     </ClCompile>
     <ClCompile Include="ToggleSSDebug.cpp">
       <Filter>CustomTools\Random cheat thingy</Filter>
-    </ClCompile>
-    <ClCompile Include="GetResearchData.cpp">
-      <Filter>CustomTools\Random cheat thingy</Filter>
-    </ClCompile>
-    <ClCompile Include="cSSResearchManager.cpp">
-      <Filter>CustomTools\Systems\Research</Filter>
-    </ClCompile>
-    <ClCompile Include="CloseResearchMenu.cpp">
-      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
-    </ClCompile>
-    <ClCompile Include="cResearchWinProc.cpp">
-      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
-    </ClCompile>
-    <ClCompile Include="cResearchButtonWinProc.cpp">
-      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
-    </ClCompile>
-    <ClCompile Include="OpenResearchMenu.cpp">
-      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
-    </ClCompile>
-    <ClCompile Include="ResearchPointCaptionWinProc.cpp">
-      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

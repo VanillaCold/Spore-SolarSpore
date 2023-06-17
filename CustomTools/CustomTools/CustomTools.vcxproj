@@ -158,6 +158,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="SetupModStrategies.h" />
+    <ClInclude Include="ShieldkillerBeam.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="SpawnVehicle.h" />
     <ClInclude Include="SpiceDye.h" />
     <ClInclude Include="StaffofDeath.h" />
@@ -244,6 +248,10 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="SetupModStrategies.cpp" />
+    <ClCompile Include="ShieldkillerBeam.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="SpawnVehicle.cpp" />
     <ClCompile Include="SpiceDye.cpp" />
     <ClCompile Include="StaffofDeath.cpp" />
