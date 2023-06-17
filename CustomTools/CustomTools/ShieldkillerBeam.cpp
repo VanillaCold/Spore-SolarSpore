@@ -21,7 +21,7 @@ bool ShieldkillerBeam::OnHit(cSpaceToolData* pTool, const Vector3& position, Spa
 			if (playerCombatant->field_80 == true)
 			{
 				playerDamage += pTool->mMaxDamage;
-				if (playerDamage > 1000)
+				if (playerDamage > 5000)
 				{
 					playerDamage = 0;
 					playerCombatant->field_80 = false;
