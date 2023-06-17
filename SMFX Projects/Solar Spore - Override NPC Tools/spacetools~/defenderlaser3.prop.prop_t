@@ -24,3 +24,8 @@ key toolHitWaterEffectID 0x37EB20FB
 bool toolIsHoming true
 key toolMuzzleEffectID 0x253A34AB
 bool toolPassThroughAll true
+
+bool SS_IsPlaceholderTool true
+uint32s SS_ToolOverrides
+	hash(NPC_shieldlaser3)
+end
