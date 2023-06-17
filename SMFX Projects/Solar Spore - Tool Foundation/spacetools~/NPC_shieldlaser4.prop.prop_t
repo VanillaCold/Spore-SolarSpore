@@ -8,24 +8,19 @@ texts spaceToolDescription
 	(spacegame_tools!0xc5c6da6f) "Laser"
 end
 key spaceToolImageID ufotools~!0x0815A0F5.png
-float spaceToolMaxDamage 315
+float spaceToolMaxDamage 140/2
 float spaceToolMaxRange 50
-float spaceToolMinDamage 315
+float spaceToolMinDamage 140/2
 float spaceToolMinRange 1
-key spaceToolStrategy DefaultBeam
+key spaceToolStrategy ShieldkillerBeam
 key spaceToolType weapon
 int32 spaceToolUseCost 0
-key toolBeamEffectID 0xB9D1B4F1
-key toolHitCombatantEffectID 0x9148E0DF
-key toolHitGroundEffectID 0x9148E0DF
-bool toolHitOrientsToTerrain false
-key toolHitPlayerEffectID 0xD4C08889
-key toolHitWaterEffectID 0x9148E0DF
+bool toolHitOrientsToTerrain true
+key toolHitPlayerEffectID SG_laser_lvl_1_beam_impact
 bool toolIsHoming true
 key toolMuzzleEffectID 0x253A34AB
 bool toolPassThroughAll true
-
-bool SS_IsPlaceholderTool true
-uint32s SS_ToolOverrides
-	hash(NPC_shieldlaser6)
-end
+key toolBeamEffectID 0xB0A6DCE9
+key toolHitCombatantEffectID SG_laser_lvl_1_beam_impact
+key toolHitGroundEffectID SG_laser_lvl_1_scorch
+key toolHitWaterEffectID SG_laser_lvl_1_water

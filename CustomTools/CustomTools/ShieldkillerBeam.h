@@ -22,8 +22,10 @@ public:
 	int AddRef() override;
 	int Release() override;
 	void* Cast(uint32_t type) const override;
+	IVisualEffectPtr shieldEffect;
 
 private:
 	int playerDamage;
+
 
 };

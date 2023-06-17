@@ -21,11 +21,22 @@ bool ShieldkillerBeam::OnHit(cSpaceToolData* pTool, const Vector3& position, Spa
 			if (playerCombatant->field_80 == true)
 			{
 				playerDamage += pTool->mMaxDamage;
-				if (playerDamage > 300)
+				if (playerDamage > 1000)
 				{
 					playerDamage = 0;
 					playerCombatant->field_80 = false;
+
+					if (EffectsManager.CreateVisualEffect(id("ShieldDown"), 0, shieldEffect))
+					{
+						shieldEffect->SetRigidTransform(player->GetModel()->mTransform);
+						shieldEffect->SetSourceTransform(player->GetModel()->mTransform);
+						shieldEffect->Start();
+					}
 				}
+			}
+			else
+			{
+				playerDamage = 0;
 			}
 		}
 	}
