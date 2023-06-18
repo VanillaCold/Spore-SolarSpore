@@ -27,5 +27,5 @@ bool toolPassThroughAll true
 
 bool SS_IsPlaceholderTool true
 uint32s SS_ToolOverrides
-	hash(NPC_shieldlaser2)
+	hash(NPC_shieldlaser2d)
 end

@@ -145,6 +145,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="ToSol.h" />
+    <ClInclude Include="TransportProjectile.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="vehicletest.h">
       <SubType>
       </SubType>
@@ -209,6 +213,10 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="ToSol.cpp" />
+    <ClCompile Include="TransportProjectile.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="vehicletest.cpp">
       <SubType>
       </SubType>

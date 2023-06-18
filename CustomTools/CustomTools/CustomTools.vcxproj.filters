@@ -56,6 +56,12 @@
     <Filter Include="CustomTools\Tools\NPC">
       <UniqueIdentifier>{b2504013-c5ee-4f92-b703-18b0f2c9c3da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CustomTools\Tools\NPC\ShieldkillerBeam">
+      <UniqueIdentifier>{54cdd978-1270-4ebb-a94c-b554cc1be0cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\NPC\TransportProjectile">
+      <UniqueIdentifier>{64d4a529-ccb8-46b8-842d-ce825b0c88c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -149,7 +155,10 @@
       <Filter>CustomTools\Random cheat thingy</Filter>
     </ClInclude>
     <ClInclude Include="ShieldkillerBeam.h">
-      <Filter>CustomTools\Tools\NPC</Filter>
+      <Filter>CustomTools\Tools\NPC\ShieldkillerBeam</Filter>
+    </ClInclude>
+    <ClInclude Include="TransportProjectile.h">
+      <Filter>CustomTools\Tools\NPC\TransportProjectile</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -244,7 +253,10 @@
       <Filter>CustomTools\Random cheat thingy</Filter>
     </ClCompile>
     <ClCompile Include="ShieldkillerBeam.cpp">
-      <Filter>CustomTools\Tools\NPC</Filter>
+      <Filter>CustomTools\Tools\NPC\ShieldkillerBeam</Filter>
+    </ClCompile>
+    <ClCompile Include="TransportProjectile.cpp">
+      <Filter>CustomTools\Tools\NPC\TransportProjectile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
