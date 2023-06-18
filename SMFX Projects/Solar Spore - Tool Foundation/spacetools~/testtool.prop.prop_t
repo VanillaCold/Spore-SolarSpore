@@ -7,25 +7,44 @@ end
 texts spaceToolDetailDescription
 	"A"
 end
-bool spaceToolDisableOn201Ruins true
-bool spaceToolDisableOnHomeworld true
+float spaceToolAutoFireRate 100
+float spaceToolDamageArea 12
+float spaceToolMaxDamage 50
+float spaceToolMaxProjectileScale 5
+float spaceToolMaxRange 175
+float spaceToolMinRange 25
+float spaceToolMinDamage 50
+key spaceToolPanelKey combat_panel_top~
+float spaceToolRechargeRate 2
+key spaceToolStrategy TransportProjectile
+key spaceToolType weapon
+key toolCanPlayerLockOn true
+bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
-bool spaceToolHide false
-key spaceToolImageID ufotools~!0x4AD21FAC.png
-float spaceToolMaxRange -1
-key spaceToolPanelKey travel_panel_top~
-float spaceToolRechargeRate 15
-bool toolDeselectsAfterUse true
-float spaceToolEnergyCost 100
-bool toolHitOrientsToTerrain false
-bool toolIsSuperWeapon true
-bool toolPreventsPlanetExit true
-bool toolUseOnActivate true
-texts toolTargetFlagsFailMessage
-	"whoops"
+float spaceToolEnergyCost 15
+key spaceToolImageID ufotools~!0x89824FB1.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
-bool SS_IsPlaceholderTool true
-uint32s SS_ToolOverrides
-	hash(Starkiller)
-	hash(staffofdeath)
+key toolHitCombatantEffectID civ_weapons_military_projectile_shell_1_explosion
+key toolHitGroundEffectID civ_weapons_military_projectile_shell_1_explosion
+key toolHitWaterEffectID civ_weapons_military_projectile_shell_1_explosion
+bool toolIsHoming true
+key toolMuzzleEffectID civ_weapons_military_projectile_shell_1_muzzle
+float toolProjectileEccentricity 1
+key toolProjectileEffectID CIV_weapons_military_projectile_shell_1
+float toolProjectileExplosionExpansionRate 5000
+key toolProjectileMotion 0x0BA57653
+float toolProjectileSpeed 180
+float toolProjectileTimeOut 200000
+float toolProjectileDetonationDistance 20
+int32s toolTargetFlags
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x061af4b2) "This weapon can only be fired at spaceships, turrets, and vehicles."
 end
