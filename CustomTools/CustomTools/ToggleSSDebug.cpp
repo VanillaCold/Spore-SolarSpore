@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "ToggleSSDebug.h"
 #include "cSSArchetypeToolManager.h"
+#include <Spore\BasicIncludes.h>
+#include <Spore\Simulator\cBadgeManager.h>
 
 ToggleSSDebug::ToggleSSDebug()
 {
@@ -17,6 +19,8 @@ void ToggleSSDebug::ParseLine(const ArgScript::Line& line)
 {
 	if (isDebug == false)
 	{
+		AchievementsManager.mIsCheater = true;
+		BadgeManager.AddToBadgeProgress(Simulator::BadgeManagerEvent::Joker, 1);
 		isDebug = true;
 	}
 	else
