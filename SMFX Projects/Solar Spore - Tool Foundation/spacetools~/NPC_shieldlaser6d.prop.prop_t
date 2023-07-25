@@ -20,7 +20,7 @@ key toolHitPlayerEffectID SG_laser_lvl_1_beam_impact
 bool toolIsHoming true
 key toolMuzzleEffectID 0x253A34AB
 bool toolPassThroughAll true
-key toolBeamEffectID 0xB9D1B4F1 
+key toolBeamEffectID SG_laser_lvl_3_beam
 key toolHitCombatantEffectID SG_laser_lvl_1_beam_impact
 key toolHitGroundEffectID SG_laser_lvl_1_scorch
 key toolHitWaterEffectID SG_laser_lvl_1_water
