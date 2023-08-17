@@ -1,0 +1,29 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Black Cloud"
+key spaceToolContext planet
+float spaceToolDamageArea 100
+float spaceToolDetectableRange 2000
+float spaceToolMaxDamage 40
+float spaceToolMinDamage 40
+float spaceToolRechargeRate 300
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+bool toolDamagesFriendlies true
+key toolHitCombatantEffectID CG_black_cloud_explosion
+key toolHitGroundEffectID CG_black_cloud_explosion
+key toolHitWaterEffectID CG_black_cloud_explosion
+bool toolIsHoming true
+bool toolPassThroughAll true
+float toolProjectileAcceleration 50
+key toolProjectileEffectID CG_black_cloud_projectile
+float toolProjectileExplosionExpansionRate 50
+key toolProjectileMotion cruise
+float toolProjectileSpeed 200
+float toolProjectileTimeOut 120
+key toolProjectileType blackcloud
+float toolRelationshipDelta -5
+key toolTargetEffectID 0x7D2BF7A3
+int32s toolTargetFlags
+	hash(city)
+	hash(building)
+end
