@@ -26,3 +26,8 @@ float toolProjectileExplosionExpansionRate 500
 float toolProjectileSpeed 150
 float toolProjectileTimeOut 2
 float toolProjectileTurnRate 0.1
+
+bool SS_IsPlaceholderTool true
+uint32s SS_ToolOverrides
+	hash(NPC_warpcannon6d)
+end
