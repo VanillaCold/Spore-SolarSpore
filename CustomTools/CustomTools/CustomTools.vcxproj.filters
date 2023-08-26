@@ -145,6 +145,9 @@
     <ClInclude Include="ToggleSSDebug.h">
       <Filter>CustomTools\Random cheat thingy</Filter>
     </ClInclude>
+    <ClInclude Include="cSSResearchManager.h">
+      <Filter>CustomTools\Systems</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -236,6 +239,9 @@
     </ClCompile>
     <ClCompile Include="ToggleSSDebug.cpp">
       <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSResearchManager.cpp">
+      <Filter>CustomTools\Systems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

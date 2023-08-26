@@ -31,6 +31,7 @@
 #include "cSSArchetypeToolManager.h"
 #include "ToggleSSDebug.h"
 #include "MySystem.h"
+#include "cSSResearchManager.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -69,6 +70,8 @@ void SetupModStrategies::SetupStrategies()
 	//Add simulator strategy (to-do: make strategy obsolete and remove it)
 	SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
 	
+	//Add research strategy; this one is NOT to be obsolete.
+	SimulatorSystem.AddStrategy(new cSSResearchManager(), cSSResearchManager::NOUN_ID);
 
 	//Add archetype tools
 	if (PropManager.HasPropertyList(id("sstoolsexist"), id("solarsporeconfig")))
