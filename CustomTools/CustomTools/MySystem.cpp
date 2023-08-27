@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "MySystem.h"
 #include <Spore/Simulator/Serialization.h>
+#include "cSSResearchManager.h"
 
 MySystem* MySystem::sInstance;
 

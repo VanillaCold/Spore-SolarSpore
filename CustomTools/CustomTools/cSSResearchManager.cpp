@@ -40,6 +40,7 @@ Simulator::Attribute cSSResearchManager::ATTRIBUTES[] = {
 
 void cSSResearchManager::Initialize() {
 	sInstance = this;
+	SetupResearches();
 }
 
 void cSSResearchManager::Dispose() {
@@ -54,4 +55,74 @@ void cSSResearchManager::Update(int deltaTime, int deltaGameTime)
 cSSResearchManager* cSSResearchManager::Get()
 {
 	return sInstance;
+}
+
+bool cSSResearchManager::SetupResearches()
+{
+	vector<uint32_t> researchIDs;
+	PropManager.GetPropertyListIDs(id("SS-research"), researchIDs);
+
+	for each (uint32_t resID in researchIDs)
+	{
+		try
+		{
+			ResearchType res = ResearchType(resID);
+			mResearchTypes.push_back(res);
+		}
+		catch (std::exception except)
+		{
+			const char* text = except.what();
+			wstring report;
+			report.assign_convert(text);
+			MessageBox(NULL, report.c_str(), LPCWSTR(u"Error adding research"), 0x00000010L);
+		}
+	}
+	return false;
+}
+
+cSSResearchManager* cSSResearchManager::sInstance;
+
+
+//Struct con-struct-or
+ResearchType::ResearchType(uint32_t propID)
+{
+	if (PropManager.GetPropertyList(propID, id("SS-research"), mpPropList))
+	{
+		mResearchID = propID;
+		App::Property::GetUInt32(mpPropList.get(), id("ResearchTool"), mToolID);
+
+		size_t count;
+		uint32_t* ids;
+		App::Property::GetArrayUInt32(mpPropList.get(), id("ResearchDependancies"), count, ids);
+		if (count != 0)
+		{
+			for (int i = 0; i < count; i++)
+			{
+				mPriorResearches.push_back(ids[i]);
+			}
+		}
+
+		if (!App::Property::GetUInt32(mpPropList.get(), id("ResearchPointsRequired"), mRequiredPoints))
+		{
+			string error = "Research property list " + to_string(propID) + " has no required point count!";
+			throw std::invalid_argument(error.c_str());
+		}
+	}
+	else
+	{
+		string error = "Research property list " + to_string(propID) + " is not valid!";
+		throw std::invalid_argument(error.c_str());
+	}
+}
+
+bool ResearchType::operator==(const ResearchType other)
+{
+	return other.mpPropList == mpPropList && other.mPriorResearches == mPriorResearches
+		&& other.mRequiredPoints == mRequiredPoints && other.mToolID == mToolID && mResearchID == other.mResearchID;
+}
+
+bool ResearchType::operator!=(const ResearchType other)
+{
+	return !(other.mpPropList == mpPropList && other.mPriorResearches == mPriorResearches
+		&& other.mRequiredPoints == mRequiredPoints && other.mToolID == mToolID && other.mResearchID == mResearchID);
 }

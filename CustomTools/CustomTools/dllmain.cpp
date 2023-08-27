@@ -5,6 +5,7 @@
 
 #include <stdexcept>
 #include "cSSArchetypeToolManager.h"
+#include "cSSResearchManager.h"
 
 void Initialize()
 {

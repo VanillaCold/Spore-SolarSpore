@@ -15,40 +15,18 @@
 struct ResearchType
 {
 public:
-	ResearchType(uint32_t propID)
-	{
-		if (PropManager.GetPropertyList(propID, id("SS-research"), mpPropList))
-		{
-			App::Property::GetUInt32(mpPropList.get(), id("ResearchTool"), mToolID);
-
-			size_t count;
-			uint32_t* ids;
-			App::Property::GetArrayUInt32(mpPropList.get(), id("ResearchDependancies"), count, ids);
-			if (count != 0)
-			{
-				for (int i = 0; i < count; i++)
-				{
-					mPriorResearches.push_back(ids[i]);
-				}
-			}
-
-			if (!App::Property::GetUInt32(mpPropList.get(), id("ResearchPointsRequired"), mRequiredPoints))
-			{
-				string error = "Research property list " + to_string(propID) + " has no required point count!";
-				throw std::invalid_argument(error.c_str());
-			}
-		}
-		else
-		{
-			string error = "Research property list "+to_string(propID)+" is not valid!";
-			throw std::invalid_argument(error.c_str());
-		}
-	}
+	ResearchType(uint32_t propID);
+	ResearchType(PropertyListPtr propList, uint32_t toolID, vector<uint32_t> priorResearches, uint32_t requiredPoints, uint32_t researchID);
+	
+	bool operator==(const ResearchType other);
+	bool operator!=(const ResearchType other);
+	
 
 	PropertyListPtr mpPropList;
 	uint32_t mToolID;
 	vector<uint32_t> mPriorResearches;
 	uint32_t mRequiredPoints;
+	uint32_t mResearchID;
 };
 
 class cSSResearchManager
@@ -75,10 +53,11 @@ public:
 	static Simulator::Attribute ATTRIBUTES[];
 	static cSSResearchManager* Get();
 
-	vector<ResearchType> researches;
+	vector<ResearchType> mResearchTypes;
 
 private:
 	static cSSResearchManager* sInstance;
+	bool SetupResearches();
 	//
 	// You can add members here
 	//

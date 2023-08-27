@@ -148,6 +148,9 @@
     <ClInclude Include="cSSResearchManager.h">
       <Filter>CustomTools\Systems</Filter>
     </ClInclude>
+    <ClInclude Include="GetResearchData.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -242,6 +245,9 @@
     </ClCompile>
     <ClCompile Include="cSSResearchManager.cpp">
       <Filter>CustomTools\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="GetResearchData.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -32,6 +32,7 @@
 #include "ToggleSSDebug.h"
 #include "MySystem.h"
 #include "cSSResearchManager.h"
+#include "GetResearchData.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -66,13 +67,16 @@ void SetupModStrategies::SetupStrategies()
 	//	CheatManager.AddCheat("empireInfo", new SystemCount());
 	CheatManager.AddCheat("contactHomeworld", new ContactHomeworld());
 	CheatManager.AddCheat("togglessdebug", new ToggleSSDebug());
+	new GetResearchData();
 
 	//Add simulator strategy (to-do: make strategy obsolete and remove it)
 	SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
 	
 	//Add research strategy; this one is NOT to be obsolete.
-	SimulatorSystem.AddStrategy(new cSSResearchManager(), cSSResearchManager::NOUN_ID);
-
+	if (PropManager.HasPropertyList(id("ss_enableresearch"), id("solarsporeconfig")))
+	{
+		SimulatorSystem.AddStrategy(new cSSResearchManager(), cSSResearchManager::NOUN_ID);
+	}
 	//Add archetype tools
 	if (PropManager.HasPropertyList(id("sstoolsexist"), id("solarsporeconfig")))
 	{
