@@ -20,6 +20,8 @@ void GetResearchData::ParseLine(const ArgScript::Line& line)
 	auto rTypes = SSResearchManager.mResearchTypes;
 	int index = -1;
 
+	ResearchType type = eastl::find(rTypes.begin(), rTypes.end(), ResearchType(id))[0];
+
 	for(int i = 0; i<rTypes.size(); i++)
 	{
 		auto type = rTypes[i];

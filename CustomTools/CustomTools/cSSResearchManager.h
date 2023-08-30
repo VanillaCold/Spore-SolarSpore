@@ -18,8 +18,9 @@ public:
 	ResearchType(uint32_t propID);
 	ResearchType(PropertyListPtr propList, uint32_t toolID, vector<uint32_t> priorResearches, uint32_t requiredPoints, uint32_t researchID);
 	
-	bool operator==(const ResearchType other);
-	bool operator!=(const ResearchType other);
+	const bool operator==(const ResearchType other);
+	const bool operator!=(const ResearchType other);
+	explicit operator bool() const;
 	
 
 	PropertyListPtr mpPropList;
@@ -52,12 +53,21 @@ public:
 
 	static Simulator::Attribute ATTRIBUTES[];
 	static cSSResearchManager* Get();
-
+	bool CheckResearchExists(uint32_t resID);
+	bool HasResearched(uint32_t resID);
+	bool ResearchItem(uint32_t resID, string& outError); //outError is the output if it returns false
+	ResearchType& GetResearch(uint32_t resID);
+	
 	vector<ResearchType> mResearchTypes;
+
 
 private:
 	static cSSResearchManager* sInstance;
 	bool SetupResearches();
+	
+	map<uint32_t, uint32_t> mResearchTools; // <Research, tool> Research IDs that correspond with each tool.
+	uint32_t ResearchPoints;
+	
 	//
 	// You can add members here
 	//

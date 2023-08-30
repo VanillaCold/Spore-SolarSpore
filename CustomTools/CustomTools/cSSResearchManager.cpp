@@ -39,6 +39,7 @@ Simulator::Attribute cSSResearchManager::ATTRIBUTES[] = {
 };
 
 void cSSResearchManager::Initialize() {
+	ResearchPoints = 0;
 	sInstance = this;
 	SetupResearches();
 }
@@ -55,6 +56,79 @@ void cSSResearchManager::Update(int deltaTime, int deltaGameTime)
 cSSResearchManager* cSSResearchManager::Get()
 {
 	return sInstance;
+}
+
+bool cSSResearchManager::CheckResearchExists(uint32_t resID)
+{
+	for (int i = 0; i < mResearchTypes.size(); i++)
+	{
+		if (mResearchTypes[i].mResearchID == resID)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool cSSResearchManager::HasResearched(uint32_t resID)
+{
+	ResearchType& res = GetResearch(resID);
+	if (res)
+	{
+		if (SimulatorSpaceGame.GetPlayerInventory()->HasTool({ res.mToolID,0,0 }))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool cSSResearchManager::ResearchItem(uint32_t resID, string& outError)
+{
+	
+	if (ResearchType& res = GetResearch(resID))
+	{
+		auto inv = SimulatorSpaceGame.GetPlayerInventory();
+		if (inv->HasTool({ res.mToolID,0,0 }))
+		{
+			outError = "Already researched.";
+			return false;
+		}
+
+		if (ResearchPoints < res.mRequiredPoints)
+		{
+			outError = "Not enough research points.";
+			return false;
+		}
+		for each (uint32_t priorID in res.mPriorResearches)
+		{
+			if (!HasResearched(priorID))
+			{
+				outError = "Not all prior researches are researched.";
+				return false;
+			}
+		}
+		
+		cSpaceToolDataPtr pTool;
+		if (ToolManager.LoadTool({ res.mToolID,0,0 }, pTool))
+		{
+			inv->AddItem(pTool.get());
+			return true;
+		}
+	}
+	return false;
+}
+
+ResearchType& cSSResearchManager::GetResearch(uint32_t resID)
+{
+	for (int i = 0; i < mResearchTypes.size(); i++)
+	{
+		if (mResearchTypes[i].mResearchID == resID)
+		{
+			return mResearchTypes[i];
+		}
+	}
+	return ResearchType(0);
 }
 
 bool cSSResearchManager::SetupResearches()
@@ -86,6 +160,14 @@ cSSResearchManager* cSSResearchManager::sInstance;
 //Struct con-struct-or
 ResearchType::ResearchType(uint32_t propID)
 {
+	if (propID == 0)
+	{
+		mRequiredPoints = 0;
+		mResearchID = 0;
+		mToolID = 0;
+		return;
+	}
+
 	if (PropManager.GetPropertyList(propID, id("SS-research"), mpPropList))
 	{
 		mResearchID = propID;
@@ -115,14 +197,19 @@ ResearchType::ResearchType(uint32_t propID)
 	}
 }
 
-bool ResearchType::operator==(const ResearchType other)
+const bool ResearchType::operator==(const ResearchType other)
 {
 	return other.mpPropList == mpPropList && other.mPriorResearches == mPriorResearches
 		&& other.mRequiredPoints == mRequiredPoints && other.mToolID == mToolID && mResearchID == other.mResearchID;
 }
 
-bool ResearchType::operator!=(const ResearchType other)
+const bool ResearchType::operator!=(const ResearchType other)
 {
 	return !(other.mpPropList == mpPropList && other.mPriorResearches == mPriorResearches
 		&& other.mRequiredPoints == mRequiredPoints && other.mToolID == mToolID && other.mResearchID == mResearchID);
+}
+
+ResearchType::operator bool() const
+{
+	return (mResearchID != 0);
 }
