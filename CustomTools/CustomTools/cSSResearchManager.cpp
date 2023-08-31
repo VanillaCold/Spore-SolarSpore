@@ -35,11 +35,12 @@ bool cSSResearchManager::WriteToXML(Simulator::XmlSerializer* writexml)
 Simulator::Attribute cSSResearchManager::ATTRIBUTES[] = {
 	// Add more attributes here
 	// This one must always be at the end
+	SimAttribute(cSSResearchManager,mResearchPoints,1),
 	Simulator::Attribute()
 };
 
 void cSSResearchManager::Initialize() {
-	ResearchPoints = 0;
+	mResearchPoints = 0;
 	sInstance = this;
 	SetupResearches();
 }
@@ -50,7 +51,7 @@ void cSSResearchManager::Dispose() {
 
 void cSSResearchManager::Update(int deltaTime, int deltaGameTime) 
 {
-
+	
 }
 
 cSSResearchManager* cSSResearchManager::Get()
@@ -95,7 +96,7 @@ bool cSSResearchManager::ResearchItem(uint32_t resID, string& outError)
 			return false;
 		}
 
-		if (ResearchPoints < res.mRequiredPoints)
+		if (mResearchPoints < res.mRequiredPoints)
 		{
 			outError = "Not enough research points.";
 			return false;

@@ -3,6 +3,8 @@
 #include <Spore\BasicIncludes.h>
 #include <exception>
 #include <stdexcept>
+#include <Spore\App\cJob.h>
+#include <Spore\App\JobManager.h>
 
 #define cSSResearchManagerPtr intrusive_ptr<cSSResearchManager>
 #define SSResearchManager (cSSResearchManager::Get())[0]
@@ -59,14 +61,14 @@ public:
 	ResearchType& GetResearch(uint32_t resID);
 	
 	vector<ResearchType> mResearchTypes;
-
+	uint32_t mResearchPoints;
 
 private:
 	static cSSResearchManager* sInstance;
 	bool SetupResearches();
 	
-	map<uint32_t, uint32_t> mResearchTools; // <Research, tool> Research IDs that correspond with each tool.
-	uint32_t ResearchPoints;
+	//map<uint32_t, uint32_t> mResearchTools; // <Research, tool> Research IDs that correspond with each tool.
+	
 	
 	//
 	// You can add members here

@@ -60,14 +60,18 @@ void SetupModStrategies::SetupStrategies()
 	ToolManager.AddStrategy(new StarKiller(), id("Starkiller"));
 
 
-	//Add cheats
-	CheatManager.AddCheat("spawnvehicle", new vehicletest());
-	//CheatManager.AddCheat("changecaptain", new ChangeCaptain());
-	CheatManager.AddCheat("setPlanetType", new SetPlanetType());
-	//	CheatManager.AddCheat("empireInfo", new SystemCount());
-	CheatManager.AddCheat("contactHomeworld", new ContactHomeworld());
-	CheatManager.AddCheat("togglessdebug", new ToggleSSDebug());
-	new GetResearchData();
+	//Add debug cheats
+#ifdef _DEBUG
+	{
+		CheatManager.AddCheat("spawnvehicle", new vehicletest());
+		//CheatManager.AddCheat("changecaptain", new ChangeCaptain());
+		CheatManager.AddCheat("setPlanetType", new SetPlanetType());
+		//	CheatManager.AddCheat("empireInfo", new SystemCount());
+		CheatManager.AddCheat("contactHomeworld", new ContactHomeworld());
+		CheatManager.AddCheat("togglessdebug", new ToggleSSDebug());
+		new GetResearchData();
+	}
+#endif
 
 	//Add simulator strategy (to-do: make strategy obsolete and remove it)
 	SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
