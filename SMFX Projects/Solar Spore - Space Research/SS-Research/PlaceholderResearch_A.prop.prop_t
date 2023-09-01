@@ -1,0 +1,6 @@
+uint32 ResearchTool hash(TestResearch)
+
+uint32s ResearchDependancies
+	hash(PlaceholderResearch)
+end
+uint32 ResearchPointsRequired 5

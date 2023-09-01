@@ -1,6 +1,6 @@
-uint32 ResearchTool hash()
+uint32 ResearchTool hash(ResearchTemplate)
 
 uint32s ResearchDependancies
 
 end
-uint32 ResearchPointsRequired 0
+uint32 ResearchPointsRequired 5
