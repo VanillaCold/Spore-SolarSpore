@@ -42,6 +42,7 @@ Simulator::Attribute cSSResearchManager::ATTRIBUTES[] = {
 void cSSResearchManager::Initialize() {
 	mResearchPoints = 0;
 	sInstance = this;
+	mUIlayout = nullptr;
 	SetupResearches();
 }
 
@@ -51,7 +52,28 @@ void cSSResearchManager::Dispose() {
 
 void cSSResearchManager::Update(int deltaTime, int deltaGameTime) 
 {
-	
+	if (Simulator::IsSpaceGame())
+	{
+		mResearchPoints += deltaGameTime * Simulator::SpacePlayerData::Get()->mPlayerColonies.size() / 1000 / 60;
+
+		if (mWindowOffset != 0 && mUIlayout)
+		{
+			auto window = mUIlayout->FindWindowByID(0xFFFFFFFF, false);
+			float offset2 = (((mWindowOffset * -1) + 1) / 8); //max((((windowOffset * -1) + 1) / 8), 1.0)
+			mWindowOffset = mWindowOffset + offset2;
+
+			UTFWin::IWindow* parentWindow = window->GetParent();
+			Math::Rectangle rec = parentWindow->GetArea();
+			window->SetArea(Math::Rectangle(rec.right / 2 - (801 / 2), (rec.bottom / 2 - (602 / 2)) + mWindowOffset, rec.right / 2 + (801 / 2), (rec.bottom / 2 + (602 / 2)) + mWindowOffset));
+		}
+	}
+	else
+	{
+		if (mUIlayout)
+		{
+			CloseResearchUI(false);
+		}
+	}
 }
 
 cSSResearchManager* cSSResearchManager::Get()
@@ -131,6 +153,56 @@ ResearchType& cSSResearchManager::GetResearch(uint32_t resID)
 	}
 	return ResearchType(0);
 }
+
+// UI functions
+
+bool cSSResearchManager::OpenResearchUI(bool animation)
+{
+	if (!mUIlayout)
+	{
+		mUIlayout = new UTFWin::UILayout();
+	}
+
+	if (mUIlayout->LoadByID(id("ResearchScreen")))
+	{
+		mUIlayout->SetVisible(true);
+		mUIlayout->SetParentWindow(WindowManager.GetMainWindow());
+		auto window = mUIlayout->FindWindowByID(0xFFFFFFFF, false);
+		window->SetSize(801.0F, 602.0F);
+		WindowManager.GetMainWindow()->SendToBack(mUIlayout->GetContainerWindow());
+
+		Math::Rectangle rec = window->GetParent()->GetArea();
+
+		if (animation)
+		{
+			mWindowOffset = (rec.bottom / 2 + (602 / 2));
+		}
+		else
+		{
+			mWindowOffset = 0;
+		}
+
+		window->SetArea(Math::Rectangle(rec.right / 2 - (801 / 2), (rec.bottom / 2 - (602 / 2)) + mWindowOffset, rec.right / 2 + (801 / 2), (rec.bottom / 2 + (602 / 2)) + mWindowOffset));
+
+		return true;
+	}
+	mUIlayout = nullptr;
+	return false;
+}
+
+bool cSSResearchManager::CloseResearchUI(bool animation)
+{
+	if (mUIlayout)
+	{
+		mWindowOffset = 0;
+		WindowManager.GetMainWindow()->RemoveWindow(mUIlayout->FindWindowByID(0xFFFFFFFF, false));
+		mUIlayout = nullptr;
+		return true;
+	}
+	return false;
+}
+
+//Private functions
 
 bool cSSResearchManager::SetupResearches()
 {

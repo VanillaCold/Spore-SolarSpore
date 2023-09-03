@@ -61,11 +61,17 @@ public:
 	ResearchType& GetResearch(uint32_t resID);
 	
 	vector<ResearchType> mResearchTypes;
-	uint32_t mResearchPoints;
+	float mResearchPoints;
+
+	bool OpenResearchUI(bool animation = true);
+	bool CloseResearchUI(bool animation = true);
 
 private:
 	static cSSResearchManager* sInstance;
 	bool SetupResearches();
+
+	UTFWin::UILayout* mUIlayout;
+	float mWindowOffset;
 	
 	//map<uint32_t, uint32_t> mResearchTools; // <Research, tool> Research IDs that correspond with each tool.
 	

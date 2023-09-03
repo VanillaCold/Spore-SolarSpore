@@ -1,0 +1,39 @@
+SS
+animations~	0x0
+names
+SS_Resear
+auto_SS-Research_PlaceholderResearch_A
+ToolTemplate
+auto_spacetools~_TestResearch
+layouts_atlas~	0x40464200
+SS_Resea
+SS_Research
+solarsporeconfig
+SS_Re
+PlaceholderResearch_A
+ExpansionPack1
+auto_solarsporeconfig_ss_enableresearch
+TestResearch
+SS_Res
+en-us
+SS_R
+spacegame_tools
+ufotools~	0x3064cb38
+other
+SS-Research
+SS_Rese
+S
+ss_enableresearch
+0
+spacetools~	0x30608f0b
+ResearchItem
+auto_SS-Research_PlaceholderResearch
+PlaceholderResearch
+ResearchScreen
+ResearchTemplate
+SS_Researc
+passive
+SS_
+locale~	0x2fabf01
+auto_spacetools~_ResearchTemplate
+sporemaster

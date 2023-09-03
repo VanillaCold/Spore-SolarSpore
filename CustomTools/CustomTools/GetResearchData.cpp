@@ -63,9 +63,20 @@ void GetResearchData::ParseLine(const ArgScript::Line& line)
 		SSResearchManager.mResearchPoints = points;
 		return;
 	}
+
 	if (line.HasFlag("getPoints"))
 	{
 		App::ConsolePrintF(to_string(SSResearchManager.mResearchPoints).c_str());
+		return;
+	}
+
+	if (line.HasFlag("OpenUI"))
+	{
+		SSResearchManager.OpenResearchUI();
+	}
+	if (line.HasFlag("CloseUI"))
+	{
+		SSResearchManager.CloseResearchUI();
 	}
 }
 
