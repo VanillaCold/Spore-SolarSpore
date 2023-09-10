@@ -7,6 +7,7 @@ SS_Re
 PlaceholderResearch_A
 auto_solarsporeconfig_ss_enableresearch
 TestResearch
+oldSelected
 SS_Res
 ResName
 Titlebar
@@ -17,6 +18,7 @@ other
 SS-Research
 SS_Rese
 0
+counter
 ResearchItem
 ResearchScreen
 SS_Researc
@@ -40,11 +42,13 @@ ufotools~	0x3064cb38
 ItemID
 S
 ss_enableresearch
+selected
 spacetools~	0x30608f0b
 auto_SS-Research_PlaceholderResearch
 PlaceholderResearch
 ResearchButton
 ResearchTemplate
+disabled
 passive
 SS_
 locale~	0x2fabf01

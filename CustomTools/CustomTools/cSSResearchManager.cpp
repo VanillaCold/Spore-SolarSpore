@@ -204,6 +204,12 @@ bool cSSResearchManager::OpenResearchUI(bool animation)
 
 		mpPointsCaption = mpUIlayout->FindWindowByID(id("RSPointCounter"));
 
+		auto nameCaption = mpUIlayout->FindWindowByID(id("ResName"));
+		nameCaption->SetCaption(u"");
+
+		auto descCaption = mpUIlayout->FindWindowByID(id("ResDescr"));
+		descCaption->SetCaption(u"");
+
 		LoadUIItems();
 
 		return true;

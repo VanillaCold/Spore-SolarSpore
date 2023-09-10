@@ -29,6 +29,8 @@ public:
 private:
 	ResearchType mResearchType;
 	UTFWin::IWindow* mItemWindow;
+	string16 mError;
+	UTFWin::Tooltip* mpTooltip;
 
 
 };
