@@ -53,6 +53,12 @@
     <Filter Include="CustomTools\Tools\Starkiller">
       <UniqueIdentifier>{9268ab1e-f63d-4c53-bbbf-62878fec4224}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CustomTools\Systems\Research">
+      <UniqueIdentifier>{d241c43e-b67e-4938-9a38-8c50dbbec416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems\Research\WinProcs">
+      <UniqueIdentifier>{1ae17577-f236-4cdc-893b-c9785d8bbc99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -145,11 +151,20 @@
     <ClInclude Include="ToggleSSDebug.h">
       <Filter>CustomTools\Random cheat thingy</Filter>
     </ClInclude>
-    <ClInclude Include="cSSResearchManager.h">
-      <Filter>CustomTools\Systems</Filter>
-    </ClInclude>
     <ClInclude Include="GetResearchData.h">
       <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="cSSResearchManager.h">
+      <Filter>CustomTools\Systems\Research</Filter>
+    </ClInclude>
+    <ClInclude Include="CloseResearchMenu.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="cResearchWinProc.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="cResearchButtonWinProc.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -243,11 +258,20 @@
     <ClCompile Include="ToggleSSDebug.cpp">
       <Filter>CustomTools\Random cheat thingy</Filter>
     </ClCompile>
-    <ClCompile Include="cSSResearchManager.cpp">
-      <Filter>CustomTools\Systems</Filter>
-    </ClCompile>
     <ClCompile Include="GetResearchData.cpp">
       <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSResearchManager.cpp">
+      <Filter>CustomTools\Systems\Research</Filter>
+    </ClCompile>
+    <ClCompile Include="CloseResearchMenu.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="cResearchWinProc.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="cResearchButtonWinProc.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

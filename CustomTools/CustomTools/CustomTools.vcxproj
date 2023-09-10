@@ -102,7 +102,19 @@
     <ClInclude Include="BerserkerRage.h" />
     <ClInclude Include="Capacitor.h" />
     <ClInclude Include="ChangeSpecies.h" />
+    <ClInclude Include="CloseResearchMenu.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ContactHomeworld.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="cResearchButtonWinProc.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="cResearchWinProc.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -160,7 +172,19 @@
     <ClCompile Include="BerserkerRage.cpp" />
     <ClCompile Include="Capacitor.cpp" />
     <ClCompile Include="ChangeSpecies.cpp" />
+    <ClCompile Include="CloseResearchMenu.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="ContactHomeworld.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="cResearchButtonWinProc.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="cResearchWinProc.cpp">
       <SubType>
       </SubType>
     </ClCompile>

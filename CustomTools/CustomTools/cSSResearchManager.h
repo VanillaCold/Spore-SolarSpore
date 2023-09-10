@@ -18,7 +18,8 @@ struct ResearchType
 {
 public:
 	ResearchType(uint32_t propID);
-	ResearchType(PropertyListPtr propList, uint32_t toolID, vector<uint32_t> priorResearches, uint32_t requiredPoints, uint32_t researchID);
+	ResearchType();
+	//ResearchType(PropertyListPtr propList, uint32_t toolID, vector<uint32_t> priorResearches, uint32_t requiredPoints, uint32_t researchID);
 	
 	const bool operator==(const ResearchType other);
 	const bool operator!=(const ResearchType other);
@@ -30,6 +31,8 @@ public:
 	vector<uint32_t> mPriorResearches;
 	uint32_t mRequiredPoints;
 	uint32_t mResearchID;
+	LocalizedString mResearchTitle;
+	LocalizedString mResearchDescription;
 };
 
 class cSSResearchManager
@@ -66,11 +69,16 @@ public:
 	bool OpenResearchUI(bool animation = true);
 	bool CloseResearchUI(bool animation = true);
 
+	void LoadUIItems();
+
+	vector<UTFWin::IWindow*> mpItemUIs;
+
 private:
 	static cSSResearchManager* sInstance;
 	bool SetupResearches();
 
-	UTFWin::UILayout* mUIlayout;
+	UTFWin::UILayout* mpUIlayout;
+	UTFWin::IWindow* mpPointsCaption;
 	float mWindowOffset;
 	
 	//map<uint32_t, uint32_t> mResearchTools; // <Research, tool> Research IDs that correspond with each tool.

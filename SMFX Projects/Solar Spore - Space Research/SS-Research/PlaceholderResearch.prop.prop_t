@@ -5,3 +5,10 @@ uint32s ResearchDependancies
 end
 uint32 ResearchPointsRequired 5
 key ResearchImage ufotools~!0xD9F39498.png
+
+texts ResearchName 
+	"PlaceholderName"
+end
+texts ResearchDescript 
+	"Descriptive description about the research and its tool."
+end
