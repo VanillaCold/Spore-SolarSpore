@@ -147,6 +147,7 @@ bool cSSResearchManager::ResearchItem(uint32_t resID, string& outError)
 		if (ToolManager.LoadTool({ res.mToolID,0,0 }, pTool))
 		{
 			inv->AddItem(pTool.get());
+			mResearchPoints -= res.mRequiredPoints;
 			return true;
 		}
 	}
