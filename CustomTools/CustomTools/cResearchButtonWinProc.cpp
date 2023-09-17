@@ -91,9 +91,19 @@ bool cResearchButtonWinProc::HandleUIMessage(IWindow* window, const Message& mes
 			mainWin->FindWindowByID(id("ResDescr"))->SetCaption(mResearchType.mResearchDescription.GetText());
 			mainWin->FindWindowByID(id("ResearchButton"))->SetCommandID(mResearchType.mResearchID);
 
-
-
-			mainWin->FindWindowByID(id("ResearchIcon"))->SetDrawable(window->GetDrawable());
+			auto iconWindow = mainWin->FindWindowByID(id("ResearchIcon"));
+			ImagePtr img;
+			ResourceKey imgKey;
+			if (App::Property::GetKey(mResearchType.mpPropList.get(), id("ResearchImage"), imgKey))
+			{
+				ImagePtr img;
+				if (Image::GetImage(imgKey, img))
+				{
+					ImageDrawable* drawable = new ImageDrawable();
+					drawable->SetImage(img.get());
+					iconWindow->SetDrawable(drawable);
+				}
+			}
 
 			return true;
 		}

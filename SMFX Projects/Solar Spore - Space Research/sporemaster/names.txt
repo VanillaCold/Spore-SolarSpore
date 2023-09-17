@@ -5,6 +5,8 @@ SS_Resea
 FullMenu
 SS_Re
 PlaceholderResearch_A
+WanderingPortalRes
+auto_SS-Research_WanderingPortal
 auto_solarsporeconfig_ss_enableresearch
 TestResearch
 oldSelected
@@ -14,6 +16,7 @@ Titlebar
 ItemIcon
 spacegame_tools
 Caption
+colonization
 other
 SS-Research
 SS_Rese
@@ -22,6 +25,7 @@ counter
 ResearchItem
 ResearchScreen
 SS_Researc
+spacetrading~	0x34d97fa
 ResearchIcon
 sporemaster
 names
@@ -32,8 +36,10 @@ auto_spacetools~_TestResearch
 layouts_atlas~	0x40464200
 SS_Research
 solarsporeconfig
+WanderAroundAmmo
 ExpansionPack1
 ResDescr
+auto_spacetrading~_WanderingPortal
 en-us
 closebutton
 RSPointCounter
@@ -42,8 +48,10 @@ ufotools~	0x3064cb38
 ItemID
 S
 ss_enableresearch
+tool
 selected
 spacetools~	0x30608f0b
+auto_spacetools~_WanderingPortalRes
 auto_SS-Research_PlaceholderResearch
 PlaceholderResearch
 ResearchButton
@@ -51,5 +59,6 @@ ResearchTemplate
 disabled
 passive
 SS_
+WanderingPortal
 locale~	0x2fabf01
 auto_spacetools~_ResearchTemplate

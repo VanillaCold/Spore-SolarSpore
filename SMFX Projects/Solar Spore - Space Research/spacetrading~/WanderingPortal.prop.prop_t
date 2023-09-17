@@ -1,0 +1,47 @@
+texts spaceToolDescription
+	"Wandering Portal"
+end
+texts spaceToolDetailDescription
+	"Teleports you to a random system within 30 parcecs. Uses ammo."
+end
+key spaceToolImageID ufotools~!0x66E86527.png
+float spaceTradingAbundance 150
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 1250000
+float spaceTradingChance 100
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 0
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerKnight 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 0
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierBard 1
+float spaceTradingCostMultiplierGrob 1
+float spaceTradingCostMultiplierTrader 1.65
+float spaceTradingCostMultiplierUserCul 1#0.75
+float spaceTradingCostMultiplierUserEco 0.75
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierScientist 1
+float spaceTradingCostMultiplierWarrior 1
+float spaceTradingCostMultiplierZealot 99.75
+float spaceTradingCostMultiplierDiplomat 0.75
+key spaceTradingExchangeFor WanderAroundAmmo.prop
+key spaceTradingRequires WanderingPortalRes.prop
+int32 spaceTradingRequiresTier 0
+int32 spaceTradingToolReofferRate 15
+key spaceTradingToolClass colonization
+key spaceTradingType tool

@@ -12,3 +12,5 @@ end
 texts ResearchDescript 
 	"Descriptive description about the research and its tool."
 end
+
+bool ResearchHide true

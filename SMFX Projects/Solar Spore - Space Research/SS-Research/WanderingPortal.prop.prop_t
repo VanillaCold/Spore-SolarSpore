@@ -1,0 +1,15 @@
+uint32 ResearchTool hash(WanderingPortalRes)
+
+uint32s ResearchDependancies
+end
+uint32 ResearchPointsRequired 15
+key ResearchImage ufotools~!0x66E86527.png
+
+texts ResearchName 
+	"Wandering Portal"
+end
+texts ResearchDescript 
+	"Teleports the user to a random system within 30 parsecs. Ammo sold separately."
+end
+
+bool ResearchHide false

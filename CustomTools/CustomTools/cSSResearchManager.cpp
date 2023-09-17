@@ -57,14 +57,19 @@ void cSSResearchManager::Update(int deltaTime, int deltaGameTime)
 {
 	if (Simulator::IsSpaceGame())
 	{
-		mResearchPoints += deltaGameTime * Simulator::SpacePlayerData::Get()->mPlayerColonies.size() / 1000 / 60;
+		float length = ((deltaGameTime) / 1000.0f) * (Simulator::SpacePlayerData::Get()->mPlayerColonies.size()) / 60;
+		mResearchPoints += length;
+
+		//SporeDebugPrint(to_string(deltaGameTime).c_str());
 
 		if (mpPointsCaption)
 		{
+			float points = mResearchPoints;
 			string16 cap;
-			cap.assign_convert(to_string(int(floor(mResearchPoints))));
+			cap.assign_convert(to_string(int(floor(points))));
 			cap = u"\u268C " + cap;
 			mpPointsCaption->SetCaption(cap.c_str());
+			//SporeDebugPrint("%f", mResearchPoints);
 		}
 
 		if (mWindowOffset != 0 && mpUIlayout)
@@ -170,49 +175,52 @@ ResearchType& cSSResearchManager::GetResearch(uint32_t resID)
 
 bool cSSResearchManager::OpenResearchUI(bool animation)
 {
-	if (!mpUIlayout)
+	if (!mpPointsCaption)
 	{
-		mpUIlayout = new UTFWin::UILayout();
-	}
-
-	if (mpUIlayout->LoadByID(id("ResearchScreen")))
-	{
-		mpUIlayout->SetVisible(true);
-		mpUIlayout->SetParentWindow(WindowManager.GetMainWindow());
-		auto window = mpUIlayout->FindWindowByID(0xFFFFFFFF, false);
-		window->SetSize(801.0F, 602.0F);
-		WindowManager.GetMainWindow()->SendToBack(mpUIlayout->GetContainerWindow());
-
-		Math::Rectangle rec = window->GetParent()->GetArea();
-
-		if (animation)
+		if (!mpUIlayout)
 		{
-			mWindowOffset = (rec.bottom / 2 + (602 / 2));
-		}
-		else
-		{
-			mWindowOffset = 0;
+			mpUIlayout = new UTFWin::UILayout();
 		}
 
-		window->SetArea(Math::Rectangle(rec.right / 2 - (801 / 2), (rec.bottom / 2 - (602 / 2)) + mWindowOffset, rec.right / 2 + (801 / 2), (rec.bottom / 2 + (602 / 2)) + mWindowOffset));
+		if (mpUIlayout->LoadByID(id("ResearchScreen")))
+		{
+			mpUIlayout->SetVisible(true);
+			mpUIlayout->SetParentWindow(WindowManager.GetMainWindow());
+			auto window = mpUIlayout->FindWindowByID(0xFFFFFFFF, false);
+			window->SetSize(801.0F, 602.0F);
+			WindowManager.GetMainWindow()->SendToBack(mpUIlayout->GetContainerWindow());
 
-		auto closeButton = mpUIlayout->FindWindowByID(id("closebutton"));
-		closeButton->AddWinProc(new CloseResearchMenu());
+			Math::Rectangle rec = window->GetParent()->GetArea();
 
-		auto resButton = mpUIlayout->FindWindowByID(id("ResearchButton"));
-		resButton->AddWinProc(new cResearchWinProc());
+			if (animation)
+			{
+				mWindowOffset = (rec.bottom / 2 + (602 / 2));
+			}
+			else
+			{
+				mWindowOffset = 0;
+			}
 
-		mpPointsCaption = mpUIlayout->FindWindowByID(id("RSPointCounter"));
+			window->SetArea(Math::Rectangle(rec.right / 2 - (801 / 2), (rec.bottom / 2 - (602 / 2)) + mWindowOffset, rec.right / 2 + (801 / 2), (rec.bottom / 2 + (602 / 2)) + mWindowOffset));
 
-		auto nameCaption = mpUIlayout->FindWindowByID(id("ResName"));
-		nameCaption->SetCaption(u"");
+			auto closeButton = mpUIlayout->FindWindowByID(id("closebutton"));
+			closeButton->AddWinProc(new CloseResearchMenu());
 
-		auto descCaption = mpUIlayout->FindWindowByID(id("ResDescr"));
-		descCaption->SetCaption(u"");
+			auto resButton = mpUIlayout->FindWindowByID(id("ResearchButton"));
+			resButton->AddWinProc(new cResearchWinProc());
 
-		LoadUIItems();
+			mpPointsCaption = mpUIlayout->FindWindowByID(id("RSPointCounter"));
 
-		return true;
+			auto nameCaption = mpUIlayout->FindWindowByID(id("ResName"));
+			nameCaption->SetCaption(u"");
+
+			auto descCaption = mpUIlayout->FindWindowByID(id("ResDescr"));
+			descCaption->SetCaption(u"");
+
+			LoadUIItems();
+
+			return true;
+		}
 	}
 	mpUIlayout = nullptr;
 	return false;
@@ -250,10 +258,6 @@ void cSSResearchManager::LoadUIItems()
 
 			if (auto itemWindow = layout->FindWindowByID(id("ItemID")))
 			{
-				itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
-				itemWindow->FindWindowByID(id("itembutton"))->AddWinProc(new cResearchButtonWinProc(itemWindow, research));
-				itemWindow->SetLayoutLocation((65 * (i % 8)) + (8 * ((i % 8)+1)), div((i),8).quot * 65);
-
 				auto icon = itemWindow->FindWindowByID(id("ItemIcon"));
 
 				ResourceKey imgKey;
@@ -268,7 +272,9 @@ void cSSResearchManager::LoadUIItems()
 					}
 				}
 
-
+				itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
+				itemWindow->FindWindowByID(id("itembutton"))->AddWinProc(new cResearchButtonWinProc(itemWindow, research));
+				itemWindow->SetLayoutLocation((65 * (i % 8)) + (8 * ((i % 8)+1)), div((i),8).quot * 65);
 
 				mpItemUIs.push_back(itemWindow);
 				i++;
@@ -290,7 +296,16 @@ bool cSSResearchManager::SetupResearches()
 		try
 		{
 			ResearchType res = ResearchType(resID);
-			mResearchTypes.push_back(res);
+			bool hideResearch;
+			if (App::Property::GetBool(res.mpPropList.get(), id("ResearchHide"), hideResearch))
+			{
+				if (hideResearch != true)
+					mResearchTypes.push_back(res);
+			}
+			else
+			{
+				mResearchTypes.push_back(res);
+			}
 		}
 		catch (std::exception except)
 		{
