@@ -1,0 +1,8 @@
+key parent ConsequenceSuperPowers!spg_Template.prop
+texts consequenceSuperPowerDescription
+	"Converts the spice of the current planet to Purple Spice. Unlocked via research."
+end
+key consequenceSuperPowerIcon ufotools~!0xA690DC79.png
+texts consequenceSuperPowerName
+	"Purple Spice Dye"
+end

@@ -1,0 +1,23 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Shield"
+key spaceToolContext planet
+texts spaceToolDescription
+	"Electron Shield"
+end
+texts spaceToolDetailDescription
+	"Protects your ship from damage for a short period. Has a higher shield HP."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 20
+key spaceToolImageID ufotools~!spg_combat_sheild.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+key spaceToolPanelKey CombatAbilityPanel
+float spaceToolRechargeRate 180
+key spaceToolStrategy DefaultToolStrategy
+key spaceToolUpgradeFile shield
+key spaceToolType weapon
+bool toolDeselectsAfterUse true
+bool toolUseOnActivate true

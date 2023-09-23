@@ -1,0 +1,48 @@
+texts spaceToolDescription
+	"Uber Missile"
+end
+texts spaceToolDetailDescription
+	"Fires an incredibly powerful missile used by Uber Turrets. Uses lots of energy."
+end
+key spaceToolImageID ufotools~!0x89824FB1.png
+float spaceTradingAbundance 25
+bool spaceTradingAlliesOnly true
+float spaceTradingBaseCost 5000000
+float spaceTradingChance 100
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 0
+float spaceTradingChancePlayerBard 00
+float spaceTradingChancePlayerDiplomat 00
+float spaceTradingChancePlayerEcologist 00
+float spaceTradingChancePlayerKnight 00
+float spaceTradingChancePlayerScientist 00
+float spaceTradingChancePlayerShaman 00
+float spaceTradingChancePlayerTrader 00
+float spaceTradingChancePlayerWanderer 00
+float spaceTradingChancePlayerWarrior 00
+float spaceTradingChancePlayerZealot 00
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 0
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierBard 1
+float spaceTradingCostMultiplierGrob 0.25
+float spaceTradingCostMultiplierTrader 1.65
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 0.75
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierScientist 1.05
+float spaceTradingCostMultiplierWarrior 0.75
+float spaceTradingCostMultiplierZealot 1
+key spaceTradingExchangeFor ubermissile.prop
+uint32 spaceTradingQuantityToOffer 1
+key spaceTradingRequiresBadge conquerer-4
+key spaceTradingRequiresBadgeOr bodyguard-3
+int32 spaceTradingRequiresTier 4
+key spaceTradingToolClass combat
+int32 spaceTradingToolReofferRate 40
+key spaceTradingType upgrade

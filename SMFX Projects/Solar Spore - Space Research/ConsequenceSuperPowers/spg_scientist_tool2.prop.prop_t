@@ -1,0 +1,8 @@
+key parent ConsequenceSuperPowers!spg_Template.prop
+texts consequenceSuperPowerDescription
+	"Reduces all energy losses by 50%, at the cost of reserving 30% of your health. Unlocked via research."
+end
+key consequenceSuperPowerIcon ufotools~!acgenerator.png
+texts consequenceSuperPowerName
+	"AC Generator"
+end

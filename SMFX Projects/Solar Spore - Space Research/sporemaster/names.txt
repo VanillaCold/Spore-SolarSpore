@@ -1,64 +1,64 @@
-SS
 animations~	0x0
-Inventory
-SS_Resea
-FullMenu
 SS_Re
-PlaceholderResearch_A
-WanderingPortalRes
-auto_SS-Research_WanderingPortal
-auto_solarsporeconfig_ss_enableresearch
-TestResearch
 oldSelected
-SS_Res
-ResName
 Titlebar
-ItemIcon
-spacegame_tools
-Caption
-colonization
-other
 SS-Research
 SS_Rese
 0
-counter
+WanderAroundAmmo
+S
+passive
+auto_SS-Research_PlaceholderResearch_A
+PlaceholderResearch
+auto_SS-Research_WanderingPortal
+ResDescr
+ss_enableresearch
+auto_spacetools~_WanderingPortalRes
+Inventory
+SS_Resea
+PlaceholderResearch_A
+SS_Research
+tool
+disabled
+spacegame_tools
+other
 ResearchItem
+layouts_atlas~	0x40464200
+SS_
+FullMenu
 ResearchScreen
 SS_Researc
-spacetrading~	0x34d97fa
 ResearchIcon
+SS_Resear
+ToolTemplate
+solarsporeconfig
+ufotools~	0x3064cb38
+WanderingPortal
+WanderingPortalRes
+ItemIcon
+en-us
+selected
+colonization
+auto_spacetrading~_WanderingPortal
+ResearchButton
+spacetrading~	0x34d97fa
+SS_Res
 sporemaster
 names
-SS_Resear
-auto_SS-Research_PlaceholderResearch_A
-ToolTemplate
-auto_spacetools~_TestResearch
-layouts_atlas~	0x40464200
-SS_Research
-solarsporeconfig
-WanderAroundAmmo
-ExpansionPack1
-ResDescr
-auto_spacetrading~_WanderingPortal
-en-us
-closebutton
-RSPointCounter
-SS_R
-ufotools~	0x3064cb38
 ItemID
-S
-ss_enableresearch
-tool
-selected
-spacetools~	0x30608f0b
-auto_spacetools~_WanderingPortalRes
-auto_SS-Research_PlaceholderResearch
-PlaceholderResearch
-ResearchButton
-ResearchTemplate
-disabled
-passive
-SS_
-WanderingPortal
+ResName
 locale~	0x2fabf01
 auto_spacetools~_ResearchTemplate
+auto_solarsporeconfig_ss_enableresearch
+TestResearch
+counter
+SS_R
+auto_SS-Research_PlaceholderResearch
+SS
+Caption
+ExpansionPack1
+spacetools~	0x30608f0b
+ResearchTemplate
+auto_spacetools~_TestResearch
+closebutton
+RSPointCounter

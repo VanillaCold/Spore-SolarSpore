@@ -1,0 +1,12 @@
+key parent ConsequenceTraits!spg_Template.prop
+colorRGB consequenceTraitColor (0.282, 0.733, 0.549)
+texts consequenceTraitDescription
+	(consequence!0x00000058) "Bard Descrip (PLACEHOLDER)"
+end
+key consequenceTraitIcon consequence~!0xA126DB40.png
+texts consequenceTraitName
+	(consequence!0x00000057) "Bard (PLACEHOLDER)"
+end
+keys consequenceTraitUnlocksSuperpowers
+	spg_bard_tool
+end

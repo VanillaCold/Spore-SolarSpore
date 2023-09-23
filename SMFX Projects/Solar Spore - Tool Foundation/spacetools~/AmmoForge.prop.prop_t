@@ -5,19 +5,18 @@ texts spaceToolDescription
 	"Ammo Forge - $750,000 per Tool"
 end
 texts spaceToolDetailDescription
-	"Creates ammo for tools, while paying a large price."
+	"Creates ammo for tools, while paying a large price for each tool that has ammo manufactured."
 end
 bool spaceToolDisableOn201Ruins false
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames false
 bool spaceToolHide false
-bool spaceToolUsesAmmo true
-int32 spaceToolAmmoUsedPerShot 1
-int32 spaceToolMaxAmmoCount 99
+bool spaceToolUsesAmmo false
+int32 spaceToolAmmoUsedPerShot 0
 key spaceToolImageID ufotools~!0x1585FFDA.png
 float spaceToolMaxRange -1
 key spaceToolPanelKey travel_panel_bottom~
-float spaceToolRechargeRate 60
+float spaceToolRechargeRate 120
 key toolMuzzleEffectID 0x2E570807
 key spaceToolStrategy AmmoCreator
 bool toolDeselectsAfterUse true
