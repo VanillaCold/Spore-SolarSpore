@@ -57,7 +57,7 @@ void cSSResearchManager::Update(int deltaTime, int deltaGameTime)
 {
 	if (Simulator::IsSpaceGame())
 	{
-		float length = ((deltaGameTime) / 1000.0f) * (Simulator::SpacePlayerData::Get()->mPlayerColonies.size()) / 60;
+		float length = ((deltaGameTime) / 1000.0f) * (1.25*logf(Simulator::SpacePlayerData::Get()->mPlayerColonies.size()+1)) / 60;
 		mResearchPoints += length;
 
 		//SporeDebugPrint(to_string(deltaGameTime).c_str());
@@ -274,7 +274,7 @@ void cSSResearchManager::LoadUIItems()
 
 				itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
 				itemWindow->FindWindowByID(id("itembutton"))->AddWinProc(new cResearchButtonWinProc(itemWindow, research));
-				itemWindow->SetLayoutLocation((65 * (i % 8)) + (8 * ((i % 8)+1)), div((i),8).quot * 65);
+				itemWindow->SetLayoutLocation((65 * (i % 6)) + (8 * ((i % 6)+1)), div((i),6).quot * 75);
 
 				mpItemUIs.push_back(itemWindow);
 				i++;
@@ -291,28 +291,31 @@ bool cSSResearchManager::SetupResearches()
 	vector<uint32_t> researchIDs;
 	PropManager.GetPropertyListIDs(id("SS-research"), researchIDs);
 
-	for each (uint32_t resID in researchIDs)
+	for (int i = 0; i < 5; i++)
 	{
-		try
+		for each (uint32_t resID in researchIDs)
 		{
-			ResearchType res = ResearchType(resID);
-			bool hideResearch;
-			if (App::Property::GetBool(res.mpPropList.get(), id("ResearchHide"), hideResearch))
+			try
 			{
-				if (hideResearch != true)
+				ResearchType res = ResearchType(resID);
+				bool hideResearch;
+				if (App::Property::GetBool(res.mpPropList.get(), id("ResearchHide"), hideResearch))
+				{
+					if (hideResearch != true)
+						mResearchTypes.push_back(res);
+				}
+				else
+				{
 					mResearchTypes.push_back(res);
+				}
 			}
-			else
+			catch (std::exception except)
 			{
-				mResearchTypes.push_back(res);
+				const char* text = except.what();
+				wstring report;
+				report.assign_convert(text);
+				MessageBox(NULL, report.c_str(), LPCWSTR(u"Error adding research"), 0x00000010L);
 			}
-		}
-		catch (std::exception except)
-		{
-			const char* text = except.what();
-			wstring report;
-			report.assign_convert(text);
-			MessageBox(NULL, report.c_str(), LPCWSTR(u"Error adding research"), 0x00000010L);
 		}
 	}
 	return false;
