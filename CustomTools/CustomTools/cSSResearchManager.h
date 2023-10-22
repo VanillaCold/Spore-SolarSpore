@@ -5,6 +5,8 @@
 #include <stdexcept>
 #include <Spore\App\cJob.h>
 #include <Spore\App\JobManager.h>
+#include <Spore\UI\ScrollFrameVertical.h>
+#include <set>
 
 #define cSSResearchManagerPtr intrusive_ptr<cSSResearchManager>
 #define SSResearchManager (cSSResearchManager::Get())[0]
@@ -63,7 +65,8 @@ public:
 	bool ResearchItem(uint32_t resID, string& outError); //outError is the output if it returns false
 	ResearchType& GetResearch(uint32_t resID);
 	
-	vector<ResearchType> mResearchTypes;
+	//vector<ResearchType> mResearchTypes;
+	map<uint32_t, ResearchType> mResearchTypes;
 	float mResearchPoints;
 
 	bool OpenResearchUI(bool animation = true);
@@ -72,6 +75,7 @@ public:
 	void LoadUIItems();
 
 	vector<UTFWin::IWindow*> mpItemUIs;
+	IWindowPtr scrollWindow;
 
 private:
 	static cSSResearchManager* sInstance;
