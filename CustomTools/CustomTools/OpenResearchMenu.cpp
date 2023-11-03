@@ -47,15 +47,16 @@ bool OpenResearchMenu::HandleUIMessage(IWindow* window, const Message& message)
 	App::ConsolePrintF(to_string(window->GetState()).c_str());
 	if (message.eventType == MessageType::kMsgButtonSelect)
 	{
-		
-		if (window->GetState() == 29 || window->GetState() ==  13 || window->GetState() == 21 || window->GetState() == 9)
+		if (window->GetTextFontID() != 55)
 		{
+			window->SetTextFontID(55);
 			SSResearchManager.OpenResearchUI();
 			window->SetState(29);
 			return true;
 		}
 		else
 		{
+			window->SetTextFontID(0);
 			SSResearchManager.CloseResearchUI();
 			return true;
 		}

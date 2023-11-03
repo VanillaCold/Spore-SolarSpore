@@ -241,7 +241,7 @@ bool cSSResearchManager::CloseResearchUI(bool animation)
 	if (mpUIlayout)
 	{
 		auto openButton = WindowManager.GetMainWindow()->FindWindowByID(id("OpenResearchButton"));
-		if (openButton->GetState() == 13 || openButton->GetState() == 21 || openButton->GetState() == 29 || openButton->GetState() == 31 || openButton->GetState() == 25)
+		if (openButton->GetState() == 13 || openButton->GetState() == 21 || openButton->GetState() == 29 || openButton->GetState() == 31 || openButton->GetState() == 25 || openButton->GetState() == 15 || openButton->GetState() == 9)
 		{
 			openButton->SetState(9);
 		}
@@ -249,6 +249,7 @@ bool cSSResearchManager::CloseResearchUI(bool animation)
 		{
 			openButton->SetState(1);
 		}
+		openButton->SetTextFontID(0);
 		mWindowOffset = 0;
 		WindowManager.GetMainWindow()->RemoveWindow(mpUIlayout->FindWindowByID(0xFFFFFFFF, false));
 		mpPointsCaption = false;
