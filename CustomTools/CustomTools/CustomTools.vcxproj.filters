@@ -166,6 +166,12 @@
     <ClInclude Include="cResearchButtonWinProc.h">
       <Filter>CustomTools\Systems\Research\WinProcs</Filter>
     </ClInclude>
+    <ClInclude Include="OpenResearchMenu.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="ResearchPointCaptionWinProc.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -271,6 +277,12 @@
       <Filter>CustomTools\Systems\Research\WinProcs</Filter>
     </ClCompile>
     <ClCompile Include="cResearchButtonWinProc.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenResearchMenu.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="ResearchPointCaptionWinProc.cpp">
       <Filter>CustomTools\Systems\Research\WinProcs</Filter>
     </ClCompile>
   </ItemGroup>

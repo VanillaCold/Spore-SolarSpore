@@ -6,6 +6,8 @@
 #include <stdexcept>
 #include "cSSArchetypeToolManager.h"
 #include "cSSResearchManager.h"
+#include "ResearchPointCaptionWinProc.h";
+#include "OpenResearchMenu.h";
 
 void Initialize()
 {
@@ -46,12 +48,37 @@ void Dispose()
 	// This method is called when the game is closing
 }
 
+member_detour(AddResearchMenuButton, UI::SpaceGameUI, void()) {
+	void detoured()
+	{
+		original_function(this);
+		PropertyListPtr list;
+		if (PropManager.GetPropertyList(id("ss_enableresearch"), id("solarsporeconfig"), list))
+		{
+			IWindowPtr parentWindow = WindowManager.GetMainWindow()->FindWindowByID(0x07CE6631);
+			UTFWin::UILayout* layout = new UTFWin::UILayout();
+
+			layout->LoadByID(id("buttonspui"));
+			layout->SetParentWindow(parentWindow.get());
+			layout->FindWindowByID(id("OpenResearchButton"))->AddWinProc(new OpenResearchMenu());
+			layout->FindWindowByID(id("RPCaptionHolder"))->AddWinProc(new ResearchPointCaptionWinProc());
+			auto main = layout->FindWindowByID(id("OpenResearch"));
+			main->SetLocation(0, -35.0f);
+
+			layout->SetVisible(true);
+		}
+	}
+};
+
 void AttachDetours()
 {
 	//thingytofixparts::attach(0xFEA598); //0x4A0520
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
+	AddResearchMenuButton::attach(GetAddress(UI::SpaceGameUI, Load));
 }
+
+
 
 
 // Generally, you don't need to touch any code here

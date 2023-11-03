@@ -141,9 +141,17 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="OpenResearchMenu.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="PlanetDebuster.h" />
     <ClInclude Include="RandomTool.h" />
     <ClInclude Include="RegalShield.h" />
+    <ClInclude Include="ResearchPointCaptionWinProc.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ReturnPortal.h" />
     <ClInclude Include="SetPlanetType.h">
       <SubType>
@@ -219,9 +227,17 @@
     </ClCompile>
     <ClCompile Include="ConvertPlanet.cpp" />
     <ClCompile Include="infinitecolonies.cpp" />
+    <ClCompile Include="OpenResearchMenu.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="PlanetDebuster.cpp" />
     <ClCompile Include="RandomTool.cpp" />
     <ClCompile Include="RegalShield.cpp" />
+    <ClCompile Include="ResearchPointCaptionWinProc.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="ReturnPortal.cpp" />
     <ClCompile Include="SetPlanetType.cpp">
       <SubType>
