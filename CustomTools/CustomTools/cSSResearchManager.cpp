@@ -165,6 +165,36 @@ bool cSSResearchManager::ResearchItem(uint32_t resID, string& outError)
 	return false;
 }
 
+bool cSSResearchManager::CanResearch(uint32_t resID, string& outError)
+{
+	if (ResearchType& res = GetResearch(resID))
+	{
+		auto inv = SimulatorSpaceGame.GetPlayerInventory();
+		if (inv->HasTool({ res.mToolID,0,0 }))
+		{
+			outError = "Already researched.";
+			return false;
+		}
+
+		if (mResearchPoints < res.mRequiredPoints)
+		{
+			outError = "Not enough research points.";
+			return false;
+		}
+		for each (uint32_t priorID in res.mPriorResearches)
+		{
+			if (!HasResearched(priorID))
+			{
+				outError = "Not all prior researches are researched.";
+				return false;
+			}
+		}
+
+		return true;
+	}
+	return false;
+}
+
 ResearchType& cSSResearchManager::GetResearch(uint32_t resID)
 {
 	if (mResearchTypes.find(resID) != mResearchTypes.end())
@@ -267,44 +297,95 @@ void cSSResearchManager::LoadUIItems()
 	auto inventoryWindow = mpUIlayout->FindWindowByID(id("Inventory"), true);
 	int i = 0;
 	
-	for(auto it = mResearchTypes.begin();it!=mResearchTypes.end();it++)
+	vector<ResearchType> validResearches;
+	vector<ResearchType> invalidResearches;
+
+	for (auto it = mResearchTypes.begin(); it != mResearchTypes.end(); it++)
 	{
-		ResearchType research = it.mpNode->mValue.second;
+		string error;
+		if (CanResearch(it.mpNode->mValue.second.mToolID,error))
+		{
+			validResearches.push_back(it.mpNode->mValue.second);
+		}
+		else
+		{
+			invalidResearches.push_back(it.mpNode->mValue.second);
+		}
+
+	}
+	validResearches.insert(validResearches.end(), invalidResearches.begin(), invalidResearches.end());
+
+
+	for each(ResearchType research in validResearches)
+	{
 		if (!HasResearched(research.mResearchID))
 		{
-			UTFWin::UILayout* layout = new UTFWin::UILayout();
-			layout->LoadByID(id("ResearchItem"));
-			layout->SetParentWindow(inventoryWindow);
-
-			layout->SetVisible(true);
-
-
-			if (auto itemWindow = layout->FindWindowByID(id("ItemID")))
+			bool canShow = false;
+			if (research.mPriorResearches.size() != 0)
 			{
-				auto icon = itemWindow->FindWindowByID(id("ItemIcon"));
-
-				ResourceKey imgKey;
-				if (App::Property::GetKey(research.mpPropList.get(), id("ResearchImage"), imgKey))
+				for each (ResearchType prior in research.mPriorResearches)
 				{
-					ImagePtr img;
-					if (Image::GetImage(imgKey, img))
+					if (!HasResearched(prior.mResearchID))
 					{
-						ImageDrawable* drawable = new ImageDrawable();
-						drawable->SetImage(img.get());
-						icon->SetDrawable(drawable);
+						for each (ResearchType prior2 in prior.mPriorResearches)
+						{
+							if (HasResearched(prior2.mResearchID))
+							{
+								canShow = true;
+							}
+						}
+						if (prior.mPriorResearches.size() == 0)
+						{
+							canShow = true;
+						}
+					}
+					else
+					{
+						canShow = true;
 					}
 				}
+			}
+			else
+			{
+				canShow = true;
+			}
 
-				itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
-				itemWindow->FindWindowByID(id("itembutton"))->AddWinProc(new cResearchButtonWinProc(itemWindow, research));
-				itemWindow->SetLayoutLocation((65 * (i % 6)) + (8 * ((i % 6)+1)), div((i),6).quot * 75);
+			if (canShow)
+			{
+				UTFWin::UILayout* layout = new UTFWin::UILayout();
+				layout->LoadByID(id("ResearchItem"));
+				layout->SetParentWindow(inventoryWindow);
 
-				mpItemUIs.push_back(itemWindow);
+				layout->SetVisible(true);
+
+
+				if (auto itemWindow = layout->FindWindowByID(id("ItemID")))
+				{
+					auto icon = itemWindow->FindWindowByID(id("ItemIcon"));
+
+					ResourceKey imgKey;
+					if (App::Property::GetKey(research.mpPropList.get(), id("ResearchImage"), imgKey))
+					{
+						ImagePtr img;
+						if (Image::GetImage(imgKey, img))
+						{
+							ImageDrawable* drawable = new ImageDrawable();
+							drawable->SetImage(img.get());
+							icon->SetDrawable(drawable);
+						}
+					}
+
+					itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
+					itemWindow->FindWindowByID(id("itembutton"))->AddWinProc(new cResearchButtonWinProc(itemWindow, research));
+					itemWindow->SetLayoutLocation((65 * (i % 6)) + (8 * ((i % 6) + 1)), div((i), 6).quot * 75);
+
+					mpItemUIs.push_back(itemWindow);
+				}
 				i++;
 			}
 		}
+		
 	}
-
 }
 
 //Private functions

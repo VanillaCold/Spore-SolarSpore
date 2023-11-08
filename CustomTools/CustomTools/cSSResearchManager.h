@@ -63,6 +63,7 @@ public:
 	bool CheckResearchExists(uint32_t resID);
 	bool HasResearched(uint32_t resID);
 	bool ResearchItem(uint32_t resID, string& outError); //outError is the output if it returns false
+	bool CanResearch(uint32_t resID, string& outError);
 	ResearchType& GetResearch(uint32_t resID);
 	
 	//vector<ResearchType> mResearchTypes;
