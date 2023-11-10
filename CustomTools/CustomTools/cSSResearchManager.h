@@ -77,13 +77,13 @@ public:
 
 	vector<UTFWin::IWindow*> mpItemUIs;
 	IWindowPtr scrollWindow;
+	UTFWin::IWindow* mpPointsCaption;
 
 private:
 	static cSSResearchManager* sInstance;
 	bool SetupResearches();
 
 	UTFWin::UILayout* mpUIlayout;
-	UTFWin::IWindow* mpPointsCaption;
 	float mWindowOffset;
 	
 	//map<uint32_t, uint32_t> mResearchTools; // <Research, tool> Research IDs that correspond with each tool.

@@ -55,16 +55,14 @@ void cSSResearchManager::Dispose() {
 	
 }
 
-void cSSResearchManager::Update(int deltaTime, int deltaGameTime) 
+void cSSResearchManager::Update(int deltaTime, int deltaGameTime)  //Executed every frame
 {
-	if (Simulator::IsSpaceGame())
+	if (Simulator::IsSpaceGame()) //If we're in the space stage... (adventures do not count)
 	{
-		float length = ((deltaGameTime) / 1000.0f) * (1.25*logf(Simulator::SpacePlayerData::Get()->mPlayerColonies.size()+1)) / 60;
-		mResearchPoints += length;
+		float length = ((deltaGameTime) / 1000.0f) * (1.25*logf(Simulator::SpacePlayerData::Get()->mPlayerColonies.size()+1)) / 60; //Get the passive income of research points
+		mResearchPoints += length; //and increase the points by said passive income.
 
-		//SporeDebugPrint(to_string(deltaGameTime).c_str());
-
-		if (mpPointsCaption)
+		/*if (mpPointsCaption) //If the points caption is present,
 		{
 			float points = mResearchPoints;
 			string16 cap;
@@ -72,7 +70,7 @@ void cSSResearchManager::Update(int deltaTime, int deltaGameTime)
 			cap = u"\u268C " + cap;
 			mpPointsCaption->SetCaption(cap.c_str());
 			//SporeDebugPrint("%f", mResearchPoints);
-		}
+		}*/
 
 		if (mWindowOffset != 0 && mpUIlayout)
 		{

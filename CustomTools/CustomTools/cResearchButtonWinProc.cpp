@@ -90,19 +90,29 @@ bool cResearchButtonWinProc::HandleUIMessage(IWindow* window, const Message& mes
 			mainWin->FindWindowByID(id("ResName"))->SetCaption(mResearchType.mResearchTitle.GetText());
 			mainWin->FindWindowByID(id("ResDescr"))->SetCaption(mResearchType.mResearchDescription.GetText());
 			mainWin->FindWindowByID(id("ResearchButton"))->SetCommandID(mResearchType.mResearchID);
+			SSResearchManager.mpPointsCaption->SetCaption(mainWin->FindWindowByID(id("counter"))->GetCaption());
 
-			auto iconWindow = mainWin->FindWindowByID(id("ResearchIcon"));
+			auto iconWindow = mainWin->FindWindowByID(id("ResearchItemIcon"));
 			ImagePtr img;
 			ResourceKey imgKey;
+
+			//iconWindow->SetDrawable(mItemWindow->FindWindowByID(id("ItemIcon"))->GetDrawable());
+
 			if (App::Property::GetKey(mResearchType.mpPropList.get(), id("ResearchImage"), imgKey))
 			{
 				ImagePtr img;
 				if (Image::GetImage(imgKey, img))
 				{
+					iconWindow->SetVisible(false);
 					ImageDrawable* drawable = new ImageDrawable();
 					drawable->SetImage(img.get());
 					iconWindow->SetDrawable(drawable);
+
+					iconWindow->SetVisible(true);
+
+					
 				}
+				
 			}
 
 			return true;
@@ -119,7 +129,6 @@ bool cResearchButtonWinProc::HandleUIMessage(IWindow* window, const Message& mes
 			mItemWindow->FindWindowByID(id("rollover"))->SetVisible(false);
 		}
 	}
-
 	else
 	{
 		if (message.IsType(MessageType::kMsgUpdate))
