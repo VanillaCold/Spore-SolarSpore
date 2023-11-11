@@ -140,14 +140,18 @@ bool cSSResearchManager::ResearchItem(uint32_t resID, string& outError)
 
 		if (mResearchPoints < res.mRequiredPoints)
 		{
-			outError = "Not enough research points.";
+			LocalizedString str = LocalizedString(id("SS_Research"), 0x04);
+			HintManager.ShowHint(id("NoResourcePoints"));
+			outError.assign_convert(str.GetText());
 			return false;
 		}
 		for each (uint32_t priorID in res.mPriorResearches)
 		{
 			if (!HasResearched(priorID))
 			{
-				outError = "Not all prior researches are researched.";
+				LocalizedString str = LocalizedString(id("SS_Research"), 0x05);
+				HintManager.ShowHint(id("NoPriorResearch"));
+				outError.assign_convert(str.GetText());
 				return false;
 			}
 		}
@@ -176,14 +180,16 @@ bool cSSResearchManager::CanResearch(uint32_t resID, string& outError)
 
 		if (mResearchPoints < res.mRequiredPoints)
 		{
-			outError = "Not enough research points.";
+			LocalizedString str = LocalizedString(id("SS_Research"), 0x04);
+			outError.assign_convert(str.GetText());
 			return false;
 		}
 		for each (uint32_t priorID in res.mPriorResearches)
 		{
 			if (!HasResearched(priorID))
 			{
-				outError = "Not all prior researches are researched.";
+				LocalizedString str = LocalizedString(id("SS_Research"), 0x05);
+				outError.assign_convert(str.GetText());
 				return false;
 			}
 		}

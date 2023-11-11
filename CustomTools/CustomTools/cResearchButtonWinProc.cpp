@@ -15,14 +15,14 @@ cResearchButtonWinProc::cResearchButtonWinProc(UTFWin::IWindow* window, Research
 
 	if (SSResearchManager.mResearchPoints < mResearchType.mRequiredPoints)
 	{
-		mError = u"Not enough research points.";
+		mError = LocalizedString(id("SS_Research"), 0x04).GetText();
 
 	}
 	for each (uint32_t priorID in mResearchType.mPriorResearches)
 	{
 		if (!SSResearchManager.HasResearched(priorID))
 		{
-			mError = u"Not all prior researches are researched.";
+			mError = LocalizedString(id("SS_Research"), 0x04).GetText();
 		}
 	}
 
@@ -74,23 +74,23 @@ int cResearchButtonWinProc::GetEventFlags() const
 // checking what kind of message was sent...
 bool cResearchButtonWinProc::HandleUIMessage(IWindow* window, const Message& message)
 {
-	auto disabledWindow = mItemWindow->FindWindowByID(id("disabled"));
-	if (!disabledWindow->IsVisible())
-	{
-		if (message.IsType(MessageType::kMsgButtonClick))
+	auto disabledWindow = mItemWindow->FindWindowByID(id("disabled")); //Check if the window's disabled.
+	//if (!disabledWindow->IsVisible()) //if it isn't...
+	//{
+		if (message.IsType(MessageType::kMsgButtonClick)) //Check if clicked.
 		{
-			for each (IWindow * deselWindow in SSResearchManager.mpItemUIs)
+			for each (IWindow * deselWindow in SSResearchManager.mpItemUIs) //For each selection window
 			{
-				deselWindow->FindWindowByID(id("selected"))->SetVisible(false);
+				deselWindow->FindWindowByID(id("selected"))->SetVisible(false); //Make it invisible
 			}
-			mItemWindow->FindWindowByID(id("selected"))->SetVisible(true);
+			mItemWindow->FindWindowByID(id("selected"))->SetVisible(true); //and make this selection window visible.
 
 			auto mainWin = WindowManager.GetMainWindow();
 
 			mainWin->FindWindowByID(id("ResName"))->SetCaption(mResearchType.mResearchTitle.GetText());
 			mainWin->FindWindowByID(id("ResDescr"))->SetCaption(mResearchType.mResearchDescription.GetText());
 			mainWin->FindWindowByID(id("ResearchButton"))->SetCommandID(mResearchType.mResearchID);
-			SSResearchManager.mpPointsCaption->SetCaption(mainWin->FindWindowByID(id("counter"))->GetCaption());
+			SSResearchManager.mpPointsCaption->SetCaption(mItemWindow->FindWindowByID(id("counter"))->GetCaption());
 
 			auto iconWindow = mainWin->FindWindowByID(id("ResearchItemIcon"));
 			ImagePtr img;
@@ -128,8 +128,8 @@ bool cResearchButtonWinProc::HandleUIMessage(IWindow* window, const Message& mes
 		{
 			mItemWindow->FindWindowByID(id("rollover"))->SetVisible(false);
 		}
-	}
-	else
+	//}
+	if (disabledWindow->IsVisible())
 	{
 		if (message.IsType(MessageType::kMsgUpdate))
 		{
