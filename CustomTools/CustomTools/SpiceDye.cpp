@@ -49,7 +49,7 @@ bool SpiceDye::OnSelect(cSpaceToolData* pTool)
 	GetPlayerEmpire()->mEmpireMoney -= cost;
 
 
-	PropManager.GetPropertyList(Spice.instanceID, GroupIDs::SpaceTrading, propList);
+	PropManager.GetPropertyList(Spice.instanceID, GroupIDs::SpaceTrading_, propList);
 	uint32_t spicecolour;
 	App::Property::GetUInt32(propList.get(), 0x058CBB75, spicecolour);
 

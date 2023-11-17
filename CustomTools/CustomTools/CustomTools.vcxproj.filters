@@ -172,6 +172,9 @@
     <ClInclude Include="ResearchPointCaptionWinProc.h">
       <Filter>CustomTools\Systems\Research\WinProcs</Filter>
     </ClInclude>
+    <ClInclude Include="cSSArchetypeWeaponManager.h">
+      <Filter>CustomTools\IUpdatables</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -284,6 +287,9 @@
     </ClCompile>
     <ClCompile Include="ResearchPointCaptionWinProc.cpp">
       <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSArchetypeWeaponManager.cpp">
+      <Filter>CustomTools\IUpdatables</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
