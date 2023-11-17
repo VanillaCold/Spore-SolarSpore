@@ -1,0 +1,8 @@
+key parent ConsequenceSuperPowers!spg_Template.prop
+texts consequenceSuperPowerDescription
+	"Instantly prepares temperature and atmosphere of a planet for life. Unlocked via research."
+end
+key consequenceSuperPowerIcon ufotools~!0x813F6FE0.png
+texts consequenceSuperPowerName
+	"Life Burst"
+end

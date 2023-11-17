@@ -39,6 +39,7 @@ float spaceTradingCostMultiplierScientist 1.25
 float spaceTradingCostMultiplierWarrior 0.75
 float spaceTradingCostMultiplierZealot 99.75
 key spaceTradingExchangeFor StaffOfDeath.prop
+key spaceTradingRequiresAnd StaffOfDeath.prop #just disable it entirely
 int32 spaceTradingRequiresTier 5
 int32 spaceTradingToolReofferRate 60
 key spaceTradingToolClass combat

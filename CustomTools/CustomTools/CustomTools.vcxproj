@@ -102,7 +102,19 @@
     <ClInclude Include="BerserkerRage.h" />
     <ClInclude Include="Capacitor.h" />
     <ClInclude Include="ChangeSpecies.h" />
+    <ClInclude Include="CloseResearchMenu.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ContactHomeworld.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="cResearchButtonWinProc.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="cResearchWinProc.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -110,9 +122,17 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="cSSResearchManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Detente.h" />
     <ClInclude Include="EraseSpecies.h" />
     <ClInclude Include="ConvertPlanet.h" />
+    <ClInclude Include="GetResearchData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="GroxColony.h" />
     <ClInclude Include="infinitecolonies.h" />
     <ClInclude Include="IntergalacticDrive.h" />
@@ -121,9 +141,17 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="OpenResearchMenu.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="PlanetDebuster.h" />
     <ClInclude Include="RandomTool.h" />
     <ClInclude Include="RegalShield.h" />
+    <ClInclude Include="ResearchPointCaptionWinProc.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ReturnPortal.h" />
     <ClInclude Include="SetPlanetType.h">
       <SubType>
@@ -152,11 +180,27 @@
     <ClCompile Include="BerserkerRage.cpp" />
     <ClCompile Include="Capacitor.cpp" />
     <ClCompile Include="ChangeSpecies.cpp" />
+    <ClCompile Include="CloseResearchMenu.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="ContactHomeworld.cpp">
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="cResearchButtonWinProc.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="cResearchWinProc.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="cSSArchetypeToolManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="cSSResearchManager.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -170,6 +214,10 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="EraseSpecies.cpp" />
+    <ClCompile Include="GetResearchData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="GroxColony.cpp" />
     <ClCompile Include="IntergalacticDrive.cpp" />
     <ClCompile Include="LifeBurst.cpp" />
@@ -179,9 +227,17 @@
     </ClCompile>
     <ClCompile Include="ConvertPlanet.cpp" />
     <ClCompile Include="infinitecolonies.cpp" />
+    <ClCompile Include="OpenResearchMenu.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="PlanetDebuster.cpp" />
     <ClCompile Include="RandomTool.cpp" />
     <ClCompile Include="RegalShield.cpp" />
+    <ClCompile Include="ResearchPointCaptionWinProc.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="ReturnPortal.cpp" />
     <ClCompile Include="SetPlanetType.cpp">
       <SubType>

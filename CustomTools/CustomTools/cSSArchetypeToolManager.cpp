@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "cSSArchetypeToolManager.h"
 #include <stdexcept>
+#include "cSSResearchManager.h"
 
 cSSArchetypeToolManager::cSSArchetypeToolManager()
 {
@@ -47,7 +48,7 @@ void cSSArchetypeToolManager::Update()
 
 		else
 		{
-			if (givenTool == false && (empire->mStars.size() >= 60 || isDebug))
+			if (givenTool == false && (SimulatorSpaceGame.GetPlayerInventory()->HasTool(ResourceKey(id("ArchetypeResearch"),0,0)) || isDebug))
 			{
 				givenTool = true;
 				for each (ArchetypeTool tooltype in toolInstances)

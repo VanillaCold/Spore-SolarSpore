@@ -1,8 +1,0 @@
-key parent ConsequenceSuperPowers!spg_Template.prop
-texts consequenceSuperPowerName
-	"Starkiller"
-end
-key consequenceSuperPowerIcon ufotools~!0xFDE1BB35.png
-texts consequenceSuperPowerDescription
-	"Destroys a star with a huge explosion, converting it to a black hole. Unlocked after colonising 60 systems."
-end

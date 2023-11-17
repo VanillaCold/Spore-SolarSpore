@@ -1,9 +1,28 @@
+float AlphaCreatureHitPointMultiplier 1.25
 vector2 CastingManager_DistanceThresholds (100, 150)
 int32 CastingManager_MaxAnimalPoolSize 100
 int32 CastingManager_MaxHerdsActivatedPerInterval 2
 float CastingManager_UpdateTime 1
+floats DNAPointsMultipliers
+	1
+	0.3
+	0.15
+	0.01
+	0.01
+	0.01
+	0.01
+	0.01
+	0.01
+	0.01
+	0.01
+end
+int32s MigrationDNALevels
+	150
+	650
+end
 float PlanetHorizonCullFactor 10
 int32 clickFruitOrTrees 0
+float creatureAttackTetherDistance 60
 float creatureAvatarAcceptableStopDist 0.55
 float creatureAvatarDamageMultiplier 1
 float creatureAvatarDeathEffectScaleMultiplier 1.5
@@ -35,6 +54,7 @@ float creatureEvoPoints_S 0
 float creatureEvoPoints_XL 20
 float creatureFleeDistance 25
 float creatureFleeTime 5
+float creatureFleeWatchTime 10
 float creatureGlideSpeed 30
 float creatureGoalDistanceLimit 50
 float creatureHealingRadius 5
@@ -55,6 +75,7 @@ bool creatureTreesEnabled true
 float creatureUntargetDistance 17.5
 key creatureVerbtrayCollection verbtrays!0x758205A3
 bool effectSpawnedRocksEnabled true
+vector2 eventLogOffset (0, -80)
 bool fruitAutoDroppingEnabled true
 bool fruitEnabled true
 float fruitPropMaxHangingTime 60
@@ -64,15 +85,15 @@ float fruitPropMaxRottingTime 180
 float fruitPropMinHangingTime 30
 bool fruitRegrowthEnabled true
 keys modelPreloads
-	tuningenerfmommmaxblockedcreathreshold_death_hut01
-	tuningcheratercraft_envir_01b
-	castingmanagen_posen_deathspeedzoomceilimbs_9
-	0x2D12268B
-	0xFE29A98E
+	cr_crgnest_00
+	cr_crgnest_01
+	cr_crgnest_02
+	cr_crgnest_npc
+	cr_crgnest_npc_abandoned
 	CRG_Skeleton1
 	CRG_Giant_Skeleton
 	CRG_Giant_Skeleton_Pillaged
-	crg_skeleton_ribs
+	CRG_Skeleton_Ribs
 	CRG_Skeleton_Ribs_Pillaged
 	CRG_Part_Unlock_Skeleton2
 	CRG_Part_Unlock_Skeleton3
@@ -82,7 +103,7 @@ keys modelPreloads
 	CRG_Skeleton_Destructed_03
 	CRG_Skeleton_Destructed_04
 	CRG_SkeletonSkull1
-	0xA76CD528
+	Creature_Egg
 	cr_egg_01_base
 	cr_egg_01_breaking_open
 	cr_egg_01_hatched
@@ -129,10 +150,6 @@ bool treeOrnamentsEnabled true
 float 0x0284E6C1 2
 float 0x02ACBAD8 10
 uint32 0x037AE622 2
-int32s 0x04098097
-	150
-	650
-end
 float 0x04F7CF2C 0.001
 float 0x07AF7926 1
 int32 0x0816E292 60
@@ -165,27 +182,12 @@ float 0x322D5DD6 0.25
 float 0x34877C4F 2
 float 0x35CD8F0C 90
 float 0x3757372C 3
-floats 0x3819A4D3
-	1
-	0.3
-	0.15
-	0.01
-	0.01
-	0.01
-	0.01
-	0.01
-	0.01
-	0.01
-	0.01
-end
 float 0x38623218 10
 float 0x3964A33D 15
 float 0x39697DE6 90
 bool 0x39B674A2 false
 float 0x3AC3FDDB 6
-float 0x3D3E2988 10
 float 0x3D73D3B0 40
-float 0x3DA2A2D2 1.25
 float 0x3DA92194 1
 float 0x3FBD28E4 1
 float 0x41752DD5 1
@@ -250,7 +252,6 @@ float 0x9EFA4612 3
 float 0xA117EF5B 1
 float 0xA1247843 15
 float 0xA3E580F3 0.2
-float 0xA5B8D733 60
 bool 0xA5E247F0 false
 float 0xAC640BA9 3
 float 0xAD0D6A72 3
@@ -329,5 +330,4 @@ bool 0xF7E9BDEE true
 uint32 0xFB2020B9 1
 key 0xFC530D11 verbtrays!0xE715F528
 float 0xFD87B588 2.5
-vector2 0xFF259BA2 (0, -80)
 uint32 0xFF7D4A77 4

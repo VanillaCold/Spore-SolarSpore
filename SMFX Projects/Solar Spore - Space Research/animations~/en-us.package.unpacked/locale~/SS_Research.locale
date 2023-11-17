@@ -1,0 +1,7 @@
+0x01 Research Menu
+0x02 Research Item
+0x03 Close Menu
+
+# errors
+0x04 Not enough research points.
+0x05 Not all prior researches are researched.

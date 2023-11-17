@@ -1,0 +1,8 @@
+key parent ConsequenceSuperPowers!spg_Template.prop
+texts consequenceSuperPowerName
+	"Berserker Rage"
+end
+key consequenceSuperPowerIcon ufotools~!0x5FB05326.png
+texts consequenceSuperPowerDescription
+	"Triples all damage dealt to enemies while enabled, at the cost of reserving 25% of your energy. Unlocked via research."
+end

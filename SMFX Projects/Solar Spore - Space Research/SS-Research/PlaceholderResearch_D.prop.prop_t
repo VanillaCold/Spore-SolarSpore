@@ -1,0 +1,16 @@
+uint32 ResearchTool hash(TestResearch)
+
+uint32s ResearchDependancies
+	hash(PlaceholderResearch)
+end
+uint32 ResearchPointsRequired 5
+key ResearchImage ufotools~!0xD9F39498.png
+
+texts ResearchName 
+	"PlaceholderName 2"
+end
+texts ResearchDescript 
+	"Descriptive description about the research and its tool."
+end
+
+bool ResearchHide true

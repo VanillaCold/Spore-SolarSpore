@@ -1,0 +1,14 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "ResearchTemplate"
+key spaceToolContext passive
+texts spaceToolDescription
+	"ResearchTemplate"
+end
+texts spaceToolDetailDescription
+	"ResearchTemplate."
+end
+key spaceToolImageID ufotools~!0x33A79E9E.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+key spaceToolType other

@@ -1,8 +1,0 @@
-key parent ConsequenceSuperPowers!spg_Template.prop
-texts consequenceSuperPowerName
-	"Regal Shield"
-end
-key consequenceSuperPowerIcon ufotools~!0x71B594FE.png
-texts consequenceSuperPowerDescription
-	"Reduces all damage taken by 75%, at the cost of reserving 50% of your energy. Unlocked after colonising 60 systems."
-end

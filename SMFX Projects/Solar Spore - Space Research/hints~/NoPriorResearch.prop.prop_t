@@ -1,0 +1,11 @@
+bool hintAlwaysShow true
+float hintLife 2
+bool hintMustDo false
+float hintPeriod 1
+int32 hintPriority 1
+uint32 hintTextColor 0xffff0000
+texts hintText
+	(SS_Research!0x05) "not enough priors :(  (PLACEHOLDER)"
+end
+key hintType Triggered
+float hintWait 1
