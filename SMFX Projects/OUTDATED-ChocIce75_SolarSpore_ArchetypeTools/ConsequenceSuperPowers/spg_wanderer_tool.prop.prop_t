@@ -1,8 +1,0 @@
-key parent ConsequenceSuperPowers!spg_Template.prop
-texts consequenceSuperPowerName
-	"Wanderering Portal"
-end
-key consequenceSuperPowerIcon ufotools~!0x66E86527.png
-texts consequenceSuperPowerDescription
-	"Teleports you to a random, nearby star."
-end
