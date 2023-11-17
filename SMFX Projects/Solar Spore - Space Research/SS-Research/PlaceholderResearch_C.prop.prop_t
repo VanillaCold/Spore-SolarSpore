@@ -13,4 +13,4 @@ texts ResearchDescript
 	"Descriptive description about the research and its tool."
 end
 
-bool ResearchHide false
+bool ResearchHide true

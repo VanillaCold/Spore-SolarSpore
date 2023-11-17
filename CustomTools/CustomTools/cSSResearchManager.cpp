@@ -138,13 +138,6 @@ bool cSSResearchManager::ResearchItem(uint32_t resID, string& outError)
 			return false;
 		}
 
-		if (mResearchPoints < res.mRequiredPoints)
-		{
-			LocalizedString str = LocalizedString(id("SS_Research"), 0x04);
-			HintManager.ShowHint(id("NoResourcePoints"));
-			outError.assign_convert(str.GetText());
-			return false;
-		}
 		for each (uint32_t priorID in res.mPriorResearches)
 		{
 			if (!HasResearched(priorID))
@@ -155,6 +148,15 @@ bool cSSResearchManager::ResearchItem(uint32_t resID, string& outError)
 				return false;
 			}
 		}
+
+		if (mResearchPoints < res.mRequiredPoints)
+		{
+			LocalizedString str = LocalizedString(id("SS_Research"), 0x04);
+			HintManager.ShowHint(id("NoResourcePoints"));
+			outError.assign_convert(str.GetText());
+			return false;
+		}
+		
 		
 		cSpaceToolDataPtr pTool;
 		if (ToolManager.LoadTool({ res.mToolID,0,0 }, pTool))

@@ -12,19 +12,22 @@ cResearchButtonWinProc::cResearchButtonWinProc(UTFWin::IWindow* window, Research
 	numPoints.assign_convert(to_string(mResearchType.mRequiredPoints));
 	numPoints = u"\u268C " + numPoints;
 	mItemWindow->FindWindowByID(id("counter"))->SetCaption(numPoints.c_str());
+	
 
 	if (SSResearchManager.mResearchPoints < mResearchType.mRequiredPoints)
 	{
 		mError = LocalizedString(id("SS_Research"), 0x04).GetText();
-
 	}
+
 	for each (uint32_t priorID in mResearchType.mPriorResearches)
 	{
 		if (!SSResearchManager.HasResearched(priorID))
 		{
-			mError = LocalizedString(id("SS_Research"), 0x04).GetText();
+			mError = LocalizedString(id("SS_Research"), 0x05).GetText();
 		}
 	}
+
+	
 
 	if (mError != u"")
 	{
@@ -133,12 +136,13 @@ bool cResearchButtonWinProc::HandleUIMessage(IWindow* window, const Message& mes
 	{
 		if (message.IsType(MessageType::kMsgUpdate))
 		{
-			if (mError == u"Not enough research points." && !(SSResearchManager.mResearchPoints < mResearchType.mRequiredPoints))
+			string error;
+			if (SSResearchManager.CanResearch(mResearchType.mResearchID,error))
 			{
 				disabledWindow->SetVisible(false);
-				mError = u"";
 				window->RemoveWinProc(mpTooltip);
 			}
+			mError.assign_convert(error);
 		}
 	}
 	// Return true if the message was handled, and therefore no other window procedure should receive it.
