@@ -59,6 +59,9 @@
     <Filter Include="CustomTools\Systems\Research\WinProcs">
       <UniqueIdentifier>{1ae17577-f236-4cdc-893b-c9785d8bbc99}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CustomTools\Systems\ArchetypeWeapons">
+      <UniqueIdentifier>{97af0bfa-f70c-4a23-832e-dbda8212ff1d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -172,8 +175,8 @@
     <ClInclude Include="ResearchPointCaptionWinProc.h">
       <Filter>CustomTools\Systems\Research\WinProcs</Filter>
     </ClInclude>
-    <ClInclude Include="cSSArchetypeWeaponManager.h">
-      <Filter>CustomTools\IUpdatables</Filter>
+    <ClInclude Include="cSSArchetypeWeaponSystem.h">
+      <Filter>CustomTools\Systems\ArchetypeWeapons</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -288,8 +291,8 @@
     <ClCompile Include="ResearchPointCaptionWinProc.cpp">
       <Filter>CustomTools\Systems\Research\WinProcs</Filter>
     </ClCompile>
-    <ClCompile Include="cSSArchetypeWeaponManager.cpp">
-      <Filter>CustomTools\IUpdatables</Filter>
+    <ClCompile Include="cSSArchetypeWeaponSystem.cpp">
+      <Filter>CustomTools\Systems\ArchetypeWeapons</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -122,7 +122,7 @@
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="cSSArchetypeWeaponManager.h">
+    <ClInclude Include="cSSArchetypeWeaponSystem.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -204,7 +204,7 @@
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="cSSArchetypeWeaponManager.cpp">
+    <ClCompile Include="cSSArchetypeWeaponSystem.cpp">
       <SubType>
       </SubType>
     </ClCompile>

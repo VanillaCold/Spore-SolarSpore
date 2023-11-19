@@ -33,6 +33,7 @@
 #include "MySystem.h"
 #include "cSSResearchManager.h"
 #include "GetResearchData.h"
+#include "cSSArchetypeWeaponSystem.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -75,6 +76,7 @@ void SetupModStrategies::SetupStrategies()
 
 	//Add simulator strategy (to-do: make strategy obsolete and remove it)
 	SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
+	SimulatorSystem.AddStrategy(new cSSArchetypeWeaponSystem, cSSArchetypeWeaponSystem::NOUN_ID);
 	
 	//Add research strategy; this one is NOT to be obsolete.
 	if (PropManager.HasPropertyList(id("ss_enableresearch"), id("solarsporeconfig")))
