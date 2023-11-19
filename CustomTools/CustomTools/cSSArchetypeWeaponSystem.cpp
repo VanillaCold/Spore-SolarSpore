@@ -33,7 +33,14 @@ Simulator::Attribute cSSArchetypeWeaponSystem::ATTRIBUTES[] = {
 };
 
 void cSSArchetypeWeaponSystem::Initialize() {
-	
+	vector<uint32_t> propIDs;
+	PropManager.GetPropertyListIDs(id("SS-WeaponSets"), propIDs);
+
+	for each (uint32_t prop in propIDs)
+	{
+		ArchetypeWeapons weaponClass = ArchetypeWeapons(ResourceKey(prop, TypeIDs::prop, id("SS-WeaponSets")));
+		mWeaponMappings.emplace(weaponClass.mArchetype, weaponClass);
+	}
 }
 
 void cSSArchetypeWeaponSystem::Dispose() {
@@ -46,12 +53,21 @@ void cSSArchetypeWeaponSystem::Update(int deltaTime, int deltaGameTime) {
 
 void cSSArchetypeWeaponSystem::OnModeEntered(uint32_t previousModeID, uint32_t newModeID)
 {
+	mbIsFirstLaunch = false;
 	if (newModeID == GameModeIDs::kGameSpace)
 	{
 		if (auto inventory = SimulatorSpaceGame.GetPlayerInventory())
 		{
 			if (inventory->GetTool(ResourceKey( id("scan"), 0, 0) ) )
 			{
+				if (inventory->GetTool(ResourceKey(id("laserlevel1"), 0, 0)) || inventory->GetTool(ResourceKey(id("laserlevel2"), 0, 0)) || inventory->GetTool(ResourceKey(id("laserlevel3"), 0, 0)))
+				{
+					RefreshTools();
+				}
+			}
+			else
+			{
+				mbIsFirstLaunch = true;
 			}
 		}
 	}
@@ -62,8 +78,60 @@ bool cSSArchetypeWeaponSystem::WriteToXML(Simulator::XmlSerializer* writexml)
 	return false;
 }
 
+void cSSArchetypeWeaponSystem::RefreshTools()
+{
+	int index = 0;
+	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
+	for (auto i = mWeaponMappings.begin(); i != mWeaponMappings.end(); i++)
+	{
+		auto keys = i.mpNode->mValue.second.mToolKeys;
+		for(int i = 0; i < keys.size(); i++)
+		{
+			ResourceKey toolKey = keys[i];
+			if (inventory->HasItem(Simulator::SpaceInventoryItemType::Tool, toolKey.instanceID))
+			{
+				index = i;
+				inventory->RemoveItem(inventory->GetTool(ResourceKey(toolKey.instanceID, 0, 0)));
+
+				break;
+			}
+		}
+	}
+
+	cSpaceToolDataPtr tool;
+	uint32_t toolID = mWeaponMappings[Simulator::GetPlayerEmpire()->mArchetype].mToolKeys[index].instanceID;
+
+	ToolManager.LoadTool(ResourceKey(toolID, 0, 0), tool);
+	inventory->AddItem(tool.get());
+
+}
+
 
 ArchetypeWeapons::ArchetypeWeapons(ResourceKey propKey)
 {
+	mArchetype = Simulator::Archetypes::kArchetypeGrob;
+	if (PropManager.GetPropertyList(propKey.instanceID, propKey.groupID, mpPropList))
+	{
+		mToolKeys = vector<ResourceKey>();
 
+		ResourceKey* weaponIDs;
+		size_t size;
+		App::Property::GetArrayKey(mpPropList.get(), id("WeaponToolIDs"), size, weaponIDs);
+		for (int i = 0; i < size; i++)
+		{
+			mToolKeys.push_back(weaponIDs[i]);
+		}
+		uint32_t archetypeID;
+		App::Property::GetUInt32(mpPropList.get(), id("WeaponSetArchetype"), archetypeID);
+
+		mArchetype = (Simulator::Archetypes)archetypeID;
+
+	}
+}
+
+ArchetypeWeapons::ArchetypeWeapons()
+{
+	mArchetype = Simulator::Archetypes::kArchetypeGrob;
+	mToolKeys = vector<ResourceKey>();
+	mpPropList = nullptr;
 }

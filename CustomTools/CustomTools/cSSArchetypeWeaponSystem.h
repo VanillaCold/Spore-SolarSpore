@@ -12,9 +12,11 @@
 struct ArchetypeWeapons
 {
 	PropertyListPtr mpPropList;
-	vector<ResourceKey> toolKeys;
+	vector<ResourceKey> mToolKeys;
+	Simulator::Archetypes mArchetype;
 
 	ArchetypeWeapons(ResourceKey propKey);
+	ArchetypeWeapons();
 };
 
 class cSSArchetypeWeaponSystem
@@ -35,6 +37,8 @@ public:
 	virtual void OnModeEntered(uint32_t previousModeID,
 		uint32_t newModeID) override;
 	bool WriteToXML(Simulator::XmlSerializer* writexml) override;
+
+	void RefreshTools();
 	//
 	// You can add more methods here
 	//
@@ -42,8 +46,8 @@ public:
 	static Simulator::Attribute ATTRIBUTES[];
 
 private:
-	bool isFirstLaunch;
-	map<Simulator::Archetypes, ArchetypeWeapons> weaponMappings;
+	bool mbIsFirstLaunch;
+	map<Simulator::Archetypes, ArchetypeWeapons> mWeaponMappings;
 	//
 	// You can add members here
 	//
