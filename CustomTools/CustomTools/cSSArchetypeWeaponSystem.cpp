@@ -49,26 +49,51 @@ void cSSArchetypeWeaponSystem::Dispose() {
 
 void cSSArchetypeWeaponSystem::Update(int deltaTime, int deltaGameTime) {
 	
+	if (mbIsFirstLaunch)
+	{
+		if (auto inventory = SimulatorSpaceGame.GetPlayerInventory())
+		{
+			if (inventory->GetTool(ResourceKey(id("laserlevel1"), 0, 0)))
+			{
+				RefreshTools();
+				mbIsFirstLaunch = false;
+			}
+		}
+	}
+	else
+	{
+		if (mCurrentArchetype != Simulator::GetPlayerEmpire()->mArchetype && mCurrentArchetype != Simulator::kArchetypeGrob)
+		{
+			RefreshTools();
+		}
+	}
+	if (Simulator::IsSpaceGame())
+	{
+		mCurrentArchetype = Simulator::GetPlayerEmpire()->mArchetype;
+	}
+	else
+	{
+		mCurrentArchetype = Simulator::Archetypes::kArchetypeGrob;
+	}
 }
 
 void cSSArchetypeWeaponSystem::OnModeEntered(uint32_t previousModeID, uint32_t newModeID)
 {
 	mbIsFirstLaunch = false;
+	mCurrentArchetype = Simulator::Archetypes::kArchetypeGrob;
 	if (newModeID == GameModeIDs::kGameSpace)
 	{
 		if (auto inventory = SimulatorSpaceGame.GetPlayerInventory())
 		{
 			if (inventory->GetTool(ResourceKey( id("scan"), 0, 0) ) )
 			{
-				if (inventory->GetTool(ResourceKey(id("laserlevel1"), 0, 0)) || inventory->GetTool(ResourceKey(id("laserlevel2"), 0, 0)) || inventory->GetTool(ResourceKey(id("laserlevel3"), 0, 0)))
-				{
-					RefreshTools();
-				}
+				RefreshTools();
 			}
 			else
 			{
 				mbIsFirstLaunch = true;
 			}
+			mCurrentArchetype = Simulator::GetPlayerEmpire()->mArchetype;
 		}
 	}
 }
@@ -82,15 +107,15 @@ void cSSArchetypeWeaponSystem::RefreshTools()
 {
 	int index = 0;
 	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
-	for (auto i = mWeaponMappings.begin(); i != mWeaponMappings.end(); i++)
+	for (auto j = mWeaponMappings.begin(); j != mWeaponMappings.end(); j++)
 	{
-		auto keys = i.mpNode->mValue.second.mToolKeys;
+		auto keys = j.mpNode->mValue.second.mToolKeys;
 		for(int i = 0; i < keys.size(); i++)
 		{
 			ResourceKey toolKey = keys[i];
-			if (inventory->HasItem(Simulator::SpaceInventoryItemType::Tool, toolKey.instanceID))
+			if (inventory->HasTool(ResourceKey(toolKey.instanceID,0,0)))
 			{
-				index = i;
+				index = max(i,index);
 				inventory->RemoveItem(inventory->GetTool(ResourceKey(toolKey.instanceID, 0, 0)));
 
 				break;
@@ -99,10 +124,20 @@ void cSSArchetypeWeaponSystem::RefreshTools()
 	}
 
 	cSpaceToolDataPtr tool;
-	uint32_t toolID = mWeaponMappings[Simulator::GetPlayerEmpire()->mArchetype].mToolKeys[index].instanceID;
-
+	uint32_t toolID;
+	if (mWeaponMappings.find(Simulator::GetPlayerEmpire()->mArchetype) != mWeaponMappings.end())
+	{
+		toolID = mWeaponMappings[Simulator::GetPlayerEmpire()->mArchetype].mToolKeys[index].instanceID;
+	}
+	else
+	{
+		toolID = mWeaponMappings[Simulator::Archetypes::kArchetypePlayerWanderer].mToolKeys[index].instanceID;
+	}
 	ToolManager.LoadTool(ResourceKey(toolID, 0, 0), tool);
+	tool->mCurrentAmmoCount = tool->mMaxAmmoCount;
 	inventory->AddItem(tool.get());
+	
+	
 
 }
 

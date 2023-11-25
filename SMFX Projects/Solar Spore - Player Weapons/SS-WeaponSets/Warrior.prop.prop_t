@@ -1,0 +1,6 @@
+keys WeaponToolIDs
+	autocannonlevel1
+	autocannonlevel2
+	autocannonlevel3
+end
+uint32 WeaponSetArchetype 9 #kArchetypePlayerWanderer

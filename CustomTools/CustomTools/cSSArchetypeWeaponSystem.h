@@ -48,6 +48,7 @@ public:
 private:
 	bool mbIsFirstLaunch;
 	map<Simulator::Archetypes, ArchetypeWeapons> mWeaponMappings;
+	Simulator::Archetypes mCurrentArchetype;
 	//
 	// You can add members here
 	//
