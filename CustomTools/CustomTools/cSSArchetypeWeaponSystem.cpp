@@ -110,12 +110,12 @@ void cSSArchetypeWeaponSystem::RefreshTools()
 	for (auto j = mWeaponMappings.begin(); j != mWeaponMappings.end(); j++)
 	{
 		auto keys = j.mpNode->mValue.second.mToolKeys;
-		for(int i = 0; i < keys.size(); i++)
+		for (int i = 0; i < keys.size(); i++)
 		{
 			ResourceKey toolKey = keys[i];
-			if (inventory->HasTool(ResourceKey(toolKey.instanceID,0,0)))
+			if (inventory->HasTool(ResourceKey(toolKey.instanceID, 0, 0)))
 			{
-				index = max(i,index);
+				index = max(i, index);
 				inventory->RemoveItem(inventory->GetTool(ResourceKey(toolKey.instanceID, 0, 0)));
 
 				break;
@@ -123,20 +123,22 @@ void cSSArchetypeWeaponSystem::RefreshTools()
 		}
 	}
 
-	cSpaceToolDataPtr tool;
-	uint32_t toolID;
-	if (mWeaponMappings.find(Simulator::GetPlayerEmpire()->mArchetype) != mWeaponMappings.end())
+	for (int i = 0; i <= index; i++)
 	{
-		toolID = mWeaponMappings[Simulator::GetPlayerEmpire()->mArchetype].mToolKeys[index].instanceID;
+		cSpaceToolDataPtr tool;
+		uint32_t toolID = 0;
+		if (mWeaponMappings.find(Simulator::GetPlayerEmpire()->mArchetype) != mWeaponMappings.end())
+		{
+			toolID = mWeaponMappings[Simulator::GetPlayerEmpire()->mArchetype].mToolKeys[i].instanceID;
+		}
+		else
+		{
+			toolID = mWeaponMappings[Simulator::Archetypes::kArchetypePlayerWanderer].mToolKeys[i].instanceID;
+		}
+		ToolManager.LoadTool(ResourceKey(toolID, 0, 0), tool);
+		tool->mCurrentAmmoCount = tool->mMaxAmmoCount;
+		SimulatorSpaceGame.GetPlayerInventory()->AddItem(tool.get());
 	}
-	else
-	{
-		toolID = mWeaponMappings[Simulator::Archetypes::kArchetypePlayerWanderer].mToolKeys[index].instanceID;
-	}
-	ToolManager.LoadTool(ResourceKey(toolID, 0, 0), tool);
-	tool->mCurrentAmmoCount = tool->mMaxAmmoCount;
-	inventory->AddItem(tool.get());
-	
 	
 
 }
