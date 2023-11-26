@@ -1,0 +1,54 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Pulse (Medium)"
+float spaceToolAutoFireRate 1
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	(spacegame_tools!0xc9e33aed) "Pulse"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x3e948fac) "Fires a medium-powered burst in a straight line.  Good against ground targets."
+end
+float spaceToolDetectableRange 25
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 1
+key spaceToolImageID ufotools~!spg_combat_pulse.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 150
+float spaceToolMaxRange 150
+float spaceToolMinDamage 150
+key spaceToolPanelKey CombatAbilityPanel
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+key spaceToolUpgradeFile pulselevel1.prop
+int32 spaceToolUseCost 0
+bool toolCanPlayerLockOn false
+key toolHitCombatantEffectID SG_pulse_lvl_2_weapon_explosion
+key toolHitGroundEffectID SG_pulse_lvl_2_weapon_explosion
+key toolHitWaterEffectID SG_pulse_lvl_2_weapon_explosion
+bool toolIsHoming false
+key toolMuzzleEffectID SG_pulse_lvl_2_weapon_muzzle
+key toolProjectileEffectID SG_pulse_lvl_2_weapon
+float toolProjectileExplosionExpansionRate 200
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 1.5
+float toolRelationshipDelta -0.1
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

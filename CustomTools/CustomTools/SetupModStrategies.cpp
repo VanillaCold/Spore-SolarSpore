@@ -34,6 +34,9 @@
 #include "cSSResearchManager.h"
 #include "GetResearchData.h"
 #include "cSSArchetypeWeaponSystem.h"
+#include "GoToHome.h";
+
+#include "DamageMultiplierProjectile.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -60,6 +63,9 @@ void SetupModStrategies::SetupStrategies()
 	ToolManager.AddStrategy(new ReturnPortal(), id("ReturnPortal"));
 	ToolManager.AddStrategy(new StarKiller(), id("Starkiller"));
 
+	//Add generalised tools
+	ToolManager.AddStrategy(new DamageMultiplierProjectile(), DamageMultiplierProjectile::STRATEGY_ID);
+
 
 	//Add debug cheats
 #ifdef _DEBUG
@@ -70,6 +76,7 @@ void SetupModStrategies::SetupStrategies()
 		//	CheatManager.AddCheat("empireInfo", new SystemCount());
 		CheatManager.AddCheat("contactHomeworld", new ContactHomeworld());
 		CheatManager.AddCheat("togglessdebug", new ToggleSSDebug());
+		CheatManager.AddCheat("gth", new GoToHome());
 		new GetResearchData();
 	}
 #endif

@@ -130,10 +130,18 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="DamageMultiplierProjectile.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Detente.h" />
     <ClInclude Include="EraseSpecies.h" />
     <ClInclude Include="ConvertPlanet.h" />
     <ClInclude Include="GetResearchData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="GoToHome.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -212,6 +220,10 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="DamageMultiplierProjectile.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="Detente.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
@@ -223,6 +235,10 @@
     </ClCompile>
     <ClCompile Include="EraseSpecies.cpp" />
     <ClCompile Include="GetResearchData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="GoToHome.cpp">
       <SubType>
       </SubType>
     </ClCompile>

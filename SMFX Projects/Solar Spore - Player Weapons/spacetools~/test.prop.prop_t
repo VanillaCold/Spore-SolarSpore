@@ -1,0 +1,58 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Pulse (Weak)"
+float spaceToolAutoFireRate 1
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	(spacegame_tools!0xd0eb46b4) "Mini Pulse"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x0b3b46b5) "Fires a weak burst in a straight line.  Good against ground targets."
+end
+float spaceToolDetectableRange 25
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.5
+key spaceToolImageID ufotools~!spg_combat_pulse.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 5#75
+float spaceToolMaxRange 150
+float spaceToolMinDamage 5#75
+key spaceToolPanelKey CombatAbilityPanel
+float spaceToolRechargeRate 1
+key spaceToolStrategy DmgMultProjectile #DefaultProjectile
+float spaceToolBuildingDmgMultiplier 500
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+bool toolCanPlayerLockOn false
+key toolHitCombatantEffectID civ_weapons_cultural_building_defense
+key toolHitGroundEffectID civ_weapons_cultural_impact
+key toolHitWaterEffectID civ_weapons_cultural_impact
+bool toolIsHoming false
+key toolMuzzleEffectID civ_weapons_cultural_notes
+key toolProjectileEffectID civ_weapons_cultural_attack_notes
+float toolProjectileExplosionExpansionRate 200
+#key toolProjectileMotion Ballistic #0x0BA57653##
+float toolProjectileSpeed 300
+#float toolProjectileLobAngle 30
+float toolProjectileEccentricity 2
+float toolProjectileTimeOut 2.5
+float toolRelationshipDelta -0.1
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+	hash(building)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

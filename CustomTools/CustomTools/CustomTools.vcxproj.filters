@@ -62,6 +62,9 @@
     <Filter Include="CustomTools\Systems\ArchetypeWeapons">
       <UniqueIdentifier>{97af0bfa-f70c-4a23-832e-dbda8212ff1d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CustomTools\Tools\General Types">
+      <UniqueIdentifier>{c007bb10-4b50-4c39-9bbf-8fa4f3848af9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -178,6 +181,12 @@
     <ClInclude Include="cSSArchetypeWeaponSystem.h">
       <Filter>CustomTools\Systems\ArchetypeWeapons</Filter>
     </ClInclude>
+    <ClInclude Include="DamageMultiplierProjectile.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="GoToHome.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -293,6 +302,12 @@
     </ClCompile>
     <ClCompile Include="cSSArchetypeWeaponSystem.cpp">
       <Filter>CustomTools\Systems\ArchetypeWeapons</Filter>
+    </ClCompile>
+    <ClCompile Include="DamageMultiplierProjectile.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="GoToHome.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
