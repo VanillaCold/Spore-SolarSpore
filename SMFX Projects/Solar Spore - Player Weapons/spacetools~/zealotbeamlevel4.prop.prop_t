@@ -18,9 +18,9 @@ key spaceToolImageID ufotools~!spg_combat_pulse.png
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
-float spaceToolMaxDamage 250
+float spaceToolMaxDamage 100
 float spaceToolMaxRange 150
-float spaceToolMinDamage 250
+float spaceToolMinDamage 100
 key spaceToolPanelKey CombatAbilityPanel
 float spaceToolRechargeRate 1
 key spaceToolStrategy DmgMultProjectile #DefaultProjectile
