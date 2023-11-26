@@ -21,7 +21,7 @@ bool DamageMultiplierProjectile::OnHit(cSpaceToolData* pTool, const Vector3& pos
 		{
 			float distance = max(((building->mPosition - position).Length() - building->mBoundingRadius), 0.0f);
 			
-			if (distance <= 1.5f)
+			if (distance <= 1.0f)
 			{
 				SporeDebugPrint(to_string(max(((building->mPosition - position).Length() - building->mBoundingRadius), 0.0f)).c_str());
 				float localMultiplier;

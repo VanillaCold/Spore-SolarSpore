@@ -1,15 +1,16 @@
 key parent spacetools~!ToolTemplate.prop
 string16 description "Laser"
-float spaceToolAutoFireRate 0.2
+float spaceToolAutoFireRate 0.5
 int32 spaceToolBuyCost 500
 key spaceToolContext planet
 float spaceToolDamageArea 0.5
 texts spaceToolDescription
-	(ss_atnames!0x00) "Mini Auto-Cannon"
+	(ss_atnames!0x08) "Galactic Auto-Cannon"
 end
 texts spaceToolDetailDescription
-	(ss_atnames!0x01) "Use on ground targets. A precise, but weak weapon."
+	(ss_atnames!0x09) "Use on ground targets. A precise, but weak weapon."
 end
+
 bool spaceToolUsesAmmo true
 int32 spaceToolAmmoUsedPerShot 1
 int32 spaceToolMaxAmmoCount 99
@@ -18,18 +19,18 @@ float spaceToolDetectableRange 15
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
 float spaceToolEnergyCost 0
-key spaceToolImageID ufotools~!0xD4055DBF.png
-float spaceToolMaxDamage 80
+key spaceToolImageID ufotools~!0xD4055DBD.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 480
 float spaceToolMaxRange 200
-float spaceToolMinDamage 80
+float spaceToolMinDamage 480
 key spaceToolPanelKey combat_panel_top~
-
-bool spaceToolShowCollectedOrUnlockedText false
 key spaceToolStrategy 0xFC20C32D
 key spaceToolType weapon
+key spaceToolUpgradeFile autocannonlevel2.prop
 int32 spaceToolUseCost 0
-
-#key spaceToolUpgradeFile autocannonlevel2
 
 key toolHitCombatantEffectID 0x2ABC60AA
 key toolMuzzleEffectID 0x5F27B0FB

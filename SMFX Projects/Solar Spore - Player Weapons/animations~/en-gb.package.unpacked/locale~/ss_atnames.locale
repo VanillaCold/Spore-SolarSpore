@@ -1,0 +1,31 @@
+0x000 Mini Auto-Cannon
+0x001 A weak ammo-based precision weapon. Useful against ground targets.
+
+0x002 Auto-Cannon
+0x003 An adequate ammo-based precision weapon. Useful against ground targets.
+
+0x004 Mega Auto-Cannon
+0x005 An ammo-based precision weapon. Useful against all targets.
+
+0x006 Imperial Auto-Cannon
+0x007 A strong ammo-based precision weapon. Highly useful against all targets.
+
+0x008 Galactic Auto-Cannon
+0x009 An empire-class, ammo-based precision weapon. Only used by the strongest of empires.
+
+# Doctrination Blaster
+
+0x010 Mini Doctrination Blaster
+0x011 A high-speed, weak precision sound beam. Strong against buildings.
+
+0x012 Doctrination Blaster
+0x013 A high-speed, adequate precision sound-beam. Strong against buildings.
+
+0x014 Mega Doctrination Blaster
+0x015 A high-speed precision sound-beam. Strong against buildings.
+
+0x016 Imperial Doctrination Blaster
+0x017 A high-speed, strong precision sound-beam. Very strong against buildings.
+
+0x018 Galactic Doctrination Blaster
+0x019 An empire-class, high-speed precision sound-beam. Incredibly strong against buildings.

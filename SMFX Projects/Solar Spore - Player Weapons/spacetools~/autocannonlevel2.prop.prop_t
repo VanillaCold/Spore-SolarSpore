@@ -5,10 +5,10 @@ int32 spaceToolBuyCost 500
 key spaceToolContext planet
 float spaceToolDamageArea 0.5
 texts spaceToolDescription
-	"Auto-cannon"
+	(ss_atnames!0x02) "Auto-Cannon"
 end
 texts spaceToolDetailDescription
-	(spacegame_tools!0xf561b166) "Use on ground targets. A medium strength, precision weapon."
+	(ss_atnames!0x03) "Use on ground targets. A precise, but weak weapon."
 end
 
 bool spaceToolUsesAmmo true
