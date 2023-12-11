@@ -1,6 +1,6 @@
 key parent spacetools~!ToolTemplate.prop
 string16 description "Pulse (Weak)"
-float spaceToolAutoFireRate 0.25
+float spaceToolAutoFireRate 0.5
 int32 spaceToolBuyCost 500
 key spaceToolContext planet
 float spaceToolDamageArea 5
@@ -22,7 +22,7 @@ float spaceToolMaxDamage 150
 float spaceToolMaxRange 150
 float spaceToolMinDamage 150
 key spaceToolPanelKey CombatAbilityPanel
-float spaceToolRechargeRate 1
+float spaceToolRechargeRate 2
 key spaceToolStrategy DmgMultProjectile #DefaultProjectile
 float spaceToolBuildingDmgMultiplier 3.5
 key spaceToolType weapon
