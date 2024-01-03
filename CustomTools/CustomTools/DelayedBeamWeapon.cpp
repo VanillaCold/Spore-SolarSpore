@@ -3,7 +3,8 @@
 
 DelayedBeamWeapon::DelayedBeamWeapon()
 {
-	mFireTimer = new Simulator::cGonzagoTimer();
+	toReset = true;
+	mFireTimer.SetMode(Clock::Mode::Milliseconds);
 }
 
 
@@ -14,14 +15,14 @@ DelayedBeamWeapon::~DelayedBeamWeapon()
 void DelayedBeamWeapon::OnMouseDown(Simulator::cSpaceToolData* pTool, const Vector3& playerPosition)
 {
 
-	if (!mFireTimer->IsRunning())
+	if (!mFireTimer.IsRunning())
 	{
 		toReset = true;
-		mFireTimer->Start();
+		mFireTimer.Start();
 	}
 	else
 	{
-		if (mFireTimer->GetElapsed().LowPart > 2*100)
+		if (mFireTimer.GetElapsedTime() > 1500)
 		return Simulator::cDefaultBeamTool::OnMouseDown(pTool, playerPosition);
 	}
 }
@@ -35,13 +36,15 @@ bool DelayedBeamWeapon::Update(Simulator::cSpaceToolData* pTool, bool showErrors
 
 bool DelayedBeamWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vector3& aimPoint, int unk)
 {
-	if (!mFireTimer->IsRunning())
+	if (!mFireTimer.IsRunning())
 	{
-		App::ConsolePrintF("a");
-		mFireTimer->Start();
+		mFireTimer.SetMode(Clock::Mode::Milliseconds);
+		toReset = true;
+		mFireTimer.Start();
 	}
-	App::ConsolePrintF("%i", mFireTimer->GetElapsed().LowPart);
-	if (mFireTimer->GetElapsed().LowPart > 2*100)
+
+	App::ConsolePrintF("%i", mFireTimer.GetElapsedTime());
+	if (mFireTimer.GetElapsedTime() > 1500)
 	{
 		Simulator::cDefaultBeamTool::WhileFiring(pTool, aimPoint, unk);
 		if (toReset)
@@ -56,10 +59,7 @@ bool DelayedBeamWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vect
 
 bool DelayedBeamWeapon::OnMouseUp(Simulator::cSpaceToolData* pTool)
 {
-	if (toReset == false && mFireTimer->GetElapsed().LowPart > 2*100)
-	{
-		mFireTimer->Stop();
-		toReset = true;
-	}
+	mFireTimer.Reset();
+	toReset = true;
 	return Simulator::cDefaultBeamTool::OnMouseUp(pTool);
 }

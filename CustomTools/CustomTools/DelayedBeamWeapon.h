@@ -8,7 +8,7 @@
 class DelayedBeamWeapon 
 	: public Simulator::cDefaultBeamTool
 {
-	Simulator::cGonzagoTimer* mFireTimer;
+	Clock mFireTimer;
 
 	bool toReset;
 public:
