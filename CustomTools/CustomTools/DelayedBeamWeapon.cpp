@@ -37,7 +37,7 @@ bool DelayedBeamWeapon::Update(Simulator::cSpaceToolData* pTool, bool showErrors
 {
 	//Just call the base function. maybe add more stuff here in future.
 
-	if (!pTool->mbIsInUse && mFireTimer.IsRunning() && mFailsafeTimer.IsRunning() && mFailsafeTimer.GetElapsedTime() > 10)
+	if (!pTool->mbIsInUse && mFireTimer.IsRunning() && mFailsafeTimer.IsRunning() && mFailsafeTimer.GetElapsedTime() > 100)
 	{
 		OnMouseUp(pTool);
 	}
