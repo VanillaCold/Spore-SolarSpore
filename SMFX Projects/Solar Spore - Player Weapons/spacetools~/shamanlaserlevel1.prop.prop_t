@@ -15,19 +15,23 @@ bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
 float spaceToolEnergyCost 0.25
 key spaceToolImageID ufotools~!spg_combat_laser1.png
-float spaceToolMaxDamage 40
+float spaceToolMaxDamage 100
 float spaceToolMaxRange 200
-float spaceToolMinDamage 40
+float spaceToolMinDamage 100
 key spaceToolPanelKey CombatAbilityPanel
 bool spaceToolShowCollectedOrUnlockedText false
 key spaceToolStrategy DelayedBeamWeapon
 key spaceToolType weapon
 int32 spaceToolUseCost 0
-key toolBeamEffectID SG_laser_lvl_1_beam
-key toolHitCombatantEffectID SG_laser_lvl_1_beam_impact
-key toolHitGroundEffectID SG_laser_lvl_1_scorch
+
+key toolBeamEffectID SG_laser_lvl_3_beam
+
+key SS-delayedBeamStartEffect SG_laser_lvl_3_beam_impact
+
+key toolHitCombatantEffectID SG_laser_lvl_3_beam_impact
+key toolHitGroundEffectID SG_laser_lvl_3_scorch
 bool toolHitOrientsToTerrain true
-key toolHitWaterEffectID SG_laser_lvl_1_water
+key toolHitWaterEffectID SG_laser_lvl_3_water
 bool toolIsHoming true
 float toolRelationshipDelta -0.02
 int32s toolTargetFlags

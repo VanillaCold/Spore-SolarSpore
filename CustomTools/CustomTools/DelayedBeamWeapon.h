@@ -9,7 +9,9 @@ class DelayedBeamWeapon
 	: public Simulator::cDefaultBeamTool
 {
 	Clock mFireTimer;
+	Clock mFailsafeTimer;
 
+	IVisualEffectPtr effect;
 	bool toReset;
 public:
 	static const uint32_t STRATEGY_ID = id("DelayedBeamWeapon");
