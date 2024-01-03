@@ -134,6 +134,10 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="DelayedBeamWeapon.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Detente.h" />
     <ClInclude Include="EraseSpecies.h" />
     <ClInclude Include="ConvertPlanet.h" />
@@ -221,6 +225,10 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="DamageMultiplierProjectile.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DelayedBeamWeapon.cpp">
       <SubType>
       </SubType>
     </ClCompile>

@@ -1,0 +1,4 @@
+keys WeaponToolIDs
+	shamanlaserlevel1
+end
+uint32 WeaponSetArchetype 12 #kArchetypePlayerShaman

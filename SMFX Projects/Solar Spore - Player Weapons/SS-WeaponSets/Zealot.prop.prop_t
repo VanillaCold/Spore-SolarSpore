@@ -5,4 +5,4 @@ keys WeaponToolIDs
 	zealotbeamlevel4
 	zealotbeamlevel5
 end
-uint32 WeaponSetArchetype 14 #kArchetypePlayerWarrior
+uint32 WeaponSetArchetype 14 #kArchetypePlayerZealot

@@ -187,6 +187,9 @@
     <ClInclude Include="GoToHome.h">
       <Filter>CustomTools\Random cheat thingy</Filter>
     </ClInclude>
+    <ClInclude Include="DelayedBeamWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -308,6 +311,9 @@
     </ClCompile>
     <ClCompile Include="GoToHome.cpp">
       <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="DelayedBeamWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

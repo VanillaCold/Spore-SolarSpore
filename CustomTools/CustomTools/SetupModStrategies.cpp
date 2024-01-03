@@ -37,6 +37,7 @@
 #include "GoToHome.h";
 
 #include "DamageMultiplierProjectile.h"
+#include "DelayedBeamWeapon.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -63,7 +64,9 @@ void SetupModStrategies::SetupStrategies()
 	ToolManager.AddStrategy(new ReturnPortal(), id("ReturnPortal"));
 	ToolManager.AddStrategy(new StarKiller(), id("Starkiller"));
 
+	
 	//Add generalised tools
+	ToolManager.AddStrategy(new DelayedBeamWeapon(), DelayedBeamWeapon::STRATEGY_ID);
 	ToolManager.AddStrategy(new DamageMultiplierProjectile(), DamageMultiplierProjectile::STRATEGY_ID);
 
 
