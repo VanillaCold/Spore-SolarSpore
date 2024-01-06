@@ -23,9 +23,9 @@ key spaceToolImageID ufotools~!0xD4055DBD.png
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
-float spaceToolMaxDamage 480
+float spaceToolMaxDamage 580
 float spaceToolMaxRange 200
-float spaceToolMinDamage 480
+float spaceToolMinDamage 580
 key spaceToolPanelKey combat_panel_top~
 key spaceToolStrategy 0xFC20C32D
 key spaceToolType weapon

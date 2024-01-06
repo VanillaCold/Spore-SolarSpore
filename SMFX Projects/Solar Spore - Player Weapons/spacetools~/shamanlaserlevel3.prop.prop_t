@@ -5,19 +5,19 @@ int32 spaceToolBuyCost 500
 key spaceToolContext planet
 float spaceToolDamageArea 0.5
 texts spaceToolDescription
-	(ss_atnames!0x020) "Test Laser"
+	(ss_atnames!0x024) "Test Laser"
 end
 texts spaceToolDetailDescription
-	(ss_atnames!0x021) "Use on ground targets. A precise, but weak weapon."
+	(ss_atnames!0x025) "Use on ground targets. A precise, but weak weapon."
 end
 float spaceToolDetectableRange 15
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
-float spaceToolEnergyCost 0.25
+float spaceToolEnergyCost 0.75
 key spaceToolImageID ufotools~!spg_combat_laser1.png
-float spaceToolMaxDamage 100
+float spaceToolMaxDamage 350
 float spaceToolMaxRange 200
-float spaceToolMinDamage 100
+float spaceToolMinDamage 350
 key spaceToolPanelKey CombatAbilityPanel
 bool spaceToolShowCollectedOrUnlockedText false
 key spaceToolStrategy DelayedBeamWeapon
@@ -33,7 +33,6 @@ key toolHitGroundEffectID SG_laser_lvl_3_scorch
 bool toolHitOrientsToTerrain true
 key toolHitWaterEffectID SG_laser_lvl_3_water
 bool toolIsHoming true
-
 float toolRelationshipDelta -0.02
 int32s toolTargetFlags
 	hash(animal)

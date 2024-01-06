@@ -37,9 +37,14 @@ bool DelayedBeamWeapon::Update(Simulator::cSpaceToolData* pTool, bool showErrors
 {
 	//Just call the base function. maybe add more stuff here in future.
 
-	if (!pTool->mbIsInUse && mFireTimer.IsRunning() && mFailsafeTimer.IsRunning() && mFailsafeTimer.GetElapsedTime() > 100)
+	if (!pTool->mbIsInUse && mFireTimer.IsRunning() && mFailsafeTimer.IsRunning())
 	{
-		OnMouseUp(pTool);
+		if ((mFailsafeTimer.GetElapsedTime() > 250) || (mFailsafeTimer.GetElapsedTime() > 100 && effect->IsRunning()))
+		{
+			mFireTimer.Reset();
+			mFailsafeTimer.Reset();
+			OnMouseUp(pTool);
+		}
 	}
 
 	return Simulator::cToolStrategy::Update(pTool, showErrors, ppFailText);
@@ -112,9 +117,9 @@ bool DelayedBeamWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vect
 
 bool DelayedBeamWeapon::OnMouseUp(Simulator::cSpaceToolData* pTool)
 {
-	//Just stop the timer,
-	mFireTimer.Reset();
-	mFailsafeTimer.Reset();
+	//We do not stop the timer, as this would feel bad to play.
+	//instead, the failsafe timer is used to give a short "grace period" - see update function.
+
 	//set the value for if we've not yet gone past 1.5s before to true
 	toReset = true;
 	effect->Stop();
