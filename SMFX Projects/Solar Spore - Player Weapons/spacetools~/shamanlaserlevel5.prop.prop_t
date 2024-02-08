@@ -27,6 +27,7 @@ int32 spaceToolUseCost 0
 key toolBeamEffectID SG_laser_lvl_3_beam
 
 key SS-delayedBeamStartEffect SG_laser_lvl_3_beam_impact
+key spaceToolUpgradeFile shamanlaserlevel4
 
 key toolHitCombatantEffectID SG_laser_lvl_3_beam_impact
 key toolHitGroundEffectID SG_laser_lvl_3_scorch

@@ -1,3 +1,10 @@
+#Solar Spore localisation for archetype tools.
+#Even though base 16 is used for these files, I opted to instead count them up in base 10 for the first column.
+#This just makes using the references easier, since the second digit would match up with an archetype.
+
+
+#Auto-cannon
+
 0x000 Mini Auto-Cannon
 0x001 A weak ammo-based precision weapon. Useful against ground targets.
 
@@ -12,6 +19,8 @@
 
 0x008 Galactic Auto-Cannon
 0x009 An empire-class, ammo-based precision weapon. Only used by the strongest of empires.
+
+
 
 # Doctrination Blaster
 
@@ -30,6 +39,8 @@
 0x018 Galactic Doctrination Blaster
 0x019 An empire-class, high-speed precision sound-beam. Incredibly strong against buildings.
 
+
+
 # Doctrination Blaster
 
 0x020 Mini Chi-Ray
@@ -46,3 +57,22 @@
 
 0x028 Galactic Chi-Ray
 0x029 An empire-class, precise energy beam. Needs a large amount of time to charge when used.
+
+
+
+# Moneybag
+
+0x030 Mini Moneybag - 
+0x031 A weak, but precise, monetary air-strike. Costs $50 to use.
+
+0x032 Moneybag - 
+0x033 An adequate, and precise, monetary air-strike. Costs $75 to use.
+
+0x034 Mega Moneybag -
+0x035 A precise, monetary airstrike. Costs $100 to use.
+
+0x036 Imperial Moneybag -
+0x037 A strong, and precise, monetary airstrike. Costs $125 to use.
+
+0x038 Galactic Moneybag -
+0x039 An empire-class, precise but monetary-fueled airstrike. Costs $150 to use. 

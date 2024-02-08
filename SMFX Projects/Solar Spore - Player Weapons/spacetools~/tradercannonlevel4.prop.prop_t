@@ -5,10 +5,10 @@ int32 spaceToolBuyCost 500
 key spaceToolContext planet
 float spaceToolDamageArea 5
 texts spaceToolDescription
-	(ss_atnames!0x030) "Mini Moneybag - "
+	(ss_atnames!0x036) "Mini Moneybag - "
 end
 texts spaceToolDetailDescription
-	(ss_atnames!0x031) "Fires a weak burst in a straight line.  Good against ground targets."
+	(ss_atnames!0x037) "Fires a weak burst in a straight line.  Good against ground targets."
 end
 float spaceToolDetectableRange 25
 bool spaceToolDisableOnHomeworld false
@@ -18,20 +18,24 @@ key spaceToolImageID ufotools~!spg_combat_pulse.png
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
-float spaceToolMaxDamage 100
-float spaceToolMinDamage 100
+float spaceToolMaxDamage 455
+float spaceToolMinDamage 455
 key spaceToolPanelKey CombatAbilityPanel
 float spaceToolRechargeRate 0.85
 key spaceToolStrategy DefaultProjectile
 key spaceToolType weapon
-int32 spaceToolUseCost 50
+int32 spaceToolUseCost 125
 bool toolCanPlayerLockOn false
 key toolHitCombatantEffectID SG_pulse_lvl_1_weapon_explosion
 key toolHitGroundEffectID SG_pulse_lvl_1_weapon_explosion
 key toolHitWaterEffectID SG_pulse_lvl_1_weapon_explosion
 bool toolIsHoming false
 key toolMuzzleEffectID SG_pulse_lvl_1_weapon_muzzle
-key toolProjectileEffectID TraderMoneybagL1
+
+key spaceToolUpgradeFile tradercannonlevel3
+
+
+key toolProjectileEffectID TraderMoneybagL4
 float toolProjectileExplosionExpansionRate 200
 float toolProjectileSpeed 65
 

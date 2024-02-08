@@ -38,6 +38,10 @@
 
 #include "DamageMultiplierProjectile.h"
 #include "DelayedBeamWeapon.h"
+#include "cSSStatusEffectManager.h"
+#include "PoisonProjectileWeapon.h"
+
+#include "cSSStatusEffectManager.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -63,12 +67,13 @@ void SetupModStrategies::SetupStrategies()
 	ToolManager.AddStrategy(new AmmoCreator(), id("AmmoCreator"));
 	ToolManager.AddStrategy(new ReturnPortal(), id("ReturnPortal"));
 	ToolManager.AddStrategy(new StarKiller(), id("Starkiller"));
+	
 
 	
 	//Add generalised tools
 	ToolManager.AddStrategy(new DelayedBeamWeapon(), DelayedBeamWeapon::STRATEGY_ID);
 	ToolManager.AddStrategy(new DamageMultiplierProjectile(), DamageMultiplierProjectile::STRATEGY_ID);
-
+	ToolManager.AddStrategy(new PoisonProjectileWeapon(), PoisonProjectileWeapon::STRATEGY_ID);
 
 	//Add debug cheats
 #ifdef _DEBUG
@@ -87,6 +92,7 @@ void SetupModStrategies::SetupStrategies()
 	//Add simulator strategy (to-do: make strategy obsolete and remove it)
 	SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
 	SimulatorSystem.AddStrategy(new cSSArchetypeWeaponSystem, cSSArchetypeWeaponSystem::NOUN_ID);
+	SimulatorSystem.AddStrategy(new cSSStatusEffectManager, cSSStatusEffectManager::NOUN_ID);
 	
 	//Add research strategy; this one is NOT to be obsolete.
 	if (PropManager.HasPropertyList(id("ss_enableresearch"), id("solarsporeconfig")))

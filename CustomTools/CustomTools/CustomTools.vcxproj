@@ -130,6 +130,7 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="cSSStatusEffectManager.h" />
     <ClInclude Include="DamageMultiplierProjectile.h">
       <SubType>
       </SubType>
@@ -162,6 +163,7 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="PlanetDebuster.h" />
+    <ClInclude Include="PoisonProjectileWeapon.h" />
     <ClInclude Include="RandomTool.h" />
     <ClInclude Include="RegalShield.h" />
     <ClInclude Include="ResearchPointCaptionWinProc.h">
@@ -224,6 +226,7 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="cSSStatusEffectManager.cpp" />
     <ClCompile Include="DamageMultiplierProjectile.cpp">
       <SubType>
       </SubType>
@@ -264,6 +267,7 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="PlanetDebuster.cpp" />
+    <ClCompile Include="PoisonProjectileWeapon.cpp" />
     <ClCompile Include="RandomTool.cpp" />
     <ClCompile Include="RegalShield.cpp" />
     <ClCompile Include="ResearchPointCaptionWinProc.cpp">

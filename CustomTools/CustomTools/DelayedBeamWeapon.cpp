@@ -39,7 +39,7 @@ bool DelayedBeamWeapon::Update(Simulator::cSpaceToolData* pTool, bool showErrors
 
 	if (!pTool->mbIsInUse && mFireTimer.IsRunning() && mFailsafeTimer.IsRunning())
 	{
-		if ((mFailsafeTimer.GetElapsedTime() > 250) || (mFailsafeTimer.GetElapsedTime() > 100 && effect->IsRunning()))
+		if ((mFailsafeTimer.GetElapsedTime() > 250) || (mFailsafeTimer.GetElapsedTime() > 500 && effect->IsRunning()))
 		{
 			mFireTimer.Reset();
 			mFailsafeTimer.Reset();

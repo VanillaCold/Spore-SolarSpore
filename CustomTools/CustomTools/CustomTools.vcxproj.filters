@@ -190,6 +190,12 @@
     <ClInclude Include="DelayedBeamWeapon.h">
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClInclude>
+    <ClInclude Include="PoisonProjectileWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="cSSStatusEffectManager.h">
+      <Filter>CustomTools\Systems</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -314,6 +320,12 @@
     </ClCompile>
     <ClCompile Include="DelayedBeamWeapon.cpp">
       <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="PoisonProjectileWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSStatusEffectManager.cpp">
+      <Filter>CustomTools\Systems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

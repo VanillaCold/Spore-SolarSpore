@@ -1,0 +1,8 @@
+keys WeaponToolIDs
+	tradercannonlevel1
+	tradercannonlevel2
+	tradercannonlevel3
+	tradercannonlevel4
+	tradercannonlevel5
+end
+uint32 WeaponSetArchetype 10 #kArchetypePlayerTrader
