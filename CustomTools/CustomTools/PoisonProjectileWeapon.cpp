@@ -16,17 +16,29 @@ bool PoisonProjectileWeapon::OnHit(Simulator::cSpaceToolData* pTool, const Vecto
 
 	cGameDataPtr test;
 	Vector3 outPos{};
-	if (GameViewManager.Raycast(position, position + Vector3(0.01, 0, 0), nullptr, test, outPos))
+
+	if (GameViewManager.Raycast(position, position + Vector3(0.01, 0, 0), nullptr, test, outPos, true))
 	{
-		SporeDebugPrint("we got em");
 		cCombatantPtr a = object_cast<Simulator::cCombatant>(test);
 		if (a)
 		{
-			uint32_t id = a->ToGameData()->mID;
-			SporeDebugPrint("ooooo");
-			if (id)
+			uint32_t combID = a->ToGameData()->mID;
+			if (combID)
 			{
-				SSStatusManager.activeStatusEffects[a] = 55;
+				uint32_t statusID;
+				App::Property::GetUInt32(pTool->mpPropList.get(), id("SS-StatusEffect"), statusID);
+				if (SSStatusManager.activeStatusEffects[a] == nullptr)
+				{
+					SSStatusManager.AddStatusEffect(a, statusID);
+				}
+				else
+				{
+					auto status = SSStatusManager.activeStatusEffects[a];
+					float timer;
+					App::Property::GetFloat(status->mpPropList.get(), id("statusEffectTimer"), timer);
+					status->mTimer = timer;
+				}
+
 			}
 		}
 	}

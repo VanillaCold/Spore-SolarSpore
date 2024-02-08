@@ -1,0 +1,5 @@
+float statusEffectTimer 3
+key statusVisualEffect SG_laser_lvl_3_beam_impact
+uint32 statusEffectType hash(Damage)
+
+float statusDamaage 1

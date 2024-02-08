@@ -34,7 +34,7 @@ Simulator::Attribute cSSStatusEffectManager::ATTRIBUTES[] = {
 
 void cSSStatusEffectManager::Initialize() {
 	sInstance = this;
-	activeStatusEffects = map < cCombatantPtr, uint32_t>();
+	activeStatusEffects = map < cCombatantPtr, cSSStatusEffectManager::SSStatusEffect *> ();
 }
 
 void cSSStatusEffectManager::Dispose() {
@@ -46,15 +46,26 @@ void cSSStatusEffectManager::Update(int deltaTime, int deltaGameTime) {
 	for(auto i = activeStatusEffects.begin(); i != activeStatusEffects.end();i++)
 	{
 		auto combatant = i.mpNode->mValue.first;
+		auto status = i.mpNode->mValue.second;
 		if (!combatant || combatant->ToGameData()->mbIsDestroyed || combatant->mHealthPoints <= 0)
 		{
 			SporeDebugPrint("wooeeoo");
 			invalidStatuses.push_back(combatant);
 		}
+
+		else if (status->mTimer <= 0)
+		{
+			invalidStatuses.push_back(combatant);
+		}
+		else
+		{
+			status->Update(deltaGameTime / 1000.0f);
+		}
 	}
 
 	for each (cCombatantPtr removal in invalidStatuses)
 	{
+		activeStatusEffects[removal]->End();
 		activeStatusEffects.erase(removal);
 	}
 }
@@ -67,6 +78,11 @@ bool cSSStatusEffectManager::WriteToXML(Simulator::XmlSerializer* writexml)
 cSSStatusEffectManager* cSSStatusEffectManager::Get()
 {
 	return sInstance;
+}
+
+void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t instanceID)
+{
+	activeStatusEffects[combatant] = new cSSStatusEffectManager::SSStatusEffect(instanceID,combatant);
 }
 
 cSSStatusEffectManager* cSSStatusEffectManager::sInstance;
