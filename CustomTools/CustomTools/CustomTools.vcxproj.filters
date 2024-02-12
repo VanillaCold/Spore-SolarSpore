@@ -65,6 +65,12 @@
     <Filter Include="CustomTools\Tools\General Types">
       <UniqueIdentifier>{c007bb10-4b50-4c39-9bbf-8fa4f3848af9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CustomTools\Systems\Status effects">
+      <UniqueIdentifier>{645c2c5f-24e6-42e8-bb5f-fb108e4cc526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems\Status effects\IStatusEffects">
+      <UniqueIdentifier>{9517c795-ccb1-4a9a-b28f-6c2751fceba8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -194,7 +200,13 @@
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClInclude>
     <ClInclude Include="cSSStatusEffectManager.h">
-      <Filter>CustomTools\Systems</Filter>
+      <Filter>CustomTools\Systems\Status effects</Filter>
+    </ClInclude>
+    <ClInclude Include="IStatusEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="cPoisonEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -325,7 +337,13 @@
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClCompile>
     <ClCompile Include="cSSStatusEffectManager.cpp">
-      <Filter>CustomTools\Systems</Filter>
+      <Filter>CustomTools\Systems\Status effects</Filter>
+    </ClCompile>
+    <ClCompile Include="IStatusEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cPoisonEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -34,7 +34,7 @@ Simulator::Attribute cSSStatusEffectManager::ATTRIBUTES[] = {
 
 void cSSStatusEffectManager::Initialize() {
 	sInstance = this;
-	activeStatusEffects = map < cCombatantPtr, cSSStatusEffectManager::SSStatusEffect *> ();
+	activeStatusEffects = map < cCombatantPtr, IStatusEffect*> ();
 }
 
 void cSSStatusEffectManager::Dispose() {
@@ -82,7 +82,27 @@ cSSStatusEffectManager* cSSStatusEffectManager::Get()
 
 void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t instanceID)
 {
-	activeStatusEffects[combatant] = new cSSStatusEffectManager::SSStatusEffect(instanceID,combatant);
+	PropertyListPtr propList;
+	PropManager.GetPropertyList(instanceID, id("SS-StatusEffects"), propList);
+	uint32_t statusType;
+	App::Property::GetUInt32(propList.get(), id("statusEffectType"), statusType);
+	
+	ModAPI::Log("Adding status effect with strat. ID %x", statusType);
+
+	if (statusTypes[statusType] != nullptr)
+	{
+		ModAPI::Log("Strategy does indeed exist");
+		IStatusEffect* status = statusTypes[statusType]->Clone();
+		status->Instantiate(instanceID, combatant);
+		activeStatusEffects[combatant] = status;
+	}
+}
+
+void cSSStatusEffectManager::AddStatusType(IStatusEffect* type, uint32_t typeID)
+{
+	ModAPI::Log("Added strategy with ID %x", typeID);
+	type->mbIsExample = true;
+	statusTypes.emplace(typeID, type);
 }
 
 cSSStatusEffectManager* cSSStatusEffectManager::sInstance;

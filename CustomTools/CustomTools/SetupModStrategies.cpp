@@ -42,6 +42,7 @@
 #include "PoisonProjectileWeapon.h"
 
 #include "cSSStatusEffectManager.h"
+#include "cPoisonEffect.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -93,6 +94,10 @@ void SetupModStrategies::SetupStrategies()
 	SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
 	SimulatorSystem.AddStrategy(new cSSArchetypeWeaponSystem, cSSArchetypeWeaponSystem::NOUN_ID);
 	SimulatorSystem.AddStrategy(new cSSStatusEffectManager, cSSStatusEffectManager::NOUN_ID);
+
+	SSStatusManager.AddStatusType(new cPoisonEffect(), cPoisonEffect::STRATEGY_ID);
+
+
 	
 	//Add research strategy; this one is NOT to be obsolete.
 	if (PropManager.HasPropertyList(id("ss_enableresearch"), id("solarsporeconfig")))
