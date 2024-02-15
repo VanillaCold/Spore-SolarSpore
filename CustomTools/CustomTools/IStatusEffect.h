@@ -21,17 +21,22 @@ public:
 	uint32_t mStatusType;
 
 	bool mbIsExample;
+	bool mbIsFinished;
+
 	cCombatantPtr mpCombatant;
 	Vector3 mCombatantPos;
 	Math::Quaternion mCombatantRot;
 
 	PropertyListPtr mpPropList;
+	uint32_t mStatusEffectID;
 	float mTimer;
 	IVisualEffectPtr visualEffect;
 
+	uint32_t mInternalID;
+
 	virtual void Update(float deltaTime);
 	virtual IStatusEffect* Clone() = 0;
-	virtual void End();
+	virtual void EndEffect();
 
 	int AddRef() override;
 	int Release() override;

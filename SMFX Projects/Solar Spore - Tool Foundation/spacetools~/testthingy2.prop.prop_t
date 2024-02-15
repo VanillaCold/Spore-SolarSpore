@@ -1,0 +1,53 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Defense Missile"
+float spaceToolAutoFireRate 1
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 8
+texts spaceToolDescription
+	"TEST Proton Missile 2"
+end
+texts spaceToolDetailDescription
+	"Fires a very powerful homing Proton Missile at its target.  Effective against enemy spaceships."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 1.5
+key spaceToolImageID ufotools~!0x0BBF8B7F.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 220
+float spaceToolMaxRange 200
+float spaceToolMinDamage 220
+float spaceToolMinRange 10
+key spaceToolPanelKey combat_panel_top~
+float spaceToolRechargeRate 1
+key spaceToolStrategy PoisonProjectileWeapon
+key spaceToolType weapon
+#key spaceToolUpgradeFile protonmissilelevel3.prop
+int32 spaceToolUseCost 0
+#bool toolCanPlayerLockOn true
+key toolHitCombatantEffectID 0xE01D48C5
+key toolHitGroundEffectID 0xE01D48C5
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID 0xE01D48C5
+bool toolIsHoming true
+key toolMuzzleEffectID 0xA0020A0D
+float toolProjectileEccentricity 0.25
+key toolProjectileEffectID 0x483B6157
+float toolProjectileExplosionExpansionRate 500
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 1.5
+float toolProjectileTurnRate 0.1
+
+uint32 SS-StatusEffect hash(Freezetest)
+
+#int32s toolTargetFlags
+	#hash(ufo)
+	#hash(vehicle)
+	#hash(turret)
+#end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x061af4b2) "This weapon can only be fired at spaceships, turrets, and vehicles."
+end

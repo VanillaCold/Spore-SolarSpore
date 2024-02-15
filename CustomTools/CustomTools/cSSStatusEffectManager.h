@@ -40,7 +40,7 @@ public:
 	//
 
 	static Simulator::Attribute ATTRIBUTES[];
-	map < cCombatantPtr, IStatusEffect*> activeStatusEffects;
+	map <uint32_t, IStatusEffect*> activeStatusEffects;
 
 	void AddStatusEffect(cCombatantPtr, uint32_t instanceID);
 	void AddStatusType(IStatusEffect* type, uint32_t typeID);

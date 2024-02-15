@@ -34,7 +34,7 @@ Simulator::Attribute cSSStatusEffectManager::ATTRIBUTES[] = {
 
 void cSSStatusEffectManager::Initialize() {
 	sInstance = this;
-	activeStatusEffects = map < cCombatantPtr, IStatusEffect*> ();
+	activeStatusEffects = map < uint32_t, IStatusEffect*> ();
 }
 
 void cSSStatusEffectManager::Dispose() {
@@ -42,20 +42,21 @@ void cSSStatusEffectManager::Dispose() {
 }
 
 void cSSStatusEffectManager::Update(int deltaTime, int deltaGameTime) {
-	vector<cCombatantPtr> invalidStatuses{};
+	vector<uint32_t> invalidStatuses{};
 	for(auto i = activeStatusEffects.begin(); i != activeStatusEffects.end();i++)
 	{
-		auto combatant = i.mpNode->mValue.first;
+		auto statusID = i.mpNode->mValue.first;
 		auto status = i.mpNode->mValue.second;
-		if (!combatant || combatant->ToGameData()->mbIsDestroyed || combatant->mHealthPoints <= 0)
+		if (status == nullptr)
 		{
-			SporeDebugPrint("wooeeoo");
-			invalidStatuses.push_back(combatant);
+			SporeDebugPrint("well the effect died.");
+			invalidStatuses.push_back(statusID);
 		}
 
-		else if (status->mTimer <= 0)
+		else if (status->mbIsFinished)
 		{
-			invalidStatuses.push_back(combatant);
+			SporeDebugPrint("wooeeoo");
+			invalidStatuses.push_back(statusID);
 		}
 		else
 		{
@@ -63,9 +64,12 @@ void cSSStatusEffectManager::Update(int deltaTime, int deltaGameTime) {
 		}
 	}
 
-	for each (cCombatantPtr removal in invalidStatuses)
+	for each (uint32_t removal in invalidStatuses)
 	{
-		activeStatusEffects[removal]->End();
+		if (activeStatusEffects[removal] != nullptr)
+		{
+			activeStatusEffects[removal]->EndEffect();
+		}
 		activeStatusEffects.erase(removal);
 	}
 }
@@ -92,9 +96,32 @@ void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t i
 	if (statusTypes[statusType] != nullptr)
 	{
 		ModAPI::Log("Strategy does indeed exist");
+
+		for each (auto effect in activeStatusEffects)
+		{
+			if (effect.second->mpCombatant == combatant && instanceID == effect.second->mStatusEffectID)
+			{
+				effect.second->mTimer = 0;
+				App::Property::GetFloat(propList.get(), id("statusEffectTimer"), effect.second->mTimer);
+				return;
+			}
+		}
+
 		IStatusEffect* status = statusTypes[statusType]->Clone();
 		status->Instantiate(instanceID, combatant);
-		activeStatusEffects[combatant] = status;
+
+		uint32_t index = 0;
+		
+		//I have no idea why this works because everything else I tried made the status object despawn.
+		for each (auto thingy in activeStatusEffects)
+		{
+			index++;
+		}
+
+
+		status->mInternalID = index;
+		SporeDebugPrint("%x", index);
+		activeStatusEffects.emplace(status->mInternalID, status);
 	}
 }
 

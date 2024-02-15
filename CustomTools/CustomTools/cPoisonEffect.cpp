@@ -3,6 +3,16 @@
 
 cPoisonEffect::cPoisonEffect()
 {
+	mbIsExample = true;
+	mStatusType = 0;
+	mpCombatant = nullptr;
+	mCombatantPos = Vector3();
+	mCombatantRot = Quaternion();
+	mpPropList = nullptr;
+	mTimer = 0;
+	visualEffect = nullptr;
+	mbIsFinished = false;
+	mStatusEffectID = 0;
 	damage = 0;
 }
 
@@ -28,7 +38,7 @@ void cPoisonEffect::Instantiate(uint32_t ID, cCombatantPtr combatant)
 
 IStatusEffect* cPoisonEffect::Clone()
 {
-	return new cPoisonEffect();
+	return new cPoisonEffect(*this);
 }
 
 // You can extend this function to return any other types your class implements.

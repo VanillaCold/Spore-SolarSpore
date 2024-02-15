@@ -11,6 +11,9 @@ IStatusEffect::IStatusEffect()
 	mpPropList = nullptr;
 	mTimer = 0;
 	visualEffect = nullptr;
+	mbIsFinished = false;
+	mStatusEffectID = 0;
+	mInternalID = 0;
 }
 
 void IStatusEffect::Instantiate(uint32_t ID, cCombatantPtr combatant)
@@ -32,6 +35,9 @@ void IStatusEffect::Instantiate(uint32_t ID, cCombatantPtr combatant)
 	mpCombatant = combatant;
 	mCombatantPos = combatant->ToSpatialObject()->mPosition;
 	mCombatantRot = combatant->ToSpatialObject()->mOrientation;
+
+	mStatusEffectID = ID;
+	mbIsFinished = false;
 }
 
 
@@ -44,9 +50,14 @@ void IStatusEffect::Update(float deltaTime)
 	mTimer -= deltaTime;
 	SporeDebugPrint("%f", deltaTime);
 	visualEffect->SetSourceTransform(visualEffect->GetSourceTransform().SetOffset(mCombatantPos));
+
+	if (mTimer <= 0 || !mpCombatant || mpCombatant->ToGameData()->mbIsDestroyed || mpCombatant->mHealthPoints <= 0)
+	{
+		mbIsFinished = true;
+	}
 }
 
-void IStatusEffect::End()
+void IStatusEffect::EndEffect()
 {
 	visualEffect->Stop();
 	delete this;
