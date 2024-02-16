@@ -208,6 +208,9 @@
     <ClInclude Include="cPoisonEffect.h">
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClInclude>
+    <ClInclude Include="cStunEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -343,6 +346,9 @@
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClCompile>
     <ClCompile Include="cPoisonEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cStunEffect.cpp">
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClCompile>
   </ItemGroup>

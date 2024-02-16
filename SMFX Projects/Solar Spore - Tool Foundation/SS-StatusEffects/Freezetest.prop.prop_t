@@ -1,5 +1,5 @@
-float statusEffectTimer 3099
+float statusEffectTimer 15
 key statusVisualEffect EP1_dec_spotlight_blue
-uint32 statusEffectType hash(Damage)
+uint32 statusEffectType hash(Stun)
 
 float statusDamage 10

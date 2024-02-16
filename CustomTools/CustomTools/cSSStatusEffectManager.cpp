@@ -86,30 +86,42 @@ cSSStatusEffectManager* cSSStatusEffectManager::Get()
 
 void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t instanceID)
 {
+	//Get the property list from the status effect's instance ID.
 	PropertyListPtr propList;
 	PropManager.GetPropertyList(instanceID, id("SS-StatusEffects"), propList);
+	
+	//Next, get the status effect strategy to use.
 	uint32_t statusType;
 	App::Property::GetUInt32(propList.get(), id("statusEffectType"), statusType);
 	
+	//Log stuff.
 	ModAPI::Log("Adding status effect with strat. ID %x", statusType);
 
+	//If the strategy exists,
 	if (statusTypes[statusType] != nullptr)
 	{
+		//log stuff again.
 		ModAPI::Log("Strategy does indeed exist");
 
+		//next, check if this status is already being used by that specific combatant
 		for each (auto effect in activeStatusEffects)
 		{
 			if (effect.second->mpCombatant == combatant && instanceID == effect.second->mStatusEffectID)
 			{
+				//If it is, then reset its timer - don't remove it.
 				effect.second->mTimer = 0;
 				App::Property::GetFloat(propList.get(), id("statusEffectTimer"), effect.second->mTimer);
 				return;
 			}
 		}
-
+		//If not...
+		
+		//Clone the template status strategy,
 		IStatusEffect* status = statusTypes[statusType]->Clone();
+		//and instantiate it with the status effect ID, and the combatant.
 		status->Instantiate(instanceID, combatant);
 
+		//Set the index to 0.
 		uint32_t index = 0;
 		
 		//I have no idea why this works because everything else I tried made the status object despawn.
@@ -118,9 +130,9 @@ void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t i
 			index++;
 		}
 
-
+		//set the strategy's internal index,
 		status->mInternalID = index;
-		SporeDebugPrint("%x", index);
+		//then finally add it to the list of active effects.
 		activeStatusEffects.emplace(status->mInternalID, status);
 	}
 }

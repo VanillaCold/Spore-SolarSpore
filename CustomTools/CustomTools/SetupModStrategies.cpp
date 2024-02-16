@@ -43,6 +43,7 @@
 
 #include "cSSStatusEffectManager.h"
 #include "cPoisonEffect.h"
+#include "cStunEffect.h";
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -96,6 +97,7 @@ void SetupModStrategies::SetupStrategies()
 	SimulatorSystem.AddStrategy(new cSSStatusEffectManager, cSSStatusEffectManager::NOUN_ID);
 
 	SSStatusManager.AddStatusType(new cPoisonEffect(), cPoisonEffect::STRATEGY_ID);
+	SSStatusManager.AddStatusType(new cStunEffect(), cStunEffect::STRATEGY_ID);
 
 
 	

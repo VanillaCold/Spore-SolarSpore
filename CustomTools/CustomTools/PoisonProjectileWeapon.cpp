@@ -14,16 +14,16 @@ PoisonProjectileWeapon::~PoisonProjectileWeapon()
 bool PoisonProjectileWeapon::OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position, Simulator::SpaceToolHit hitType, int unk)
 {
 
-	cGameDataPtr test;
+	vector<cSpatialObjectPtr> test;
 	Vector3 outPos{};
 
-	if (GameViewManager.Raycast(position, position + Vector3(0.01, 0, 0), nullptr, test, outPos, true))
+	if (GameViewManager.RaycastAll(position - Vector3(0.1, 0.1, 0.1), position + Vector3(0.1, 0.1, 0.1), test, true))
 	{
-		cCombatantPtr a = object_cast<Simulator::cCombatant>(test);
-		if (a)
+
+		for each (cSpatialObjectPtr spatial in test)
 		{
-			uint32_t combID = a->ToGameData()->mID;
-			if (combID)
+			cCombatantPtr a = object_cast<Simulator::cCombatant>(spatial);
+			if (a)
 			{
 				uint32_t statusID;
 				App::Property::GetUInt32(pTool->mpPropList.get(), id("SS-StatusEffect"), statusID);

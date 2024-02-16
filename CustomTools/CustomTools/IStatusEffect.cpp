@@ -49,9 +49,9 @@ void IStatusEffect::Update(float deltaTime)
 {
 	mTimer -= deltaTime;
 	SporeDebugPrint("%f", deltaTime);
-	visualEffect->SetSourceTransform(visualEffect->GetSourceTransform().SetOffset(mCombatantPos));
+	visualEffect->SetSourceTransform(visualEffect->GetSourceTransform().SetOffset(mpCombatant->ToSpatialObject()->mPosition));
 
-	if (mTimer <= 0 || !mpCombatant || mpCombatant->ToGameData()->mbIsDestroyed || mpCombatant->mHealthPoints <= 0)
+	if (mTimer <= 0 || !mpCombatant || mpCombatant->ToGameData()->mbIsDestroyed)
 	{
 		mbIsFinished = true;
 	}

@@ -135,6 +135,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="cSSStatusEffectManager.h" />
+    <ClInclude Include="cStunEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="DamageMultiplierProjectile.h">
       <SubType>
       </SubType>
@@ -239,6 +243,10 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="cSSStatusEffectManager.cpp" />
+    <ClCompile Include="cStunEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="DamageMultiplierProjectile.cpp">
       <SubType>
       </SubType>
