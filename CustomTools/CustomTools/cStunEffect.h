@@ -19,5 +19,15 @@ public:
 	virtual void Instantiate(uint32_t ID, cCombatantPtr combatant) override;
 	virtual IStatusEffect* Clone() override;
 
+	virtual void EndEffect() override;
+
 	void* Cast(uint32_t type) const override;
+
+private:
+	cSpaceToolDataPtr mpNPCWeapon;
+	cSpaceToolDataPtr mpNPCGroundWeapon;
+	cSpaceToolDataPtr mpNPCNearAirWeapon;
+	cSpaceToolDataPtr mpNPCMediumAirWeapon;
+	cSpaceToolDataPtr mpNPCFarAirWeapon;
+	cSpaceToolDataPtr mpNPCAbductWeapon;
 };

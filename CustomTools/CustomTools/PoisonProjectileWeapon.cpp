@@ -17,7 +17,7 @@ bool PoisonProjectileWeapon::OnHit(Simulator::cSpaceToolData* pTool, const Vecto
 	vector<cSpatialObjectPtr> test;
 	Vector3 outPos{};
 
-	if (GameViewManager.RaycastAll(position - Vector3(0.1, 0.1, 0.1), position + Vector3(0.1, 0.1, 0.1), test, true))
+	if (GameViewManager.RaycastAll(position - Vector3(1, 1, 1), position + Vector3(1, 1, 1), test, true))
 	{
 
 		for each (cSpatialObjectPtr spatial in test)
