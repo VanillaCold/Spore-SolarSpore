@@ -44,13 +44,13 @@ void cStunEffect::Update(float deltaTime)
 				ufoObj->mPosition = mCombatantPos;
 				ufoObj->Teleport(mCombatantPos, Math::Quaternion());
 				ufoObj->MoveTo(mCombatantPos, 0);
+
+				if (ufoObj->mpNPCWeapon)
+				{
+					ufoObj->mpNPCWeapon->mRechargeTimer.Start();
+				}
 			}
 			mpCombatant->mpTarget = nullptr;
-			
-			if (ufoObj->mpNPCWeapon)
-			{
-				ufoObj->mpNPCWeapon->mRechargeTimer.Start();
-			}
 
 			if (mTimer <= 0)
 			{
