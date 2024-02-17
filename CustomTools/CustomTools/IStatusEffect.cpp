@@ -48,7 +48,7 @@ IStatusEffect::~IStatusEffect()
 void IStatusEffect::Update(float deltaTime)
 {
 	mTimer -= deltaTime;
-	SporeDebugPrint("%f", deltaTime);
+	//SporeDebugPrint("%f", deltaTime);
 	visualEffect->SetSourceTransform(visualEffect->GetSourceTransform().SetOffset(mpCombatant->ToSpatialObject()->mPosition));
 
 	if (mTimer <= 0 || !mpCombatant || mpCombatant->ToGameData()->mbIsDestroyed)
