@@ -55,12 +55,11 @@ void cPoisonEffect::Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatant
 {
 	IStatusEffect::Instantiate(ID, combatant, source);
 	App::Property::GetFloat(mpPropList.get(), id("statusDamage"), damage);
-	if (!App::Property::GetFloat(mpPropList.get(), id("statusCost"), mCostPerSecond))
+	if (!App::Property::GetFloat(mpPropList.get(), id("statusCost"), mCostPerSecond)
+		|| (object_cast<Simulator::cCreatureBase>(combatant) || !mpSource 
+		|| (combatant->GetPoliticalID() == mpSource->GetPoliticalID())))
 	{
-		if (object_cast<Simulator::cCreatureBase>(combatant) || !mpSource || (StarManager.GetEmpire(combatant->GetPoliticalID()) == StarManager.GetEmpire(mpSource->GetPoliticalID())))
-		{
-			mCostPerSecond = 0;
-		}
+		mCostPerSecond = 0;
 	}
 }
 
