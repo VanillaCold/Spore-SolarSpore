@@ -16,7 +16,7 @@ public:
 	~cStunEffect();
 
 	virtual void Update(float deltaTime) override;
-	virtual void Instantiate(uint32_t ID, cCombatantPtr combatant) override;
+	virtual void Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatantPtr source = nullptr) override;
 	virtual IStatusEffect* Clone() override;
 
 	virtual void EndEffect() override;

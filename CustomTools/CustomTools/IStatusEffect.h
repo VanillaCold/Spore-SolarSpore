@@ -14,7 +14,7 @@ public:
 	
 	IStatusEffect();
 
-	virtual void Instantiate(uint32_t ID, cCombatantPtr combatant);
+	virtual void Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatantPtr source = nullptr);
 
 	~IStatusEffect();
 
@@ -23,6 +23,7 @@ public:
 	bool mbIsExample;
 	bool mbIsFinished;
 
+	cCombatantPtr mpSource;
 	cCombatantPtr mpCombatant;
 	Vector3 mCombatantPos;
 	Math::Quaternion mCombatantRot;

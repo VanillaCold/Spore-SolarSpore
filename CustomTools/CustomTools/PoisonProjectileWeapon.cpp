@@ -27,7 +27,7 @@ bool PoisonProjectileWeapon::OnHit(Simulator::cSpaceToolData* pTool, const Vecto
 			{
 				uint32_t statusID;
 				App::Property::GetUInt32(pTool->mpPropList.get(), id("SS-StatusEffect"), statusID);
-				SSStatusManager.AddStatusEffect(a, statusID);
+				SSStatusManager.AddStatusEffect(a, statusID, object_cast<Simulator::cCombatant>(pTool->mpToolOwner));
 			}
 		}
 	}

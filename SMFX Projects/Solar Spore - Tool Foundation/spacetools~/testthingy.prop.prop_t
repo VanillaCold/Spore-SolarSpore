@@ -41,7 +41,7 @@ float toolProjectileSpeed 150
 float toolProjectileTimeOut 1.5
 float toolProjectileTurnRate 0.1
 
-uint32 SS-StatusEffect hash(Poisontest)
+uint32 SS-StatusEffect hash(MoneyDrones)
 
 #int32s toolTargetFlags
 	#hash(ufo)

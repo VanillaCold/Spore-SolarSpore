@@ -3,3 +3,4 @@ key statusVisualEffect ScrapDrones
 uint32 statusEffectType hash(Damage)
 
 float statusDamage 10
+float statusCost -500

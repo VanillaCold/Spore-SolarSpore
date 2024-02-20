@@ -75,9 +75,10 @@ void cStunEffect::Update(float deltaTime)
 	}
 }
 
-void cStunEffect::Instantiate(uint32_t ID, cCombatantPtr combatant)
+void cStunEffect::Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatantPtr source)
 {
-	IStatusEffect::Instantiate(ID, combatant);
+	IStatusEffect::Instantiate(ID, combatant, source);
+	ModAPI::Log("Noun ID is %x", combatant->ToGameData()->GetNounID());
 }
 
 IStatusEffect* cStunEffect::Clone()

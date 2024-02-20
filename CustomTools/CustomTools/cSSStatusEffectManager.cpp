@@ -84,7 +84,7 @@ cSSStatusEffectManager* cSSStatusEffectManager::Get()
 	return sInstance;
 }
 
-void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t instanceID)
+void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t instanceID, cCombatantPtr source)
 {
 	//Get the property list from the status effect's instance ID.
 	PropertyListPtr propList;
@@ -125,7 +125,7 @@ void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t i
 		//Clone the template status strategy,
 		IStatusEffect* status = statusTypes[statusType]->Clone();
 		//and instantiate it with the status effect ID, and the combatant.
-		status->Instantiate(instanceID, combatant);
+		status->Instantiate(instanceID, combatant, source);
 
 		//set the strategy's internal index,
 		status->mInternalID = index;

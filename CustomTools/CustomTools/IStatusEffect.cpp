@@ -14,9 +14,10 @@ IStatusEffect::IStatusEffect()
 	mbIsFinished = false;
 	mStatusEffectID = 0;
 	mInternalID = 0;
+	mpSource = nullptr;
 }
 
-void IStatusEffect::Instantiate(uint32_t ID, cCombatantPtr combatant)
+void IStatusEffect::Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatantPtr source)
 {
 	mbIsExample = false;
 	mStatusType = 0;
@@ -38,6 +39,7 @@ void IStatusEffect::Instantiate(uint32_t ID, cCombatantPtr combatant)
 
 	mStatusEffectID = ID;
 	mbIsFinished = false;
+	mpSource = source;
 }
 
 
@@ -59,7 +61,7 @@ void IStatusEffect::Update(float deltaTime)
 
 void IStatusEffect::EndEffect()
 {
-	visualEffect->Stop();
+	visualEffect->Stop(0);
 	delete this;
 }
 
