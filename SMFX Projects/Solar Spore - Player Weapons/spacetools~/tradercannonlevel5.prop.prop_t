@@ -13,32 +13,37 @@ end
 float spaceToolDetectableRange 25
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
-key spaceToolImageID ufotools~!spg_combat_pulse.png
+float spaceToolEnergyCost 1.5
+key spaceToolImageID ufotools~!0x0BBF8B7F.png
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
-float spaceToolMaxDamage 675
-float spaceToolMinDamage 675
-key spaceToolPanelKey CombatAbilityPanel
-float spaceToolRechargeRate 0.85
-key spaceToolStrategy DefaultProjectile
+float spaceToolMaxDamage 180 
+float spaceToolMaxRange 200
+float spaceToolMinDamage 180
+float spaceToolMinRange 10
+key spaceToolPanelKey combat_panel_top~
+float spaceToolRechargeRate 1
 key spaceToolType weapon
-int32 spaceToolUseCost 150
-bool toolCanPlayerLockOn false
-key toolHitCombatantEffectID SG_pulse_lvl_1_weapon_explosion
-key toolHitGroundEffectID SG_pulse_lvl_1_weapon_explosion
-key toolHitWaterEffectID SG_pulse_lvl_1_weapon_explosion
-bool toolIsHoming false
-key toolMuzzleEffectID SG_pulse_lvl_1_weapon_muzzle
+key spaceToolUpgradeFile tradercannonlevel4.prop
+int32 spaceToolUseCost 0
+#bool toolCanPlayerLockOn true
+key toolHitCombatantEffectID 0xE01D48C5
+key toolHitGroundEffectID 0xE01D48C5
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID 0xE01D48C5
+bool toolIsHoming true
+key toolMuzzleEffectID 0xA0020A0D
+float toolProjectileEccentricity 0.25
+key toolProjectileEffectID 0x483B6157
+float toolProjectileExplosionExpansionRate 500
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 1.5
+float toolProjectileTurnRate 0.1
 
-key spaceToolUpgradeFile tradercannonlevel4
 
-key toolProjectileEffectID TraderMoneybagL4
-float toolProjectileExplosionExpansionRate 200
-float toolProjectileSpeed 65
-
-float spaceToolMaxRange 70
-float toolProjectileTimeOut 3.5
+key spaceToolStrategy PoisonProjectileWeapon
+uint32 SS-StatusEffect hash(MoneyDronesL5)
 
 float toolRelationshipDelta -0.1
 int32s toolTargetFlags

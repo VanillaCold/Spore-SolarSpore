@@ -62,17 +62,17 @@
 
 # Moneybag
 
-0x030 Mini Moneybag - 
-0x031 A weak, but precise, monetary air-strike. Costs $50 to use.
+0x030 Mini Moneydrones
+0x031 A weak projectile that launches drones at the target, producing money from scrap obtained.
 
-0x032 Moneybag - 
-0x033 An adequate, and precise, monetary air-strike. Costs $75 to use.
+0x032 Moneydrones
+0x033 An adequate projectile that launches drones at the target, producing money from scrap obtained.
 
-0x034 Mega Moneybag -
-0x035 A precise, monetary airstrike. Costs $100 to use.
+0x034 Mega Moneydrones
+0x035 A projectile that launches drones at the target, producing money from scrap obtained.
 
-0x036 Imperial Moneybag -
-0x037 A strong, and precise, monetary airstrike. Costs $125 to use.
+0x036 Imperial Moneydrones
+0x037 A strong projectile that launches drones at the target, producing money from scrap obtained.
 
-0x038 Galactic Moneybag -
-0x039 An empire-class, precise but monetary-fueled airstrike. Costs $150 to use. 
+0x038 Galactic Moneydrones
+0x039 An empire-class projectile that launches drones at the target, producing money from scrap obtained.

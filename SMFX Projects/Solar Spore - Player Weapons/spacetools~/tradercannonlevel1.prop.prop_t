@@ -10,35 +10,42 @@ end
 texts spaceToolDetailDescription
 	(ss_atnames!0x031) "Fires a weak burst in a straight line.  Good against ground targets."
 end
-float spaceToolDetectableRange 25
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
-float spaceToolEnergyCost 0
-key spaceToolImageID ufotools~!spg_combat_pulse.png
+float spaceToolEnergyCost 1.5
+key spaceToolImageID ufotools~!0x0BBF8B7F.png
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
-float spaceToolMaxDamage 100
-float spaceToolMinDamage 100
-key spaceToolPanelKey CombatAbilityPanel
-float spaceToolRechargeRate 0.85
-key spaceToolStrategy DefaultProjectile
+float spaceToolMaxDamage 20 
+float spaceToolMaxRange 200
+float spaceToolMinDamage 20
+float spaceToolMinRange 10
+key spaceToolPanelKey combat_panel_top~
+float spaceToolRechargeRate 1
 key spaceToolType weapon
-int32 spaceToolUseCost 50
-bool toolCanPlayerLockOn false
-key toolHitCombatantEffectID SG_pulse_lvl_1_weapon_explosion
-key toolHitGroundEffectID SG_pulse_lvl_1_weapon_explosion
-key toolHitWaterEffectID SG_pulse_lvl_1_weapon_explosion
-bool toolIsHoming false
-key toolMuzzleEffectID SG_pulse_lvl_1_weapon_muzzle
-key toolProjectileEffectID TraderMoneybagL1
-float toolProjectileExplosionExpansionRate 200
-float toolProjectileSpeed 65
+#key spaceToolUpgradeFile protonmissilelevel3.prop
+int32 spaceToolUseCost 0
+#bool toolCanPlayerLockOn true
+key toolHitCombatantEffectID 0xE01D48C5
+key toolHitGroundEffectID 0xE01D48C5
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID 0xE01D48C5
+bool toolIsHoming true
+key toolMuzzleEffectID 0xA0020A0D
+float toolProjectileEccentricity 0.25
+key toolProjectileEffectID 0x483B6157
+float toolProjectileExplosionExpansionRate 500
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 1.5
+float toolProjectileTurnRate 0.1
 
-float spaceToolMaxRange 70
-float toolProjectileTimeOut 3.5
+
+key spaceToolStrategy PoisonProjectileWeapon
+uint32 SS-StatusEffect hash(MoneyDronesL1)
 
 float toolRelationshipDelta -0.1
+
 int32s toolTargetFlags
 	hash(animal)
 	hash(citizen)
@@ -51,5 +58,5 @@ int32s toolTargetFlags
 	hash(colonyobject)
 end
 texts toolTargetFlagsFailMessage
-	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+	(spacegame_tools!0x061af4b2) "This weapon can only be fired at spaceships, turrets, and vehicles."
 end
