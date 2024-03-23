@@ -122,6 +122,10 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="cShieldEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="cSSArchetypeToolManager.h">
       <SubType>
       </SubType>
@@ -151,6 +155,10 @@
     <ClInclude Include="EraseSpecies.h" />
     <ClInclude Include="ConvertPlanet.h" />
     <ClInclude Include="GetResearchData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="GiveSelfStatusTool.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -230,6 +238,10 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="cShieldEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="cSSArchetypeToolManager.cpp">
       <SubType>
       </SubType>
@@ -266,6 +278,10 @@
     </ClCompile>
     <ClCompile Include="EraseSpecies.cpp" />
     <ClCompile Include="GetResearchData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="GiveSelfStatusTool.cpp">
       <SubType>
       </SubType>
     </ClCompile>

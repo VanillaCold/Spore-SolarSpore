@@ -211,6 +211,12 @@
     <ClInclude Include="cStunEffect.h">
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClInclude>
+    <ClInclude Include="cShieldEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="GiveSelfStatusTool.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -350,6 +356,12 @@
     </ClCompile>
     <ClCompile Include="cStunEffect.cpp">
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cShieldEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="GiveSelfStatusTool.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
