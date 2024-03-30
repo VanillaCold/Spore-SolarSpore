@@ -25,6 +25,7 @@ public:
 
 	cCombatantPtr mpSource;
 	cCombatantPtr mpCombatant;
+	cSpaceToolDataPtr mpToolObject;
 	Vector3 mCombatantPos;
 	Math::Quaternion mCombatantRot;
 

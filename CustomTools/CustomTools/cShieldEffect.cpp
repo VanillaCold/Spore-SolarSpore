@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "cShieldEffect.h"
 
-cShieldEffect::cShieldEffect()
+cShieldEffect::cShieldEffect()// : IStatusEffect()
 {
 	mCurrentHealth = 0;
 	mPercentageStrength = 0;
@@ -18,9 +18,16 @@ cShieldEffect::~cShieldEffect()
 void cShieldEffect::Update(float deltaTime)
 {
 	IStatusEffect::Update(deltaTime);
+
+	if (Simulator::GetCurrentContext() != Simulator::SpaceContext::Planet)
+	{
+		mbIsFinished = true;
+	}
+
 	if (mCurrentHealth <= 0)
 	{
 		mbIsFinished = true;
+		EffectsManager.CreateVisualEffect(mDestructionEffect, 0, mpDestroyEffect);
 		mpDestroyEffect->SetRigidTransform(mpDestroyEffect->GetRigidTransform().SetOffset(mCombatantPos));
 		mpDestroyEffect->SetSourceTransform(mpDestroyEffect->GetSourceTransform().SetOffset(mCombatantPos));
 		mpDestroyEffect->Start();
@@ -42,8 +49,12 @@ void cShieldEffect::Update(float deltaTime)
 void cShieldEffect::Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatantPtr source)
 {
 	IStatusEffect::Instantiate(ID, combatant, source);
+
+	App::Property::GetFloat(mpPropList.get(), id("shieldHealth"), mCurrentHealth);
+	App::Property::GetFloat(mpPropList.get(), id("shieldStrength"), mPercentageStrength);
+	App::Property::GetUInt32(mpPropList.get(), id("shieldDestroyEffect"), mDestructionEffect);
+
 	mLastCombatantHealth = combatant->mHealthPoints;
-	EffectsManager.CreateVisualEffect(mDestructionEffect, 0, mpDestroyEffect);
 }
 
 IStatusEffect* cShieldEffect::Clone()
@@ -53,7 +64,16 @@ IStatusEffect* cShieldEffect::Clone()
 
 void cShieldEffect::EndEffect()
 {
-	mpDestroyEffect->Stop();
+	if (mpDestroyEffect)
+	{
+		mpDestroyEffect->Stop(false);
+	}
+	if (mpToolObject)
+	{
+		ToolManager.GetStrategy(mpToolObject->mStrategy)->OnDeselect(mpToolObject.get());
+		mpToolObject->mRechargeTimer.Stop();
+		mpToolObject->mRechargeTimer.Start();
+	}
 	return IStatusEffect::EndEffect();
 }
 

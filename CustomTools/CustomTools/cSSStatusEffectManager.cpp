@@ -84,7 +84,7 @@ cSSStatusEffectManager* cSSStatusEffectManager::Get()
 	return sInstance;
 }
 
-void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t instanceID, cCombatantPtr source)
+void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t instanceID, cCombatantPtr source, cSpaceToolDataPtr pTool)
 {
 	//Get the property list from the status effect's instance ID.
 	PropertyListPtr propList;
@@ -129,9 +129,37 @@ void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t i
 
 		//set the strategy's internal index,
 		status->mInternalID = index;
+		status->mpToolObject = pTool;
 		//then finally add it to the list of active effects.
 		activeStatusEffects.emplace(status->mInternalID, status);
 	}
+}
+
+IStatusEffect* cSSStatusEffectManager::FindStatusEffect(cCombatantPtr pTarget, uint32_t effID)
+{
+	for (auto i = activeStatusEffects.begin(); i != activeStatusEffects.end(); i++)
+	{
+		auto effect = i.mpNode->mValue;
+		if (effect.second->mpCombatant.get() == pTarget.get() && effID == effect.second->mStatusEffectID && !effect.second->mbIsFinished)
+		{
+			return effect.second;
+		}
+	}
+	return nullptr;
+}
+
+void cSSStatusEffectManager::RemoveStatusEffect(cCombatantPtr pTarget, uint32_t effID)
+{
+	for (auto i = activeStatusEffects.begin(); i != activeStatusEffects.end(); i++)
+	{
+		auto effect = i.mpNode->mValue;
+		if (effect.second->mpCombatant.get() == pTarget.get() && effID == effect.second->mStatusEffectID && !effect.second->mbIsFinished)
+		{
+			effect.second->mbIsFinished = true;
+			return;
+		}
+	}
+	return;
 }
 
 void cSSStatusEffectManager::AddStatusType(IStatusEffect* type, uint32_t typeID)

@@ -38,12 +38,13 @@
 
 #include "DamageMultiplierProjectile.h"
 #include "DelayedBeamWeapon.h"
-#include "cSSStatusEffectManager.h"
+#include "GiveSelfStatusTool.h"
 #include "PoisonProjectileWeapon.h"
 
 #include "cSSStatusEffectManager.h"
 #include "cPoisonEffect.h"
 #include "cStunEffect.h";
+#include "cShieldEffect.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -76,6 +77,7 @@ void SetupModStrategies::SetupStrategies()
 	ToolManager.AddStrategy(new DelayedBeamWeapon(), DelayedBeamWeapon::STRATEGY_ID);
 	ToolManager.AddStrategy(new DamageMultiplierProjectile(), DamageMultiplierProjectile::STRATEGY_ID);
 	ToolManager.AddStrategy(new PoisonProjectileWeapon(), PoisonProjectileWeapon::STRATEGY_ID);
+	ToolManager.AddStrategy(new GiveSelfStatusTool(), GiveSelfStatusTool::STRATEGY_ID);
 
 	//Add debug cheats
 #ifdef _DEBUG
@@ -98,6 +100,7 @@ void SetupModStrategies::SetupStrategies()
 
 	SSStatusManager.AddStatusType(new cPoisonEffect(), cPoisonEffect::STRATEGY_ID);
 	SSStatusManager.AddStatusType(new cStunEffect(), cStunEffect::STRATEGY_ID);
+	SSStatusManager.AddStatusType(new cShieldEffect(), cShieldEffect::STRATEGY_ID);
 
 
 	
