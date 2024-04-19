@@ -71,8 +71,8 @@ void cShieldEffect::EndEffect()
 	if (mpToolObject)
 	{
 		ToolManager.GetStrategy(mpToolObject->mStrategy)->OnDeselect(mpToolObject.get());
-		mpToolObject->mRechargeTimer.Stop();
-		mpToolObject->mRechargeTimer.Start();
+		//mpToolObject->mRechargeTimer.Stop();
+		//mpToolObject->mRechargeTimer.Start();
 	}
 	return IStatusEffect::EndEffect();
 }
