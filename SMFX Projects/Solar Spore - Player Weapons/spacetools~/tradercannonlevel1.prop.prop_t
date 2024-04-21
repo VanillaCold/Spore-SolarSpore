@@ -13,7 +13,7 @@ end
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
 float spaceToolEnergyCost 1.5
-key spaceToolImageID ufotools~!0x0BBF8B7F.png
+key spaceToolImageID ufotools~!spg_trader_cannon
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end

@@ -1,30 +1,29 @@
 texts spaceToolDescription
-	(ss_atnames!0x0A) "Auto-Cannon AMMO"
+	"Galactic Laser"
 end
 texts spaceToolDetailDescription
-	(ss_atnames!0x03)  "Use on ground targets. A medium strength, precision weapon."
+	"Use on ground targets. A strong, precision weapon."
 end
-key spaceToolImageID ufotools~!0xD4055DBF.png
-float spaceTradingAbundance 999
+key spaceToolImageID ufotools~!0xD4055DBD.png
+float spaceTradingAbundance 10
 bool spaceTradingAlliesOnly false
-float spaceTradingBaseCost 5000
-float spaceTradingChance 100
-float spaceTradingChanceBard 100
-float spaceTradingChanceDiplomat 100
-float spaceTradingChanceEcologist 100
+float spaceTradingBaseCost 4000000
+float spaceTradingChance 5
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
 float spaceTradingChanceGrob 100
 float spaceTradingChancePlayerBard 100
 float spaceTradingChancePlayerDiplomat 100
 float spaceTradingChancePlayerEcologist 100
-float spaceTradingChancePlayerKnight 100
 float spaceTradingChancePlayerScientist 100
 float spaceTradingChancePlayerShaman 100
 float spaceTradingChancePlayerTrader 100
 float spaceTradingChancePlayerWanderer 100
 float spaceTradingChancePlayerWarrior 100
 float spaceTradingChancePlayerZealot 100
-float spaceTradingChanceScientist 100
-float spaceTradingChanceShaman 100
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 0
 float spaceTradingChanceTrader 100
 float spaceTradingChanceWarrior 100
 float spaceTradingChanceZealot 100
@@ -35,10 +34,10 @@ float spaceTradingCostMultiplierUserEco 1
 float spaceTradingCostMultiplierUserMil 1
 float spaceTradingCostMultiplierWarrior 0.5
 float spaceTradingCostMultiplierZealot 0.75
-uint32 spaceTradingQuantityToOffer 99
-int32 spaceTradingToolReofferRate 20
-key spaceTradingExchangeFor autocannonlevel1.prop
-key spaceTradingRequires autocannonlevel1.prop
-int32 spaceTradingRequiresTier 1
+key spaceTradingExchangeFor laserlevel5.prop
+key spaceTradingRequires laserlevel4.prop
+key spaceTradingRequiresBadge conquerer-4
+key spaceTradingRequiresBadgeOr ecohero-3
+int32 spaceTradingRequiresTier 4
 key spaceTradingToolClass combat
-key spaceTradingType tool
+key spaceTradingType upgrade

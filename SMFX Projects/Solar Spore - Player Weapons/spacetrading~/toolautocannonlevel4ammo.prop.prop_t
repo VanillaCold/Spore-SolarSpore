@@ -1,51 +1,14 @@
 texts spaceToolDescription
-	"Mega Auto-Cannon Ammo"
+	(ss_atnames!0x0D) "Mega Auto-Cannon"
 end
 texts spaceToolDetailDescription
-	(spacegame_tools!0xf561b166) "Use on ground targets. A medium strength, precision weapon."
+	(ss_atnames!0x07)  "Use on ground targets. A strong, precision weapon."
 end
-key spaceToolImageID ufotools~!0xD4055DBF.png
-float spaceTradingAbundance 999
-bool spaceTradingAlliesOnly false
-float spaceTradingBaseCost 5000
-float spaceTradingChance 100
-float spaceTradingChanceBard 100
-float spaceTradingChanceDiplomat 100
-float spaceTradingChanceEcologist 100
-float spaceTradingChanceGrob 100
-float spaceTradingChancePlayerBard 100
-float spaceTradingChancePlayerDiplomat 100
-float spaceTradingChancePlayerEcologist 100
-float spaceTradingChancePlayerKnight 100
-float spaceTradingChancePlayerScientist 100
-float spaceTradingChancePlayerShaman 100
-float spaceTradingChancePlayerTrader 100
-float spaceTradingChancePlayerWanderer 100
-float spaceTradingChancePlayerWarrior 100
-float spaceTradingChancePlayerZealot 100
-float spaceTradingChanceScientist 100
-float spaceTradingChanceShaman 100
-float spaceTradingChanceTrader 100
-float spaceTradingChanceWarrior 100
-float spaceTradingChanceZealot 100
-float spaceTradingCostMultiplierDiplomat 1
-float spaceTradingCostMultiplierTrader 0.65
-float spaceTradingCostMultiplierUserCul 1
-float spaceTradingCostMultiplierUserEco 1
-float spaceTradingCostMultiplierUserMil 1
-float spaceTradingCostMultiplierWarrior 0.5
-float spaceTradingCostMultiplierZealot 0.75
+key parent spacetrading~!toolautocannon1ammo.prop
 key spaceTradingExchangeFor autocannonlevel4.prop
-uint32 spaceTradingQuantityToOffer 99
-int32 spaceTradingToolReofferRate 20
 keys spaceTradingBonusTool
 	autocannonlevel1
 	autocannonlevel2
 	autocannonlevel3
 end
 key spaceTradingRequires autocannonlevel4.prop
-#key spaceTradingRequiresBadge conquerer-2
-#key spaceTradingRequiresBadgeOr ecohero-1
-int32 spaceTradingRequiresTier 1
-key spaceTradingToolClass combat
-key spaceTradingType tool

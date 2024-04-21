@@ -1,0 +1,10 @@
+key parent spacetrading~!toollaser5
+texts spaceToolDescription
+	(ss_atnames!0x038) "Trader Cannon"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x039) "Trader Cannon"
+end
+key spaceToolImageID ufotools~!spg_trader_cannon
+key spaceTradingExchangeFor tradercannonlevel5.prop
+key spaceTradingRequires tradercannonlevel4.prop

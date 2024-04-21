@@ -20,7 +20,11 @@
 0x008 Galactic Auto-Cannon
 0x009 An empire-class, ammo-based precision weapon. Only used by the strongest of empires.
 
-
+0x00A Mini Auto-Cannon Ammo
+0x00B Auto-Cannon Ammo
+0x00C Mega Auto-Cannon Ammo
+0x00D Imperial Auto-Cannon Ammo
+0x00E Galactic Auto-Cannon Ammo
 
 # Doctrination Blaster
 
