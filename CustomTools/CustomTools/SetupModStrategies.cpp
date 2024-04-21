@@ -38,6 +38,9 @@
 #include "ShieldkillerBeam.h"
 #include "TransportProjectile.h"
 
+#include "ShieldkillerBeam.h"
+#include "TransportProjectile.h"
+
 void SetupModStrategies::SetupStrategies()
 {
 	//Add tools

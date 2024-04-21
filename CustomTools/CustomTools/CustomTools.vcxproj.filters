@@ -261,6 +261,12 @@
     <ClCompile Include="ShieldkillerBeam.cpp">
       <Filter>CustomTools\Tools\NPC</Filter>
     </ClCompile>
+    <ClCompile Include="ShieldkillerBeam.cpp">
+      <Filter>CustomTools\Tools\NPC\ShieldkillerBeam</Filter>
+    </ClCompile>
+    <ClCompile Include="TransportProjectile.cpp">
+      <Filter>CustomTools\Tools\NPC\TransportProjectile</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SdkPathConfig.props" />
