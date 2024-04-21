@@ -166,6 +166,27 @@
     <ClInclude Include="TransportProjectile.h">
       <Filter>CustomTools\Tools\NPC\TransportProjectile</Filter>
     </ClInclude>
+    <ClInclude Include="cResearchButtonWinProc.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="cResearchWinProc.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="ResearchPointCaptionWinProc.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenResearchMenu.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="CloseResearchMenu.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="cSSResearchManager.h">
+      <Filter>CustomTools\Systems\Research</Filter>
+    </ClInclude>
+    <ClInclude Include="GetResearchData.h">
+      <Filter>CustomTools\Systems\Research</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -266,6 +287,27 @@
     </ClCompile>
     <ClCompile Include="TransportProjectile.cpp">
       <Filter>CustomTools\Tools\NPC\TransportProjectile</Filter>
+    </ClCompile>
+    <ClCompile Include="cResearchButtonWinProc.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="cResearchWinProc.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="ResearchPointCaptionWinProc.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenResearchMenu.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="CloseResearchMenu.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSResearchManager.cpp">
+      <Filter>CustomTools\Systems\Research</Filter>
+    </ClCompile>
+    <ClCompile Include="GetResearchData.cpp">
+      <Filter>CustomTools\Systems\Research</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
