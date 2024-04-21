@@ -70,8 +70,39 @@ member_detour(AddResearchMenuButton, UI::SpaceGameUI, void()) {
 	}
 };
 
+member_detour(OverrideRandomToolDetour, Simulator::cToolManager, bool(const ResourceKey&, cSpaceToolDataPtr&))
+{
+	bool detoured(const ResourceKey& toolId, cSpaceToolDataPtr& dst)
+	{
+		PropertyListPtr propList;
+		if (PropManager.GetPropertyList(toolId.instanceID, GroupIDs::SpaceTools, propList))
+		{
+			bool isPlaceholder;
+
+			if (App::Property::GetBool(propList.get(), id("SS_IsPlaceholderTool"), isPlaceholder)  && isPlaceholder)
+			{
+				size_t overrideCount;
+				uint32_t* overrideIDs;
+				App::Property::GetArrayUInt32(propList.get(), id("SS_ToolOverrides"),overrideCount,overrideIDs);
+				int index = GetRNG().RandomInt(overrideCount);
+				ResourceKey& newTool = ResourceKey(overrideIDs[index],0,0);
+				return original_function(this, newTool, dst);
+			}
+			else
+			{
+				return original_function(this, toolId, dst);
+			}
+		}
+		else
+		{
+			return original_function(this,toolId,dst);
+		}
+	}
+};
+
 void AttachDetours()
 {
+	OverrideRandomToolDetour::attach(GetAddress(Simulator::cToolManager, LoadTool));
 	//thingytofixparts::attach(0xFEA598); //0x4A0520
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));

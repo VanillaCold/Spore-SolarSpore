@@ -30,9 +30,16 @@
 #include "StarKiller.h"
 #include "cSSArchetypeToolManager.h"
 #include "ToggleSSDebug.h"
+
 #include "MySystem.h"
 #include "cSSResearchManager.h"
 #include "GetResearchData.h"
+
+#include "ShieldkillerBeam.h"
+#include "TransportProjectile.h"
+
+#include "ShieldkillerBeam.h"
+#include "TransportProjectile.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -58,6 +65,8 @@ void SetupModStrategies::SetupStrategies()
 	ToolManager.AddStrategy(new AmmoCreator(), id("AmmoCreator"));
 	ToolManager.AddStrategy(new ReturnPortal(), id("ReturnPortal"));
 	ToolManager.AddStrategy(new StarKiller(), id("Starkiller"));
+	ToolManager.AddStrategy(new ShieldkillerBeam(), ShieldkillerBeam::STRATEGY_ID);
+	ToolManager.AddStrategy(new TransportProjectile(), TransportProjectile::STRATEGY_ID);
 
 
 	//Add debug cheats

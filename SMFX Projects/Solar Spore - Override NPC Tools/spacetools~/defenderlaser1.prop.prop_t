@@ -1,0 +1,31 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Laser"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	(spacegame_tools!0xc5c6da6f) "Laser"
+end
+key spaceToolImageID ufotools~!0x0815A0F5.png
+float spaceToolMaxDamage 35
+float spaceToolMaxRange 50
+float spaceToolMinDamage 35
+float spaceToolMinRange 1
+key spaceToolStrategy DefaultBeam
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+key toolBeamEffectID 0x3DBF256C
+key toolHitCombatantEffectID 0xA826A39E
+key toolHitGroundEffectID 0xA826A39E
+bool toolHitOrientsToTerrain false
+key toolHitPlayerEffectID 0x9C212D54
+key toolHitWaterEffectID 0xA826A39E
+bool toolIsHoming true
+key toolMuzzleEffectID 0x253A34AB
+bool toolPassThroughAll true
+
+bool SS_IsPlaceholderTool true
+uint32s SS_ToolOverrides
+	hash(NPC_shieldlaser1d)
+end
