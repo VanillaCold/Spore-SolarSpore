@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "cShieldEffect.h"
+#include "cSSStatusEffectManager.h"
 
 cShieldEffect::cShieldEffect()// : IStatusEffect()
 {
@@ -55,6 +56,11 @@ void cShieldEffect::Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatant
 	App::Property::GetUInt32(mpPropList.get(), id("shieldDestroyEffect"), mDestructionEffect);
 
 	mLastCombatantHealth = combatant->mHealthPoints;
+	vector<IStatusEffect*> statusesToRemove = SSStatusManager.FindStatusEffectByClass(combatant, TYPE, ID);
+	for each (IStatusEffect * status in statusesToRemove)
+	{
+		status->mbIsFinished = true;
+	}
 }
 
 IStatusEffect* cShieldEffect::Clone()

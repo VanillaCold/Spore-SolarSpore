@@ -1,0 +1,28 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "TestT"
+key spaceToolContext always #planet
+texts spaceToolDescription
+	"TEST SHIELD 2"
+end
+texts spaceToolDetailDescription
+	"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+end
+bool spaceToolDisableOn201Ruins false
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+#bool spaceToolHide false
+#bool toolIsSuperWeapon false
+key spaceToolImageID ufotools~!acgenerator.png #0x826502EB.png
+float spaceToolMaxRange 1
+key spaceToolPanelKey CombatAbilityPanel
+key spaceToolType weapon
+float spaceToolRechargeRate 60
+uint32 SS-StatusEffect hash(BasicShield2)
+key spaceToolStrategy InflictSelf
+bool toolDeselectsAfterUse true
+bool toolHitOrientsToTerrain false
+bool toolPreventsPlanetExit false
+bool toolUseOnActivate true
+texts toolTargetFlagsFailMessage
+	"whoops"
+end

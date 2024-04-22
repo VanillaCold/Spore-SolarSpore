@@ -44,6 +44,7 @@ public:
 
 	void AddStatusEffect(cCombatantPtr, uint32_t instanceID, cCombatantPtr source = nullptr, cSpaceToolDataPtr pTool = nullptr);
 	IStatusEffect* FindStatusEffect(cCombatantPtr pTarget, uint32_t effID);
+	vector<IStatusEffect*> FindStatusEffectByClass(cCombatantPtr pTarget, uint32_t pClassID, uint32_t pWhitelistType);
 	void RemoveStatusEffect(cCombatantPtr pTarget, uint32_t effID);
 	void AddStatusType(IStatusEffect* type, uint32_t typeID);
 

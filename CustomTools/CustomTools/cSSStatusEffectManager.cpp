@@ -148,6 +148,26 @@ IStatusEffect* cSSStatusEffectManager::FindStatusEffect(cCombatantPtr pTarget, u
 	return nullptr;
 }
 
+vector<IStatusEffect*> cSSStatusEffectManager::FindStatusEffectByClass(cCombatantPtr pTarget, uint32_t pClassID, uint32_t pWhitelistType)
+{
+	vector<IStatusEffect*> allEffects;
+	for (auto i = activeStatusEffects.begin(); i != activeStatusEffects.end(); i++)
+	{
+		auto effect = i.mpNode->mValue;
+		if (effect.second)
+		{
+			if (effect.second->mpCombatant.get() == pTarget.get() && effect.second->Cast(pClassID))
+			{
+				if (effect.second->mStatusType != pWhitelistType)
+				{
+					allEffects.push_back(effect.second);
+				}
+			}
+		}
+	}
+	return allEffects;
+}
+
 void cSSStatusEffectManager::RemoveStatusEffect(cCombatantPtr pTarget, uint32_t effID)
 {
 	for (auto i = activeStatusEffects.begin(); i != activeStatusEffects.end(); i++)
