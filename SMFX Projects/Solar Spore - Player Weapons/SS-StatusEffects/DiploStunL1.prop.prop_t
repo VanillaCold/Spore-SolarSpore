@@ -1,0 +1,6 @@
+string8 name "level 1 diplo stun"
+
+float statusEffectTimer 0.5
+key statusVisualEffect EP1_dec_spotlight_blue
+uint32 statusEffectType hash(Stun)
+float statusDamage 0

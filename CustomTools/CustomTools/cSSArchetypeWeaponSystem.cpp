@@ -35,7 +35,6 @@ Simulator::Attribute cSSArchetypeWeaponSystem::ATTRIBUTES[] = {
 void cSSArchetypeWeaponSystem::Initialize() {
 	vector<uint32_t> propIDs;
 	PropManager.GetPropertyListIDs(id("SS-WeaponSets"), propIDs);
-
 	for each (uint32_t prop in propIDs)
 	{
 		ArchetypeWeapons weaponClass = ArchetypeWeapons(ResourceKey(prop, TypeIDs::prop, id("SS-WeaponSets")));

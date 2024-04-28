@@ -80,3 +80,22 @@
 
 0x038 Galactic Moneydrones
 0x039 An empire-class projectile that launches drones at the target, producing money from scrap obtained.
+
+
+
+# Diplomat weapon
+
+0x040 Mini Taser-Dazers
+0x041 A weak projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons. 
+
+0x042 Taser-Dazers
+0x043 An adequate projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons.
+
+0x044 Mega Taser-Dazers
+0x045 A projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons.
+
+0x046 Imperial Taser-Dazers
+0x047 A strong projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons.
+
+0x048 Galactic Taser-Dazers
+0x049 An empire-class projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons.
