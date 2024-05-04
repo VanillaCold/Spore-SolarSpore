@@ -217,6 +217,9 @@
     <ClInclude Include="GiveSelfStatusTool.h">
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClInclude>
+    <ClInclude Include="PoisonLaserWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -361,6 +364,9 @@
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClCompile>
     <ClCompile Include="GiveSelfStatusTool.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="PoisonLaserWeapon.cpp">
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClCompile>
   </ItemGroup>

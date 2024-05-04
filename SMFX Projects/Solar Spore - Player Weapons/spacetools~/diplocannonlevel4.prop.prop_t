@@ -5,7 +5,7 @@ int32 spaceToolBuyCost 500
 key spaceToolContext planet
 float spaceToolDamageArea 5
 texts spaceToolDescription
-	(ss_atnames!0x046) "TazerDazer"
+	(ss_atnames!0x046) "Imperial TazerDazer"
 end
 texts spaceToolDetailDescription
 	(ss_atnames!0x047) "Fires a weak burst in a straight line.  Good against ground targets."

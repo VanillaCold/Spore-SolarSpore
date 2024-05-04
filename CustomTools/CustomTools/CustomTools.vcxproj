@@ -183,6 +183,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="PlanetDebuster.h" />
+    <ClInclude Include="PoisonLaserWeapon.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="PoisonProjectileWeapon.h" />
     <ClInclude Include="RandomTool.h" />
     <ClInclude Include="RegalShield.h" />
@@ -307,6 +311,10 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="PlanetDebuster.cpp" />
+    <ClCompile Include="PoisonLaserWeapon.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="PoisonProjectileWeapon.cpp" />
     <ClCompile Include="RandomTool.cpp" />
     <ClCompile Include="RegalShield.cpp" />
