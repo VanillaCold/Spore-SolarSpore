@@ -6,9 +6,9 @@ texts spaceToolDetailDescription
 end
 key parent spacetrading~!toolautocannon1ammo.prop
 key spaceTradingExchangeFor autocannonlevel4.prop
-keys spaceTradingBonusTool
-	autocannonlevel1
-	autocannonlevel2
-	autocannonlevel3
-end
+#keys spaceTradingBonusTool
+#	autocannonlevel1
+#	autocannonlevel2
+#	autocannonlevel3
+#end
 key spaceTradingRequires autocannonlevel4.prop

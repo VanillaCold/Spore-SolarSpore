@@ -1,6 +1,6 @@
 string8 name "level 3 diplo stun"
 
 float statusEffectTimer 1.25
-key statusVisualEffect EP1_dec_spotlight_blue
+key statusVisualEffect SG_ufo_static_cling_stunned_vehicle
 uint32 statusEffectType hash(Stun)
 float statusDamage 0

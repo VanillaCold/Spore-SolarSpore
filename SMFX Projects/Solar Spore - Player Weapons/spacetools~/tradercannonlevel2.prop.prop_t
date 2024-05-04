@@ -43,7 +43,9 @@ float toolProjectileTurnRate 0.1
 
 
 key spaceToolStrategy PoisonProjectileWeapon
-uint32 SS-StatusEffect hash(MoneyDronesL2)
+uint32s SS-StatusEffect 
+	hash(MoneyDronesL2)
+end
 
 float toolRelationshipDelta -0.1
 int32s toolTargetFlags

@@ -19,15 +19,19 @@ bool PoisonProjectileWeapon::OnHit(Simulator::cSpaceToolData* pTool, const Vecto
 
 	if (GameViewManager.IntersectSphere(position, pTool->mDamageRadius*4,test,true))
 	{
-
+		uint32_t* statusIDs;
+		size_t size;
+		App::Property::GetArrayUInt32(pTool->mpPropList.get(), id("SS-StatusEffect"), size, statusIDs);
 		for each (cSpatialObjectPtr spatial in test)
 		{
 			cCombatantPtr a = object_cast<Simulator::cCombatant>(spatial);
 			if (a && spatial != pTool->mpToolOwner)
 			{
-				uint32_t statusID;
-				App::Property::GetUInt32(pTool->mpPropList.get(), id("SS-StatusEffect"), statusID);
-				SSStatusManager.AddStatusEffect(a, statusID, object_cast<Simulator::cCombatant>(pTool->mpToolOwner));
+				
+				for(int i = 0;i<size;i++)
+				{
+					SSStatusManager.AddStatusEffect(a, statusIDs[i], object_cast<Simulator::cCombatant>(pTool->mpToolOwner));
+				}
 			}
 		}
 	}

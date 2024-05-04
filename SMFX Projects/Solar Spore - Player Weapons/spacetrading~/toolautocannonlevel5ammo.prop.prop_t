@@ -8,10 +8,10 @@ end
 
 key parent spacetrading~!toolautocannon1ammo.prop
 key spaceTradingExchangeFor autocannonlevel5.prop
-keys spaceTradingBonusTool
-	autocannonlevel1
-	autocannonlevel2
-	autocannonlevel3
-	autocannonlevel4
-end
+#keys spaceTradingBonusTool
+#	autocannonlevel1
+#	autocannonlevel2
+#	autocannonlevel3
+#	autocannonlevel4
+#end
 key spaceTradingRequires autocannonlevel5.prop
