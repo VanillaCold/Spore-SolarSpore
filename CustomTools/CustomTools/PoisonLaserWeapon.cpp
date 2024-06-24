@@ -41,7 +41,7 @@ bool PoisonLaserWeapon::OnHit(Simulator::cSpaceToolData* pTool, const Vector3& p
 	{
 		if (pTool->mpToolOwner)
 		{
-			SSStatusManager.AddStatusEffect(pTool->mpToolOwner, otherStatusID);
+			SSStatusManager.AddStatusEffect(object_cast<Simulator::cCombatant>(pTool->mpToolOwner), otherStatusID);
 		}
 	}
 

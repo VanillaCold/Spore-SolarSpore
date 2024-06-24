@@ -70,12 +70,34 @@ member_detour(AddResearchMenuButton, UI::SpaceGameUI, void()) {
 	}
 };
 
+//FUN_00c720a0
+static_detour(SpiceGenDetour, float(float, float, float, float, float, float, float))
+{
+	float detoured(float rawIncome, float a2, float a3, float a4, float a5, float a6, float a7)
+	{
+
+		if (PropManager.HasPropertyList(id("ss_logarithmiccolonies"), id("solarsporeconfig")))
+		{
+			float newIncome = 400 * log10f((rawIncome) / 40);
+			newIncome = max(0.0f, newIncome);
+
+
+			// SporeDebugPrint("%f, %f, %f, %x, %x, %x, %x", newIncome, a2, a3, a4, a5, a6, a7);
+			auto a = original_function(newIncome, a2, a3, a4, a5, a6, a7);
+			return a;
+		}
+		return original_function(rawIncome, a2, a3, a4, a5, a6, a7);
+	}
+};
+
+
 void AttachDetours()
 {
 	//thingytofixparts::attach(0xFEA598); //0x4A0520
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 	AddResearchMenuButton::attach(GetAddress(UI::SpaceGameUI, Load));
+	SpiceGenDetour::attach(Address(0x00c720a0));
 }
 
 

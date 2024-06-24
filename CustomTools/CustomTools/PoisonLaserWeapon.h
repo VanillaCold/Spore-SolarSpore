@@ -10,8 +10,8 @@ class PoisonLaserWeapon
 {
 public:
 
-	static const uint32_t STRATEGY_ID = id("PoisonProjectileWeapon");
-	static const uint32_t TYPE = id("PoisonProjectileWeapon");
+	static const uint32_t STRATEGY_ID = id("PoisonLaserWeapon");
+	static const uint32_t TYPE = id("PoisonLaserWeapon");
 
 	PoisonLaserWeapon();
 	~PoisonLaserWeapon();
