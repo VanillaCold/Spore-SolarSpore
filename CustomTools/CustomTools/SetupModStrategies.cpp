@@ -41,6 +41,7 @@
 #include "GiveSelfStatusTool.h"
 #include "PoisonProjectileWeapon.h"
 #include "PoisonLaserWeapon.h"
+#include "StrengthIncreasingLaser.h"
 
 #include "cSSStatusEffectManager.h"
 #include "cPoisonEffect.h"
@@ -80,6 +81,7 @@ void SetupModStrategies::SetupStrategies()
 	ToolManager.AddStrategy(new PoisonProjectileWeapon(), PoisonProjectileWeapon::STRATEGY_ID);
 	ToolManager.AddStrategy(new GiveSelfStatusTool(), GiveSelfStatusTool::STRATEGY_ID);
 	ToolManager.AddStrategy(new PoisonLaserWeapon(), PoisonLaserWeapon::STRATEGY_ID);
+	ToolManager.AddStrategy(new StrengthIncreasingLaser(), StrengthIncreasingLaser::STRATEGY_ID);
 
 	//Add debug cheats
 #ifdef _DEBUG

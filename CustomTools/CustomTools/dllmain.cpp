@@ -51,41 +51,52 @@ void Dispose()
 member_detour(AddResearchMenuButton, UI::SpaceGameUI, void()) {
 	void detoured()
 	{
+		//First, let the actual UI load in.
 		original_function(this);
+
+		//Get the property list of research, to confirm that research is enabled.
 		PropertyListPtr list;
 		if (PropManager.GetPropertyList(id("ss_enableresearch"), id("solarsporeconfig"), list))
 		{
+			//Find the parent window,
 			IWindowPtr parentWindow = WindowManager.GetMainWindow()->FindWindowByID(0x07CE6631);
+			//and initialise a new SPUI layout.
 			UTFWin::UILayout* layout = new UTFWin::UILayout();
 
+			//Load the research button
 			layout->LoadByID(id("buttonspui"));
+			//Set the parent of the research button SPUI.
 			layout->SetParentWindow(parentWindow.get());
+			//Add window procedures.
 			layout->FindWindowByID(id("OpenResearchButton"))->AddWinProc(new OpenResearchMenu());
 			layout->FindWindowByID(id("RPCaptionHolder"))->AddWinProc(new ResearchPointCaptionWinProc());
+			//Find the OpenResearch window,
 			auto main = layout->FindWindowByID(id("OpenResearch"));
+			//and set the relative position.
 			main->SetLocation(0, -35.0f);
 
+			//Make the SPUI layout visible.
 			layout->SetVisible(true);
 		}
 	}
 };
 
 //FUN_00c720a0
-static_detour(SpiceGenDetour, float(float, float, float, float, float, float, float))
+static_detour(SpiceGenDetour, float(float, float, float, float, float, float, int))
 {
-	float detoured(float rawIncome, float a2, float a3, float a4, float a5, float a6, float a7)
+	float detoured(float rawIncome, float a2, float a3, float a4, float a5, float a6, int a7)
 	{
-
+		//If the feature's enabled,
 		if (PropManager.HasPropertyList(id("ss_logarithmiccolonies"), id("solarsporeconfig")))
 		{
+			//Calculate the new income using logarithms.
 			float newIncome = 400 * log10f((rawIncome) / 40);
+			//And make sure it's non-negative, as log(0) is undefined and equates to negative infinity here.  
 			newIncome = max(0.0f, newIncome);
-
-
-			// SporeDebugPrint("%f, %f, %f, %x, %x, %x, %x", newIncome, a2, a3, a4, a5, a6, a7);
-			auto a = original_function(newIncome, a2, a3, a4, a5, a6, a7);
-			return a;
+			//Return the original function, using the new raw income.
+			return original_function(newIncome, a2, a3, a4, a5, a6, a7);
 		}
+		//If it's disabled, just return the original function.
 		return original_function(rawIncome, a2, a3, a4, a5, a6, a7);
 	}
 };
@@ -93,11 +104,8 @@ static_detour(SpiceGenDetour, float(float, float, float, float, float, float, fl
 
 void AttachDetours()
 {
-	//thingytofixparts::attach(0xFEA598); //0x4A0520
-	// Call the attach() method on any detours you want to add
-	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 	AddResearchMenuButton::attach(GetAddress(UI::SpaceGameUI, Load));
-	SpiceGenDetour::attach(Address(0x00c720a0));
+	//SpiceGenDetour::attach(ModAPI::ChooseAddress(Address(0x00c71200),Address(0x00c720a0)));
 }
 
 

@@ -205,6 +205,10 @@
     <ClInclude Include="StaffofDeath.h" />
     <ClInclude Include="StarKiller.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StrengthIncreasingLaser.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="targetver.h" />
     <ClInclude Include="ToggleSSDebug.h">
       <SubType>
@@ -335,6 +339,10 @@
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StrengthIncreasingLaser.cpp">
+      <SubType>
+      </SubType>
     </ClCompile>
     <ClCompile Include="ToggleSSDebug.cpp">
       <SubType>

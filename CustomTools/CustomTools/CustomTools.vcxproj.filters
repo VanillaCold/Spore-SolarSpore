@@ -220,6 +220,9 @@
     <ClInclude Include="PoisonLaserWeapon.h">
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClInclude>
+    <ClInclude Include="StrengthIncreasingLaser.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -367,6 +370,9 @@
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClCompile>
     <ClCompile Include="PoisonLaserWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="StrengthIncreasingLaser.cpp">
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClCompile>
   </ItemGroup>
