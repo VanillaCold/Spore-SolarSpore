@@ -15,7 +15,7 @@ public:
 	StrengthIncreasingLaser();
 	~StrengthIncreasingLaser();
 
-	virtual bool WhileFiring(Simulator::cSpaceToolData* pTool, const Vector3& aimPoint, int) override;
+	virtual bool OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position, Simulator::SpaceToolHit hitType, int) override;
 	virtual bool OnMouseUp(Simulator::cSpaceToolData* pTool) override;
 	virtual bool WhileAiming(Simulator::cSpaceToolData* pTool, const Vector3& aimPoint, bool showErrors) override;
 
