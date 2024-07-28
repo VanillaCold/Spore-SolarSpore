@@ -24,6 +24,7 @@ float spaceToolMinDamage 15
 
 float SS-maxToolDPS 200
 float SS-msHp-PowConstant 0.99
+float SS-energyUsage-MultConst 1.05
 
 key spaceToolPanelKey combat_panel_top~
 key spaceToolStrategy StrengthIncreasingLaser

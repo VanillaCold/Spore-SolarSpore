@@ -17,12 +17,14 @@ bool StrengthIncreasingLaser::OnHit(Simulator::cSpaceToolData* pTool, const Vect
 
 	float powConstant = 1;
 	float maxDPS = 9999;
+	float energyConstant = 20 / 19;
 	App::Property::GetFloat(pTool->mpPropList.get(), id("SS-maxToolDPS"), maxDPS);
 	App::Property::GetFloat(pTool->mpPropList.get(), id("SS-msHp-PowConstant"), powConstant);
+	App::Property::GetFloat(pTool->mpPropList.get(), id("SS-energyUsage-MultConst"), energyConstant);
 
 	if (pTool->mpBeam->mMsPerDamagePoint < maxDPS)
 	{
-		pTool->mEnergyCost *= 20 / 19;//* GameTimeManager.GetSpeed() / 16;
+		pTool->mEnergyCost *= energyConstant;//* GameTimeManager.GetSpeed() / 16;
 	}
 
 	if (pTool->mpBeam)
