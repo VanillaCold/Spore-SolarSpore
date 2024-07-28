@@ -82,30 +82,32 @@ member_detour(AddResearchMenuButton, UI::SpaceGameUI, void()) {
 };
 
 //FUN_00c720a0
-static_detour(SpiceGenDetour, float(float, float, float, float, float, float, int))
+static_detour(SpiceGenDetour, float(float, float, float, bool, bool, bool, float, int, bool))
 {
-	float detoured(float rawIncome, float a2, float a3, float a4, float a5, float a6, int a7)
+	float detoured(float rawIncome, float maxOutput, float extraFactor, bool isHomeWorld,
+		bool useSuperpowerMultiplier, bool useStorageMultiplier, float finalFactor, int numCities, bool limitOutput)
 	{
 		//If the feature's enabled,
 		if (PropManager.HasPropertyList(id("ss_logarithmiccolonies"), id("solarsporeconfig")))
 		{
 			//Calculate the new income using logarithms.
-			float newIncome = 400 * log10f((rawIncome) / 40);
+			float newIncome = 400 * log10f((rawIncome*numCities) / 40) / numCities;
 			//And make sure it's non-negative, as log(0) is undefined and equates to negative infinity here.  
 			newIncome = max(0.0f, newIncome);
 			//Return the original function, using the new raw income.
-			return original_function(newIncome, a2, a3, a4, a5, a6, a7);
+			return original_function(newIncome, maxOutput, extraFactor, false, useSuperpowerMultiplier, useStorageMultiplier, finalFactor, numCities, limitOutput);
 		}
 		//If it's disabled, just return the original function.
-		return original_function(rawIncome, a2, a3, a4, a5, a6, a7);
+		return original_function(rawIncome, maxOutput, extraFactor, isHomeWorld, useSuperpowerMultiplier, useStorageMultiplier, finalFactor, numCities, limitOutput);
 	}
 };
 
 
 void AttachDetours()
 {
+	//Simulator::cPlanetRecord::CalculateDeltaSpiceProduction
 	AddResearchMenuButton::attach(GetAddress(UI::SpaceGameUI, Load));
-	//SpiceGenDetour::attach(ModAPI::ChooseAddress(Address(0x00c71200),Address(0x00c720a0)));
+	SpiceGenDetour::attach(GetAddress(Simulator::cPlanetRecord, CalculateDeltaSpiceProduction)); //ModAPI::ChooseAddress(Address(0x00c71200),Address(0x00c720a0)));
 }
 
 
