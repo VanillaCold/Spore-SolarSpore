@@ -1,9 +1,12 @@
 #include "stdafx.h"
 #include "cChargeEffect.h"
 #include "cSSStatusEffectManager.h"
+#include "cInstantDamageEffect.h"
 
 cChargeEffect::cChargeEffect()
 {
+	mMinDamage = 0;
+	mMaxDamage = 0;
 }
 
 
@@ -23,18 +26,27 @@ void cChargeEffect::Update(float deltaTime)
 		return;
 	}
 
+	SporeDebugPrint("%f", sourceSpeed);
+
 	eastl::vector<cSpatialObjectPtr> collidedObjects;
+	float diff = mMaxDamage - mMinDamage;
+	float clampedDamage = clamp(mMinDamage, mMinDamage + (diff * log2(sourceSpeed) / 4), mMaxDamage);
 
 	if (GameViewManager.IntersectSphere(locomotiveOwner->mPosition, locomotiveOwner->GetBoundingRadius()+4*(log2(sourceSpeed)), collidedObjects, true))
 	{
 		uint32_t statusID;
-		App::Property::GetUInt32(mpPropList.get(), id("SS-RamInflictedStatus"), statusID);
+		App::Property::GetUInt32(mpPropList.get(), id("statusToGiveWhenRammed"), statusID);
 		for each (cSpatialObjectPtr spatial in collidedObjects)
 		{
 			cCombatantPtr hitCombatant = object_cast<Simulator::cCombatant>(spatial);
 			if (hitCombatant != mpCombatant)
 			{
-				SSStatusManager.AddStatusEffect(hitCombatant, statusID, mpCombatant);
+				auto effect = SSStatusManager.AddStatusEffect(hitCombatant, statusID, mpCombatant);
+				auto damageEffect = object_cast<cInstantDamageEffect>(effect);
+				if (damageEffect)
+				{
+					damageEffect->mDamage = clampedDamage;
+				}
 			}
 		}
 	}
@@ -42,7 +54,10 @@ void cChargeEffect::Update(float deltaTime)
 
 void cChargeEffect::Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatantPtr source)
 {
-	return IStatusEffect::Instantiate(ID, combatant, source);
+	IStatusEffect::Instantiate(ID, combatant, source);
+	App::Property::GetFloat(mpPropList.get(), id("statusMinDamage"), mMinDamage);
+	App::Property::GetFloat(mpPropList.get(), id("statusMaxDamage"), mMaxDamage);
+
 }
 
 IStatusEffect* cChargeEffect::Clone()

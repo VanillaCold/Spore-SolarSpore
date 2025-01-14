@@ -106,6 +106,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="ChangeSpecies.h" />
+    <ClInclude Include="cInstantDamageEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="CloseResearchMenu.h">
       <SubType>
       </SubType>
@@ -234,6 +238,10 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="ChangeSpecies.cpp" />
+    <ClCompile Include="cInstantDamageEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="CloseResearchMenu.cpp">
       <SubType>
       </SubType>

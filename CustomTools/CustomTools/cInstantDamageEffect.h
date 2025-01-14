@@ -3,26 +3,24 @@
 #include <Spore\BasicIncludes.h>
 #include "IStatusEffect.h"
 
-#define cChargeEffectPtr intrusive_ptr<cChargeEffect>
+#define cInstantDamageEffectPtr intrusive_ptr<cInstantDamageEffect>
 
-class cChargeEffect 
+class cInstantDamageEffect 
 	: public IStatusEffect
-	, public DefaultRefCounted
 {
 public:
-	static const uint32_t TYPE = id("cChargeEffect");
-	static const uint32_t STRATEGY_ID = id("Charge");
+	static const uint32_t TYPE = id("cInstantDamageEffect");
+	static const uint32_t STRATEGY_ID = id("InstantDamage");
 	
-	cChargeEffect();
-	~cChargeEffect();
+	cInstantDamageEffect();
+	~cInstantDamageEffect();
 
 
 	virtual void Update(float deltaTime) override;
 	virtual void Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatantPtr source = nullptr) override;
 	virtual IStatusEffect* Clone() override;
 
-	float mMinDamage;
-	float mMaxDamage;
+	float mDamage;
 
 	void* Cast(uint32_t type) const override;
 };

@@ -45,7 +45,6 @@ void MySystem::Initialize() {
 
 void MySystem::Dispose() {
 	sInstance = nullptr;
-	App::ConsolePrintF("Simulator should be over now. >:)");
 }
 
 void MySystem::Update(int deltaTime, int deltaGameTime) {

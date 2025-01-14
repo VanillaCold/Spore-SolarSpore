@@ -1,0 +1,6 @@
+float statusEffectTimer 1500000000000
+key statusVisualEffect animations~
+uint32 statusEffectType hash(Charge)
+
+float statusMinDamage 15
+float statusMaxDamage 45

@@ -42,6 +42,14 @@ void cSSStatusEffectManager::Dispose() {
 }
 
 void cSSStatusEffectManager::Update(int deltaTime, int deltaGameTime) {
+
+	while (!mpEffectsToRemove.empty())
+	{
+		IStatusEffect* effect = mpEffectsToRemove.top();
+		mpEffectsToRemove.pop();
+		delete effect;
+	}
+
 	vector<uint32_t> invalidStatuses{};
 	for(auto i = activeStatusEffects.begin(); i != activeStatusEffects.end();i++)
 	{
@@ -84,7 +92,7 @@ cSSStatusEffectManager* cSSStatusEffectManager::Get()
 	return sInstance;
 }
 
-void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t instanceID, cCombatantPtr source, cSpaceToolDataPtr pTool)
+IStatusEffect* cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t instanceID, cCombatantPtr source, cSpaceToolDataPtr pTool)
 {
 	//Get the property list from the status effect's instance ID.
 	PropertyListPtr propList;
@@ -118,7 +126,7 @@ void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t i
 				effect.second->mTimer = 0;
 				App::Property::GetFloat(propList.get(), id("statusEffectTimer"), effect.second->mTimer);
 				ModAPI::Log("Restoring timer on existing combatant.");
-				return;
+				return effect.second;
 			}
 		}
 		//If not...
@@ -132,6 +140,8 @@ void cSSStatusEffectManager::AddStatusEffect(cCombatantPtr combatant, uint32_t i
 		status->mpToolObject = pTool;
 		//then finally add it to the list of active effects.
 		activeStatusEffects.emplace(status->mInternalID, status);
+
+		return status;
 	}
 }
 

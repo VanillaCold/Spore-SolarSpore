@@ -229,6 +229,9 @@
     <ClInclude Include="cChargeEffect.h">
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClInclude>
+    <ClInclude Include="cInstantDamageEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -382,6 +385,9 @@
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClCompile>
     <ClCompile Include="cChargeEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cInstantDamageEffect.cpp">
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClCompile>
   </ItemGroup>
