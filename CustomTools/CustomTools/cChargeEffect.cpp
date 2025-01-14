@@ -21,7 +21,7 @@ void cChargeEffect::Update(float deltaTime)
 	auto locomotiveOwner = object_cast<Simulator::cLocomotiveObject>(mpCombatant);
 	auto sourceSpeed = locomotiveOwner->GetVelocity().Length();
 
-	if (sourceSpeed == 0 || log2(sourceSpeed) < 0)
+	if (sourceSpeed == 0 || log2(sourceSpeed) < 4)
 	{
 		return;
 	}
@@ -30,9 +30,9 @@ void cChargeEffect::Update(float deltaTime)
 
 	eastl::vector<cSpatialObjectPtr> collidedObjects;
 	float diff = mMaxDamage - mMinDamage;
-	float clampedDamage = clamp(mMinDamage, mMinDamage + (diff * log2(sourceSpeed) / 4), mMaxDamage);
+	float clampedDamage = clamp(mMinDamage, mMinDamage + (diff * log2(sourceSpeed) / 8), mMaxDamage);
 
-	if (GameViewManager.IntersectSphere(locomotiveOwner->mPosition, locomotiveOwner->GetBoundingRadius()+4*(log2(sourceSpeed)), collidedObjects, true))
+	if (GameViewManager.IntersectSphere(locomotiveOwner->mPosition, locomotiveOwner->GetBoundingRadius()+10, collidedObjects, true))
 	{
 		uint32_t statusID;
 		App::Property::GetUInt32(mpPropList.get(), id("statusToGiveWhenRammed"), statusID);
@@ -45,7 +45,7 @@ void cChargeEffect::Update(float deltaTime)
 				auto damageEffect = object_cast<cInstantDamageEffect>(effect);
 				if (damageEffect)
 				{
-					damageEffect->mDamage = clampedDamage;
+					damageEffect->mDamage = clampedDamage / 100;
 				}
 			}
 		}

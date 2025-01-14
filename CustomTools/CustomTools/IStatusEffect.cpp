@@ -19,6 +19,7 @@ IStatusEffect::IStatusEffect()
 
 void IStatusEffect::Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatantPtr source)
 {
+
 	mbIsExample = false;
 	mStatusType = 0;
 	PropManager.GetPropertyList(ID, id("SS-StatusEffects"), mpPropList);
@@ -33,7 +34,17 @@ void IStatusEffect::Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatant
 
 	App::Property::GetUInt32(mpPropList.get(), id("statusEffectType"), mStatusType);
 
+
+
 	mpCombatant = combatant;
+
+
+	if (combatant == nullptr)
+	{
+		mbIsFinished = true;
+		return;
+	}
+	
 	mCombatantPos = combatant->ToSpatialObject()->mPosition;
 	mCombatantRot = combatant->ToSpatialObject()->mOrientation;
 
@@ -51,7 +62,10 @@ void IStatusEffect::Update(float deltaTime)
 {
 	mTimer -= deltaTime;
 	//SporeDebugPrint("%f", deltaTime);
-	visualEffect->SetSourceTransform(visualEffect->GetSourceTransform().SetOffset(mpCombatant->ToSpatialObject()->mPosition));
+	if (visualEffect)
+	{
+		visualEffect->SetSourceTransform(visualEffect->GetSourceTransform().SetOffset(mpCombatant->ToSpatialObject()->mPosition));
+	}
 
 	if (mTimer <= 0 || !mpCombatant || mpCombatant->ToGameData()->mbIsDestroyed)
 	{
@@ -61,7 +75,10 @@ void IStatusEffect::Update(float deltaTime)
 
 void IStatusEffect::EndEffect()
 {
-	visualEffect->Stop(0);
+	if (visualEffect)
+	{
+		visualEffect->Stop(0);
+	}
 	delete this;
 }
 
