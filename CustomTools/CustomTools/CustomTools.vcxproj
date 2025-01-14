@@ -101,6 +101,10 @@
     <ClInclude Include="AmmoCreator.h" />
     <ClInclude Include="BerserkerRage.h" />
     <ClInclude Include="Capacitor.h" />
+    <ClInclude Include="cChargeEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ChangeSpecies.h" />
     <ClInclude Include="CloseResearchMenu.h">
       <SubType>
@@ -225,6 +229,10 @@
     <ClCompile Include="AmmoCreator.cpp" />
     <ClCompile Include="BerserkerRage.cpp" />
     <ClCompile Include="Capacitor.cpp" />
+    <ClCompile Include="cChargeEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="ChangeSpecies.cpp" />
     <ClCompile Include="CloseResearchMenu.cpp">
       <SubType>

@@ -71,6 +71,9 @@
     <Filter Include="CustomTools\Systems\Status effects\IStatusEffects">
       <UniqueIdentifier>{9517c795-ccb1-4a9a-b28f-6c2751fceba8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CustomTools\Tools\Archetype\ChargeTools">
+      <UniqueIdentifier>{edd4cef3-6129-4a45-8cc3-b856ce326fb2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -223,6 +226,9 @@
     <ClInclude Include="StrengthIncreasingLaser.h">
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClInclude>
+    <ClInclude Include="cChargeEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -374,6 +380,9 @@
     </ClCompile>
     <ClCompile Include="StrengthIncreasingLaser.cpp">
       <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="cChargeEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
