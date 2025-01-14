@@ -34,7 +34,7 @@ void cPoisonEffect::Update(float deltaTime)
 			polID = mpSource->GetPoliticalID();
 		}
 
-		mpCombatant->func18h(damage * deltaTime, polID, 0, Vector3(0, 0, 0), nullptr);
+		mpCombatant->TakeDamage(damage * deltaTime, polID, 0, Vector3(0, 0, 0), nullptr);
 		mMoneyLost += mCostPerSecond * deltaTime;
 
 		if (abs(mMoneyLost) >= 50 && mpSource && StarManager.GetEmpire(mpSource->GetPoliticalID()))

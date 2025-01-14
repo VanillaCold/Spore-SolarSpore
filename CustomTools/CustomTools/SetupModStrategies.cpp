@@ -47,6 +47,7 @@
 #include "cPoisonEffect.h"
 #include "cStunEffect.h";
 #include "cShieldEffect.h"
+#include "cChargeEffect.h";
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -105,6 +106,7 @@ void SetupModStrategies::SetupStrategies()
 	SSStatusManager.AddStatusType(new cPoisonEffect(), cPoisonEffect::STRATEGY_ID);
 	SSStatusManager.AddStatusType(new cStunEffect(), cStunEffect::STRATEGY_ID);
 	SSStatusManager.AddStatusType(new cShieldEffect(), cShieldEffect::STRATEGY_ID);
+	SSStatusManager.AddStatusType(new cChargeEffect(), cChargeEffect::STRATEGY_ID);
 
 
 	

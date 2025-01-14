@@ -21,7 +21,5 @@ public:
 	virtual void Instantiate(uint32_t ID, cCombatantPtr combatant, cCombatantPtr source = nullptr) override;
 	virtual IStatusEffect* Clone() override;
 
-	int AddRef() override;
-	int Release() override;
 	void* Cast(uint32_t type) const override;
 };
