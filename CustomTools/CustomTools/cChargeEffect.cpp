@@ -30,7 +30,7 @@ void cChargeEffect::Update(float deltaTime)
 
 	eastl::vector<cSpatialObjectPtr> collidedObjects;
 	float diff = mMaxDamage - mMinDamage;
-	float clampedDamage = clamp(mMinDamage, mMinDamage + (diff * log2(sourceSpeed) / 8), mMaxDamage);
+	float clampedDamage = clamp(mMinDamage, mMinDamage + (diff * log2(sourceSpeed) / 7), mMaxDamage);
 
 	if (GameViewManager.IntersectSphere(locomotiveOwner->mPosition, locomotiveOwner->GetBoundingRadius()+10, collidedObjects, true))
 	{
@@ -45,7 +45,7 @@ void cChargeEffect::Update(float deltaTime)
 				auto damageEffect = object_cast<cInstantDamageEffect>(effect);
 				if (damageEffect)
 				{
-					damageEffect->mDamage = clampedDamage / 100;
+					damageEffect->mDamage = clampedDamage / 10;
 				}
 			}
 		}
