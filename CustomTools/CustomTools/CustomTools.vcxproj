@@ -162,6 +162,10 @@
     <ClInclude Include="Detente.h" />
     <ClInclude Include="EraseSpecies.h" />
     <ClInclude Include="ConvertPlanet.h" />
+    <ClInclude Include="FlamethrowerWeapon.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="GetResearchData.h">
       <SubType>
       </SubType>
@@ -301,6 +305,10 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="EraseSpecies.cpp" />
+    <ClCompile Include="FlamethrowerWeapon.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="GetResearchData.cpp">
       <SubType>
       </SubType>

@@ -232,6 +232,9 @@
     <ClInclude Include="cInstantDamageEffect.h">
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClInclude>
+    <ClInclude Include="FlamethrowerWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -389,6 +392,9 @@
     </ClCompile>
     <ClCompile Include="cInstantDamageEffect.cpp">
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="FlamethrowerWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
