@@ -49,6 +49,7 @@
 #include "cShieldEffect.h"
 #include "cChargeEffect.h";
 #include "cInstantDamageEffect.h";
+#include "FlamethrowerWeapon.h"
 
 void SetupModStrategies::SetupStrategies()
 {
@@ -84,6 +85,7 @@ void SetupModStrategies::SetupStrategies()
 	ToolManager.AddStrategy(new GiveSelfStatusTool(), GiveSelfStatusTool::STRATEGY_ID);
 	ToolManager.AddStrategy(new PoisonLaserWeapon(), PoisonLaserWeapon::STRATEGY_ID);
 	ToolManager.AddStrategy(new StrengthIncreasingLaser(), StrengthIncreasingLaser::STRATEGY_ID);
+	ToolManager.AddStrategy(new FlamethrowerWeapon(), FlamethrowerWeapon::STRATEGY_ID);
 
 	//Add debug cheats
 #ifdef _DEBUG

@@ -4,11 +4,51 @@
 
 FlamethrowerWeapon::FlamethrowerWeapon()
 {
+	mpEffectsForCombatants = {};
 }
 
 
 FlamethrowerWeapon::~FlamethrowerWeapon()
 {
+}
+
+bool FlamethrowerWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vector3& aimPoint, int unk)
+{
+	auto combatant = object_cast<Simulator::cCombatant>(pTool->mpToolOwner);
+	if (mpEffectsForCombatants.find(combatant) == mpEffectsForCombatants.end())
+	{
+		IVisualEffectPtr effect;
+		if (EffectsManager.CreateVisualEffect(pTool->mBeamEffectID, 0, effect))
+		{
+			Transform transform = effect->GetSourceTransform();
+			transform.SetOffset(aimPoint);
+
+			transform.SetScale(2);
+
+			effect->SetSourceTransform(transform);
+			effect->Start();
+
+			mpEffectsForCombatants.emplace(combatant, effect);
+		}
+	}
+	else
+	{
+		auto effect = mpEffectsForCombatants[combatant];
+
+		auto direction = (aimPoint - pTool->mpToolOwner->mPosition).Normalized();
+		auto pos = pTool->mpToolOwner->mPosition + (direction * pTool->mDamageRadius * 2);
+		if (effect)
+		{
+			effect->SetSourceTransform(effect->GetSourceTransform().SetOffset(pos));
+		}
+		else
+		{
+			SporeDebugPrint("wah");
+			mpEffectsForCombatants.erase(combatant);
+		}
+	}
+
+	return Simulator::cToolStrategy::WhileFiring(pTool, aimPoint, unk);
 }
 
 Vector3 FlamethrowerWeapon::GetAimPoint()
@@ -26,7 +66,6 @@ Vector3 FlamethrowerWeapon::GetAimPoint()
 	}
 
 	// no need for an "else"
-	// Since the AI can't get to this point, we can also just assume the player's using the tool.
 
 	auto pPlayer = Simulator::GetPlayerUFO();
 
