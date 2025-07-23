@@ -1,6 +1,6 @@
 key parent spacetools~!ToolTemplate.prop
 string16 description "Laser"
-float spaceToolAutoFireRate 0.2
+float spaceToolAutoFireRate 0.01
 int32 spaceToolBuyCost 500
 key spaceToolContext planet
 float spaceToolDamageArea 0.5
@@ -20,9 +20,11 @@ bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
 float spaceToolEnergyCost 0
 key spaceToolImageID ufotools~!0xD4055DBF.png
-float spaceToolMaxDamage 80
+float spaceToolMaxDamage 160
 float spaceToolMaxRange 2000
 float spaceToolMinDamage 80
+
+float spaceToolEnergyCost 0.05
 key spaceToolPanelKey combat_panel_top~
 
 bool spaceToolShowCollectedOrUnlockedText false
@@ -38,6 +40,8 @@ key toolHitGroundEffectID 0x2ABC60AA
 key toolBeamEffectID _effect_editor
 bool toolHitOrientsToTerrain true
 key toolHitWaterEffectID SG_laser_lvl_1_water
+
+bool flamethrower-attackAllies true
 
 bool toolIsHoming false
 float toolRelationshipDelta -0.02

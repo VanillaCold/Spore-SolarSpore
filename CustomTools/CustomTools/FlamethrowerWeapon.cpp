@@ -37,18 +37,21 @@ bool FlamethrowerWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vec
 		}
 		auto targetCombatant = object_cast<Simulator::cCombatant>(obj);
 		auto targetGameData = object_cast<Simulator::cGameData>(obj);
-
-		if (RelationshipManager.IsAllied(targetGameData->mPoliticalID, combatant->GetPoliticalID()) && !bChaosMode)
-		{
-			continue;
-		}
-
-		auto distance = (pos - obj->GetPosition()).Length();
 		
-		float distanceRatio = 1 - (distance / pTool->mDamageRadius);
-		float damageDealt = ((pTool->mMaxDamage - pTool->mMinDamage) * distanceRatio) + pTool->mMinDamage;
+		if (targetCombatant && targetGameData)
+		{
+			if (RelationshipManager.IsAllied(targetGameData->mPoliticalID, combatant->GetPoliticalID()) && !bChaosMode)
+			{
+				continue;
+			}
 
-		targetCombatant->TakeDamage(damageDealt, combatant->GetPoliticalID(), 0, pos, combatant);
+			auto distance = (pos - obj->GetPosition()).Length();
+
+			float distanceRatio = 1 - (distance / pTool->mDamageRadius);
+			float damageDealt = (((pTool->mMaxDamage - pTool->mMinDamage) * distanceRatio) + pTool->mMinDamage) * pTool->mAutoFireRate;
+
+			targetCombatant->TakeDamage(damageDealt, combatant->GetPoliticalID(), 0, pos, combatant);
+		}
 
 	}
 
@@ -85,6 +88,24 @@ bool FlamethrowerWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vec
 	}
 
 	return Simulator::cToolStrategy::WhileFiring(pTool, targetPos, unk);
+}
+
+bool FlamethrowerWeapon::OnMouseUp(Simulator::cSpaceToolData* pTool)
+{
+	auto combatant = object_cast<Simulator::cCombatant>(pTool->mpToolOwner);
+
+
+	if (mpEffectsForCombatants.find(combatant) != mpEffectsForCombatants.end())
+	{
+		auto effect = mpEffectsForCombatants[combatant];
+		if (effect)
+		{
+			effect->Stop(0);
+		}
+		mpEffectsForCombatants.erase(combatant);
+	}
+
+	return Simulator::cToolStrategy::OnMouseUp(pTool);
 }
 
 Vector3 FlamethrowerWeapon::GetAimPoint()

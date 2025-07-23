@@ -16,6 +16,7 @@ public:
 
 
 	virtual bool WhileFiring(Simulator::cSpaceToolData* pTool, const Vector3& aimPoint, int unk);
+	virtual bool OnMouseUp(Simulator::cSpaceToolData* pTool);
 	Vector3 GetAimPoint() override;
 
 	map<Simulator::cCombatant*, IVisualEffectPtr> mpEffectsForCombatants;
