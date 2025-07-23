@@ -14,14 +14,53 @@ FlamethrowerWeapon::~FlamethrowerWeapon()
 
 bool FlamethrowerWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vector3& aimPoint, int unk)
 {
+	Vector3 targetPos = aimPoint;
+
+	Vector3 direction = (targetPos - pTool->mpToolOwner->mPosition).Normalized();
+	Vector3 pos = pTool->mpToolOwner->mPosition + (direction * pTool->mDamageRadius * 2);
+
+	bool bChaosMode;
+	App::Property::GetBool(pTool->mpPropList.get(), id("flamethrower-attackAllies"), bChaosMode);
+
 	auto combatant = object_cast<Simulator::cCombatant>(pTool->mpToolOwner);
+
+	// Deal damage to combatants caught in the blast.
+
+	eastl::vector <cSpatialObjectPtr> combatantsCaught;
+	GameViewManager.IntersectSphere(pos, pTool->mDamageRadius, combatantsCaught);
+
+	for (cSpatialObjectPtr obj : combatantsCaught)
+	{
+		if (obj.get() == pTool->mpToolOwner.get())
+		{
+			continue;
+		}
+		auto targetCombatant = object_cast<Simulator::cCombatant>(obj);
+		auto targetGameData = object_cast<Simulator::cGameData>(obj);
+
+		if (RelationshipManager.IsAllied(targetGameData->mPoliticalID, combatant->GetPoliticalID()) && !bChaosMode)
+		{
+			continue;
+		}
+
+		auto distance = (pos - obj->GetPosition()).Length();
+		
+		float distanceRatio = 1 - (distance / pTool->mDamageRadius);
+		float damageDealt = ((pTool->mMaxDamage - pTool->mMinDamage) * distanceRatio) + pTool->mMinDamage;
+
+		targetCombatant->TakeDamage(damageDealt, combatant->GetPoliticalID(), 0, pos, combatant);
+
+	}
+
+	// Deal with the visual effect.
+
 	if (mpEffectsForCombatants.find(combatant) == mpEffectsForCombatants.end())
 	{
 		IVisualEffectPtr effect;
 		if (EffectsManager.CreateVisualEffect(pTool->mBeamEffectID, 0, effect))
 		{
 			Transform transform = effect->GetSourceTransform();
-			transform.SetOffset(aimPoint);
+			transform.SetOffset(targetPos);
 
 			transform.SetScale(2);
 
@@ -34,9 +73,6 @@ bool FlamethrowerWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vec
 	else
 	{
 		auto effect = mpEffectsForCombatants[combatant];
-
-		auto direction = (aimPoint - pTool->mpToolOwner->mPosition).Normalized();
-		auto pos = pTool->mpToolOwner->mPosition + (direction * pTool->mDamageRadius * 2);
 		if (effect)
 		{
 			effect->SetSourceTransform(effect->GetSourceTransform().SetOffset(pos));
@@ -48,7 +84,7 @@ bool FlamethrowerWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vec
 		}
 	}
 
-	return Simulator::cToolStrategy::WhileFiring(pTool, aimPoint, unk);
+	return Simulator::cToolStrategy::WhileFiring(pTool, targetPos, unk);
 }
 
 Vector3 FlamethrowerWeapon::GetAimPoint()
@@ -56,8 +92,7 @@ Vector3 FlamethrowerWeapon::GetAimPoint()
 
 	Vector3 cameraPosition, mouseDir;
 	App::GetViewer()->GetCameraToMouse(cameraPosition, mouseDir);
-	auto viewDir = CameraManager.GetViewer()->GetViewTransform().GetRotation().Row(1);
-
+	
 	auto obj = GameViewManager.GetHoveredObject();
 
 	if (obj)
@@ -74,24 +109,32 @@ Vector3 FlamethrowerWeapon::GetAimPoint()
 	
 	Vector3 positionHit{};
 	PlaneEquation::Intersection gridPosition = test.IntersectRay(cameraPosition, mouseDir, positionHit);
+	Vector3 playerPos = pPlayer->GetPosition();
+
+	SporeDebugPrint("point at %f, %f, %f", positionHit.x, positionHit.y, positionHit.z);
+	SporeDebugPrint("player pos at %f, %f, %f ", playerPos.x, playerPos.y, playerPos.z);
 	
 	auto cursor = Simulator::cGameTerrainCursor::GetTerrainCursor();
-	if (cursor) 
+	if (cursor && cursor->GetPosition() != Vector3(0,0,0)) 
 	{
+
 		// intellisense can scream at me all it wants, i'm not making these const references-
 		Vector3 cursorPos = cursor->GetPosition();
-		Vector3 playerPos = pPlayer->GetPosition();
+
+		SporeDebugPrint("cursor at %f, %f, %f", cursorPos.x, cursorPos.y, cursorPos.z);
 
 		float gridDistance = (positionHit - playerPos).Length();
 		float cursorDistance = (cursorPos - playerPos).Length();
 
 		// If the grid is further than the ground, then assume the player wants to hit the ground.
-		if (gridDistance >= cursorDistance)
+		if (cursorDistance <= 100)
 		{
 			// and set the position accordingly.
 			positionHit = cursorPos;
 		}
 	}
+
+	return positionHit;
 
 }
 
