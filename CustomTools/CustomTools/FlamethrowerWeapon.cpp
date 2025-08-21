@@ -16,8 +16,9 @@ bool FlamethrowerWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vec
 {
 	Vector3 targetPos = aimPoint;
 
-	Vector3 direction = (targetPos - pTool->mpToolOwner->mPosition).Normalized();
-	Vector3 pos = pTool->mpToolOwner->mPosition + (direction * pTool->mDamageRadius * 2);
+	Vector3 playerPos = pTool->mpToolOwner->mPosition;
+	Vector3 direction = (targetPos - playerPos).Normalized();
+	Vector3 pos = playerPos + (direction * pTool->mDamageRadius * 2);
 
 	bool bChaosMode;
 	App::Property::GetBool(pTool->mpPropList.get(), id("flamethrower-attackAllies"), bChaosMode);
@@ -64,6 +65,8 @@ bool FlamethrowerWeapon::WhileFiring(Simulator::cSpaceToolData* pTool, const Vec
 		{
 			Transform transform = effect->GetSourceTransform();
 			transform.SetOffset(targetPos);
+
+			
 
 			transform.SetScale(2);
 

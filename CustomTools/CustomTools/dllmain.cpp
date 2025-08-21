@@ -8,6 +8,7 @@
 #include "cSSResearchManager.h"
 #include "ResearchPointCaptionWinProc.h";
 #include "OpenResearchMenu.h";
+#include "TerraLaser.h"
 
 void Initialize()
 {
@@ -21,6 +22,9 @@ void Initialize()
 	cSSArchetypeToolManager* manager = new cSSArchetypeToolManager();
 	App::AddUpdateFunction(manager);
 	SetupModStrategies::SetupStrategies();
+	
+	//virtual int TakeDamage(float damage, uint32_t attackerPoliticalID, int, const Vector3&, cCombatant * pAttacker);
+	//Simulator::cCombatant::TakeDamage
 
 
 
@@ -31,6 +35,34 @@ void Initialize()
 	
 	//SSConsequenceToolManager->AddArchetypeTool(ArchetypeTool(Simulator::Archetypes::kArchetypeBard, id("test")));
 }
+
+virtual_detour(CombatDetour, Simulator::cCreatureBase, Simulator::cCombatant, int(float, uint32_t, int, const Vector3&, Simulator::cCombatant*))
+{
+	int detoured(float damage, uint32_t attackerPoliticalID, int unk, const Vector3& pos, cCombatant * pAttacker)
+	{
+		SporeDebugPrint("a");
+		if (Simulator::IsSpaceGame())
+		{
+			SporeDebugPrint("ab");
+			if (pAttacker && pAttacker->GetPoliticalID() == TerraLaser::sTerraActive)
+			{
+				SporeDebugPrint("b");
+				auto animal = object_cast<Simulator::cCreatureAnimal>(((Simulator::cCombatant*)this)->ToGameData());
+				if (animal != nullptr)
+				{
+					SporeDebugPrint("c");
+					if (!animal->mbIsDiseased)
+					{
+						SporeDebugPrint("d");
+						return original_function(this, 0, attackerPoliticalID, unk, pos, pAttacker);
+					}
+				}
+			}
+		}
+
+		return original_function(this, damage, attackerPoliticalID, unk, pos, pAttacker);
+	}
+};
 
 /*virtual_detour(thingytofixparts, Editors::cEditor, Editors::cEditor, void()) {
 	void detoured()
@@ -105,6 +137,7 @@ static_detour(SpiceGenDetour, float(float, float, float, bool, bool, bool, float
 
 void AttachDetours()
 {
+	CombatDetour::attach(GetAddress(Simulator::cCombatant, TakeDamage));
 	//Simulator::cPlanetRecord::CalculateDeltaSpiceProduction
 	AddResearchMenuButton::attach(GetAddress(UI::SpaceGameUI, Load));
 	SpiceGenDetour::attach(GetAddress(Simulator::cPlanetRecord, CalculateDeltaSpiceProduction)); //ModAPI::ChooseAddress(Address(0x00c71200),Address(0x00c720a0)));

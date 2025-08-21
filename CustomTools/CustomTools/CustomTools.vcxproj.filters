@@ -20,9 +20,6 @@
     <Filter Include="CustomTools\Tools\finished">
       <UniqueIdentifier>{c28fcfcb-98fe-4b90-b866-a0193c6c38f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CustomTools\Tools\Planet De-Buster">
-      <UniqueIdentifier>{3aad31cb-0dd4-4b2b-9f1c-b4995659759a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CustomTools\Systems">
       <UniqueIdentifier>{0f11701f-f943-48e9-a791-f40a4f4c5a23}</UniqueIdentifier>
     </Filter>
@@ -73,6 +70,9 @@
     </Filter>
     <Filter Include="CustomTools\Tools\Archetype\ChargeTools">
       <UniqueIdentifier>{edd4cef3-6129-4a45-8cc3-b856ce326fb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Planet De-Buster">
+      <UniqueIdentifier>{3aad31cb-0dd4-4b2b-9f1c-b4995659759a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +235,9 @@
     <ClInclude Include="FlamethrowerWeapon.h">
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClInclude>
+    <ClInclude Include="TerraLaser.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -394,6 +397,9 @@
       <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
     </ClCompile>
     <ClCompile Include="FlamethrowerWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="TerraLaser.cpp">
       <Filter>CustomTools\Tools\General Types</Filter>
     </ClCompile>
   </ItemGroup>

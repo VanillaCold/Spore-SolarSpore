@@ -222,6 +222,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TerraLaser.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ToggleSSDebug.h">
       <SubType>
       </SubType>
@@ -365,6 +369,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="StrengthIncreasingLaser.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TerraLaser.cpp">
       <SubType>
       </SubType>
     </ClCompile>
