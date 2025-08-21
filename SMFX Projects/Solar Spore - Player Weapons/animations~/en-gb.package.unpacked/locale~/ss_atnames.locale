@@ -99,3 +99,22 @@
 
 0x048 Galactic Taser-Dazers
 0x049 An empire-class projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons.
+
+
+
+# Ecologist weapon
+
+0x050 Mini Terra-Ray
+0x051 A weak laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
+
+0x052 Terra-Ray
+0x053 An adequate laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
+
+0x054 Mega Terra-Ray
+0x055 A laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
+
+0x056 Imperial Terra-Ray
+0x057 A strong laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
+
+0x058 Galactic Terra-Ray
+0x059 An empire-class laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
