@@ -1,0 +1,8 @@
+keys WeaponToolIDs
+	terraraylevel1
+	terraraylevel2
+	terraraylevel3
+	terraraylevel4
+	terraraylevel5
+end
+uint32 WeaponSetArchetype 16 #kArchetypePlayerEcologist

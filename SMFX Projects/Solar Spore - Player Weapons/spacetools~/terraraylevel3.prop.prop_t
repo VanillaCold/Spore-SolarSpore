@@ -5,29 +5,35 @@ int32 spaceToolBuyCost 500
 key spaceToolContext planet
 float spaceToolDamageArea 0.5
 texts spaceToolDescription
-	(spacegame_tools!0x0cfc7432) "Mini Laser"
+	(ss_atnames!0x054) "Test Laser"
 end
 texts spaceToolDetailDescription
-	(spacegame_tools!0x7f2e2c7b) "Use on ground targets. A precise, but weak weapon."
+	(ss_atnames!0x055) "Use on ground targets. A precise, but weak weapon."
 end
 float spaceToolDetectableRange 15
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
-float spaceToolEnergyCost 0.25
-key spaceToolImageID ufotools~!spg_combat_laser1.png
-float spaceToolMaxDamage 40
+float spaceToolEnergyCost 0.75
+key spaceToolImageID ufotools~!spg_combat_laser3.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 200
 float spaceToolMaxRange 200
-float spaceToolMinDamage 40
+float spaceToolMinDamage 200
 key spaceToolPanelKey CombatAbilityPanel
-bool spaceToolShowCollectedOrUnlockedText false
-key spaceToolStrategy DefaultBeam
+
+float ss_terraformDelta 0.0375
+key spaceToolStrategy TerraLaser
+
 key spaceToolType weapon
+key spaceToolUpgradeFile terraraylevel2.prop
 int32 spaceToolUseCost 0
-key toolBeamEffectID SG_laser_lvl_1_beam
-key toolHitCombatantEffectID SG_laser_lvl_1_beam_impact
-key toolHitGroundEffectID SG_laser_lvl_1_scorch
+key toolBeamEffectID TerraLaser3
+key toolHitCombatantEffectID SG_laser_lvl_3_beam_impact
+key toolHitGroundEffectID SG_laser_lvl_3_scorch
 bool toolHitOrientsToTerrain true
-key toolHitWaterEffectID SG_laser_lvl_1_water
+key toolHitWaterEffectID SG_laser_lvl_3_water
 bool toolIsHoming true
 float toolRelationshipDelta -0.02
 int32s toolTargetFlags
