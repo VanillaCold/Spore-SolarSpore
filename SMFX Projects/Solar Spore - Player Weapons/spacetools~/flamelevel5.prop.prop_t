@@ -6,10 +6,10 @@ key spaceToolContext planet
 float spaceToolDamageArea 0.5
 float spaceToolDamageRadius 15
 texts spaceToolDescription
-	(ss_atnames!0x60) "Flamethrower"
+	(ss_atnames!0x68) "Flamethrower"
 end
 texts spaceToolDetailDescription
-	(ss_atnames!0x61) "Use on ground targets. A precise, but weak weapon."
+	(ss_atnames!0x69) "Use on ground targets. A precise, but weak weapon."
 end
 
 bool spaceToolUsesAmmo false
@@ -21,9 +21,9 @@ bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
 float spaceToolEnergyCost 0
 key spaceToolImageID ufotools~!0xD4055DBF.png
-float spaceToolMaxDamage 160
+float spaceToolMaxDamage 750
 float spaceToolMaxRange 2000
-float spaceToolMinDamage 80
+float spaceToolMinDamage 450
 
 float spaceToolEnergyCost 0.05
 key spaceToolPanelKey combat_panel_top~
@@ -33,7 +33,7 @@ key spaceToolStrategy Flamethrower
 key spaceToolType weapon
 int32 spaceToolUseCost 0
 
-#key spaceToolUpgradeFile autocannonlevel2
+key spaceToolUpgradeFile flamelevel4
 
 key toolHitCombatantEffectID 0x2ABC60AA
 key toolMuzzleEffectID 0x5F27B0FB

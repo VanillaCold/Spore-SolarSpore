@@ -118,3 +118,21 @@
 
 0x058 Galactic Terra-Ray
 0x059 An empire-class laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
+
+
+# Bard weapon
+
+0x060 Mini Phlog'o'fun
+0x061 A weak flamethrower. High damage but incredibly low range and precision.
+
+0x062 Phlog'o'fun
+0x063 An adequate flamethrower. High damage but incredibly low range
+
+0x064 Mega Phlog'o'fun
+0x065 A flamethrower. Very high damage but incredibly low range.
+
+0x066 Imperial Phlog'o'fun
+0x067 A strong flamethrower. Gigantic damage but incredibly low range.
+
+0x068 Galactic Phlog'o'fun
+0x069 An empire-class flamethrower. Insane damage, yet low range.
