@@ -14,26 +14,49 @@ bool DamageMultiplierProjectile::OnHit(cSpaceToolData* pTool, const Vector3& pos
 {
 
 	pTool->mDamageMultiplier = 1;
-	if (hitType == SpaceToolHit::kHitCombatant)
+	// Get the combatant
+	eastl::vector <cSpatialObjectPtr> combatantsCaught;
+	bool objFound = GameViewManager.IntersectSphere(position, pTool->mDamageRadius * 4, combatantsCaught, true);
+
+
+	if (objFound)
 	{
-		//auto test = (Simulator::cCombatant*)pTool->field_108.get();
-		for (auto building : GetDataByCast<cBuilding>())
+
+		uint32_t propertyID = id("spaceToolDefaultDmgMultiplier");
+		for (auto targetObject : combatantsCaught)
 		{
-			float distance = max(((building->mPosition - position).Length() - building->mBoundingRadius), 0.0f);
-			
-			if (distance <= 1.0f)
+			if (object_cast<Simulator::cBuilding>(targetObject))
 			{
-				SporeDebugPrint(to_string(max(((building->mPosition - position).Length() - building->mBoundingRadius), 0.0f)).c_str());
-				float localMultiplier;
-				App::Property::GetFloat(pTool->mpPropList.get(), id("spaceToolBuildingDmgMultiplier"), localMultiplier);
-				pTool->mDamageMultiplier *= localMultiplier;
+				SporeDebugPrint("building");
+				propertyID = id("spaceToolBuildingDmgMultiplier");
 				break;
 			}
-		}
-	}
 
-	bool base = cDefaultProjectileWeapon::OnHit(pTool, position, hitType,unk);
-	return base;
+			else if (object_cast<Simulator::cGameDataUFO>(targetObject))
+			{
+				SporeDebugPrint("ufo");
+				propertyID = id("spaceToolUFODmgMultiplier");
+				break;
+			}
+
+			else if (object_cast<Simulator::cVehicle>(targetObject))
+			{
+				SporeDebugPrint("vehicle");
+				propertyID = id("spaceToolVehicleDmgMultiplier");
+				break;
+			}
+
+		}
+
+		float localMultiplier;
+		if (App::Property::GetFloat(pTool->mpPropList.get(), propertyID, localMultiplier))
+		{
+			pTool->mDamageMultiplier = localMultiplier;
+		}
+
+		bool base = cDefaultProjectileWeapon::OnHit(pTool, position, hitType, unk);
+		return base;
+	}
 }
 
 // For internal use, do not modify.

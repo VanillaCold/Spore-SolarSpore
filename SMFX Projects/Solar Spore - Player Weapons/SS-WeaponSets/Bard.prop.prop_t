@@ -1,0 +1,8 @@
+keys WeaponToolIDs
+	flamelevel1
+	flamelevel2
+	flamelevel3
+	flamelevel4
+	flamelevel5
+end
+uint32 WeaponSetArchetype 13 #kArchetypePlayerBard

@@ -21,7 +21,7 @@ bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
 float spaceToolEnergyCost 0
 key spaceToolImageID ufotools~!0xD4055DBF.png
-float spaceToolMaxDamage 160
+float spaceToolMaxDamage 180
 float spaceToolMaxRange 2000
 float spaceToolMinDamage 80
 
@@ -38,7 +38,7 @@ int32 spaceToolUseCost 0
 key toolHitCombatantEffectID 0x2ABC60AA
 key toolMuzzleEffectID 0x5F27B0FB
 key toolHitGroundEffectID 0x2ABC60AA
-key toolBeamEffectID _effect_editor
+key toolBeamEffectID SG_laser_lvl_1_beam_impact
 bool toolHitOrientsToTerrain true
 key toolHitWaterEffectID SG_laser_lvl_1_water
 
