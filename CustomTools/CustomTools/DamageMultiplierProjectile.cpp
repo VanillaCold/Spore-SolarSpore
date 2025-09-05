@@ -22,41 +22,51 @@ bool DamageMultiplierProjectile::OnHit(cSpaceToolData* pTool, const Vector3& pos
 	if (objFound)
 	{
 
-		uint32_t propertyID = id("spaceToolDefaultDmgMultiplier");
 		for (auto targetObject : combatantsCaught)
 		{
+			uint32_t propertyID = id("spaceToolDefaultDmgMultiplier");
 			if (object_cast<Simulator::cBuilding>(targetObject))
 			{
 				SporeDebugPrint("building");
 				propertyID = id("spaceToolBuildingDmgMultiplier");
-				break;
 			}
 
 			else if (object_cast<Simulator::cGameDataUFO>(targetObject))
 			{
 				SporeDebugPrint("ufo");
 				propertyID = id("spaceToolUFODmgMultiplier");
-				break;
 			}
 
 			else if (object_cast<Simulator::cVehicle>(targetObject))
 			{
 				SporeDebugPrint("vehicle");
 				propertyID = id("spaceToolVehicleDmgMultiplier");
-				break;
+			}
+
+
+
+			float localMultiplier;
+			if (App::Property::GetFloat(pTool->mpPropList.get(), propertyID, localMultiplier))
+			{
+				auto combatant = object_cast<Simulator::cCombatant>(targetObject);
+				float amount = (pTool->mMaxDamage * localMultiplier) - pTool->mMaxDamage;
+
+				SporeDebugPrint("Doing an extra %f damage.", amount);
+				auto owner = object_cast<Simulator::cCombatant>(pTool->mpToolOwner);
+	
+				if (RelationshipManager.IsAllied(combatant->GetPoliticalID(), owner->GetPoliticalID()))
+				{
+					continue;
+				}
+
+				combatant->TakeDamage(amount, owner->GetPoliticalID(), 0, position, owner);
 			}
 
 		}
-
-		float localMultiplier;
-		if (App::Property::GetFloat(pTool->mpPropList.get(), propertyID, localMultiplier))
-		{
-			pTool->mDamageMultiplier = localMultiplier;
-		}
-
-		bool base = cDefaultProjectileWeapon::OnHit(pTool, position, hitType, unk);
-		return base;
 	}
+
+	bool base = cDefaultProjectileWeapon::OnHit(pTool, position, hitType, unk);
+	return base;
 }
 
 // For internal use, do not modify.
