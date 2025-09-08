@@ -3,12 +3,12 @@ string16 description "Defense Missile"
 float spaceToolAutoFireRate 1
 int32 spaceToolBuyCost 0
 key spaceToolContext planet
-float spaceToolDamageArea 8
+float spaceToolDamageArea 16
 texts spaceToolDescription
-	(spacegame_tools!0x79813159) "Minor Proton Missile"
+	(ss_atnames!0x70) "Mini Plasma Gun"
 end
 texts spaceToolDetailDescription
-	(spacegame_tools!0xe0ae0c98) "Fires a small homing Proton Missile at its target.  Effective against enemy spaceships."
+	(ss_atnames!0x71) "Use on ground targets. A precise, but weak weapon."
 end
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
@@ -17,34 +17,44 @@ key spaceToolImageID ufotools~!spg_combat_protonmissile.png
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
-float spaceToolMaxDamage 30
+float spaceToolMaxDamage 10
 float spaceToolMaxRange 200
-float spaceToolMinDamage 30
+float spaceToolMinDamage 10
 float spaceToolMinRange 10
 key spaceToolPanelKey CombatAbilityPanel
 float spaceToolRechargeRate 1
 bool spaceToolShowCollectedOrUnlockedText false
-key spaceToolStrategy DefaultProjectile
+key spaceToolStrategy DmgMultProjectile
+
+float spaceToolUFODmgMultiplier 6
+
 key spaceToolType weapon
 int32 spaceToolUseCost 0
-bool toolCanPlayerLockOn true
-key toolHitCombatantEffectID 0xC35BC5B8
-key toolHitGroundEffectID 0xC35BC5B8
+bool toolCanPlayerLockOn false
+key toolHitCombatantEffectID PulseBoom1 #0x5da34b84
+key toolHitGroundEffectID PulseBoom1 #0x5da34b84
 bool toolHitOrientsToTerrain false
-key toolHitWaterEffectID 0xC35BC5B8
+key toolHitWaterEffectID PulseBoom1 #0x5da34b84
+key toolMuzzleEffectID 0xf8ff004e
+float toolProjectileEccentricity 0#.25
+key toolProjectileEffectID 0x864c0358
 bool toolIsHoming true
-key toolMuzzleEffectID 0xA0020A0D
-float toolProjectileEccentricity 0.25
-key toolProjectileEffectID 0x9CAB27C6
 float toolProjectileExplosionExpansionRate 500
-float toolProjectileSpeed 150
+float toolProjectileSpeed 250
 float toolProjectileTimeOut 1.5
-float toolProjectileTurnRate 0.1
+float toolProjectileTurnRate 0.3
 int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
 	hash(ufo)
 	hash(vehicle)
 	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+	hash(building)
 end
 texts toolTargetFlagsFailMessage
-	(spacegame_tools!0xb5f45e41) "Targeting capability of this weapon is limited to spaceships, turrets and vehicles."
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
 end
