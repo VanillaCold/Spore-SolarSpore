@@ -1,0 +1,26 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Enemy Pulse"
+float spaceToolAutoFireRate 5
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	(spacegame_tools!0x20c6731c) "Enemy Pulse"
+end
+key spaceToolImageID ufotools~!0xB8F022EE.png
+float spaceToolMaxDamage 80
+float spaceToolMaxRange 300
+float spaceToolMinDamage 80
+float spaceToolMinRange 1
+float spaceToolRechargeRate 8
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+key toolHitCombatantEffectID 0x778C6F86
+key toolHitGroundEffectID 0x778C6F86
+key toolHitWaterEffectID 0x778C6F86
+key toolMuzzleEffectID 0xC9C2C8AF
+key toolProjectileEffectID 0x12301330
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileSpeed 75
+float toolProjectileTimeOut 4

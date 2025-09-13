@@ -212,6 +212,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="SetupModStrategies.h" />
+    <ClInclude Include="ShieldkillerBeam.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="SpawnVehicle.h" />
     <ClInclude Include="SpiceDye.h" />
     <ClInclude Include="StaffofDeath.h" />
@@ -231,6 +235,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="ToSol.h" />
+    <ClInclude Include="TransportProjectile.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="vehicletest.h">
       <SubType>
       </SubType>
@@ -360,6 +368,10 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="SetupModStrategies.cpp" />
+    <ClCompile Include="ShieldkillerBeam.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="SpawnVehicle.cpp" />
     <ClCompile Include="SpiceDye.cpp" />
     <ClCompile Include="StaffofDeath.cpp" />
@@ -381,6 +393,10 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="ToSol.cpp" />
+    <ClCompile Include="TransportProjectile.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="vehicletest.cpp">
       <SubType>
       </SubType>
