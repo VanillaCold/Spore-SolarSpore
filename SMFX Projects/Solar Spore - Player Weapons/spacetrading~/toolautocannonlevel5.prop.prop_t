@@ -1,0 +1,10 @@
+key parent spacetrading~!toollaser5
+texts spaceToolDescription
+	(ss_atnames!0x08) "Mega Auto-Cannon"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x09)  "Use on ground targets. A strong, precision weapon."
+end
+key spaceToolImageID ufotools~!0xD4055DBD.png
+key spaceTradingExchangeFor autocannonlevel5.prop
+key spaceTradingRequires autocannonlevel4.prop

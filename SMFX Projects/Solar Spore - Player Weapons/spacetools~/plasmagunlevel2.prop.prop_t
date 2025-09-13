@@ -1,0 +1,60 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Defense Missile"
+float spaceToolAutoFireRate 1
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 16
+texts spaceToolDescription
+	(ss_atnames!0x72) "Mini Plasma Gun"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x73) "Use on ground targets. A precise, but weak weapon."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 1
+key spaceToolImageID ufotools~!spg_combat_protonmissile.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 20
+float spaceToolMaxRange 200
+float spaceToolMinDamage 20
+float spaceToolMinRange 10
+key spaceToolPanelKey CombatAbilityPanel
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+
+float spaceToolUFODmgMultiplier 6
+
+key spaceToolType weapon
+key spaceToolUpgradeFile plasmagunlevel1.prop
+int32 spaceToolUseCost 0
+bool toolCanPlayerLockOn false
+key toolHitCombatantEffectID PulseBoom2 #0x5DA34B87
+key toolHitGroundEffectID PulseBoom2
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID PulseBoom2
+key toolMuzzleEffectID 0xf8ff004d
+float toolProjectileEccentricity 0#.25
+key toolProjectileEffectID 0x864c035b
+bool toolIsHoming true
+float toolProjectileExplosionExpansionRate 500
+float toolProjectileSpeed 250
+float toolProjectileTimeOut 1.5
+float toolProjectileTurnRate 0.3
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+	hash(building)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

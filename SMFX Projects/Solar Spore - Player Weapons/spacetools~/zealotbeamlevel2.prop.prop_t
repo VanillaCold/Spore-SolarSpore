@@ -1,0 +1,60 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Pulse (Weak)"
+float spaceToolAutoFireRate 0.5
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	(ss_atnames!0x012) "Zealot Beam 2"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x013) "Zealot Beam 2"
+end
+float spaceToolDetectableRange 25
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.75
+key spaceToolImageID ufotools~!spg_combat_pulse.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 60
+float spaceToolMaxRange 150
+float spaceToolMinDamage 60
+key spaceToolPanelKey CombatAbilityPanel
+float spaceToolRechargeRate 2
+key spaceToolStrategy DmgMultProjectile #DefaultProjectile
+float spaceToolBuildingDmgMultiplier 2.5
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+
+key spaceToolUpgradeFile zealotbeamlevel1
+
+bool toolIsHoming true
+bool toolCanPlayerLockOn false
+key toolHitCombatantEffectID ZealotBeamImpact
+key toolHitGroundEffectID ZealotBeamImpact
+key toolHitWaterEffectID ZealotBeamImpact
+key toolMuzzleEffectID civ_weapons_cultural_notes
+key toolProjectileEffectID ZealotBeamBeamL2
+float toolProjectileExplosionExpansionRate 200
+#key toolProjectileMotion Ballistic #0x0BA57653##
+float toolProjectileSpeed 300
+#float toolProjectileLobAngle 30
+float toolProjectileTimeOut 2.5
+float toolRelationshipDelta -0.1
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+	hash(building)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

@@ -1,0 +1,10 @@
+key parent spacetrading~!toollaser2
+texts spaceToolDescription
+	(ss_atnames!0x02) "Auto-Cannon"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x03)  "Use on ground targets. A medium strength, precision weapon."
+end
+key spaceToolImageID ufotools~!0xD4055DBF.png
+key spaceTradingExchangeFor autocannonlevel2.prop
+key spaceTradingRequires autocannonlevel1.prop

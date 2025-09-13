@@ -1,0 +1,8 @@
+float statusEffectTimer 1500000000000
+key statusVisualEffect EP1_dec_spotlight_green
+uint32 statusEffectType hash(Shield)
+
+float shieldHealth 500
+float shieldStrength 1
+float statusCost 0
+uint32 shieldDestroyEffect hash(EP1_dec_LoveBomb)

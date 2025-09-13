@@ -1,0 +1,13 @@
+texts spaceToolDescription
+	(ss_atnames!0x0C) "Mega Auto-Cannon"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x05)  "Use on ground targets. A strong, precision weapon."
+end
+key parent spacetrading~!toolautocannon1ammo.prop
+key spaceTradingExchangeFor autocannonlevel3.prop
+#keys spaceTradingBonusTool
+#	autocannonlevel1
+#	autocannonlevel2
+#end
+key spaceTradingRequires autocannonlevel3.prop

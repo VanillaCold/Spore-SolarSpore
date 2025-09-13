@@ -1,0 +1,8 @@
+keys WeaponToolIDs
+	laserlevel1
+	laserlevel2
+	laserlevel3
+	laserlevel4
+	laserlevel5
+end
+uint32 WeaponSetArchetype 17 #kArchetypePlayerWanderer

@@ -1,0 +1,10 @@
+key parent spacetrading~!toollaser2
+texts spaceToolDescription
+	(ss_atnames!0x012) "Zealot Beam 2"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x013) "Zealot Beam 2"
+end
+key spaceToolImageID ufotools~!0xD4055DBF.png
+key spaceTradingExchangeFor zealotbeamlevel2.prop
+key spaceTradingRequires zealotbeamlevel1.prop

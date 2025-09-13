@@ -21,4 +21,6 @@ public:
 	virtual bool OnSelect(cSpaceToolData* pTool) override;
 	virtual bool OnDeselect(cSpaceToolData* pTool) override;
 
+	void* Cast(uint32_t) const override;
+
 };

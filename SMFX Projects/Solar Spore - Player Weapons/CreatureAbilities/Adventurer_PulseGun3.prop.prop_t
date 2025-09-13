@@ -1,0 +1,22 @@
+key parent AbilityTemplates!PulseGunTemplate
+float creatureAbilityAdventurerEnergyCost 125
+uint32s creatureAbilityAnimationIDs
+	0x07620ddb
+end
+uint32 creatureAbilityBabyGameAnimationID 0x07620ddb
+float creatureAbilityDamage 55
+texts creatureAbilityDescription
+	(AbilitiesEP1!0x00001007) "Pulse Gun 1 Desc (PLACEHOLDER)"
+end
+uint32 creatureAbilityImpactEffectId 0x5da34b86
+uint32 creatureAbilityMuzzleEffectId 0xf8ff004c
+texts creatureAbilityName
+	(AbilitiesEP1!0x00001006) "Pulse Gun 1 (PLACEHOLDER)"
+end
+float creatureAbilityRazeDamage 55
+float creatureAbilityRefresh 2.5
+vector2s creatureAbilityRequiredCAPsMaxValueRange
+	(3, 3)
+end
+uint32 creatureAbilityTrailEffectId 0x864c035a
+key verbIconRepresentativeAnimation 0x079992D7

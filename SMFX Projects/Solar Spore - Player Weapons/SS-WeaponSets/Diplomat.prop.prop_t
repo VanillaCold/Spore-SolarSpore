@@ -1,0 +1,8 @@
+keys WeaponToolIDs
+	diplocannonlevel1
+	diplocannonlevel2
+	diplocannonlevel3
+	diplocannonlevel4
+	diplocannonlevel5
+end
+uint32 WeaponSetArchetype 15 #kArchetypePlayerDiplomat

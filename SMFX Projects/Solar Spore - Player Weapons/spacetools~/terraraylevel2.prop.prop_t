@@ -1,0 +1,52 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Laser"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	(ss_atnames!0x052) "Test Laser"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x053) "Use on ground targets. A precise, but weak weapon."
+end
+float spaceToolDetectableRange 15
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.5
+key spaceToolImageID ufotools~!spg_combat_laser1.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 60
+float spaceToolMaxRange 200
+float spaceToolMinDamage 60
+key spaceToolPanelKey CombatAbilityPanel
+
+float ss_terraformDelta 0.025
+key spaceToolStrategy TerraLaser
+
+key spaceToolType weapon
+key spaceToolUpgradeFile terraraylevel1.prop
+int32 spaceToolUseCost 0
+key toolBeamEffectID TerraLaser2
+key toolHitCombatantEffectID SG_laser_lvl_2_beam_impact
+key toolHitGroundEffectID SG_laser_lvl_2_scorch
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID SG_laser_lvl_2_water
+bool toolIsHoming true
+float toolRelationshipDelta -0.02
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x7df2eccf) "You must choose a valid target to use this tool."
+end

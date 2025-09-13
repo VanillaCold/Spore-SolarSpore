@@ -79,3 +79,13 @@ bool RegalShield::OnDeselect(cSpaceToolData* pTool)
 	system->shieldprotectionamount = 0;
 	return false;
 }
+
+// You can extend this function to return any other types your class implements.
+void* RegalShield::Cast(uint32_t type) const
+{
+	CLASS_CAST(Object);
+	//CLASS_CAST(Simulator::cToolStrategy);
+	CLASS_CAST(Simulator::cToolStrategy);
+	CLASS_CAST(RegalShield);
+	return nullptr;
+}

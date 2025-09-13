@@ -1,0 +1,10 @@
+key parent spacetrading~!toollaser4
+texts spaceToolDescription
+	(ss_atnames!0x026) "Shaman Beam"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x027) "Shaman Beam"
+end
+key spaceToolImageID ufotools~!spg_combat_laser3.png
+key spaceTradingExchangeFor shamanlaserlevel4.prop
+key spaceTradingRequires shamanlaserlevel3.prop

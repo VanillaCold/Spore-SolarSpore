@@ -33,6 +33,13 @@ void cSSArchetypeToolManager::Update()
 {
 	if (Simulator::IsSpaceGame())
 	{
+		if (isDebug)
+		{
+			Simulator::GetPlayerUFO()->mHealthPoints = Simulator::GetPlayerUFO()->GetMaxHitPoints();
+		}
+
+
+
 		cEmpirePtr empire = Simulator::GetPlayerEmpire();
 		if (currentArchetype == Simulator::kArchetypeGrob)
 		{

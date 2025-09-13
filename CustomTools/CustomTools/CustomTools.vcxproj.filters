@@ -20,9 +20,6 @@
     <Filter Include="CustomTools\Tools\finished">
       <UniqueIdentifier>{c28fcfcb-98fe-4b90-b866-a0193c6c38f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CustomTools\Tools\Planet De-Buster">
-      <UniqueIdentifier>{3aad31cb-0dd4-4b2b-9f1c-b4995659759a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CustomTools\Systems">
       <UniqueIdentifier>{0f11701f-f943-48e9-a791-f40a4f4c5a23}</UniqueIdentifier>
     </Filter>
@@ -67,6 +64,24 @@
     </Filter>
     <Filter Include="CustomTools\Tools\NPC\TransportProjectile">
       <UniqueIdentifier>{64d4a529-ccb8-46b8-842d-ce825b0c88c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems\ArchetypeWeapons">
+      <UniqueIdentifier>{97af0bfa-f70c-4a23-832e-dbda8212ff1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\General Types">
+      <UniqueIdentifier>{c007bb10-4b50-4c39-9bbf-8fa4f3848af9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems\Status effects">
+      <UniqueIdentifier>{645c2c5f-24e6-42e8-bb5f-fb108e4cc526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems\Status effects\IStatusEffects">
+      <UniqueIdentifier>{9517c795-ccb1-4a9a-b28f-6c2751fceba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Archetype\ChargeTools">
+      <UniqueIdentifier>{edd4cef3-6129-4a45-8cc3-b856ce326fb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Planet De-Buster">
+      <UniqueIdentifier>{3aad31cb-0dd4-4b2b-9f1c-b4995659759a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +201,57 @@
     </ClInclude>
     <ClInclude Include="GetResearchData.h">
       <Filter>CustomTools\Systems\Research</Filter>
+    </ClInclude>
+    <ClInclude Include="cSSArchetypeWeaponSystem.h">
+      <Filter>CustomTools\Systems\ArchetypeWeapons</Filter>
+    </ClInclude>
+    <ClInclude Include="DamageMultiplierProjectile.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="GoToHome.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="DelayedBeamWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="PoisonProjectileWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="cSSStatusEffectManager.h">
+      <Filter>CustomTools\Systems\Status effects</Filter>
+    </ClInclude>
+    <ClInclude Include="IStatusEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="cPoisonEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="cStunEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="cShieldEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="GiveSelfStatusTool.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="PoisonLaserWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="StrengthIncreasingLaser.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="cChargeEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="cInstantDamageEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="FlamethrowerWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="TerraLaser.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -308,6 +374,57 @@
     </ClCompile>
     <ClCompile Include="GetResearchData.cpp">
       <Filter>CustomTools\Systems\Research</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSArchetypeWeaponSystem.cpp">
+      <Filter>CustomTools\Systems\ArchetypeWeapons</Filter>
+    </ClCompile>
+    <ClCompile Include="DamageMultiplierProjectile.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="GoToHome.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="DelayedBeamWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="PoisonProjectileWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSStatusEffectManager.cpp">
+      <Filter>CustomTools\Systems\Status effects</Filter>
+    </ClCompile>
+    <ClCompile Include="IStatusEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cPoisonEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cStunEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cShieldEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="GiveSelfStatusTool.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="PoisonLaserWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="StrengthIncreasingLaser.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="cChargeEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cInstantDamageEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="FlamethrowerWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="TerraLaser.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

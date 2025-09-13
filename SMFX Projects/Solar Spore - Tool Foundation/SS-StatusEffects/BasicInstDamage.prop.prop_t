@@ -1,0 +1,5 @@
+float statusEffectTimer 0
+key statusVisualEffect 0xE01D48C5
+uint32 statusEffectType hash(InstantDamage)
+
+float statusDamage 15

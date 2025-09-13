@@ -1,0 +1,63 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Laser"
+float spaceToolAutoFireRate 0.01
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+float spaceToolDamageRadius 15
+texts spaceToolDescription
+	(ss_atnames!0x66) "Flamethrower"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x67) "Use on ground targets. A precise, but weak weapon."
+end
+
+bool spaceToolUsesAmmo false
+int32 spaceToolAmmoUsedPerShot 0
+int32 spaceToolMaxAmmoCount 1
+
+float spaceToolDetectableRange 15
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0
+key spaceToolImageID ufotools~!0xD4055DBF.png
+float spaceToolMaxDamage 650
+float spaceToolMaxRange 2000
+float spaceToolMinDamage 350
+
+float spaceToolEnergyCost 0.05
+key spaceToolPanelKey combat_panel_top~
+
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy Flamethrower
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+
+key spaceToolUpgradeFile flamelevel3
+
+key toolHitCombatantEffectID 0x2ABC60AA
+key toolMuzzleEffectID 0x5F27B0FB
+key toolHitGroundEffectID 0x2ABC60AA
+key toolBeamEffectID SG_laser_lvl_3_beam_impact
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID SG_laser_lvl_1_water
+
+bool flamethrower-attackAllies true
+
+bool toolIsHoming false
+float toolRelationshipDelta -0.02
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+	hash(building)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x7df2eccf) "You must choose a valid target to use this tool."
+end

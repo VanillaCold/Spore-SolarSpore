@@ -34,6 +34,24 @@
 #include "MySystem.h"
 #include "cSSResearchManager.h"
 #include "GetResearchData.h"
+#include "cSSArchetypeWeaponSystem.h"
+#include "GoToHome.h";
+
+#include "DamageMultiplierProjectile.h"
+#include "DelayedBeamWeapon.h"
+#include "GiveSelfStatusTool.h"
+#include "PoisonProjectileWeapon.h"
+#include "PoisonLaserWeapon.h"
+#include "StrengthIncreasingLaser.h"
+#include "FlamethrowerWeapon.h"
+#include "TerraLaser.h"
+
+#include "cSSStatusEffectManager.h"
+#include "cPoisonEffect.h"
+#include "cStunEffect.h";
+#include "cShieldEffect.h"
+#include "cChargeEffect.h";
+#include "cInstantDamageEffect.h";
 
 #include "ShieldkillerBeam.h"
 #include "TransportProjectile.h"
@@ -65,6 +83,18 @@ void SetupModStrategies::SetupStrategies()
 	ToolManager.AddStrategy(new AmmoCreator(), id("AmmoCreator"));
 	ToolManager.AddStrategy(new ReturnPortal(), id("ReturnPortal"));
 	ToolManager.AddStrategy(new StarKiller(), id("Starkiller"));
+	
+
+	
+	//Add generalised tools
+	ToolManager.AddStrategy(new DelayedBeamWeapon(), DelayedBeamWeapon::STRATEGY_ID);
+	ToolManager.AddStrategy(new DamageMultiplierProjectile(), DamageMultiplierProjectile::STRATEGY_ID);
+	ToolManager.AddStrategy(new PoisonProjectileWeapon(), PoisonProjectileWeapon::STRATEGY_ID);
+	ToolManager.AddStrategy(new GiveSelfStatusTool(), GiveSelfStatusTool::STRATEGY_ID);
+	ToolManager.AddStrategy(new PoisonLaserWeapon(), PoisonLaserWeapon::STRATEGY_ID);
+	ToolManager.AddStrategy(new StrengthIncreasingLaser(), StrengthIncreasingLaser::STRATEGY_ID);
+	ToolManager.AddStrategy(new FlamethrowerWeapon(), FlamethrowerWeapon::STRATEGY_ID);
+	ToolManager.AddStrategy(new TerraLaser(), TerraLaser::STRATEGY_ID);
 	ToolManager.AddStrategy(new ShieldkillerBeam(), ShieldkillerBeam::STRATEGY_ID);
 	ToolManager.AddStrategy(new TransportProjectile(), TransportProjectile::STRATEGY_ID);
 
@@ -78,12 +108,23 @@ void SetupModStrategies::SetupStrategies()
 		//	CheatManager.AddCheat("empireInfo", new SystemCount());
 		CheatManager.AddCheat("contactHomeworld", new ContactHomeworld());
 		CheatManager.AddCheat("togglessdebug", new ToggleSSDebug());
+		CheatManager.AddCheat("gth", new GoToHome());
 		new GetResearchData();
 	}
 #endif
 
 	//Add simulator strategy (to-do: make strategy obsolete and remove it)
 	SimulatorSystem.AddStrategy(new MySystem(), MySystem::NOUN_ID);
+	SimulatorSystem.AddStrategy(new cSSArchetypeWeaponSystem, cSSArchetypeWeaponSystem::NOUN_ID);
+	SimulatorSystem.AddStrategy(new cSSStatusEffectManager, cSSStatusEffectManager::NOUN_ID);
+
+	SSStatusManager.AddStatusType(new cPoisonEffect(), cPoisonEffect::STRATEGY_ID);
+	SSStatusManager.AddStatusType(new cStunEffect(), cStunEffect::STRATEGY_ID);
+	SSStatusManager.AddStatusType(new cShieldEffect(), cShieldEffect::STRATEGY_ID);
+	SSStatusManager.AddStatusType(new cChargeEffect(), cChargeEffect::STRATEGY_ID);
+	SSStatusManager.AddStatusType(new cInstantDamageEffect(), cInstantDamageEffect::STRATEGY_ID);
+
+
 	
 	//Add research strategy; this one is NOT to be obsolete.
 	if (PropManager.HasPropertyList(id("ss_enableresearch"), id("solarsporeconfig")))

@@ -1,0 +1,8 @@
+string8 name "level 3 money drones"
+
+float statusEffectTimer 10.5
+key statusVisualEffect ScrapDrones
+uint32 statusEffectType hash(Damage)
+
+float statusDamage 7
+float statusCost -350

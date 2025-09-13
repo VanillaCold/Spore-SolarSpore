@@ -30,7 +30,7 @@ bool TransportProjectile::OnHit(cSpaceToolData* pTool, const Vector3& position, 
 	ufoObj->MoveTo(position, 0);
 	ufoObj->mbDesiredVisible = true;
 
-	((cCombatant*)ufoObj)->field_80 = false;
+	((cCombatant*)ufoObj)->mbInvincible = false;
 
 	return cDefaultProjectileWeapon::OnHit(pTool,position,hitType,unk);
 }
@@ -45,7 +45,7 @@ bool TransportProjectile::WhileFiring(cSpaceToolData* pTool, const Vector3& aimP
 		deactiveShipSizes.emplace_back(ufoObj->GetScale());
 		ufoObj->mStandardSpeed = 0;
 		ufoObj->mbEnabled = false;
-		((cCombatant*)ufoObj)->field_80 = true;
+		((cCombatant*)ufoObj)->mbInvincible = true;
 		ufoObj->SetScale(0);
 
 		ufoObj->mbAtDestination = true;

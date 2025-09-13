@@ -1,0 +1,5 @@
+float statusEffectTimer 15
+key statusVisualEffect ScrapDrones
+uint32 statusEffectType hash(Damage)
+
+float statusDamage 10

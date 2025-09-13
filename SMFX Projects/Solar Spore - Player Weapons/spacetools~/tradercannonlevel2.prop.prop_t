@@ -1,0 +1,64 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Pulse (Weak)"
+float spaceToolAutoFireRate 0.85
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	(ss_atnames!0x032) "Mini Moneybag - "
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x033) "Fires a weak burst in a straight line.  Good against ground targets."
+end
+float spaceToolDetectableRange 25
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 1.5
+key spaceToolImageID ufotools~!spg_trader_cannon
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 40 
+float spaceToolMaxRange 200
+float spaceToolMinDamage 40
+float spaceToolMinRange 10
+key spaceToolPanelKey combat_panel_top~
+float spaceToolRechargeRate 1
+key spaceToolType weapon
+key spaceToolUpgradeFile tradercannonlevel1.prop
+int32 spaceToolUseCost 0
+#bool toolCanPlayerLockOn true
+key toolHitCombatantEffectID 0xE01D48C5
+key toolHitGroundEffectID 0xE01D48C5
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID 0xE01D48C5
+bool toolIsHoming true
+key toolMuzzleEffectID 0xA0020A0D
+float toolProjectileEccentricity 0.25
+key toolProjectileEffectID 0x483B6157
+float toolProjectileExplosionExpansionRate 500
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 1.5
+float toolProjectileTurnRate 0.1
+
+
+key spaceToolStrategy PoisonProjectileWeapon
+uint32s SS-StatusEffect 
+	hash(MoneyDronesL2)
+end
+
+float toolRelationshipDelta -0.1
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

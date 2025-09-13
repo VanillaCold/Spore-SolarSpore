@@ -1,0 +1,57 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Laser"
+float spaceToolAutoFireRate 0.35
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	(ss_atnames!0x02) "Auto-Cannon"
+end
+texts spaceToolDetailDescription
+	(ss_atnames!0x03) "Use on ground targets. A precise, but weak weapon."
+end
+
+bool spaceToolUsesAmmo true
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolMaxAmmoCount 99
+
+float spaceToolDetectableRange 15
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0
+key spaceToolImageID ufotools~!0xD4055DBF.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 130
+float spaceToolMaxRange 200
+float spaceToolMinDamage 130
+key spaceToolPanelKey combat_panel_top~
+key spaceToolStrategy 0xFC20C32D
+key spaceToolType weapon
+key spaceToolUpgradeFile autocannonlevel1.prop
+int32 spaceToolUseCost 0
+
+key toolHitCombatantEffectID 0x2ABC60AA
+key toolMuzzleEffectID 0x5F27B0FB
+key toolHitGroundEffectID 0x2ABC60AA
+key toolBeamEffectID civ_turret_bullets
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID SG_laser_lvl_1_water
+
+bool toolIsHoming true
+float toolRelationshipDelta -0.02
+int32s toolTargetFlags
+	hash(animal)
+	0xa13abc9f
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	0x9b8e862f
+	0x4bf0fa5a
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x7df2eccf) "You must choose a valid target to use this tool."
+end

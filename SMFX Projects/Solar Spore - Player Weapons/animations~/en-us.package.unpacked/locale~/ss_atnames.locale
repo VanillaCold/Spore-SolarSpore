@@ -1,0 +1,156 @@
+#Solar Spore localisation for archetype tools.
+#Even though base 16 is used for these files, I opted to instead count them up in base 10 for the first column.
+#This just makes using the references easier, since the second digit would match up with an archetype.
+
+
+#Auto-cannon
+
+0x000 Mini Auto-Cannon
+0x001 A weak ammo-based precision weapon. Useful against ground targets.
+
+0x002 Auto-Cannon
+0x003 An adequate ammo-based precision weapon. Useful against ground targets.
+
+0x004 Mega Auto-Cannon
+0x005 An ammo-based precision weapon. Useful against all targets.
+
+0x006 Imperial Auto-Cannon
+0x007 A strong ammo-based precision weapon. Highly useful against all targets.
+
+0x008 Galactic Auto-Cannon
+0x009 An empire-class, ammo-based precision weapon. Only used by the strongest of empires.
+
+0x00A Mini Auto-Cannon Ammo
+0x00B Auto-Cannon Ammo
+0x00C Mega Auto-Cannon Ammo
+0x00D Imperial Auto-Cannon Ammo
+0x00E Galactic Auto-Cannon Ammo
+
+# Doctrination Blaster
+
+0x010 Mini Doctrination Blaster
+0x011 A high-speed, weak precision sound beam. Strong against buildings.
+
+0x012 Doctrination Blaster
+0x013 A high-speed, adequate precision sound-beam. Strong against buildings.
+
+0x014 Mega Doctrination Blaster
+0x015 A high-speed precision sound-beam. Strong against buildings.
+
+0x016 Imperial Doctrination Blaster
+0x017 A high-speed, strong precision sound-beam. Very strong against buildings.
+
+0x018 Galactic Doctrination Blaster
+0x019 An empire-class, high-speed precision sound-beam. Incredibly strong against buildings.
+
+
+
+# Doctrination Blaster
+
+0x020 Mini Chi-Ray
+0x021 A weak, precision energy beam. Needs time to charge when used.
+
+0x022 Chi-Ray
+0x023 An adequate, precision energy beam. Needs time to charge when used.
+
+0x024 Mega Chi-Ray
+0x025 A precision energy beam. Needs time to charge when used.
+
+0x026 Imperial Chi-Ray
+0x027 A strong precision energy beam. Needs a lot of time to charge when used.
+
+0x028 Galactic Chi-Ray
+0x029 An empire-class, precise energy beam. Needs a large amount of time to charge when used.
+
+
+
+# Moneybag
+
+0x030 Mini Moneydrones
+0x031 A weak projectile that launches drones at the target, producing money from scrap obtained.
+
+0x032 Moneydrones
+0x033 An adequate projectile that launches drones at the target, producing money from scrap obtained.
+
+0x034 Mega Moneydrones
+0x035 A projectile that launches drones at the target, producing money from scrap obtained.
+
+0x036 Imperial Moneydrones
+0x037 A strong projectile that launches drones at the target, producing money from scrap obtained.
+
+0x038 Galactic Moneydrones
+0x039 An empire-class projectile that launches drones at the target, producing money from scrap obtained.
+
+
+
+# Diplomat weapon
+
+0x040 Mini Taser-Dazers
+0x041 A weak projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons. 
+
+0x042 Taser-Dazers
+0x043 An adequate projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons.
+
+0x044 Mega Taser-Dazers
+0x045 A projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons.
+
+0x046 Imperial Taser-Dazers
+0x047 A strong projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons.
+
+0x048 Galactic Taser-Dazers
+0x049 An empire-class projectile that temporarily stuns the target, disabling its ability to move. Does not disable weapons.
+
+
+
+# Ecologist weapon
+
+0x050 Mini Terra-Ray
+0x051 A weak laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
+
+0x052 Terra-Ray
+0x053 An adequate laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
+
+0x054 Mega Terra-Ray
+0x055 A laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
+
+0x056 Imperial Terra-Ray
+0x057 A strong laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
+
+0x058 Galactic Terra-Ray
+0x059 An empire-class laser that slowly improves a planet's Terrascore. Precise, but can't harm healthy animals.
+
+
+# Bard weapon
+
+0x060 Mini Phlog'o'fun
+0x061 A weak flamethrower. High damage but incredibly low range and precision.
+
+0x062 Phlog'o'fun
+0x063 An adequate flamethrower. High damage but incredibly low range
+
+0x064 Mega Phlog'o'fun
+0x065 A flamethrower. Very high damage but incredibly low range.
+
+0x066 Imperial Phlog'o'fun
+0x067 A strong flamethrower. Gigantic damage but incredibly low range.
+
+0x068 Galactic Phlog'o'fun
+0x069 An empire-class flamethrower. Insane damage, yet low range.
+
+
+# Scientist weapon
+
+0x070 Mini Plasma-Pulse
+0x071 A weak projectile weapon with a large explosion area. Deals much higher damage to spaceships.
+
+0x072 Plasma-Pulse
+0x073 An adequate projectile weapon with a large explosion area. Deals much higher damage to spaceships.
+
+0x074 Mega Plasma-Pulse
+0x075 A projectile weapon with a large explosion area. Deals much higher damage to spaceships.
+
+0x076 Imperial Plasma-Pulse
+0x077 A strong projectile weapon with a large explosion area. Deals much higher damage to spaceships.
+
+0x078 Galactic Plasma-Pulse
+0x079 An empire-class projectile weapon with a large explosion area. Deals much higher damage to spaceships.

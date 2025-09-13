@@ -18,13 +18,13 @@ bool ShieldkillerBeam::OnHit(cSpaceToolData* pTool, const Vector3& position, Spa
 		if (player == Simulator::GetPlayerUFO())
 		{
 			auto playerCombatant = object_cast<Simulator::cCombatant>(player);
-			if (playerCombatant->field_80 == true)
+			if (playerCombatant->mbInvincible == true)
 			{
 				playerDamage += pTool->mMaxDamage;
 				if (playerDamage > 5000)
 				{
 					playerDamage = 0;
-					playerCombatant->field_80 = false;
+					playerCombatant->mbInvincible = false;
 
 					if (EffectsManager.CreateVisualEffect(id("ShieldDown"), 0, shieldEffect))
 					{

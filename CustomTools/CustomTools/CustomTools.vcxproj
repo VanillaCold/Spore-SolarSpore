@@ -101,12 +101,24 @@
     <ClInclude Include="AmmoCreator.h" />
     <ClInclude Include="BerserkerRage.h" />
     <ClInclude Include="Capacitor.h" />
+    <ClInclude Include="cChargeEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ChangeSpecies.h" />
+    <ClInclude Include="cInstantDamageEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="CloseResearchMenu.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="ContactHomeworld.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="cPoisonEffect.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -118,7 +130,15 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="cShieldEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="cSSArchetypeToolManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="cSSArchetypeWeaponSystem.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -126,16 +146,45 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="cSSStatusEffectManager.h" />
+    <ClInclude Include="cStunEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DamageMultiplierProjectile.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DelayedBeamWeapon.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Detente.h" />
     <ClInclude Include="EraseSpecies.h" />
     <ClInclude Include="ConvertPlanet.h" />
+    <ClInclude Include="FlamethrowerWeapon.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="GetResearchData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="GiveSelfStatusTool.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="GoToHome.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="GroxColony.h" />
     <ClInclude Include="infinitecolonies.h" />
     <ClInclude Include="IntergalacticDrive.h" />
+    <ClInclude Include="IStatusEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="LifeBurst.h" />
     <ClInclude Include="MySystem.h">
       <SubType>
@@ -146,6 +195,11 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="PlanetDebuster.h" />
+    <ClInclude Include="PoisonLaserWeapon.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="PoisonProjectileWeapon.h" />
     <ClInclude Include="RandomTool.h" />
     <ClInclude Include="RegalShield.h" />
     <ClInclude Include="ResearchPointCaptionWinProc.h">
@@ -167,7 +221,15 @@
     <ClInclude Include="StaffofDeath.h" />
     <ClInclude Include="StarKiller.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StrengthIncreasingLaser.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TerraLaser.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ToggleSSDebug.h">
       <SubType>
       </SubType>
@@ -187,12 +249,24 @@
     <ClCompile Include="AmmoCreator.cpp" />
     <ClCompile Include="BerserkerRage.cpp" />
     <ClCompile Include="Capacitor.cpp" />
+    <ClCompile Include="cChargeEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="ChangeSpecies.cpp" />
+    <ClCompile Include="cInstantDamageEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="CloseResearchMenu.cpp">
       <SubType>
       </SubType>
     </ClCompile>
     <ClCompile Include="ContactHomeworld.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="cPoisonEffect.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -204,11 +278,32 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="cShieldEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="cSSArchetypeToolManager.cpp">
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="cSSArchetypeWeaponSystem.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="cSSResearchManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="cSSStatusEffectManager.cpp" />
+    <ClCompile Include="cStunEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DamageMultiplierProjectile.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DelayedBeamWeapon.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -222,12 +317,28 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="EraseSpecies.cpp" />
+    <ClCompile Include="FlamethrowerWeapon.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="GetResearchData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="GiveSelfStatusTool.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="GoToHome.cpp">
       <SubType>
       </SubType>
     </ClCompile>
     <ClCompile Include="GroxColony.cpp" />
     <ClCompile Include="IntergalacticDrive.cpp" />
+    <ClCompile Include="IStatusEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="LifeBurst.cpp" />
     <ClCompile Include="MySystem.cpp">
       <SubType>
@@ -240,6 +351,11 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="PlanetDebuster.cpp" />
+    <ClCompile Include="PoisonLaserWeapon.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="PoisonProjectileWeapon.cpp" />
     <ClCompile Include="RandomTool.cpp" />
     <ClCompile Include="RegalShield.cpp" />
     <ClCompile Include="ResearchPointCaptionWinProc.cpp">
@@ -263,6 +379,14 @@
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StrengthIncreasingLaser.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TerraLaser.cpp">
+      <SubType>
+      </SubType>
     </ClCompile>
     <ClCompile Include="ToggleSSDebug.cpp">
       <SubType>
